@@ -1,0 +1,85 @@
+# ============================================================
+# Graw 社区应用商店 - 自动构建索引并发布到 gh-pages
+#
+# 说明:
+#   本文件位于「app-store 独立仓库」内（app-store/ 作为独立仓库推送），
+#   因此所有路径均以仓库根目录为基准（apps/、scripts/、index.json...）。
+#
+# 触发方式:
+#   1. main 分支任意变更（含 PR 合并）        -> 自动执行
+#   2. 手动触发 (Actions 页面)               -> 按需执行
+#
+# 流程:
+#   1. 检出代码
+#   2. 运行 scripts/generate_index.py 扫描 apps/ 生成 index.json
+#   3. 将 index.json + index.html + apps/ 打包推送到 gh-pages 分支
+#      （GitHub Pages 开启后即通过 https://<owner>.github.io/<repo>/index.json 访问）
+#
+# 所需配置:
+#   Settings -> Pages -> Source: Deploy from a branch -> gh-pages / (root)
+# ============================================================
+
+name: App Store Index (gh-pages)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    name: Build index & publish to gh-pages
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 准备 Python（自带 pip，用于安装 PyYAML）
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. 安装 PyYAML（生成脚本解析 data.yml 使用）
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      # 4. 扫描 apps/ 生成统一的 index.json
+      - name: Generate index.json
+        run: python scripts/generate_index.py
+        env:
+          # 用于生成 gh-pages 的 raw download_url
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      # 5. 发布商店静态资源到 gh-pages 分支（根目录即 index.json / apps/）
+      - name: Publish to gh-pages
+        run: |
+          set -e
+          rm -rf /tmp/ghpages
+          mkdir -p /tmp/ghpages
+          cp index.json /tmp/ghpages/index.json
+          cp index.html /tmp/ghpages/index.html
+          cp -r apps /tmp/ghpages/apps
+          cd /tmp/ghpages
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "chore(app-store): publish index (${GITHUB_SHA:0:7})"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 6. 输出摘要（便于在 Actions 页面快速查看结果）
+      - name: Summary
+        run: |
+          echo "## 应用商店索引已发布" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 仓库: \`${{ github.repository }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 索引地址: \`https://raw.githubusercontent.com/${{ github.repository }}/gh-pages/index.json\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Pages 地址: \`https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/index.json\`" >> "$GITHUB_STEP_SUMMARY"

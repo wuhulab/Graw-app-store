@@ -1,0 +1,39 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# 必填: name / id / description / homepage / source / arch / docker-compose.yml
+# 选填: versions(版本列表, 第一个为默认) / ports(容器内端口) / env(环境变量)
+# ============================================================
+
+name: "Uptime Kuma"
+id: "uptime-kuma"
+
+# 产品介绍（支持多行）
+description: >
+  一款自托管的网站 / 服务监控工具。支持 HTTP(S)、TCP、Ping、DNS、Docker
+  等多种监控类型，自带美观的 Web 仪表盘、通知告警（Telegram / 邮件 / 企业微信 /
+  Slack 等）与公开状态页功能，无需依赖外部监控服务即可实现「云监控」。
+
+# 官方网站
+homepage: "https://uptime.kuma.pet/"
+
+# 开源社区
+source: "https://github.com/louislam/uptime-kuma"
+
+# 支持架构
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+
+# 可选版本列表（下拉选择，第一个为默认「最新」）
+versions:
+  - { tag: "1", label: "最新" }
+  - { tag: "1.23.0", label: "1.23.0" }
+
+# 容器内端口（面板据此生成外部端口映射）
+ports:
+  - { container: 3001, label: "Web 界面", protocol: "tcp" }
+
+# 常用环境变量（面板据此预填）
+env:
+  - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }

@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Nextcloud"
+id: "nextcloud"
+
+description: >
+  开源的私有云盘 / 协作平台。支持文件同步与共享、相册、日历、通讯录、在线文档、
+  笔记与视频通话等功能，数据完全掌握在自己手中。本模板使用 SQLite，适合个人 /
+  小团队快速部署；如需更高并发建议在面板中追加 PostgreSQL 服务。
+
+homepage: "https://nextcloud.com/"
+
+source: "https://github.com/nextcloud/server"
+
+arch:
+  - "amd64"
+  - "arm64"
+
+versions:
+  - { tag: "latest", label: "最新" }
+  - { tag: "stable", label: "稳定版" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
+  - { name: "NEXTCLOUD_ADMIN_USER", default: "admin", desc: "管理员账号" }
+  - { name: "NEXTCLOUD_ADMIN_PASSWORD", default: "admin123", desc: "管理员密码" }

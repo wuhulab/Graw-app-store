@@ -1,0 +1,179 @@
+{
+  "store": {
+    "name": "Graw Community App Store",
+    "repo": "shunx/graw",
+    "base_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/",
+    "updated_at": "2026-08-15T09:35:39.411749+00:00",
+    "app_count": 4
+  },
+  "apps": [
+    {
+      "id": "nextcloud",
+      "name": "Nextcloud",
+      "description": "开源的私有云盘 / 协作平台。支持文件同步与共享、相册、日历、通讯录、在线文档、 笔记与视频通话等功能，数据完全掌握在自己手中。本模板使用 SQLite，适合个人 / 小团队快速部署；如需更高并发建议在面板中追加 PostgreSQL 服务。",
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        },
+        {
+          "tag": "stable",
+          "label": "稳定版"
+        }
+      ],
+      "homepage": "https://nextcloud.com/",
+      "source": "https://github.com/nextcloud/server",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "default": "Asia/Shanghai",
+          "desc": "时区"
+        },
+        {
+          "name": "NEXTCLOUD_ADMIN_USER",
+          "default": "admin",
+          "desc": "管理员账号"
+        },
+        {
+          "name": "NEXTCLOUD_ADMIN_PASSWORD",
+          "default": "admin123",
+          "desc": "管理员密码"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/nextcloud/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/nextcloud/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/nextcloud/data.yml"
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer CE",
+      "description": "Portainer 社区版（CE）是一款轻量的容器管理面板，提供图形化界面来管理 Docker / Podman 引擎：容器、镜像、网络、数据卷、栈（Stack / Compose）与模板一键部署， 并内置身份认证与多用户权限控制，适合与 Graw 面板互补使用。",
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        },
+        {
+          "tag": "2.21.0",
+          "label": "2.21.0"
+        }
+      ],
+      "homepage": "https://www.portainer.io/",
+      "source": "https://github.com/portainer/portainer",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 9000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "default": "Asia/Shanghai",
+          "desc": "时区"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/portainer/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/portainer/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/portainer/data.yml"
+    },
+    {
+      "id": "uptime-kuma",
+      "name": "Uptime Kuma",
+      "description": "一款自托管的网站 / 服务监控工具。支持 HTTP(S)、TCP、Ping、DNS、Docker 等多种监控类型，自带美观的 Web 仪表盘、通知告警（Telegram / 邮件 / 企业微信 / Slack 等）与公开状态页功能，无需依赖外部监控服务即可实现「云监控」。",
+      "version": "1",
+      "versions": [
+        {
+          "tag": "1",
+          "label": "最新"
+        },
+        {
+          "tag": "1.23.0",
+          "label": "1.23.0"
+        }
+      ],
+      "homepage": "https://uptime.kuma.pet/",
+      "source": "https://github.com/louislam/uptime-kuma",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [
+        {
+          "container": 3001,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "default": "Asia/Shanghai",
+          "desc": "时区"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/uptime-kuma/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/uptime-kuma/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/uptime-kuma/data.yml"
+    },
+    {
+      "id": "watchtower",
+      "name": "Watchtower",
+      "description": "Watchtower 会自动监控运行中的容器，当基础镜像发布新版本时自动拉取并重建容器， 让自托管应用保持最新、避免错过安全更新。可配合 Graw 面板的 Docker 管理使用。",
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://containrrr.dev/watchtower/",
+      "source": "https://github.com/containrrr/watchtower",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [],
+      "env": [
+        {
+          "name": "TZ",
+          "default": "Asia/Shanghai",
+          "desc": "时区"
+        },
+        {
+          "name": "WATCHTOWER_CLEANUP",
+          "default": "true",
+          "desc": "更新后是否删除旧镜像"
+        },
+        {
+          "name": "WATCHTOWER_POLL_INTERVAL",
+          "default": "3600",
+          "desc": "检查间隔（秒）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/watchtower/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/watchtower/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/shunx/graw/gh-pages/apps/watchtower/data.yml"
+    }
+  ]
+}

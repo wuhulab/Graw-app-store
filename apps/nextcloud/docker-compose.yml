@@ -1,0 +1,15 @@
+# Nextcloud - 私有云盘
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nextcloud:
+    image: nextcloud:${VERSION}
+    container_name: nextcloud
+    volumes:
+      - ./nextcloud-data:/var/www/html
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - TZ=${TZ:-Asia/Shanghai}
