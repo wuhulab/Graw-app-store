@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "RSSHub"
+id: "rsshub"
+
+
+category: "网络/工具"
+description: >
+  万物皆可 RSS。生成各种内容源（网站、社交平台、博客等）的 RSS 订阅，聚合你关注的一切更新。
+
+homepage: "https://docs.rsshub.app/"
+
+source: "https://github.com/DIYgod/RSSHub"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 1200, label: "Web 界面", protocol: "tcp" }
+
+env:
+

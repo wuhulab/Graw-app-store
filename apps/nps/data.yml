@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "nps (内网穿透)"
+id: "nps"
+
+
+category: "网络/工具"
+description: >
+  轻量、高性能的内网穿透工具服务端，自带 Web 管理界面，支持 TCP / UDP / HTTP(S) / Socks5 / P2P 隧道与流量统计。
+
+homepage: "https://github.com/yisier/nps"
+
+source: "https://github.com/yisier/nps"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 管理界面", protocol: "tcp" }
+  - { container: 8024, label: "客户端连接端口", protocol: "tcp" }
+
+env:
+

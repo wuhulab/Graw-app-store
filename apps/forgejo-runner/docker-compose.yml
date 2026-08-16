@@ -1,0 +1,15 @@
+# Forgejo Runner
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  forgejo-runner:
+    image: code.forgejo.org/forgejo/runner:${VERSION}
+    container_name: forgejo-runner
+    volumes:
+      - ./data:/data
+      - ./socket:/var/run/docker.sock
+    environment:
+      - FORGEJO_INSTANCE_URL=${FORGEJO_INSTANCE_URL}
+      - FORGEJO_RUNNER_REGISTRATION_TOKEN=${FORGEJO_RUNNER_REGISTRATION_TOKEN}
+    restart: unless-stopped

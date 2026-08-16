@@ -1,0 +1,12 @@
+# DeepSeek Harness
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  deepseek-harness:
+    image: node:22-alpine
+    container_name: deepseek-harness
+    volumes:
+      - ./data:/root/.dsh
+    command: npx -y @deepseek-ai/dsh web
+    restart: unless-stopped

@@ -1,0 +1,16 @@
+# n8n
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  n8n:
+    image: n8nio/n8n:${VERSION}
+    container_name: n8n
+    volumes:
+      - ./data:/home/node/.n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - GENERIC_TIMEZONE=Asia/Shanghai
+    restart: unless-stopped

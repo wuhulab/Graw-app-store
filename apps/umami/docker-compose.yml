@@ -1,0 +1,27 @@
+# Umami
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: db
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=umami
+      - POSTGRES_USER=umami
+      - POSTGRES_PASSWORD=umami
+    restart: unless-stopped
+  umami:
+    image: ghcr.io/umami-software/umami:${VERSION}
+    container_name: umami
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://umami:umami@db:5432/umami
+      - DATABASE_TYPE=postgresql
+      - HASH_SALT=change-me
+    depends_on:
+      - db
+    restart: unless-stopped

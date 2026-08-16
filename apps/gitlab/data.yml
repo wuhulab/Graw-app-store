@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "GitLab"
+id: "gitlab"
+
+
+category: "开发/DevOps"
+description: >
+  完整的 DevOps 生命周期平台，集成代码仓库、CI/CD、容器镜像、Issue 与 Wiki，适合团队自托管。内存占用较大，建议 4GB 以上。
+
+homepage: "https://about.gitlab.com/"
+
+source: "https://gitlab.com/gitlab-org/gitlab"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "HTTP", protocol: "tcp" }
+  - { container: 443, label: "HTTPS", protocol: "tcp" }
+  - { container: 22, label: "SSH", protocol: "tcp" }
+
+env:
+  - { name: "GITLAB_OMNIBUS_CONFIG", default: "", desc: "自定义配置（可选）" }
+  - { name: "GITLAB_ROOT_PASSWORD", default: "", desc: "root 初始密码" }
+

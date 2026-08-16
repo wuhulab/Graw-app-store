@@ -7,6 +7,8 @@
 name: "Uptime Kuma"
 id: "uptime-kuma"
 
+
+category: "监控/运维"
 # 产品介绍（支持多行）
 description: >
   一款自托管的网站 / 服务监控工具。支持 HTTP(S)、TCP、Ping、DNS、Docker

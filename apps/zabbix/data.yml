@@ -1,0 +1,25 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Zabbix"
+id: "zabbix"
+
+category: "监控/运维"
+description: >
+  企业级开源监控解决方案，支持主机、网络、应用、数据库等监控与多渠道告警，自带可视化仪表盘。本模板内置 PostgreSQL 数据库，Web 端口 8080。
+
+homepage: "https://www.zabbix.com/"
+
+source: "https://github.com/zabbix/zabbix"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "7.0-latest", label: "7.0 LTS" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

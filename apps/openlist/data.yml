@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "OpenList"
+id: "openlist"
+
+category: "面板/网站"
+description: >
+  AList 社区 fork 的网盘聚合与文件列表程序，支持阿里云盘、OneDrive、百度网盘、夸克、115、WebDAV 等数十种存储，带在线预览与 WebDAV 能力。
+
+homepage: "https://www.oplist.org/"
+
+source: "https://github.com/OpenListTeam/OpenList"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5244, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
+  - { name: "UMASK", default: "022", desc: "文件权限掩码" }
+

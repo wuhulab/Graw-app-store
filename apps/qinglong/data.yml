@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "青龙面板"
+id: "qinglong"
+
+
+category: "面板/网站"
+description: >
+  定时任务管理面板，支持 JavaScript / Python / Shell 脚本，可用于自动化签到、挂机等任务，自带依赖管理与日志查看。
+
+homepage: "https://qinglong.org.cn/"
+
+source: "https://github.com/whyour/qinglong"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5700, label: "Web 界面", protocol: "tcp" }
+
+env:
+

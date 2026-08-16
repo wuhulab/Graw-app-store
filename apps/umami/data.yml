@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Umami"
+id: "umami"
+
+category: "监控/运维"
+description: >
+  开源、注重隐私的网站访问统计分析工具，轻量且现代，支持多站点、事件跟踪与自定义图表，数据完全自有。本模板内置 PostgreSQL 数据库。
+
+homepage: "https://umami.is/"
+
+source: "https://github.com/umami-software/umami"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "HASH_SALT", default: "change-me", desc: "数据加密盐值（首次部署请修改）" }
+

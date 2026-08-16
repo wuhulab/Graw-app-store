@@ -1,0 +1,17 @@
+# code-server
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  code-server:
+    image: codercom/code-server:${VERSION}
+    container_name: code-server
+    volumes:
+      - ./data:/home/coder/.local/share/code-server
+      - ./config:/home/coder/.config/code-server
+    ports:
+      - "8080:8080"
+    environment:
+      - PASSWORD=${PASSWORD}
+      - SUDO_PASSWORD=${SUDO_PASSWORD}
+    restart: unless-stopped

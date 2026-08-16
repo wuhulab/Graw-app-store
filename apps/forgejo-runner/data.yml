@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Forgejo Runner"
+id: "forgejo-runner"
+
+
+category: "开发/DevOps"
+description: >
+  Forgejo Actions 的运行器，在专用机器上执行 Forgejo 仓库的 CI/CD 流水线。需要先在 Forgejo 实例注册 runner 获取令牌。
+
+homepage: "https://forgejo.org/docs/latest/admin/actions/"
+
+source: "https://code.forgejo.org/forgejo/runner"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+
+env:
+  - { name: "FORGEJO_INSTANCE_URL", default: "", desc: "Forgejo 实例地址（必填）" }
+  - { name: "FORGEJO_RUNNER_REGISTRATION_TOKEN", default: "", desc: "Runner 注册令牌（必填）" }
+

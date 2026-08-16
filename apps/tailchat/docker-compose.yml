@@ -1,0 +1,13 @@
+# Tailchat
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  tailchat:
+    image: tailchat-inc/tailchat:${VERSION}
+    container_name: tailchat
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "11002:11002"
+    restart: unless-stopped

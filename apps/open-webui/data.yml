@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Open WebUI"
+id: "open-webui"
+
+
+category: "AI/开发"
+description: >
+  可扩展、功能丰富、用户友好的自托管 AI Web 界面，支持 Ollama 与 OpenAI 兼容接口，提供多用户、RAG、模型管理与对话历史。
+
+homepage: "https://openwebui.com/"
+
+source: "https://github.com/open-webui/open-webui"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "OLLAMA_BASE_URL", default: "", desc: "Ollama 地址（可选）" }
+

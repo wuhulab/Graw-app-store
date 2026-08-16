@@ -1,0 +1,13 @@
+# Hermes Agent
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  hermes:
+    image: nousresearch/hermes-agent:${VERSION}
+    container_name: hermes
+    volumes:
+      - ./data:/opt/data
+    ports:
+      - "8642:8642"
+    restart: unless-stopped

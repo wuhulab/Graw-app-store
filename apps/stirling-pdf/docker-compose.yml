@@ -1,0 +1,15 @@
+# Stirling-PDF
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  stirling-pdf:
+    image: ghcr.io/stirling-tools/stirling-pdf:${VERSION}
+    container_name: stirling-pdf
+    volumes:
+      - ./data:/usr/share/tessdata
+      - ./logs:/logs
+      - ./custom:/configs
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

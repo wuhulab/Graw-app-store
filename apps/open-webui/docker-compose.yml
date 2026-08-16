@@ -1,0 +1,15 @@
+# Open WebUI
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:${VERSION}
+    container_name: open-webui
+    volumes:
+      - ./data:/app/backend/data
+    ports:
+      - "8080:8080"
+    environment:
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL}
+    restart: unless-stopped

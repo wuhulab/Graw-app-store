@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "AstrBot"
+id: "astrbot"
+
+
+category: "AI/开发"
+description: >
+  多平台 AI 聊天机器人框架，支持 QQ、微信、飞书、Telegram 等平台，可对接主流大模型，自带 WebUI 管理面板与插件生态。
+
+homepage: "https://astrbot.app/"
+
+source: "https://github.com/AstrBotDevs/AstrBot"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 6185, label: "Web 管理界面", protocol: "tcp" }
+  - { container: 6199, label: "OneBot / 消息端口", protocol: "tcp" }
+
+env:
+

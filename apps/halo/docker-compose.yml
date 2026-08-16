@@ -1,0 +1,15 @@
+# Halo
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  halo:
+    image: halohub/halo:${VERSION}
+    container_name: halo
+    volumes:
+      - ./data:/root/.halo2
+    ports:
+      - "8090:8090"
+    environment:
+      - HALO_PLUGIN_ENABLED=${HALO_PLUGIN_ENABLED}
+    restart: unless-stopped

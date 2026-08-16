@@ -1,0 +1,16 @@
+# MariaDB
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  mariadb:
+    image: mariadb:${VERSION}
+    container_name: mariadb
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=root123
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+    restart: unless-stopped

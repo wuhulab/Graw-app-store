@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Halo"
+id: "halo"
+
+
+category: "面板/网站"
+description: >
+  现代化、简洁的 Java 博客系统，拥有丰富的主题与插件生态，基于 Spring Boot 构建，适合个人博客与内容创作。
+
+homepage: "https://halo.run/"
+
+source: "https://github.com/halo-dev/halo"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "2", label: "2.x" }
+  - { tag: "2.18", label: "2.18" }
+
+ports:
+  - { container: 8090, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "HALO_PLUGIN_ENABLED", default: "", desc: "需要启用的插件" }
+

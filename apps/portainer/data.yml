@@ -5,6 +5,8 @@
 name: "Portainer CE"
 id: "portainer"
 
+
+category: "监控/运维"
 description: >
   Portainer 社区版（CE）是一款轻量的容器管理面板，提供图形化界面来管理 Docker /
   Podman 引擎：容器、镜像、网络、数据卷、栈（Stack / Compose）与模板一键部署，

@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Flarum"
+id: "flarum"
+
+
+category: "面板/网站"
+description: >
+  优雅、简洁、易扩展的现代化开源论坛软件，界面清新、加载迅速，支持丰富的扩展生态，是搭建社区论坛的好选择。
+
+homepage: "https://flarum.org/"
+
+source: "https://github.com/flarum/flarum"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Jupyter Notebook"
+id: "jupyter-notebook"
+
+
+category: "AI/开发"
+description: >
+  基于浏览器的交互式笔记本，支持 Python 代码、可视化与 Markdown 文档混合编写，是数据科学与教学科研的常用工具。
+
+homepage: "https://jupyter.org/"
+
+source: "https://github.com/jupyter/notebook"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8888, label: "Web 界面", protocol: "tcp" }
+
+env:
+

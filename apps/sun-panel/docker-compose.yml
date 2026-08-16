@@ -1,0 +1,15 @@
+# Sun-Panel
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  sun-panel:
+    image: hslr/sun-panel:${VERSION}
+    container_name: sun-panel
+    volumes:
+      - ./conf:/app/conf
+      - ./uploads:/app/uploads
+      - ./database:/app/database
+    ports:
+      - "3002:3002"
+    restart: unless-stopped

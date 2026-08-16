@@ -45,6 +45,14 @@ APP_STORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPS_DIR = os.path.join(APP_STORE_DIR, "apps")
 INDEX_PATH = os.path.join(APP_STORE_DIR, "index.json")
 
+# 需要置底的应用（排到列表末尾）：如 alist 有社区版本建议，不宜置顶
+_LAST_APPS = {"alist"}
+
+
+def _entry_sort_key(name: str):
+    """排序 key：需要置底的应用排最后，其余按名称字母序。"""
+    return (name in _LAST_APPS, name)
+
 
 # ------------------------------------------------------------
 # 内置极简 YAML 子集解析器（PyYAML 不可用时兜底）
@@ -229,7 +237,7 @@ def collect_apps(repo: str):
         warnings.append(f"apps 目录不存在: {APPS_DIR}")
         return apps, warnings
 
-    for entry in sorted(os.listdir(APPS_DIR)):
+    for entry in sorted(os.listdir(APPS_DIR), key=_entry_sort_key):
         app_dir = os.path.join(APPS_DIR, entry)
         if not os.path.isdir(app_dir) or entry.startswith("."):
             continue
@@ -256,8 +264,12 @@ def collect_apps(repo: str):
             continue
 
         icon_rel = f"apps/{app_id}/icon.png"
-        if not os.path.isfile(os.path.join(app_dir, "icon.png")):
-            warnings.append(f"[{entry}] 缺少 icon.png")
+        icon_found = os.path.isfile(os.path.join(app_dir, "icon.png"))
+        if not icon_found:
+            icon_rel = f"apps/{app_id}/icon.svg"
+            icon_found = os.path.isfile(os.path.join(app_dir, "icon.svg"))
+        if not icon_found:
+            warnings.append(f"[{entry}] 缺少 icon.png / icon.svg")
 
         versions = meta.get("versions") or []
         if not versions:
@@ -268,6 +280,8 @@ def collect_apps(repo: str):
             "id": app_id,
             "name": name,
             "description": str(meta.get("description") or "").strip(),
+            "category": str(meta.get("category") or ""),
+            "warn": str(meta.get("warn") or ""),
             "version": str(default_version),
             "versions": versions,
             "homepage": str(meta.get("homepage") or ""),

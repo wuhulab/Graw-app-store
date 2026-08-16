@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "frp (frpc 客户端)"
+id: "frpc"
+
+category: "网络/工具"
+description: >
+  高性能内网穿透工具的客户端，主动连接 frps 服务端，将本机内网服务暴露到公网。连接参数以环境变量配置，隧道规则可挂载 /etc/frp 下的 frpc.toml。
+
+homepage: "https://gofrp.org/"
+
+source: "https://github.com/fatedier/frp"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+
+env:
+  - { name: "FRP_SERVER_ADDR", default: "", desc: "frps 服务端地址（必填，如 1.2.3.4）" }
+  - { name: "FRP_SERVER_PORT", default: "7000", desc: "frps 服务端端口" }
+  - { name: "FRP_AUTH_METHOD", default: "token", desc: "认证方式（token / user 等）" }
+  - { name: "FRP_TOKEN", default: "", desc: "认证 token（需与 frps 配置一致）" }
+  - { name: "FRP_SERVER_USER", default: "", desc: "认证用户名（可选）" }
+  - { name: "FRP_SERVER_PASSWORD", default: "", desc: "认证密码（可选）" }
+

@@ -1,0 +1,13 @@
+# 青龙面板
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  qinglong:
+    image: whyour/qinglong:${VERSION}
+    container_name: qinglong
+    volumes:
+      - ./data:/ql/data
+    ports:
+      - "5700:5700"
+    restart: unless-stopped

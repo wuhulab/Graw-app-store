@@ -1,0 +1,38 @@
+# Outline
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  redis:
+    image: redis:7
+    container_name: redis
+    volumes:
+      - ./redisdata:/data
+    restart: unless-stopped
+  db:
+    image: postgres:16
+    container_name: db
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=outline
+      - POSTGRES_PASSWORD=outline
+      - POSTGRES_DB=outline
+    restart: unless-stopped
+  outline:
+    image: docker.getoutline.com/outlinewiki/outline:${VERSION}
+    container_name: outline
+    volumes:
+      - ./data:/var/lib/outline/data
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://outline:outline@db:5432/outline
+      - REDIS_URL=redis://redis:6379
+      - SECRET_KEY=change-me
+      - UTILS_SECRET=change-me
+      - URL=http://localhost:3000
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped

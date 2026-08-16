@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Node-RED"
+id: "node-red"
+
+
+category: "AI/开发"
+description: >
+  基于 Node.js 的流式编程工具，通过拖拽节点把设备、API 与服务连接起来，适合物联网、自动化与数据流处理。
+
+homepage: "https://nodered.org/"
+
+source: "https://github.com/node-red/node-red"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 1880, label: "Web 界面", protocol: "tcp" }
+
+env:
+

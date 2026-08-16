@@ -1,0 +1,13 @@
+# Opengist
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  opengist:
+    image: ghcr.io/thomiceli/opengist:${VERSION}
+    container_name: opengist
+    volumes:
+      - ./data:/opengist/data
+    ports:
+      - "6157:6157"
+    restart: unless-stopped

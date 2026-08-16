@@ -1,0 +1,13 @@
+# DDNS-GO
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  ddns-go:
+    image: jeessy/ddns-go:${VERSION}
+    container_name: ddns-go
+    volumes:
+      - ./config:/root
+    ports:
+      - "9876:9876"
+    restart: unless-stopped

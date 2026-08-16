@@ -1,0 +1,25 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "PixivD"
+id: "pixivd"
+
+category: "网络/工具"
+description: >
+  Pixiv 命令行批量下载工具（官方 ghcr 镜像），支持按画师 ID、每日/历史排行榜批量下载插画。容器以保活方式运行，安装后在容器终端执行 pixivd 命令（如 pixivd <UID> 或 pixivd -r），下载结果保存在 illustrations 目录。
+
+homepage: "https://github.com/bebound/pixivd"
+
+source: "https://github.com/bebound/pixivd"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+
+env:
+

@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Sub2API"
+id: "sub2api"
+
+
+category: "网络/工具"
+description: >
+  把订阅账号统一转换为 API Key 的 AI API 网关，支持账号分组、负载均衡、额度统计，需配合 PostgreSQL 与 Redis 使用。
+
+homepage: "https://github.com/Wei-Shaw/sub2api"
+
+source: "https://github.com/Wei-Shaw/sub2api"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Opengist"
+id: "opengist"
+
+
+category: "网络/工具"
+description: >
+  自托管的代码片段分享平台，类似 GitHub Gist，支持匿名 / 登录创建片段、语法高亮与评论，基于 Git 存储。
+
+homepage: "https://opengist.io/"
+
+source: "https://github.com/thomiceli/opengist"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 6157, label: "Web 界面", protocol: "tcp" }
+
+env:
+

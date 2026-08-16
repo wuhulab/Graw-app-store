@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "IT Tools"
+id: "it-tools"
+
+
+category: "面板/网站"
+description: >
+  开发者的百宝箱，集成 JSON 格式化、JWT 解析、Base64 编解码、Hash 计算、二维码生成等上百个常用工具，全部在浏览器本地运行。
+
+homepage: "https://it-tools.tech/"
+
+source: "https://github.com/CorentinTh/it-tools"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+

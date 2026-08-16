@@ -1,0 +1,17 @@
+# Dockge
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  dockge:
+    image: louislam/dockge:${VERSION}
+    container_name: dockge
+    volumes:
+      - ./data:/app/data
+      - ./stacks:/opt/stacks
+      - ./socket:/var/run/docker.sock
+    ports:
+      - "5001:5001"
+    environment:
+      - DOCKGE_STACKS_DIR=/opt/stacks
+    restart: unless-stopped
