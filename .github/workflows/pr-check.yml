@@ -1,0 +1,149 @@
+# ============================================================
+# Graw 社区应用商店 - PR 自动格式 / 配置检查
+#
+# 触发方式:
+#   1. Pull Request（含 apps/ 或 pr_check.py 变更）  -> 自动执行
+#   2. 手动触发 (Actions 页面)                       -> 按需执行
+#
+# 流程:
+#   1. 检出代码 + 安装 PyYAML
+#   2. 通过 GitHub API 识别本 PR 变更的应用目录
+#   3. 对变更的应用运行 scripts/pr_check.py --strict
+#      （校验 data.yml / docker-compose.yml / 图标 等格式与配置）
+#   4. 把检查结果以评论形式回写到 PR
+#
+# 规则:
+#   - 变更了应用 -> 仅检查这些应用，且使用 --strict（图标缺失视为错误）
+#   - 未变更应用（如只改了 README / pr_check.py）-> 全量非严格检查，
+#     避免历史遗留的图标缺失阻塞无关 PR
+#   - 检查失败时 job 返回失败码，PR 无法合并
+# ============================================================
+
+name: App Store PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'apps/**'
+      - 'scripts/pr_check.py'
+      - '.github/workflows/pr-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  pr-check:
+    name: Validate app definitions
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 检出代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 准备 Python（自带 pip，用于安装 PyYAML）
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. 安装 PyYAML（检查脚本解析 data.yml / docker-compose.yml 使用）
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      # 4. 识别本 PR 变更的应用目录（apps/<id>/ 下的变更）
+      - name: Detect changed apps
+        id: apps
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          APP_IDS=""
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            curl -s -H "Authorization: token ${GITHUB_TOKEN}" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files?per_page=300" \
+              -o /tmp/pr_files.json
+            APP_IDS=$(python - <<'PY'
+          import json
+          files = json.load(open('/tmp/pr_files.json'))
+          ids = set()
+          for f in files:
+              parts = (f.get('filename') or '').split('/')
+              if len(parts) >= 3 and parts[0] == 'apps':
+                  ids.add(parts[1])
+          print(' '.join(sorted(ids)))
+          PY
+            )
+          fi
+          echo "changed_apps=${APP_IDS}" >> "$GITHUB_OUTPUT"
+          echo "变更的应用: ${APP_IDS:-（无，将执行全量非严格检查）}"
+
+      # 5. 运行格式 / 配置检查
+      #    变更了应用 -> 严格检查这些应用（图标缺失=错误）
+      #    未变更应用 -> 全量非严格检查（图标缺失仅警告）
+      #    同时把输出保存到 /tmp/pr_check_log.txt 供评论步骤引用
+      - name: Run pr_check
+        id: check
+        env:
+          CHANGED_APPS: ${{ steps.apps.outputs.changed_apps }}
+        run: |
+          CHANGED="${CHANGED_APPS}"
+          if [ -n "$CHANGED" ]; then
+            python scripts/pr_check.py --strict $CHANGED | tee /tmp/pr_check_log.txt
+          else
+            python scripts/pr_check.py | tee /tmp/pr_check_log.txt
+          fi
+
+      # 6. 将检查结果以评论形式回写到 PR（失败不阻断主流程，便于查看）
+      - name: Post result comment
+        if: ${{ github.event_name == 'pull_request' && always() }}
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          CHANGED_APPS: ${{ steps.apps.outputs.changed_apps }}
+          CHECK_STATUS: ${{ steps.check.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          pr = os.environ.get('PR_NUMBER', '')
+          if not pr:
+              exit(0)
+
+          changed = os.environ.get('CHANGED_APPS', '').strip()
+          scope = f"检查范围: {changed}" if changed else "检查范围: 全部应用（非严格模式）"
+          status = os.environ.get('CHECK_STATUS', '')
+          icon = "❌" if status == "failure" else "✅"
+          try:
+              summary = open('/tmp/pr_check_log.txt', encoding='utf-8').read()
+          except Exception:
+              summary = "(检查日志获取失败，请查看 Actions 输出)"
+
+          # 评论过长时截断，避免 GitHub 评论限制
+          if len(summary) > 6000:
+              summary = summary[:6000] + "\n...（日志已截断）"
+
+          body = (
+              f"## {icon} Graw 应用商店 PR 检查\n\n"
+              f"{scope}\n\n"
+              f"```\n{summary}\n```\n"
+          )
+          url = f"https://api.github.com/repos/{repo}/issues/{pr}/comments"
+          data = json.dumps({"body": body}).encode()
+          req = urllib.request.Request(url, data=data, method="POST")
+          req.add_header("Authorization", f"token {os.environ['GITHUB_TOKEN']}")
+          req.add_header("Content-Type", "application/json")
+          urllib.request.urlopen(req)
+          PY
+
+      # 7. 输出摘要（便于在 Actions 页面快速查看结果）
+      - name: Summary
+        run: |
+          echo "## 应用商店 PR 检查" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 变更应用: \`${{ steps.apps.outputs.changed_apps }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- 退出码: \`${{ job.status }}\`" >> "$GITHUB_STEP_SUMMARY"
