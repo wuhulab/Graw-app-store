@@ -1,0 +1,11 @@
+# Graw（玩笑占位）
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  graw:
+    image: nginx:${VERSION}
+    container_name: graw
+    ports:
+      - "80:80"
+    restart: unless-stopped

@@ -5,7 +5,6 @@
 name: "PostgreSQL"
 id: "postgres"
 
-
 category: "数据库/存储"
 description: >
   功能强大的开源关系型数据库，以其可靠性和丰富的数据类型著称，支持复杂查询、事务、扩展与全文检索。本模板使用官方 PostgreSQL 16 镜像。

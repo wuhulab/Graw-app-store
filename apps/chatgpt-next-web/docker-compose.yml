@@ -1,0 +1,14 @@
+# ChatGPT-Next-Web
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  chatgpt-next-web:
+    image: yidadaa/chatgpt-next-web:${VERSION}
+    container_name: chatgpt-next-web
+    ports:
+      - "3000:3000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CODE=${CODE}
+    restart: unless-stopped

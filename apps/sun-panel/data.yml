@@ -5,7 +5,6 @@
 name: "Sun-Panel"
 id: "sun-panel"
 
-
 category: "面板/网站"
 description: >
   服务器 / NAS 导航面板与浏览器首页，简洁美观、支持图标管理、内外网链接切换与内置小窗口，占用资源极低。

@@ -1,10 +1,10 @@
 {
   "store": {
     "name": "Graw Community App Store",
-    "repo": "wuhulab/Graw-app-store",
-    "base_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/",
-    "updated_at": "2026-08-16T08:35:39.067080+00:00",
-    "app_count": 57
+    "repo": "wuhulab/Graw",
+    "base_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/",
+    "updated_at": "2026-08-17T06:32:15.812208+00:00",
+    "app_count": 93
   },
   "apps": [
     {
@@ -13,6 +13,7 @@
       "description": "多平台 AI 聊天机器人框架，支持 QQ、微信、飞书、Telegram 等平台，可对接主流大模型，自带 WebUI 管理面板与插件生态。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -39,9 +40,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/astrbot/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/astrbot/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/astrbot/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/data.yml"
     },
     {
       "id": "bettafish",
@@ -49,6 +50,7 @@
       "description": "多智能体驱动的舆情分析系统，自动采集微博、小红书、抖音等平台内容，由多个 AI Agent 协作生成结构化分析报告。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -74,9 +76,188 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/bettafish/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/bettafish/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/bettafish/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/data.yml"
+    },
+    {
+      "id": "chatgpt-next-web",
+      "name": "ChatGPT-Next-Web",
+      "description": "跨平台 ChatGPT / 多模型聊天 Web 前端，支持多种大模型 API、会话管理、Markdown 与部署即用，是常用的自托管 AI 对话界面。",
+      "category": "AI/开发",
+      "warn": "不设置 CODE 访问密码则任何可访问的人都能使用你的 API Key；原仓库已迁移至 ChatGPTNextWeb/NextChat。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/ChatGPTNextWeb/NextChat",
+      "source": "https://github.com/Yidadaa/ChatGPT-Next-Web",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 3000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "OPENAI_API_KEY",
+          "default": "",
+          "desc": "模型 API Key"
+        },
+        {
+          "name": "CODE",
+          "default": "",
+          "desc": "访问密码（设置后可防止陌生人使用）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/data.yml"
+    },
+    {
+      "id": "chinese-dos-games",
+      "name": "中文 DOS 游戏合集",
+      "description": "收录约 1898 款经典中文 DOS 游戏的网页合集，可在浏览器直接游玩，唤起童年回忆（本条目使用社区镜像）。",
+      "category": "面板/网站",
+      "warn": "原项目为数据仓库，无官方镜像，本条目使用社区镜像 oldiy/dosgame-web-docker；部分游戏可能涉及版权争议，仅供个人怀旧。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://dos.zczc.cz/",
+      "source": "https://github.com/rwv/chinese-dos-games",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 262,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/data.yml"
+    },
+    {
+      "id": "classworks",
+      "name": "ClassworksKV",
+      "description": "班级大屏作业板 KV 存储后端，用于班级作业展示与数据管理，支持多班任务板。部署需配置 OAuth 与 JWT 密钥。",
+      "category": "面板/网站",
+      "warn": "部署需配置 STCN OAuth 客户端与 JWT_SECRET；官方示例曾泄漏 Client Secret，请勿照抄示例密钥。",
+      "tags": [
+        "推荐"
+      ],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/Moonrend/ClassworksKV",
+      "source": "https://github.com/Moonrend/ClassworksKV",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 3000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "JWT_SECRET",
+          "default": "",
+          "desc": "JWT 密钥（必填，建议长随机串）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/data.yml"
+    },
+    {
+      "id": "clawswarm",
+      "name": "ClawSwarm",
+      "description": "1Panel 出品的 OpenClaw 多智能体群聊编排系统，让多个 AI 智能体在群聊中协同工作，需搭配 OpenClaw 实例与插件使用。",
+      "category": "AI/开发",
+      "warn": "社区项目，可能存在安全风险：默认账密为 admin / admin123456，请立即修改；需搭配 OpenClaw 实例与插件方可使用。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/1Panel-dev/ClawSwarm",
+      "source": "https://github.com/1Panel-dev/ClawSwarm",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 18080,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/data.yml"
+    },
+    {
+      "id": "cloudreve",
+      "name": "Cloudreve",
+      "description": "云网盘与文件分享平台，支持本地、对象存储、远程存储等多种存储策略，自带在线预览、分享链接与 WebDAV。",
+      "category": "面板/网站",
+      "warn": "首次启动会打印初始管理员账号与密码，请务必记录保管。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://cloudreve.org/",
+      "source": "https://github.com/cloudreve/Cloudreve",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 5212,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/data.yml"
     },
     {
       "id": "code-server",
@@ -84,6 +265,7 @@
       "description": "在浏览器中运行的 VS Code，让你随时随地通过 Web 编写代码，支持扩展安装、终端与 Git 集成，适合远程开发与容器环境。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -117,9 +299,9 @@
           "desc": "sudo 密码（可选）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/code-server/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/code-server/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/code-server/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/data.yml"
     },
     {
       "id": "consul",
@@ -127,6 +309,7 @@
       "description": "HashiCorp 的服务发现与配置中心，提供服务网格、KV 存储与健康检查，支持多数据中心。本模板以 dev 单机模式运行并开放 Web UI。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -153,9 +336,78 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/consul/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/consul/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/consul/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/data.yml"
+    },
+    {
+      "id": "cordyscrm",
+      "name": "CordysCRM",
+      "description": "1Panel 出品的新一代开源 AI CRM 系统，融合 AI 能力与客户关系管理，镜像内嵌 MySQL 与 Redis。",
+      "category": "面板/网站",
+      "warn": "默认账密为 admin / CordysCRM，首次登录请务必修改。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/1Panel-dev/CordysCRM",
+      "source": "https://github.com/1Panel-dev/CordysCRM",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8081,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        },
+        {
+          "container": 8082,
+          "label": "服务端口",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/data.yml"
+    },
+    {
+      "id": "dataease",
+      "name": "DataEase",
+      "description": "人人可用的开源 BI 分析工具，支持数据源接入、图表制作、仪表盘与分享，镜像内嵌 MySQL 与 Redis（v2 默认端口 8100）。",
+      "category": "面板/网站",
+      "warn": "默认账密为 admin / DataEase@123456，首次登录请务必修改。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.dataease.cn/",
+      "source": "https://github.com/dataease/dataease",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8100,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/data.yml"
     },
     {
       "id": "dbx",
@@ -163,6 +415,7 @@
       "description": "开源数据库工作台，支持 70+ 种数据库连接与 SQL 查询、数据浏览、Schema 对比、导入导出，内置 AI 助手与 MCP Server，可 Docker 自托管。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -190,9 +443,9 @@
           "desc": "Web 登录密码（建议设置）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dbx/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dbx/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dbx/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/data.yml"
     },
     {
       "id": "ddns-go",
@@ -200,6 +453,7 @@
       "description": "简单易用的动态域名解析工具，自动获取公网 IPv4 / IPv6 并同步到阿里云、腾讯云、Cloudflare 等 20+ DNS 服务商，带 Web 配置界面。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -221,9 +475,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/ddns-go/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/ddns-go/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/ddns-go/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/data.yml"
     },
     {
       "id": "deepseek-harness",
@@ -231,6 +485,7 @@
       "description": "DeepSeek 官方的开源 AI Agent 框架，一切皆插件，为智能体提供文件、终端、搜索、规划等能力，自带本地 Web 界面。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -252,9 +507,72 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/deepseek-harness/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/deepseek-harness/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/deepseek-harness/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/data.yml"
+    },
+    {
+      "id": "discourse",
+      "name": "Discourse",
+      "description": "开源社区论坛平台，功能强大的现代化 BBS，内置 PostgreSQL、Redis 与 Nginx，需配置域名与 SMTP 邮箱。",
+      "category": "面板/网站",
+      "warn": "官方仅支持 Docker 部署，首次安装需配置域名、SMTP 并完成初始化向导；模板使用历史单镜像，完整部署请参考官方 launcher 文档。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.discourse.org/",
+      "source": "https://github.com/discourse/discourse",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "DISCOURSE_HOSTNAME",
+          "default": "localhost",
+          "desc": "站点域名（必填）"
+        },
+        {
+          "name": "DISCOURSE_DEVELOPER_EMAILS",
+          "default": "admin@example.com",
+          "desc": "管理员邮箱"
+        },
+        {
+          "name": "DISCOURSE_SMTP_ADDRESS",
+          "default": "",
+          "desc": "SMTP 服务器"
+        },
+        {
+          "name": "DISCOURSE_SMTP_PORT",
+          "default": "587",
+          "desc": "SMTP 端口"
+        },
+        {
+          "name": "DISCOURSE_SMTP_USER_NAME",
+          "default": "",
+          "desc": "SMTP 用户名"
+        },
+        {
+          "name": "DISCOURSE_SMTP_PASSWORD",
+          "default": "",
+          "desc": "SMTP 密码"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/data.yml"
     },
     {
       "id": "dockge",
@@ -262,6 +580,7 @@
       "description": "可视化的 Docker Compose 管理面板，以 Stack 为单位管理 compose 文件，支持编辑、启动、停止、日志与终端，界面简洁美观。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -289,9 +608,9 @@
           "desc": "Compose 文件目录"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dockge/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dockge/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/dockge/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/data.yml"
     },
     {
       "id": "excalidraw",
@@ -299,6 +618,7 @@
       "description": "极简的手绘风格白板工具，支持在线协作、导出为图片与 SVG，适合绘制流程图、架构图与示意图，无需登录即可使用。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -320,9 +640,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/excalidraw/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/excalidraw/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/excalidraw/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/data.yml"
     },
     {
       "id": "flarum",
@@ -330,6 +650,7 @@
       "description": "优雅、简洁、易扩展的现代化开源论坛软件，界面清新、加载迅速，支持丰富的扩展生态，是搭建社区论坛的好选择。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -351,9 +672,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/flarum/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/flarum/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/flarum/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/data.yml"
     },
     {
       "id": "forgejo-runner",
@@ -361,6 +682,7 @@
       "description": "Forgejo Actions 的运行器，在专用机器上执行 Forgejo 仓库的 CI/CD 流水线。需要先在 Forgejo 实例注册 runner 获取令牌。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -387,9 +709,9 @@
           "desc": "Runner 注册令牌（必填）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/forgejo-runner/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/forgejo-runner/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/forgejo-runner/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/data.yml"
     },
     {
       "id": "frp",
@@ -397,6 +719,7 @@
       "description": "高性能内网穿透工具的服务端，通过反向代理将内网服务安全暴露到公网，支持 TCP / UDP / HTTP / HTTPS 协议。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -418,9 +741,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frp/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frp/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frp/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/data.yml"
     },
     {
       "id": "frpc",
@@ -428,6 +751,7 @@
       "description": "高性能内网穿透工具的客户端，主动连接 frps 服务端，将本机内网服务暴露到公网。连接参数以环境变量配置，隧道规则可挂载 /etc/frp 下的 frpc.toml。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -474,9 +798,40 @@
           "desc": "认证密码（可选）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frpc/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frpc/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/frpc/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/data.yml"
+    },
+    {
+      "id": "gameservermanager",
+      "name": "GameServerManager",
+      "description": "新一代游戏服务器管理平台（GSM3），支持多种游戏服务端的一键部署、监控与调度，Web 界面端口 3001。",
+      "category": "开发/DevOps",
+      "warn": "个人项目：容器以 root 运行并挂载多个目录与 docker.sock，请自设访问凭据并在受信任主机部署。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/GSManagerXZ/GameServerManager",
+      "source": "https://github.com/GSManagerXZ/GameServerManager",
+      "arch": [
+        "amd64"
+      ],
+      "ports": [
+        {
+          "container": 3001,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/data.yml"
     },
     {
       "id": "gitea",
@@ -484,6 +839,7 @@
       "description": "轻量、快速、自托管的 Git 服务，内存占用小、安装简单，支持仓库、Issue、PR、CI、Wiki 与 Actions，是搭建私有代码托管平台的理想选择。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -522,9 +878,9 @@
           "desc": "SSH 域名"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/data.yml"
     },
     {
       "id": "gitea-runner",
@@ -532,6 +888,7 @@
       "description": "Gitea Actions 的运行器，在本地或专用机器上执行 Gitea 仓库的 CI/CD 流水线。需要先在 Gitea 注册 runner 获取 token。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -558,9 +915,9 @@
           "desc": "Runner 注册令牌（必填）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea-runner/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea-runner/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitea-runner/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/data.yml"
     },
     {
       "id": "gitlab",
@@ -568,6 +925,7 @@
       "description": "完整的 DevOps 生命周期平台，集成代码仓库、CI/CD、容器镜像、Issue 与 Wiki，适合团队自托管。内存占用较大，建议 4GB 以上。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -610,9 +968,41 @@
           "desc": "root 初始密码"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitlab/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitlab/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/gitlab/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/data.yml"
+    },
+    {
+      "id": "graw",
+      "name": "Graw（玩笑占位）",
+      "description": "这是一个玩笑：用 Graw 下载 Graw，然后用 Graw 管理 Graw，套娃永动机。这不是真正的 Graw 服务器面板镜像，只是一个玩笑占位。",
+      "category": "面板/网站",
+      "warn": "这是一个玩笑。但这确实指向真实的 Graw 下载 —— 让你用 Graw 下载 Graw，用 Graw 部署 Graw，用 Graw 管理 Graw，这很好笑。但这只是一个笑话占位而已，镜像并非真正的 Graw 面板。",
+      "tags": [],
+      "version": "alpine",
+      "versions": [
+        {
+          "tag": "alpine",
+          "label": "alpine"
+        }
+      ],
+      "homepage": "https://github.com/wuhulab/Graw",
+      "source": "https://github.com/wuhulab/Graw",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "玩笑页面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/data.yml"
     },
     {
       "id": "halo",
@@ -620,6 +1010,7 @@
       "description": "现代化、简洁的 Java 博客系统，拥有丰富的主题与插件生态，基于 Spring Boot 构建，适合个人博客与内容创作。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "2",
       "versions": [
         {
@@ -651,9 +1042,9 @@
           "desc": "需要启用的插件"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/halo/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/halo/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/halo/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/data.yml"
     },
     {
       "id": "hermes-agent",
@@ -661,6 +1052,7 @@
       "description": "Nous Research 开源的自我改进型 AI Agent，支持多平台消息网关（Telegram / Discord 等）、MCP 工具、技能与记忆系统，可自托管部署。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -682,9 +1074,52 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/hermes-agent/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/hermes-agent/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/hermes-agent/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/data.yml"
+    },
+    {
+      "id": "home-assistant",
+      "name": "Home Assistant",
+      "description": "开源家庭自动化平台，支持上千种设备接入、自动化规则、仪表盘与语音助手，是智能家居的核心中枢。",
+      "category": "监控/运维",
+      "warn": "如需访问 Zigbee / 蓝牙等硬件设备，建议使用 privileged 权限或 host 网络（面板模板为普通网络模式，仅软件功能可用）。",
+      "tags": [],
+      "version": "stable",
+      "versions": [
+        {
+          "tag": "stable",
+          "label": "stable"
+        },
+        {
+          "tag": "latest",
+          "label": "latest"
+        }
+      ],
+      "homepage": "https://www.home-assistant.io/",
+      "source": "https://github.com/home-assistant/core",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [
+        {
+          "container": 8123,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "default": "Asia/Shanghai",
+          "desc": "时区"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/data.yml"
     },
     {
       "id": "it-tools",
@@ -692,6 +1127,7 @@
       "description": "开发者的百宝箱，集成 JSON 格式化、JWT 解析、Base64 编解码、Hash 计算、二维码生成等上百个常用工具，全部在浏览器本地运行。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -713,9 +1149,82 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/it-tools/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/it-tools/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/it-tools/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/data.yml"
+    },
+    {
+      "id": "jaeger",
+      "name": "Jaeger",
+      "description": "开源分布式链路追踪系统，all-in-one 模式开箱即用，提供 Web UI（16686）与 OTLP 接入（4317/4318）。",
+      "category": "监控/运维",
+      "warn": "Web UI 无认证，请勿直接暴露公网，建议仅内网或经反代加鉴权。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.jaegertracing.io/",
+      "source": "https://github.com/jaegertracing/jaeger",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 16686,
+          "label": "Web UI",
+          "protocol": "tcp"
+        },
+        {
+          "container": 4317,
+          "label": "OTLP gRPC",
+          "protocol": "tcp"
+        },
+        {
+          "container": 4318,
+          "label": "OTLP HTTP",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/data.yml"
+    },
+    {
+      "id": "jumpserver",
+      "name": "JumpServer",
+      "description": "广受欢迎的开源堡垒机（PAM），提供资产纳管、账号托管、运维审计与工单审批，是安全的运维入口。",
+      "category": "监控/运维",
+      "warn": "默认账密为 admin / ChangeMe，请立即修改；JumpServer 属安全敏感产品，请妥善保管管理员凭据。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.jumpserver.org/",
+      "source": "https://github.com/jumpserver/jumpserver",
+      "arch": [
+        "amd64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/data.yml"
     },
     {
       "id": "jupyter-notebook",
@@ -723,6 +1232,7 @@
       "description": "基于浏览器的交互式笔记本，支持 Python 代码、可视化与 Markdown 文档混合编写，是数据科学与教学科研的常用工具。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -744,9 +1254,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/jupyter-notebook/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/jupyter-notebook/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/jupyter-notebook/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/data.yml"
     },
     {
       "id": "kibana",
@@ -754,6 +1264,7 @@
       "description": "Elastic 生态的数据可视化与探索平台，配合 Elasticsearch 使用，提供图表、仪表盘、日志分析与告警，是 ELK 栈的可视化入口。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -781,9 +1292,84 @@
           "desc": "Elasticsearch 地址（可填服务名，如 http://elasticsearch:9200）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/kibana/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/kibana/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/kibana/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/data.yml"
+    },
+    {
+      "id": "kirara-ai",
+      "name": "Kirara AI",
+      "description": "多平台接入大模型的聊天机器人框架，支持 QQ、Telegram、企业微信等平台，自带 WebUI（8080）、工作流编排与插件生态。",
+      "category": "AI/开发",
+      "warn": "WebUI 默认仅监听 127.0.0.1，公网部署需按官方文档修改监听地址并自行加鉴权；若镜像不存在请按官方 docker compose 部署。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/lss233/kirara-ai",
+      "source": "https://github.com/lss233/kirara-ai",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8080,
+          "label": "WebUI",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/data.yml"
+    },
+    {
+      "id": "linkding",
+      "name": "Linkding",
+      "description": "自托管的轻量书签管理器，支持标签、搜索、归档与自动抓取网页元数据，默认使用 SQLite，可选 PostgreSQL。",
+      "category": "网络/工具",
+      "warn": "",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://linkding.link/",
+      "source": "https://github.com/sissbruecker/linkding",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 9090,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "LD_SUPERUSER_NAME",
+          "default": "admin",
+          "desc": "超级用户名"
+        },
+        {
+          "name": "LD_SUPERUSER_PASSWORD",
+          "default": "",
+          "desc": "超级用户密码（首次启动自动创建）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/data.yml"
     },
     {
       "id": "llama-cpp",
@@ -791,6 +1377,7 @@
       "description": "C/C++ 实现的 LLM 推理引擎，支持 GGUF 格式本地运行各种开源大模型，内置 OpenAI 兼容的 HTTP 服务器，可离线部署私有 AI。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -812,9 +1399,41 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/llama-cpp/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/llama-cpp/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/llama-cpp/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/data.yml"
+    },
+    {
+      "id": "lsky-pro",
+      "name": "兰空图床",
+      "description": "开源图床系统，支持本地上传、外链、相册管理与多种存储策略，适合自建个人/团队图床（开源版已停止维护）。",
+      "category": "面板/网站",
+      "warn": "官方无 Docker 镜像，本条目使用社区镜像 halcyonazure/lsky-pro-docker；开源版已停止维护，生产使用请评估。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.lsky.pro/",
+      "source": "https://github.com/lsky-org/lsky-pro",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8088,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/data.yml"
     },
     {
       "id": "mariadb",
@@ -822,6 +1441,7 @@
       "description": "MySQL 的社区分支，完全兼容并增加更多存储引擎与性能优化，是众多 Linux 发行版的默认数据库。本模板使用官方 MariaDB 11 镜像。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "11",
       "versions": [
         {
@@ -858,9 +1478,47 @@
           "desc": "默认数据库"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mariadb/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mariadb/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mariadb/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/data.yml"
+    },
+    {
+      "id": "maxkb",
+      "name": "MaxKB",
+      "description": "1Panel 出品的强大易用企业级智能体平台，支持知识库 RAG、对话应用编排与多种模型接入，镜像内嵌 PostgreSQL 数据库。",
+      "category": "AI/开发",
+      "warn": "默认账密为 admin / MaxKB@123..，首次登录请务必修改。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://maxkb.cn/",
+      "source": "https://github.com/1Panel-dev/MaxKB",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8080,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "MAXKB_ONE_MI_API_BASE_URL",
+          "default": "",
+          "desc": "对接 One API 的地址（可选）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/data.yml"
     },
     {
       "id": "mblog-backend",
@@ -868,6 +1526,7 @@
       "description": "开源的极简朋友圈 / 微博系统后端，支持图文发布、关注与广场浏览，可自托管，需配合 MySQL 数据库使用。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -910,9 +1569,115 @@
           "desc": "前端地址"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mblog-backend/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mblog-backend/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mblog-backend/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/data.yml"
+    },
+    {
+      "id": "mcsmanager",
+      "name": "MCSManager",
+      "description": "游戏服务器 Web 管理面板，支持多种游戏服务端的一键安装、启停、备份与文件管理，面板端口 23333。",
+      "category": "开发/DevOps",
+      "warn": "守护进程挂载 /var/run/docker.sock，权限极高；无默认密码，请自行设置并妥善保管。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://mcsmanager.com/",
+      "source": "https://github.com/MCSManager/MCSManager",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 23333,
+          "label": "Web 面板",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/data.yml"
+    },
+    {
+      "id": "memcached",
+      "name": "Memcached",
+      "description": "高性能分布式内存缓存系统，以键值方式缓存数据，常用于加速数据库查询与 Web 应用响应，默认端口 11211。",
+      "category": "数据库/存储",
+      "warn": "Memcached 无内置认证与加密，切勿直接暴露公网，请仅在内网供可信应用访问。",
+      "tags": [],
+      "version": "1.6",
+      "versions": [
+        {
+          "tag": "1.6",
+          "label": "1.6"
+        },
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://memcached.org/",
+      "source": "https://github.com/memcached/memcached",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [
+        {
+          "container": 11211,
+          "label": "Memcached 服务",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "MEMCACHED_MEMORY_LIMIT",
+          "default": "64",
+          "desc": "内存限制（MB）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/data.yml"
+    },
+    {
+      "id": "metersphere",
+      "name": "MeterSphere",
+      "description": "新一代开源持续测试平台，覆盖接口、性能、UI 与测试跟踪，一站式质量保障，安装包内置 MySQL、Redis 等依赖。",
+      "category": "开发/DevOps",
+      "warn": "默认账密为 admin / metersphere；资源占用较高，建议 4GB 以上内存。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://metersphere.io/",
+      "source": "https://github.com/metersphere/metersphere",
+      "arch": [
+        "amd64"
+      ],
+      "ports": [
+        {
+          "container": 8081,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/data.yml"
     },
     {
       "id": "mysql",
@@ -920,6 +1685,7 @@
       "description": "世界最流行的开源关系型数据库管理系统，广泛用于各类 Web 应用、企业系统和数据仓库。本模板使用 MySQL 8 官方镜像，数据持久化到本地 data 目录。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "8",
       "versions": [
         {
@@ -951,9 +1717,9 @@
           "desc": "root 密码"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mysql/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mysql/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/mysql/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/data.yml"
     },
     {
       "id": "n8n",
@@ -961,6 +1727,7 @@
       "description": "开源的工作流自动化平台，通过可视化节点把应用、数据与 AI 连接起来，支持 400+ 集成，可自托管部署。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -993,9 +1760,41 @@
           "desc": "时区"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/n8n/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/n8n/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/n8n/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/data.yml"
+    },
+    {
+      "id": "nanobot",
+      "name": "Nanobot",
+      "description": "HKUDS 开源的超轻量自托管个人 AI 智能体框架，提供 WebUI（8765）与 WebSocket，支持工具调用与本地部署，资源占用极低。",
+      "category": "AI/开发",
+      "warn": "官方无预构建镜像，模板采用源码构建（build: .），需先将源码放入 compose 目录；Docker Hub 第三方镜像不受维护，勿在第三方镜像中存放密钥。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/HKUDS/nanobot",
+      "source": "https://github.com/HKUDS/nanobot",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8765,
+          "label": "WebUI / WebSocket",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/data.yml"
     },
     {
       "id": "new-api",
@@ -1003,6 +1802,7 @@
       "description": "新一代大模型 API 网关与 AI 资产管理平台，支持多模型统一接入、令牌管理、渠道分发、用量统计与计费，可对接 OpenAI / DeepSeek 等各类模型。",
       "category": "开发/DevOps",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1034,25 +1834,22 @@
           "desc": "会话密钥（建议设置）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/new-api/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/new-api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/new-api/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/data.yml"
     },
     {
       "id": "nextcloud",
       "name": "Nextcloud",
-      "description": "开源的私有云盘 / 协作平台。支持文件同步与共享、相册、日历、通讯录、在线文档、 笔记与视频通话等功能，数据完全掌握在自己手中。本模板使用 SQLite，适合个人 / 小团队快速部署；如需更高并发建议在面板中追加 PostgreSQL 服务。",
+      "description": "自托管的网盘与协作平台，支持文件同步、分享、在线文档、日历、联系人等，可完全掌控自己的数据。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
           "tag": "latest",
           "label": "最新"
-        },
-        {
-          "tag": "stable",
-          "label": "稳定版"
         }
       ],
       "homepage": "https://nextcloud.com/",
@@ -1068,26 +1865,10 @@
           "protocol": "tcp"
         }
       ],
-      "env": [
-        {
-          "name": "TZ",
-          "default": "Asia/Shanghai",
-          "desc": "时区"
-        },
-        {
-          "name": "NEXTCLOUD_ADMIN_USER",
-          "default": "admin",
-          "desc": "管理员账号"
-        },
-        {
-          "name": "NEXTCLOUD_ADMIN_PASSWORD",
-          "default": "admin123",
-          "desc": "管理员密码"
-        }
-      ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nextcloud/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nextcloud/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nextcloud/data.yml"
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/data.yml"
     },
     {
       "id": "nezha",
@@ -1095,6 +1876,7 @@
       "description": "自托管的一站式服务器监控与运维工具，支持多端面板、实时告警、远程命令与任务管理，帮助掌握多台服务器状态。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1121,9 +1903,52 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nezha/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nezha/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nezha/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/data.yml"
+    },
+    {
+      "id": "nginx-proxy-manager",
+      "name": "Nginx Proxy Manager",
+      "description": "易用的 Nginx 反向代理 + 免费 SSL 证书管理面板，支持可视化配置域名转发、泛解析与 Let's Encrypt 证书。",
+      "category": "网络/工具",
+      "warn": "默认账密为 admin@example.com / changeme，请立即修改；80/443 端口对外暴露请谨慎配置代理规则。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://nginxproxymanager.com/",
+      "source": "https://github.com/NginxProxyManager/nginx-proxy-manager",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [
+        {
+          "container": 81,
+          "label": "管理界面",
+          "protocol": "tcp"
+        },
+        {
+          "container": 80,
+          "label": "HTTP 代理",
+          "protocol": "tcp"
+        },
+        {
+          "container": 443,
+          "label": "HTTPS 代理",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/data.yml"
     },
     {
       "id": "nocodb",
@@ -1131,6 +1956,7 @@
       "description": "开源的 Airtable 替代品，把数据库变成可视化电子表格。支持 MySQL / PostgreSQL / SQLite，拖拽式搭建数据应用，无需编程即可管理数据。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1158,9 +1984,9 @@
           "desc": "数据库连接串（默认 SQLite）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nocodb/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nocodb/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nocodb/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/data.yml"
     },
     {
       "id": "node-red",
@@ -1168,6 +1994,7 @@
       "description": "基于 Node.js 的流式编程工具，通过拖拽节点把设备、API 与服务连接起来，适合物联网、自动化与数据流处理。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1190,9 +2017,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/node-red/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/node-red/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/node-red/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/data.yml"
     },
     {
       "id": "nps",
@@ -1200,6 +2027,7 @@
       "description": "轻量、高性能的内网穿透工具服务端，自带 Web 管理界面，支持 TCP / UDP / HTTP(S) / Socks5 / P2P 隧道与流量统计。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1226,9 +2054,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nps/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nps/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/nps/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/data.yml"
     },
     {
       "id": "one-api",
@@ -1236,6 +2064,7 @@
       "description": "OpenAI 接口管理与分发系统，支持多模型统一接入、令牌管理、配额统计，可将各种模型转换为 OpenAI 格式对外提供调用。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1263,9 +2092,9 @@
           "desc": "会话密钥（建议设置）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/one-api/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/one-api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/one-api/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/data.yml"
     },
     {
       "id": "open-webui",
@@ -1273,6 +2102,7 @@
       "description": "可扩展、功能丰富、用户友好的自托管 AI Web 界面，支持 Ollama 与 OpenAI 兼容接口，提供多用户、RAG、模型管理与对话历史。",
       "category": "AI/开发",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1300,9 +2130,41 @@
           "desc": "Ollama 地址（可选）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/open-webui/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/open-webui/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/open-webui/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/data.yml"
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "description": "可运行于自有设备的个人 AI 助手，具备工具调用、DM 配对与自主执行能力，官方提供预构建 ghcr 镜像。",
+      "category": "AI/开发",
+      "warn": "社区项目，可能存在安全风险：其工具可在主机上执行命令，官方明确警告请勿将 Gateway 直接暴露到公网，建议仅内网或经鉴权使用。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://openclaw.ai/",
+      "source": "https://github.com/openclaw/openclaw",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 18789,
+          "label": "Gateway 端口",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/data.yml"
     },
     {
       "id": "opengist",
@@ -1310,6 +2172,7 @@
       "description": "自托管的代码片段分享平台，类似 GitHub Gist，支持匿名 / 登录创建片段、语法高亮与评论，基于 Git 存储。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1331,9 +2194,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/opengist/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/opengist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/opengist/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/data.yml"
     },
     {
       "id": "openlist",
@@ -1341,6 +2204,7 @@
       "description": "AList 社区 fork 的网盘聚合与文件列表程序，支持阿里云盘、OneDrive、百度网盘、夸克、115、WebDAV 等数十种存储，带在线预览与 WebDAV 能力。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1373,9 +2237,9 @@
           "desc": "文件权限掩码"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/openlist/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/openlist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/openlist/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/data.yml"
     },
     {
       "id": "outline",
@@ -1383,6 +2247,7 @@
       "description": "现代团队知识库与 Wiki 平台，支持 Markdown 实时协作编辑、全文搜索与丰富集成，需配合 PostgreSQL 与 Redis 使用。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1430,9 +2295,147 @@
           "desc": "访问地址"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/outline/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/outline/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/outline/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/data.yml"
+    },
+    {
+      "id": "palworld-server-docker",
+      "name": "Palworld Server Docker",
+      "description": "幻兽帕鲁专用服务器 Docker 镜像，自带 SteamCMD 自动下载/更新服务端，提供游戏（8211/udp）、查询与 RCON 端口。",
+      "category": "开发/DevOps",
+      "warn": "需设置 ADMIN_PASSWORD 与 SERVER_PASSWORD 才能游玩；RCON 等端口请勿公网暴露。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/thijsvanloef/palworld-server-docker",
+      "source": "https://github.com/thijsvanloef/palworld-server-docker",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8211,
+          "label": "游戏端口",
+          "protocol": "udp"
+        },
+        {
+          "container": 27015,
+          "label": "查询端口",
+          "protocol": "udp"
+        },
+        {
+          "container": 25575,
+          "label": "RCON",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "ADMIN_PASSWORD",
+          "default": "",
+          "desc": "管理员密码（必填）"
+        },
+        {
+          "name": "SERVER_PASSWORD",
+          "default": "",
+          "desc": "服务器密码（必填，否则无法加入）"
+        },
+        {
+          "name": "COMMUNITY_SERVER",
+          "default": "false",
+          "desc": "是否社区服务器"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/data.yml"
+    },
+    {
+      "id": "palworld-server-tool",
+      "name": "Palworld Server Tool",
+      "description": "幻兽帕鲁服务器管理工具，提供 Web 管理（8080）与 Agent（8081），可查看玩家、经济、存档备份与游戏状态。",
+      "category": "开发/DevOps",
+      "warn": "首个访问者即成为管理员（先到先得）；解析游戏存档瞬间可能消耗 1-3GB 内存，请评估机器配置。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/zaigie/palworld-server-tool",
+      "source": "https://github.com/zaigie/palworld-server-tool",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8080,
+          "label": "Web 管理界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/data.yml"
+    },
+    {
+      "id": "phpmyadmin",
+      "name": "phpMyAdmin",
+      "description": "基于 PHP 的 MySQL / MariaDB 可视化 Web 管理工具，支持数据库、表、SQL、用户与导入导出管理，需连接外部数据库。",
+      "category": "数据库/存储",
+      "warn": "phpMyAdmin 无内置认证，仅凭数据库账号密码登录，请勿裸暴露公网，建议配合反代与 HTTPS。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.phpmyadmin.net/",
+      "source": "https://github.com/phpmyadmin/phpmyadmin",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "PMA_HOST",
+          "default": "mysql",
+          "desc": "数据库主机（如 mysql 或服务器 IP）"
+        },
+        {
+          "name": "PMA_PORT",
+          "default": "3306",
+          "desc": "数据库端口"
+        },
+        {
+          "name": "PMA_ARBITRARY",
+          "default": "1",
+          "desc": "允许连接任意服务器（1=是）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/data.yml"
     },
     {
       "id": "pixivd",
@@ -1440,6 +2443,7 @@
       "description": "Pixiv 命令行批量下载工具（官方 ghcr 镜像），支持按画师 ID、每日/历史排行榜批量下载插画。容器以保活方式运行，安装后在容器终端执行 pixivd 命令（如 pixivd <UID> 或 pixivd -r），下载结果保存在 illustrations 目录。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1455,9 +2459,9 @@
       ],
       "ports": [],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivd/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivd/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivd/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/data.yml"
     },
     {
       "id": "pixivfe",
@@ -1465,6 +2469,7 @@
       "description": "开源的 pixiv 替代前端，保护隐私、无需登录即可匿名浏览，所有请求在服务端完成，轻量现代、支持多架构镜像。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1486,25 +2491,22 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivfe/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivfe/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pixivfe/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/data.yml"
     },
     {
       "id": "portainer",
-      "name": "Portainer CE",
-      "description": "Portainer 社区版（CE）是一款轻量的容器管理面板，提供图形化界面来管理 Docker / Podman 引擎：容器、镜像、网络、数据卷、栈（Stack / Compose）与模板一键部署， 并内置身份认证与多用户权限控制，适合与 Graw 面板互补使用。",
+      "name": "Portainer",
+      "description": "最流行的 Docker / Kubernetes 可视化面板，提供容器、镜像、网络、卷与栈的一站式管理，界面直观、适合新手。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
           "tag": "latest",
           "label": "最新"
-        },
-        {
-          "tag": "2.21.0",
-          "label": "2.21.0"
         }
       ],
       "homepage": "https://www.portainer.io/",
@@ -1520,16 +2522,10 @@
           "protocol": "tcp"
         }
       ],
-      "env": [
-        {
-          "name": "TZ",
-          "default": "Asia/Shanghai",
-          "desc": "时区"
-        }
-      ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/portainer/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/portainer/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/portainer/data.yml"
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/data.yml"
     },
     {
       "id": "postgres",
@@ -1537,6 +2533,7 @@
       "description": "功能强大的开源关系型数据库，以其可靠性和丰富的数据类型著称，支持复杂查询、事务、扩展与全文检索。本模板使用官方 PostgreSQL 16 镜像。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "16",
       "versions": [
         {
@@ -1578,9 +2575,9 @@
           "desc": "默认数据库"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/postgres/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/postgres/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/postgres/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/data.yml"
     },
     {
       "id": "pppixiv",
@@ -1588,6 +2585,7 @@
       "description": "Pixiv 插画批量下载工具，自带 Web 管理界面（/dashboard），输入画师 UID 即可一键批量下载其全部插画并支持预览。需配置 Pixiv 账号密码，国内访问 Pixiv 需代理。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1625,9 +2623,9 @@
           "desc": "服务端口"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pppixiv/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pppixiv/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/pppixiv/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/data.yml"
     },
     {
       "id": "qinglong",
@@ -1635,6 +2633,7 @@
       "description": "定时任务管理面板，支持 JavaScript / Python / Shell 脚本，可用于自动化签到、挂机等任务，自带依赖管理与日志查看。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1656,9 +2655,85 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/qinglong/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/qinglong/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/qinglong/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/data.yml"
+    },
+    {
+      "id": "qwenpaw",
+      "name": "QwenPaw",
+      "description": "通义开源的个人 AI 助手，支持本地/云端部署、多工具调用与对话编排，镜像内置 OpenAI 兼容接口。",
+      "category": "AI/开发",
+      "warn": "官方示例默认仅绑定 127.0.0.1；远程访问需显式开放监听地址并配置 Token。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/agentscope-ai/QwenPaw",
+      "source": "https://github.com/agentscope-ai/QwenPaw",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8088,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "QWENPAW_TOKEN",
+          "default": "",
+          "desc": "访问 Token（建议设置）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/data.yml"
+    },
+    {
+      "id": "reader",
+      "name": "Reader",
+      "description": "自托管的在线阅读站，支持书源管理、追更、阅读进度同步与 Web 阅读，数据保存在本地目录。",
+      "category": "面板/网站",
+      "warn": "原仓库已于 2026-06 归档停止维护；首次使用请设置管理密码与邀请码。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/hectorqin/reader",
+      "source": "https://github.com/hectorqin/reader",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8080,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "READER_APP_SECUREKEY",
+          "default": "",
+          "desc": "管理密码（建议设置）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/data.yml"
     },
     {
       "id": "redis",
@@ -1666,6 +2741,7 @@
       "description": "高性能的开源内存键值数据库，支持字符串、哈希、列表、集合等数据结构，广泛用作缓存、消息队列和会话存储。本模板使用官方 Redis 7 镜像。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "7",
       "versions": [
         {
@@ -1697,9 +2773,9 @@
           "desc": "访问密码（留空则不启用）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/redis/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/redis/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/redis/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/data.yml"
     },
     {
       "id": "rsshub",
@@ -1707,6 +2783,7 @@
       "description": "万物皆可 RSS。生成各种内容源（网站、社交平台、博客等）的 RSS 订阅，聚合你关注的一切更新。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1729,9 +2806,44 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/rsshub/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/rsshub/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/rsshub/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/data.yml"
+    },
+    {
+      "id": "sbox-community",
+      "name": "Sbox Community",
+      "description": "基于 Flask 的 Scratch 创作者社区，支持作品发布、交流与展示，是 ZeroCat 生态的社区侧。当前仅提供源码部署方式。",
+      "category": "面板/网站",
+      "warn": "官方为源码（venv + python app.py）部署，无官方镜像；商店模板采用源码构建，需先将源码放入 compose 目录。",
+      "tags": [
+        "推荐",
+        "官方"
+      ],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/wuhulab/Sbox-Community",
+      "source": "https://github.com/wuhulab/Sbox-Community",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 5219,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/data.yml"
     },
     {
       "id": "sftpgo",
@@ -1739,6 +2851,7 @@
       "description": "功能丰富的 SFTP / HTTP / FTP 服务器，支持本地文件系统及 S3、WebDAV、Google Drive 等存储后端，内置 Web 管理界面与虚拟用户。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1771,9 +2884,41 @@
           "desc": "默认根目录"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sftpgo/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sftpgo/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sftpgo/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/data.yml"
+    },
+    {
+      "id": "sqlbot",
+      "name": "SQLBot",
+      "description": "DataEase 团队出品的基于大模型 + RAG 的智能问数系统，用自然语言查询数据库并生成图表，镜像内嵌 PostgreSQL。",
+      "category": "AI/开发",
+      "warn": "默认账密为 admin / SQLBot@123456，首次登录请务必修改。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/dataease/SQLBot",
+      "source": "https://github.com/dataease/SQLBot",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/data.yml"
     },
     {
       "id": "stirling-pdf",
@@ -1781,6 +2926,7 @@
       "description": "功能强大的本地 PDF 工具箱，支持合并、拆分、压缩、转换、加密、水印、OCR 等 50+ 操作，所有处理均在本地完成，保护隐私。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1802,9 +2948,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/stirling-pdf/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/stirling-pdf/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/stirling-pdf/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/data.yml"
     },
     {
       "id": "sub2api",
@@ -1812,6 +2958,7 @@
       "description": "把订阅账号统一转换为 API Key 的 AI API 网关，支持账号分组、负载均衡、额度统计，需配合 PostgreSQL 与 Redis 使用。",
       "category": "网络/工具",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1833,9 +2980,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sub2api/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sub2api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sub2api/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/data.yml"
     },
     {
       "id": "sun-panel",
@@ -1843,6 +2990,7 @@
       "description": "服务器 / NAS 导航面板与浏览器首页，简洁美观、支持图标管理、内外网链接切换与内置小窗口，占用资源极低。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1864,9 +3012,9 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sun-panel/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sun-panel/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/sun-panel/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/data.yml"
     },
     {
       "id": "tailchat",
@@ -1874,6 +3022,7 @@
       "description": "开源的下一代 IM 与协作平台，支持群组、频道、语音、插件与机器人，可完全自托管，构建属于自己的私密通信空间。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1895,9 +3044,42 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/tailchat/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/tailchat/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/tailchat/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/data.yml"
+    },
+    {
+      "id": "twikoo",
+      "name": "Twikoo",
+      "description": "简洁安全的静态网站评论系统，支持文章评论、点赞、表情与邮件通知，数据保存在本地 JSON 文件，资源占用极低。",
+      "category": "网络/工具",
+      "warn": "",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://twikoo.js.org/",
+      "source": "https://github.com/imaegoo/twikoo",
+      "arch": [
+        "amd64",
+        "arm64",
+        "arm/v7"
+      ],
+      "ports": [
+        {
+          "container": 8080,
+          "label": "评论服务",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/data.yml"
     },
     {
       "id": "umami",
@@ -1905,6 +3087,7 @@
       "description": "开源、注重隐私的网站访问统计分析工具，轻量且现代，支持多站点、事件跟踪与自定义图表，数据完全自有。本模板内置 PostgreSQL 数据库。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -1932,33 +3115,61 @@
           "desc": "数据加密盐值（首次部署请修改）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/umami/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/umami/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/umami/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/data.yml"
+    },
+    {
+      "id": "upage",
+      "name": "uPage",
+      "description": "Halo 团队出品的基于大模型的可视化网页构建平台，通过对话描述生成网页，内置 AI 建站能力。",
+      "category": "面板/网站",
+      "warn": "需在界面配置外部 LLM / 视觉模型 API Key 方可使用，请妥善保管密钥并持久化存储目录。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/halo-dev/upage",
+      "source": "https://github.com/halo-dev/upage",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 3000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/data.yml"
     },
     {
       "id": "uptime-kuma",
       "name": "Uptime Kuma",
-      "description": "一款自托管的网站 / 服务监控工具。支持 HTTP(S)、TCP、Ping、DNS、Docker 等多种监控类型，自带美观的 Web 仪表盘、通知告警（Telegram / 邮件 / 企业微信 / Slack 等）与公开状态页功能，无需依赖外部监控服务即可实现「云监控」。",
+      "description": "自托管的网站 / 服务可用性监控工具，支持 HTTP、TCP、Ping、DNS 等多种协议，带通知告警与状态页。",
       "category": "监控/运维",
       "warn": "",
-      "version": "1",
+      "tags": [],
+      "version": "latest",
       "versions": [
         {
-          "tag": "1",
+          "tag": "latest",
           "label": "最新"
-        },
-        {
-          "tag": "1.23.0",
-          "label": "1.23.0"
         }
       ],
       "homepage": "https://uptime.kuma.pet/",
       "source": "https://github.com/louislam/uptime-kuma",
       "arch": [
         "amd64",
-        "arm64",
-        "arm/v7"
+        "arm64"
       ],
       "ports": [
         {
@@ -1967,16 +3178,51 @@
           "protocol": "tcp"
         }
       ],
-      "env": [
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/data.yml"
+    },
+    {
+      "id": "uuwaf",
+      "name": "uuWAF",
+      "description": "免费开源的工业级 Web 应用防火墙，提供 WAF 规则防护、CC 攻击防御与可视化安全报表，管理界面端口 4443。",
+      "category": "网络/工具",
+      "warn": "默认账密为 admin / #Passw0rd，请立即修改；WAF 通常需要占用 80/443 甚至 host 网络以拦截流量，端口冲突时请调整映射。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
         {
-          "name": "TZ",
-          "default": "Asia/Shanghai",
-          "desc": "时区"
+          "tag": "latest",
+          "label": "最新"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/uptime-kuma/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/uptime-kuma/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/uptime-kuma/data.yml"
+      "homepage": "https://github.com/Safe3/uuWAF",
+      "source": "https://github.com/Safe3/uuWAF",
+      "arch": [
+        "amd64"
+      ],
+      "ports": [
+        {
+          "container": 4443,
+          "label": "管理界面(HTTPS)",
+          "protocol": "tcp"
+        },
+        {
+          "container": 80,
+          "label": "WAF HTTP",
+          "protocol": "tcp"
+        },
+        {
+          "container": 443,
+          "label": "WAF HTTPS",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/data.yml"
     },
     {
       "id": "verdaccio",
@@ -1984,6 +3230,7 @@
       "description": "轻量级、可扩展的私有 npm 仓库代理，让你在本地或内网搭建属于自己的 Node 包源，支持代理与缓存公共 npm 包。",
       "category": "数据库/存储",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -2005,16 +3252,17 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/verdaccio/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/verdaccio/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/verdaccio/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/data.yml"
     },
     {
       "id": "watchtower",
       "name": "Watchtower",
-      "description": "Watchtower 会自动监控运行中的容器，当基础镜像发布新版本时自动拉取并重建容器， 让自托管应用保持最新、避免错过安全更新。可配合 Graw 面板的 Docker 管理使用。",
+      "description": "自动监控运行中的容器，当基础镜像发布新版本时自动拉取并重建，让自托管应用保持最新、避免错过安全更新。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -2047,9 +3295,9 @@
           "desc": "检查间隔（秒）"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/watchtower/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/watchtower/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/watchtower/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/data.yml"
     },
     {
       "id": "wordpress",
@@ -2057,6 +3305,7 @@
       "description": "全球使用最广泛的开源建站与内容管理系统，插件与主题生态极其丰富，适合博客、企业站、电商等各类网站。本模板内置 MySQL 数据库。",
       "category": "面板/网站",
       "warn": "",
+      "tags": [],
       "version": "latest",
       "versions": [
         {
@@ -2099,9 +3348,9 @@
           "desc": "数据库名"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/wordpress/icon.svg",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/wordpress/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/wordpress/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/icon.svg",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/data.yml"
     },
     {
       "id": "zabbix",
@@ -2109,6 +3358,7 @@
       "description": "企业级开源监控解决方案，支持主机、网络、应用、数据库等监控与多渠道告警，自带可视化仪表盘。本模板内置 PostgreSQL 数据库，Web 端口 8080。",
       "category": "监控/运维",
       "warn": "",
+      "tags": [],
       "version": "7.0-latest",
       "versions": [
         {
@@ -2129,9 +3379,124 @@
         }
       ],
       "env": [],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/zabbix/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/zabbix/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/zabbix/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/data.yml"
+    },
+    {
+      "id": "zakura",
+      "name": "Zakura",
+      "description": "协同提升 Agent 智能的 AI 编排平台，提供 API（8787）与 Web（3001）界面，支持多 Agent 协同与自动化编排。",
+      "category": "AI/开发",
+      "warn": "默认挂载 /var/run/docker.sock 属于高权限，请仅在受信任主机部署。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://github.com/Moonrend/Zakura",
+      "source": "https://github.com/Moonrend/Zakura",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 8787,
+          "label": "API 服务",
+          "protocol": "tcp"
+        },
+        {
+          "container": 3001,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/data.yml"
+    },
+    {
+      "id": "zentaopms",
+      "name": "禅道（ZenTao）",
+      "description": "国产开源一体化项目管理软件，覆盖产品、项目、测试、文档与 DevOps 全流程，镜像内置 MariaDB 数据库。",
+      "category": "开发/DevOps",
+      "warn": "安装向导默认账密为 admin / 123456，请务必设置强密码。",
+      "tags": [],
+      "version": "latest",
+      "versions": [
+        {
+          "tag": "latest",
+          "label": "最新"
+        }
+      ],
+      "homepage": "https://www.zentao.net/",
+      "source": "https://github.com/easysoft/zentaopms",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 80,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "MYSQL_INTERNAL",
+          "default": "1",
+          "desc": "是否使用内置数据库（1=内置）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/data.yml"
+    },
+    {
+      "id": "zerocat",
+      "name": "ZeroCat 编程社区",
+      "description": "轻量级的在线编程、分享平台，支持 Scratch、Python 等适合编程初学者的社区。目前处于早期阶段，官方仅提供源码 Dockerfile 本地构建，尚无可拉取的预构建镜像。",
+      "category": "面板/网站",
+      "warn": "官方尚未发布可拉取的预构建镜像，商店模板采用源码构建（build: .）。安装前需先将 ZeroCat 源码放入 compose 目录（或改用可用镜像名），否则构建/拉取会失败。",
+      "tags": [
+        "推荐"
+      ],
+      "version": "1.0.0",
+      "versions": [
+        {
+          "tag": "1.0.0",
+          "label": "1.0.0"
+        }
+      ],
+      "homepage": "https://github.com/Moonrend/ZeroCat",
+      "source": "https://github.com/Moonrend/ZeroCat",
+      "arch": [
+        "amd64",
+        "arm64"
+      ],
+      "ports": [
+        {
+          "container": 3000,
+          "label": "Web 界面",
+          "protocol": "tcp"
+        }
+      ],
+      "env": [
+        {
+          "name": "DATABASE_URL",
+          "default": "",
+          "desc": "MySQL 连接串（必填，如 mysql://root:pwd@host:3306/zerocat）"
+        }
+      ],
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/data.yml"
     },
     {
       "id": "alist",
@@ -2139,6 +3504,7 @@
       "description": "支持多存储的文件列表与分享程序，聚合阿里云盘、百度网盘、OneDrive、夸克等主流存储，自带 Web 界面、WebDAV 与离线下载。",
       "category": "面板/网站",
       "warn": "Alist 社区认可相对安全版本是 3.40；推荐使用新一代版本 OpenList，建议不要将其更新到更新的版本。",
+      "tags": [],
       "version": "v3.40.0",
       "versions": [
         {
@@ -2180,9 +3546,9 @@
           "desc": "文件权限掩码"
         }
       ],
-      "icon": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/alist/icon.png",
-      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/alist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw-app-store/gh-pages/apps/alist/data.yml"
+      "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/icon.png",
+      "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/docker-compose.yml",
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/data.yml"
     }
   ]
 }

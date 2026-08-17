@@ -5,7 +5,6 @@
 name: "AstrBot"
 id: "astrbot"
 
-
 category: "AI/开发"
 description: >
   多平台 AI 聊天机器人框架，支持 QQ、微信、飞书、Telegram 等平台，可对接主流大模型，自带 WebUI 管理面板与插件生态。

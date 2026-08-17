@@ -5,7 +5,6 @@
 name: "NocoDB"
 id: "nocodb"
 
-
 category: "数据库/存储"
 description: >
   开源的 Airtable 替代品，把数据库变成可视化电子表格。支持 MySQL / PostgreSQL / SQLite，拖拽式搭建数据应用，无需编程即可管理数据。

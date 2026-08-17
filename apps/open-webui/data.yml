@@ -5,7 +5,6 @@
 name: "Open WebUI"
 id: "open-webui"
 
-
 category: "AI/开发"
 description: >
   可扩展、功能丰富、用户友好的自托管 AI Web 界面，支持 Ollama 与 OpenAI 兼容接口，提供多用户、RAG、模型管理与对话历史。

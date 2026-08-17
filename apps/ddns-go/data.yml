@@ -5,7 +5,6 @@
 name: "DDNS-GO"
 id: "ddns-go"
 
-
 category: "网络/工具"
 description: >
   简单易用的动态域名解析工具，自动获取公网 IPv4 / IPv6 并同步到阿里云、腾讯云、Cloudflare 等 20+ DNS 服务商，带 Web 配置界面。

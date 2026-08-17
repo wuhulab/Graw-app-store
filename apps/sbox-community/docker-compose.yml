@@ -1,0 +1,14 @@
+# Sbox Community
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  sbox-community:
+    build: .
+    image: sbox-community:latest
+    container_name: sbox-community
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "5219:5219"
+    restart: unless-stopped

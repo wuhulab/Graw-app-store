@@ -5,7 +5,6 @@
 name: "Redis"
 id: "redis"
 
-
 category: "数据库/存储"
 description: >
   高性能的开源内存键值数据库，支持字符串、哈希、列表、集合等数据结构，广泛用作缓存、消息队列和会话存储。本模板使用官方 Redis 7 镜像。

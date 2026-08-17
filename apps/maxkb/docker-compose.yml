@@ -1,0 +1,15 @@
+# MaxKB
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  maxkb:
+    image: 1panel/maxkb:${VERSION}
+    container_name: maxkb
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - "8080:8080"
+    environment:
+      - MAXKB_ONE_MI_API_BASE_URL=${MAXKB_ONE_MI_API_BASE_URL}
+    restart: unless-stopped

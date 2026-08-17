@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Twikoo"
+id: "twikoo"
+
+category: "网络/工具"
+description: >
+  简洁安全的静态网站评论系统，支持文章评论、点赞、表情与邮件通知，数据保存在本地 JSON 文件，资源占用极低。
+
+homepage: "https://twikoo.js.org/"
+
+source: "https://github.com/imaegoo/twikoo"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "评论服务", protocol: "tcp" }
+
+env:
+

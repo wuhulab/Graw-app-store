@@ -282,6 +282,7 @@ def collect_apps(repo: str):
             "description": str(meta.get("description") or "").strip(),
             "category": str(meta.get("category") or ""),
             "warn": str(meta.get("warn") or ""),
+            "tags": meta.get("tags") or [],
             "version": str(default_version),
             "versions": versions,
             "homepage": str(meta.get("homepage") or ""),

@@ -5,7 +5,6 @@
 name: "DBX"
 id: "dbx"
 
-
 category: "开发/DevOps"
 description: >
   开源数据库工作台，支持 70+ 种数据库连接与 SQL 查询、数据浏览、Schema 对比、导入导出，内置 AI 助手与 MCP Server，可 Docker 自托管。

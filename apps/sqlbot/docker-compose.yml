@@ -1,0 +1,13 @@
+# SQLBot
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  sqlbot:
+    image: dataease/sqlbot:${VERSION}
+    container_name: sqlbot
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

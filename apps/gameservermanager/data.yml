@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "GameServerManager"
+id: "gameservermanager"
+
+category: "开发/DevOps"
+
+warn: "个人项目：容器以 root 运行并挂载多个目录与 docker.sock，请自设访问凭据并在受信任主机部署。"
+description: >
+  新一代游戏服务器管理平台（GSM3），支持多种游戏服务端的一键部署、监控与调度，Web 界面端口 3001。
+
+homepage: "https://github.com/GSManagerXZ/GameServerManager"
+
+source: "https://github.com/GSManagerXZ/GameServerManager"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3001, label: "Web 界面", protocol: "tcp" }
+
+env:
+

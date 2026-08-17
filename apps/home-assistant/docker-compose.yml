@@ -1,0 +1,15 @@
+# Home Assistant
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  home-assistant:
+    image: ghcr.io/home-assistant/home-assistant:${VERSION}
+    container_name: home-assistant
+    volumes:
+      - ./config:/config
+    ports:
+      - "8123:8123"
+    environment:
+      - TZ=Asia/Shanghai
+    restart: unless-stopped

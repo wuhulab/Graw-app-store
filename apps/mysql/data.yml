@@ -5,7 +5,6 @@
 name: "MySQL"
 id: "mysql"
 
-
 category: "数据库/存储"
 description: >
   世界最流行的开源关系型数据库管理系统，广泛用于各类 Web 应用、企业系统和数据仓库。本模板使用 MySQL 8 官方镜像，数据持久化到本地 data 目录。

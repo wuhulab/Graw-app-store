@@ -5,7 +5,6 @@
 name: "Dockge"
 id: "dockge"
 
-
 category: "开发/DevOps"
 description: >
   可视化的 Docker Compose 管理面板，以 Stack 为单位管理 compose 文件，支持编辑、启动、停止、日志与终端，界面简洁美观。

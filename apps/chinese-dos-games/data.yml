@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "中文 DOS 游戏合集"
+id: "chinese-dos-games"
+
+category: "面板/网站"
+
+warn: "原项目为数据仓库，无官方镜像，本条目使用社区镜像 oldiy/dosgame-web-docker；部分游戏可能涉及版权争议，仅供个人怀旧。"
+description: >
+  收录约 1898 款经典中文 DOS 游戏的网页合集，可在浏览器直接游玩，唤起童年回忆（本条目使用社区镜像）。
+
+homepage: "https://dos.zczc.cz/"
+
+source: "https://github.com/rwv/chinese-dos-games"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 262, label: "Web 界面", protocol: "tcp" }
+
+env:
+

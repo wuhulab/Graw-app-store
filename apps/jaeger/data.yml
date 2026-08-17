@@ -1,0 +1,30 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Jaeger"
+id: "jaeger"
+
+category: "监控/运维"
+
+warn: "Web UI 无认证，请勿直接暴露公网，建议仅内网或经反代加鉴权。"
+description: >
+  开源分布式链路追踪系统，all-in-one 模式开箱即用，提供 Web UI（16686）与 OTLP 接入（4317/4318）。
+
+homepage: "https://www.jaegertracing.io/"
+
+source: "https://github.com/jaegertracing/jaeger"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 16686, label: "Web UI", protocol: "tcp" }
+  - { container: 4317, label: "OTLP gRPC", protocol: "tcp" }
+  - { container: 4318, label: "OTLP HTTP", protocol: "tcp" }
+
+env:
+

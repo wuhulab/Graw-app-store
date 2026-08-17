@@ -1,4 +1,5 @@
-# Watchtower - 容器自动更新
+# Watchtower
+# ${VERSION} 占位符由面板在安装时替换
 version: "3"
 
 services:
@@ -6,9 +7,9 @@ services:
     image: containrrr/watchtower:${VERSION}
     container_name: watchtower
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
+      - ./socket:/var/run/docker.sock
     environment:
-      - TZ=${TZ:-Asia/Shanghai}
+      - TZ=Asia/Shanghai
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_POLL_INTERVAL=3600
+    restart: unless-stopped

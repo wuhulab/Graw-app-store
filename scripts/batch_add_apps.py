@@ -1261,14 +1261,760 @@ APPS = {
             "https://www.google.com/s2/favicons?domain=github.com/bebound/pixivd&sz=256",
         ],
     },
+    # ---------------- 2026-08 社区新增应用 ----------------
+    "zerocat": {
+        "name": "ZeroCat 编程社区",
+        "desc": "轻量级的在线编程、分享平台，支持 Scratch、Python 等适合编程初学者的社区。目前处于早期阶段，官方仅提供源码 Dockerfile 本地构建，尚无可拉取的预构建镜像。",
+        "homepage": "https://github.com/Moonrend/ZeroCat",
+        "source": "https://github.com/Moonrend/ZeroCat",
+        "arch": ["amd64", "arm64"],
+        "versions": [("1.0.0", "1.0.0")],
+        "ports": [(3000, "Web 界面")],
+        "envs": [("DATABASE_URL", "", "MySQL 连接串（必填，如 mysql://root:pwd@host:3306/zerocat）")],
+        "services": [{
+            "name": "zerocat",
+            "image": "zerocat:1.0.0",
+            "build": ".",
+            "map_ports": True,  # 镜像不使用 ${VERSION}，显式声明主服务
+        }],
+        "warn": "官方尚未发布可拉取的预构建镜像，商店模板采用源码构建（build: .）。安装前需先将 ZeroCat 源码放入 compose 目录（或改用可用镜像名），否则构建/拉取会失败。",
+        "tags": ["推荐"],
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=ourworld.wuyuan.dev&sz=256",
+            "https://github.com/Moonrend/.github/raw/main/profile/logo.png",
+        ],
+    },
+    "classworks": {
+        "name": "ClassworksKV",
+        "desc": "班级大屏作业板 KV 存储后端，用于班级作业展示与数据管理，支持多班任务板。部署需配置 OAuth 与 JWT 密钥。",
+        "homepage": "https://github.com/Moonrend/ClassworksKV",
+        "source": "https://github.com/Moonrend/ClassworksKV",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(3000, "Web 界面")],
+        "envs": [("JWT_SECRET", "", "JWT 密钥（必填，建议长随机串）")],
+        "services": [{
+            "name": "classworks",
+            "image": "ghcr.io/zerocatdev/classworks:${VERSION}",
+            "volumes": [("data", "/data")],
+        }],
+        "warn": "部署需配置 STCN OAuth 客户端与 JWT_SECRET；官方示例曾泄漏 Client Secret，请勿照抄示例密钥。",
+        "tags": ["推荐"],
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/Moonrend/ClassworksKV&sz=256",
+        ],
+    },
+    "zakura": {
+        "name": "Zakura",
+        "desc": "协同提升 Agent 智能的 AI 编排平台，提供 API（8787）与 Web（3001）界面，支持多 Agent 协同与自动化编排。",
+        "homepage": "https://github.com/Moonrend/Zakura",
+        "source": "https://github.com/Moonrend/Zakura",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8787, "API 服务"), (3001, "Web 界面")],
+        "envs": [],
+        "services": [
+            {"name": "redis", "image": "redis:7-alpine", "volumes": [("redisdata", "/data")]},
+            {
+                "name": "zakura",
+                "image": "sunwuyuan/zakura-dev:${VERSION}",
+                "volumes": [("data", "/app/data"), ("socket", "/var/run/docker.sock")],
+                "extra_env": [("REDIS_URL", "redis://redis:6379")],
+                "depends_on": ["redis"],
+            },
+        ],
+        "warn": "默认挂载 /var/run/docker.sock 属于高权限，请仅在受信任主机部署。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/Moonrend/Zakura&sz=256",
+        ],
+    },
+    "nanobot": {
+        "name": "Nanobot",
+        "desc": "HKUDS 开源的超轻量自托管个人 AI 智能体框架，提供 WebUI（8765）与 WebSocket，支持工具调用与本地部署，资源占用极低。",
+        "homepage": "https://github.com/HKUDS/nanobot",
+        "source": "https://github.com/HKUDS/nanobot",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8765, "WebUI / WebSocket")],
+        "envs": [],
+        "services": [{
+            "name": "nanobot",
+            "image": "nanobot:latest",
+            "build": ".",
+            "map_ports": True,  # 官方仅提供源码 Dockerfile 构建，无预构建镜像
+            "volumes": [("data", "/root/.nanobot")],
+        }],
+        "warn": "官方无预构建镜像，模板采用源码构建（build: .），需先将源码放入 compose 目录；Docker Hub 第三方镜像不受维护，勿在第三方镜像中存放密钥。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/HKUDS/nanobot&sz=256",
+        ],
+    },
+    "sbox-community": {
+        "name": "Sbox Community",
+        "desc": "基于 Flask 的 Scratch 创作者社区，支持作品发布、交流与展示，是 ZeroCat 生态的社区侧。当前仅提供源码部署方式。",
+        "homepage": "https://github.com/wuhulab/Sbox-Community",
+        "source": "https://github.com/wuhulab/Sbox-Community",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(5219, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "sbox-community",
+            "image": "sbox-community:latest",
+            "build": ".",
+            "map_ports": True,  # 官方为 venv + python app.py 源码部署，无官方镜像
+            "volumes": [("data", "/app/data")],
+        }],
+        "warn": "官方为源码（venv + python app.py）部署，无官方镜像；商店模板采用源码构建，需先将源码放入 compose 目录。",
+        "tags": ["推荐", "官方"],
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/wuhulab/Sbox-Community&sz=256",
+        ],
+    },
+    "graw": {
+        "name": "Graw（玩笑占位）",
+        "desc": "这是一个玩笑：用 Graw 下载 Graw，然后用 Graw 管理 Graw，套娃永动机。这不是真正的 Graw 服务器面板镜像，只是一个玩笑占位。",
+        "homepage": "https://github.com/wuhulab/Graw",
+        "source": "https://github.com/wuhulab/Graw",
+        "arch": ["amd64", "arm64"],
+        "versions": [("alpine", "alpine")],
+        "ports": [(80, "玩笑页面")],
+        "envs": [],
+        "services": [{
+            "name": "graw",
+            "image": "nginx:${VERSION}",
+        }],
+        "warn": "这是一个玩笑。但这确实指向真实的 Graw 下载 —— 让你用 Graw 下载 Graw，用 Graw 部署 Graw，用 Graw 管理 Graw，这很好笑。但这只是一个笑话占位而已，镜像并非真正的 Graw 面板。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/wuhulab/Graw&sz=256",
+        ],
+    },
+    "maxkb": {
+        "name": "MaxKB",
+        "desc": "1Panel 出品的强大易用企业级智能体平台，支持知识库 RAG、对话应用编排与多种模型接入，镜像内嵌 PostgreSQL 数据库。",
+        "homepage": "https://maxkb.cn/",
+        "source": "https://github.com/1Panel-dev/MaxKB",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8080, "Web 界面")],
+        "envs": [("MAXKB_ONE_MI_API_BASE_URL", "", "对接 One API 的地址（可选）")],
+        "services": [{
+            "name": "maxkb",
+            "image": "1panel/maxkb:${VERSION}",
+            "volumes": [("data", "/var/lib/postgresql/data")],
+        }],
+        "warn": "默认账密为 admin / MaxKB@123..，首次登录请务必修改。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=maxkb.cn&sz=256",
+            "https://1panel.cn/favicon.ico",
+        ],
+    },
+    "openclaw": {
+        "name": "OpenClaw",
+        "desc": "可运行于自有设备的个人 AI 助手，具备工具调用、DM 配对与自主执行能力，官方提供预构建 ghcr 镜像。",
+        "homepage": "https://openclaw.ai/",
+        "source": "https://github.com/openclaw/openclaw",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(18789, "Gateway 端口")],
+        "envs": [],
+        "services": [{
+            "name": "openclaw",
+            "image": "ghcr.io/openclaw/openclaw:${VERSION}",
+            "volumes": [("data", "/app/data"), ("socket", "/var/run/docker.sock")],
+        }],
+        "warn": "社区项目，可能存在安全风险：其工具可在主机上执行命令，官方明确警告请勿将 Gateway 直接暴露到公网，建议仅内网或经鉴权使用。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=openclaw.ai&sz=256",
+        ],
+    },
+    "cordyscrm": {
+        "name": "CordysCRM",
+        "desc": "1Panel 出品的新一代开源 AI CRM 系统，融合 AI 能力与客户关系管理，镜像内嵌 MySQL 与 Redis。",
+        "homepage": "https://github.com/1Panel-dev/CordysCRM",
+        "source": "https://github.com/1Panel-dev/CordysCRM",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8081, "Web 界面"), (8082, "服务端口")],
+        "envs": [],
+        "services": [{
+            "name": "cordyscrm",
+            "image": "1panel/cordys-crm:${VERSION}",
+            "volumes": [("data", "/data")],
+        }],
+        "warn": "默认账密为 admin / CordysCRM，首次登录请务必修改。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/1Panel-dev/CordysCRM&sz=256",
+            "https://1panel.cn/favicon.ico",
+        ],
+    },
+    "qwenpaw": {
+        "name": "QwenPaw",
+        "desc": "通义开源的个人 AI 助手，支持本地/云端部署、多工具调用与对话编排，镜像内置 OpenAI 兼容接口。",
+        "homepage": "https://github.com/agentscope-ai/QwenPaw",
+        "source": "https://github.com/agentscope-ai/QwenPaw",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8088, "Web 界面")],
+        "envs": [("QWENPAW_TOKEN", "", "访问 Token（建议设置）")],
+        "services": [{
+            "name": "qwenpaw",
+            "image": "agentscope/qwenpaw:${VERSION}",
+            "volumes": [("data", "/app/data")],
+        }],
+        "warn": "官方示例默认仅绑定 127.0.0.1；远程访问需显式开放监听地址并配置 Token。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/agentscope-ai/QwenPaw&sz=256",
+        ],
+    },
+    "sqlbot": {
+        "name": "SQLBot",
+        "desc": "DataEase 团队出品的基于大模型 + RAG 的智能问数系统，用自然语言查询数据库并生成图表，镜像内嵌 PostgreSQL。",
+        "homepage": "https://github.com/dataease/SQLBot",
+        "source": "https://github.com/dataease/SQLBot",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8000, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "sqlbot",
+            "image": "dataease/sqlbot:${VERSION}",
+            "volumes": [("data", "/app/data")],
+        }],
+        "warn": "默认账密为 admin / SQLBot@123456，首次登录请务必修改。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/dataease/SQLBot&sz=256",
+            "https://www.dataease.cn/favicon.ico",
+        ],
+    },
+    "dataease": {
+        "name": "DataEase",
+        "desc": "人人可用的开源 BI 分析工具，支持数据源接入、图表制作、仪表盘与分享，镜像内嵌 MySQL 与 Redis（v2 默认端口 8100）。",
+        "homepage": "https://www.dataease.cn/",
+        "source": "https://github.com/dataease/dataease",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8100, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "dataease",
+            "image": "dataease/dataease:${VERSION}",
+            "volumes": [("data", "/opt/dataease/data")],
+        }],
+        "warn": "默认账密为 admin / DataEase@123456，首次登录请务必修改。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=dataease.cn&sz=256",
+        ],
+    },
+    "clawswarm": {
+        "name": "ClawSwarm",
+        "desc": "1Panel 出品的 OpenClaw 多智能体群聊编排系统，让多个 AI 智能体在群聊中协同工作，需搭配 OpenClaw 实例与插件使用。",
+        "homepage": "https://github.com/1Panel-dev/ClawSwarm",
+        "source": "https://github.com/1Panel-dev/ClawSwarm",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(18080, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "clawswarm",
+            "image": "1panel/clawswarm:${VERSION}",
+            "volumes": [("data", "/data")],
+        }],
+        "warn": "社区项目，可能存在安全风险：默认账密为 admin / admin123456，请立即修改；需搭配 OpenClaw 实例与插件方可使用。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/1Panel-dev/ClawSwarm&sz=256",
+            "https://1panel.cn/favicon.ico",
+        ],
+    },
+    "upage": {
+        "name": "uPage",
+        "desc": "Halo 团队出品的基于大模型的可视化网页构建平台，通过对话描述生成网页，内置 AI 建站能力。",
+        "homepage": "https://github.com/halo-dev/upage",
+        "source": "https://github.com/halo-dev/upage",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(3000, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "upage",
+            "image": "halohub/upage:${VERSION}",
+            "volumes": [("data", "/app/data")],
+        }],
+        "warn": "需在界面配置外部 LLM / 视觉模型 API Key 方可使用，请妥善保管密钥并持久化存储目录。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/halo-dev/upage&sz=256",
+            "https://halo.run/favicon.ico",
+        ],
+    },
+    "metersphere": {
+        "name": "MeterSphere",
+        "desc": "新一代开源持续测试平台，覆盖接口、性能、UI 与测试跟踪，一站式质量保障，安装包内置 MySQL、Redis 等依赖。",
+        "homepage": "https://metersphere.io/",
+        "source": "https://github.com/metersphere/metersphere",
+        "arch": ["amd64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8081, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "metersphere",
+            "image": "metersphere/metersphere-ce-allinone:${VERSION}",
+            "volumes": [("data", "/opt/metersphere/data")],
+        }],
+        "warn": "默认账密为 admin / metersphere；资源占用较高，建议 4GB 以上内存。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=metersphere.io&sz=256",
+        ],
+    },
+    "zentaopms": {
+        "name": "禅道（ZenTao）",
+        "desc": "国产开源一体化项目管理软件，覆盖产品、项目、测试、文档与 DevOps 全流程，镜像内置 MariaDB 数据库。",
+        "homepage": "https://www.zentao.net/",
+        "source": "https://github.com/easysoft/zentaopms",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(80, "Web 界面")],
+        "envs": [("MYSQL_INTERNAL", "1", "是否使用内置数据库（1=内置）")],
+        "services": [{
+            "name": "zentaopms",
+            "image": "easysoft/zentao:${VERSION}",
+            "volumes": [("data", "/opt/zbox"), ("dbdata", "/var/lib/mysql")],
+        }],
+        "warn": "安装向导默认账密为 admin / 123456，请务必设置强密码。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=zentao.net&sz=256",
+        ],
+    },
+    "nginx-proxy-manager": {
+        "name": "Nginx Proxy Manager",
+        "desc": "易用的 Nginx 反向代理 + 免费 SSL 证书管理面板，支持可视化配置域名转发、泛解析与 Let's Encrypt 证书。",
+        "homepage": "https://nginxproxymanager.com/",
+        "source": "https://github.com/NginxProxyManager/nginx-proxy-manager",
+        "arch": ["amd64", "arm64", "arm/v7"],
+        "versions": [("latest", "最新")],
+        "ports": [(81, "管理界面"), (80, "HTTP 代理"), (443, "HTTPS 代理")],
+        "envs": [],
+        "services": [{
+            "name": "nginx-proxy-manager",
+            "image": "jc21/nginx-proxy-manager:${VERSION}",
+            "volumes": [("data", "/data"), ("letsencrypt", "/etc/letsencrypt")],
+        }],
+        "warn": "默认账密为 admin@example.com / changeme，请立即修改；80/443 端口对外暴露请谨慎配置代理规则。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=nginxproxymanager.com&sz=256",
+        ],
+    },
+    "phpmyadmin": {
+        "name": "phpMyAdmin",
+        "desc": "基于 PHP 的 MySQL / MariaDB 可视化 Web 管理工具，支持数据库、表、SQL、用户与导入导出管理，需连接外部数据库。",
+        "homepage": "https://www.phpmyadmin.net/",
+        "source": "https://github.com/phpmyadmin/phpmyadmin",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(80, "Web 界面")],
+        "envs": [
+            ("PMA_HOST", "mysql", "数据库主机（如 mysql 或服务器 IP）"),
+            ("PMA_PORT", "3306", "数据库端口"),
+            ("PMA_ARBITRARY", "1", "允许连接任意服务器（1=是）"),
+        ],
+        "services": [{
+            "name": "phpmyadmin",
+            "image": "phpmyadmin/phpmyadmin:${VERSION}",
+        }],
+        "warn": "phpMyAdmin 无内置认证，仅凭数据库账号密码登录，请勿裸暴露公网，建议配合反代与 HTTPS。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=phpmyadmin.net&sz=256",
+        ],
+    },
+    "jumpserver": {
+        "name": "JumpServer",
+        "desc": "广受欢迎的开源堡垒机（PAM），提供资产纳管、账号托管、运维审计与工单审批，是安全的运维入口。",
+        "homepage": "https://www.jumpserver.org/",
+        "source": "https://github.com/jumpserver/jumpserver",
+        "arch": ["amd64"],
+        "versions": [("latest", "最新")],
+        "ports": [(80, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "jumpserver",
+            "image": "jumpserver/jms_all:${VERSION}",
+            "volumes": [("data", "/opt/jumpserver/data")],
+        }],
+        "warn": "默认账密为 admin / ChangeMe，请立即修改；JumpServer 属安全敏感产品，请妥善保管管理员凭据。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=jumpserver.org&sz=256",
+        ],
+    },
+    "home-assistant": {
+        "name": "Home Assistant",
+        "desc": "开源家庭自动化平台，支持上千种设备接入、自动化规则、仪表盘与语音助手，是智能家居的核心中枢。",
+        "homepage": "https://www.home-assistant.io/",
+        "source": "https://github.com/home-assistant/core",
+        "arch": ["amd64", "arm64", "arm/v7"],
+        "versions": [("stable", "stable"), ("latest", "latest")],
+        "ports": [(8123, "Web 界面")],
+        "envs": [("TZ", "Asia/Shanghai", "时区")],
+        "services": [{
+            "name": "home-assistant",
+            "image": "ghcr.io/home-assistant/home-assistant:${VERSION}",
+            "volumes": [("config", "/config")],
+        }],
+        "warn": "如需访问 Zigbee / 蓝牙等硬件设备，建议使用 privileged 权限或 host 网络（面板模板为普通网络模式，仅软件功能可用）。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=home-assistant.io&sz=256",
+        ],
+    },
+    "reader": {
+        "name": "Reader",
+        "desc": "自托管的在线阅读站，支持书源管理、追更、阅读进度同步与 Web 阅读，数据保存在本地目录。",
+        "homepage": "https://github.com/hectorqin/reader",
+        "source": "https://github.com/hectorqin/reader",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8080, "Web 界面")],
+        "envs": [("READER_APP_SECUREKEY", "", "管理密码（建议设置）")],
+        "services": [{
+            "name": "reader",
+            "image": "hectorqin/reader:${VERSION}",
+            "volumes": [("logs", "/logs"), ("storage", "/storage")],
+        }],
+        "warn": "原仓库已于 2026-06 归档停止维护；首次使用请设置管理密码与邀请码。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/hectorqin/reader&sz=256",
+        ],
+    },
+    "uuwaf": {
+        "name": "uuWAF",
+        "desc": "免费开源的工业级 Web 应用防火墙，提供 WAF 规则防护、CC 攻击防御与可视化安全报表，管理界面端口 4443。",
+        "homepage": "https://github.com/Safe3/uuWAF",
+        "source": "https://github.com/Safe3/uuWAF",
+        "arch": ["amd64"],
+        "versions": [("latest", "最新")],
+        "ports": [(4443, "管理界面(HTTPS)"), (80, "WAF HTTP"), (443, "WAF HTTPS")],
+        "envs": [],
+        "services": [{
+            "name": "uuwaf",
+            "image": "uusec/waf:${VERSION}",
+            "volumes": [("data", "/opt/waf"), ("logs", "/opt/waf/logs")],
+        }],
+        "warn": "默认账密为 admin / #Passw0rd，请立即修改；WAF 通常需要占用 80/443 甚至 host 网络以拦截流量，端口冲突时请调整映射。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/Safe3/uuWAF&sz=256",
+        ],
+    },
+    "twikoo": {
+        "name": "Twikoo",
+        "desc": "简洁安全的静态网站评论系统，支持文章评论、点赞、表情与邮件通知，数据保存在本地 JSON 文件，资源占用极低。",
+        "homepage": "https://twikoo.js.org/",
+        "source": "https://github.com/imaegoo/twikoo",
+        "arch": ["amd64", "arm64", "arm/v7"],
+        "versions": [("latest", "最新")],
+        "ports": [(8080, "评论服务")],
+        "envs": [],
+        "services": [{
+            "name": "twikoo",
+            "image": "imaegoo/twikoo:${VERSION}",
+            "volumes": [("data", "/app/data")],
+        }],
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=twikoo.js.org&sz=256",
+        ],
+    },
+    "linkding": {
+        "name": "Linkding",
+        "desc": "自托管的轻量书签管理器，支持标签、搜索、归档与自动抓取网页元数据，默认使用 SQLite，可选 PostgreSQL。",
+        "homepage": "https://linkding.link/",
+        "source": "https://github.com/sissbruecker/linkding",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(9090, "Web 界面")],
+        "envs": [
+            ("LD_SUPERUSER_NAME", "admin", "超级用户名"),
+            ("LD_SUPERUSER_PASSWORD", "", "超级用户密码（首次启动自动创建）"),
+        ],
+        "services": [{
+            "name": "linkding",
+            "image": "sissbruecker/linkding:${VERSION}",
+            "volumes": [("data", "/etc/linkding/data")],
+        }],
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=linkding.link&sz=256",
+        ],
+    },
+    "cloudreve": {
+        "name": "Cloudreve",
+        "desc": "云网盘与文件分享平台，支持本地、对象存储、远程存储等多种存储策略，自带在线预览、分享链接与 WebDAV。",
+        "homepage": "https://cloudreve.org/",
+        "source": "https://github.com/cloudreve/Cloudreve",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(5212, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "cloudreve",
+            "image": "cloudreve/cloudreve:${VERSION}",
+            "volumes": [("data", "/data"), ("uploads", "/cloudreve/uploads")],
+        }],
+        "warn": "首次启动会打印初始管理员账号与密码，请务必记录保管。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=cloudreve.org&sz=256",
+        ],
+    },
+    "jaeger": {
+        "name": "Jaeger",
+        "desc": "开源分布式链路追踪系统，all-in-one 模式开箱即用，提供 Web UI（16686）与 OTLP 接入（4317/4318）。",
+        "homepage": "https://www.jaegertracing.io/",
+        "source": "https://github.com/jaegertracing/jaeger",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(16686, "Web UI"), (4317, "OTLP gRPC"), (4318, "OTLP HTTP")],
+        "envs": [],
+        "services": [{
+            "name": "jaeger",
+            "image": "jaegertracing/jaeger:${VERSION}",
+            "volumes": [("data", "/tmp/jaeger")],
+            "command": "--query.ui-config=/dev/null",
+        }],
+        "warn": "Web UI 无认证，请勿直接暴露公网，建议仅内网或经反代加鉴权。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=jaegertracing.io&sz=256",
+        ],
+    },
+    "kirara-ai": {
+        "name": "Kirara AI",
+        "desc": "多平台接入大模型的聊天机器人框架，支持 QQ、Telegram、企业微信等平台，自带 WebUI（8080）、工作流编排与插件生态。",
+        "homepage": "https://github.com/lss233/kirara-ai",
+        "source": "https://github.com/lss233/kirara-ai",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8080, "WebUI")],
+        "envs": [],
+        "services": [{
+            "name": "kirara-ai",
+            "image": "lss233/chatgpt-mirai-qq-bot:${VERSION}",
+            "volumes": [("data", "/app/data"), ("config", "/app/config")],
+        }],
+        "warn": "WebUI 默认仅监听 127.0.0.1，公网部署需按官方文档修改监听地址并自行加鉴权；若镜像不存在请按官方 docker compose 部署。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=kirara-docs.app.lss233.com&sz=256",
+            "https://github.com/lss233/kirara-ai/raw/master/assets/logo.png",
+        ],
+    },
+    "lsky-pro": {
+        "name": "兰空图床",
+        "desc": "开源图床系统，支持本地上传、外链、相册管理与多种存储策略，适合自建个人/团队图床（开源版已停止维护）。",
+        "homepage": "https://www.lsky.pro/",
+        "source": "https://github.com/lsky-org/lsky-pro",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8088, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "lsky-pro",
+            "image": "halcyonazure/lsky-pro-docker:${VERSION}",
+            "volumes": [("data", "/var/www/html")],
+        }],
+        "warn": "官方无 Docker 镜像，本条目使用社区镜像 halcyonazure/lsky-pro-docker；开源版已停止维护，生产使用请评估。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=lsky.pro&sz=256",
+        ],
+    },
+    "mcsmanager": {
+        "name": "MCSManager",
+        "desc": "游戏服务器 Web 管理面板，支持多种游戏服务端的一键安装、启停、备份与文件管理，面板端口 23333。",
+        "homepage": "https://mcsmanager.com/",
+        "source": "https://github.com/MCSManager/MCSManager",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(23333, "Web 面板")],
+        "envs": [],
+        "services": [
+            {
+                "name": "mcsmanager-web",
+                "image": "githubyumao/mcsmanager-web:${VERSION}",
+                "map_ports": True,  # 面板主服务
+                "extra_env": [("TZ", "Asia/Shanghai")],
+                "depends_on": ["mcsmanager-daemon"],
+            },
+            {
+                "name": "mcsmanager-daemon",
+                "image": "githubyumao/mcsmanager-daemon:latest",
+                "volumes": [("data", "/opt/mcsmanager"), ("socket", "/var/run/docker.sock")],
+                "extra_ports": [(24444, 24444)],
+            },
+        ],
+        "warn": "守护进程挂载 /var/run/docker.sock，权限极高；无默认密码，请自行设置并妥善保管。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=mcsmanager.com&sz=256",
+        ],
+    },
+    "chinese-dos-games": {
+        "name": "中文 DOS 游戏合集",
+        "desc": "收录约 1898 款经典中文 DOS 游戏的网页合集，可在浏览器直接游玩，唤起童年回忆（本条目使用社区镜像）。",
+        "homepage": "https://dos.zczc.cz/",
+        "source": "https://github.com/rwv/chinese-dos-games",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(262, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "chinese-dos-games",
+            "image": "oldiy/dosgame-web-docker:${VERSION}",
+        }],
+        "warn": "原项目为数据仓库，无官方镜像，本条目使用社区镜像 oldiy/dosgame-web-docker；部分游戏可能涉及版权争议，仅供个人怀旧。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=dos.zczc.cz&sz=256",
+        ],
+    },
+    "gameservermanager": {
+        "name": "GameServerManager",
+        "desc": "新一代游戏服务器管理平台（GSM3），支持多种游戏服务端的一键部署、监控与调度，Web 界面端口 3001。",
+        "homepage": "https://github.com/GSManagerXZ/GameServerManager",
+        "source": "https://github.com/GSManagerXZ/GameServerManager",
+        "arch": ["amd64"],
+        "versions": [("latest", "最新")],
+        "ports": [(3001, "Web 界面")],
+        "envs": [],
+        "services": [{
+            "name": "gameservermanager",
+            "image": "xiaozhu674/gameservermanager:${VERSION}",
+            "volumes": [("data", "/data"), ("games", "/games"), ("socket", "/var/run/docker.sock")],
+        }],
+        "warn": "个人项目：容器以 root 运行并挂载多个目录与 docker.sock，请自设访问凭据并在受信任主机部署。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/GSManagerXZ/GameServerManager&sz=256",
+        ],
+    },
+    "palworld-server-tool": {
+        "name": "Palworld Server Tool",
+        "desc": "幻兽帕鲁服务器管理工具，提供 Web 管理（8080）与 Agent（8081），可查看玩家、经济、存档备份与游戏状态。",
+        "homepage": "https://github.com/zaigie/palworld-server-tool",
+        "source": "https://github.com/zaigie/palworld-server-tool",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(8080, "Web 管理界面")],
+        "envs": [],
+        "services": [
+            {
+                "name": "pst-web",
+                "image": "jokerwho/palworld-server-tool:${VERSION}",
+                "map_ports": True,
+                "volumes": [("data", "/app/pst.db")],
+                "extra_env": [("PST_AGENT_URL", "http://pst-agent:8081")],
+                "depends_on": ["pst-agent"],
+            },
+            {
+                "name": "pst-agent",
+                "image": "jokerwho/palworld-server-tool-agent:latest",
+                "extra_ports": [(8081, 8081)],
+            },
+        ],
+        "warn": "首个访问者即成为管理员（先到先得）；解析游戏存档瞬间可能消耗 1-3GB 内存，请评估机器配置。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/zaigie/palworld-server-tool&sz=256",
+        ],
+    },
+    "palworld-server-docker": {
+        "name": "Palworld Server Docker",
+        "desc": "幻兽帕鲁专用服务器 Docker 镜像，自带 SteamCMD 自动下载/更新服务端，提供游戏（8211/udp）、查询与 RCON 端口。",
+        "homepage": "https://github.com/thijsvanloef/palworld-server-docker",
+        "source": "https://github.com/thijsvanloef/palworld-server-docker",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [
+            (8211, "游戏端口", "udp"),
+            (27015, "查询端口", "udp"),
+            (25575, "RCON", "tcp"),
+        ],
+        "envs": [
+            ("ADMIN_PASSWORD", "", "管理员密码（必填）"),
+            ("SERVER_PASSWORD", "", "服务器密码（必填，否则无法加入）"),
+            ("COMMUNITY_SERVER", "false", "是否社区服务器"),
+        ],
+        "services": [{
+            "name": "palworld-server",
+            "image": "thijsvanloef/palworld-server-docker:${VERSION}",
+            "volumes": [("game", "/palworld"), ("data", "/palworld/Pal/Saved")],
+        }],
+        "warn": "需设置 ADMIN_PASSWORD 与 SERVER_PASSWORD 才能游玩；RCON 等端口请勿公网暴露。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/thijsvanloef/palworld-server-docker&sz=256",
+        ],
+    },
+    "chatgpt-next-web": {
+        "name": "ChatGPT-Next-Web",
+        "desc": "跨平台 ChatGPT / 多模型聊天 Web 前端，支持多种大模型 API、会话管理、Markdown 与部署即用，是常用的自托管 AI 对话界面。",
+        "homepage": "https://github.com/ChatGPTNextWeb/NextChat",
+        "source": "https://github.com/Yidadaa/ChatGPT-Next-Web",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(3000, "Web 界面")],
+        "envs": [
+            ("OPENAI_API_KEY", "", "模型 API Key"),
+            ("CODE", "", "访问密码（设置后可防止陌生人使用）"),
+        ],
+        "services": [{
+            "name": "chatgpt-next-web",
+            "image": "yidadaa/chatgpt-next-web:${VERSION}",
+        }],
+        "warn": "不设置 CODE 访问密码则任何可访问的人都能使用你的 API Key；原仓库已迁移至 ChatGPTNextWeb/NextChat。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=github.com/Yidadaa/ChatGPT-Next-Web&sz=256",
+        ],
+    },
+    "discourse": {
+        "name": "Discourse",
+        "desc": "开源社区论坛平台，功能强大的现代化 BBS，内置 PostgreSQL、Redis 与 Nginx，需配置域名与 SMTP 邮箱。",
+        "homepage": "https://www.discourse.org/",
+        "source": "https://github.com/discourse/discourse",
+        "arch": ["amd64", "arm64"],
+        "versions": [("latest", "最新")],
+        "ports": [(80, "Web 界面")],
+        "envs": [
+            ("DISCOURSE_HOSTNAME", "localhost", "站点域名（必填）"),
+            ("DISCOURSE_DEVELOPER_EMAILS", "admin@example.com", "管理员邮箱"),
+            ("DISCOURSE_SMTP_ADDRESS", "", "SMTP 服务器"),
+            ("DISCOURSE_SMTP_PORT", "587", "SMTP 端口"),
+            ("DISCOURSE_SMTP_USER_NAME", "", "SMTP 用户名"),
+            ("DISCOURSE_SMTP_PASSWORD", "", "SMTP 密码"),
+        ],
+        "services": [{
+            "name": "discourse",
+            "image": "discourse/discourse:${VERSION}",
+            "volumes": [("shared", "/shared"), ("data", "/var/www/discourse")],
+        }],
+        "warn": "官方仅支持 Docker 部署，首次安装需配置域名、SMTP 并完成初始化向导；模板使用历史单镜像，完整部署请参考官方 launcher 文档。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=discourse.org&sz=256",
+        ],
+    },
+    "memcached": {
+        "name": "Memcached",
+        "desc": "高性能分布式内存缓存系统，以键值方式缓存数据，常用于加速数据库查询与 Web 应用响应，默认端口 11211。",
+        "homepage": "https://memcached.org/",
+        "source": "https://github.com/memcached/memcached",
+        "arch": ["amd64", "arm64", "arm/v7"],
+        "versions": [("1.6", "1.6"), ("latest", "最新")],
+        "ports": [(11211, "Memcached 服务")],
+        "envs": [("MEMCACHED_MEMORY_LIMIT", "64", "内存限制（MB）")],
+        "services": [{
+            "name": "memcached",
+            "image": "memcached:${VERSION}",
+            "command": "memcached -m ${MEMCACHED_MEMORY_LIMIT:-64} -l 0.0.0.0",
+        }],
+        "warn": "Memcached 无内置认证与加密，切勿直接暴露公网，请仅在内网供可信应用访问。",
+        "icon": [
+            "https://www.google.com/s2/favicons?domain=memcached.org&sz=256",
+        ],
+    },
 }
 
 # 应用分类（app_id -> 分类名），写入 data.yml 供应用商店按分类筛选
 CATEGORY = {
+    # ---------------- 已存 ----------------
     # 数据库 / 存储
     "mysql": "数据库/存储", "redis": "数据库/存储", "postgres": "数据库/存储",
     "mariadb": "数据库/存储", "nocodb": "数据库/存储", "verdaccio": "数据库/存储",
-    "sftpgo": "数据库/存储",
+    "sftpgo": "数据库/存储", "memcached": "数据库/存储",
     # 面板 / 网站
     "wordpress": "面板/网站", "gitea": "面板/网站", "halo": "面板/网站",
     "outline": "面板/网站", "flarum": "面板/网站", "tailchat": "面板/网站",
@@ -1295,6 +2041,27 @@ CATEGORY = {
     "consul": "开发/DevOps",
     # 面板 / 网站（网盘 / 列表）
     "openlist": "面板/网站", "alist": "面板/网站",
+    # ---------------- 2026-08 社区新增 ----------------
+    # 面板 / 网站
+    "zerocat": "面板/网站", "classworks": "面板/网站", "sbox-community": "面板/网站",
+    "graw": "面板/网站", "cordyscrm": "面板/网站", "dataease": "面板/网站",
+    "upage": "面板/网站", "reader": "面板/网站", "cloudreve": "面板/网站",
+    "lsky-pro": "面板/网站", "chinese-dos-games": "面板/网站", "discourse": "面板/网站",
+    # AI / 开发
+    "zakura": "AI/开发", "nanobot": "AI/开发", "maxkb": "AI/开发",
+    "openclaw": "AI/开发", "qwenpaw": "AI/开发", "sqlbot": "AI/开发",
+    "clawswarm": "AI/开发", "kirara-ai": "AI/开发", "chatgpt-next-web": "AI/开发",
+    # 网络 / 工具
+    "nginx-proxy-manager": "网络/工具", "uuwaf": "网络/工具", "twikoo": "网络/工具",
+    "linkding": "网络/工具",
+    # 监控 / 运维
+    "jumpserver": "监控/运维", "home-assistant": "监控/运维", "jaeger": "监控/运维",
+    # 数据库 / 存储
+    "phpmyadmin": "数据库/存储",
+    # 开发 / DevOps
+    "metersphere": "开发/DevOps", "zentaopms": "开发/DevOps", "mcsmanager": "开发/DevOps",
+    "gameservermanager": "开发/DevOps", "palworld-server-tool": "开发/DevOps",
+    "palworld-server-docker": "开发/DevOps",
 }
 
 
@@ -1317,6 +2084,9 @@ def gen_compose(app_id: str, meta: dict) -> str:
         name = svc["name"]
         is_primary = idx == primary_idx
         lines.append(f"  {name}:")
+        build_ctx = svc.get("build")
+        if build_ctx:
+            lines.append(f"    build: {build_ctx}")
         lines.append(f"    image: {svc['image']}")
         lines.append(f"    container_name: {name}")
         volumes = svc.get("volumes") or []
@@ -1324,15 +2094,19 @@ def gen_compose(app_id: str, meta: dict) -> str:
             lines.append("    volumes:")
             for host_sub, cont in volumes:
                 lines.append(f"      - ./{host_sub}:{cont}")
-        # 端口：主服务暴露声明端口，其它服务仅其额外端口
+        # 端口：主服务暴露声明端口（支持协议 tcp/udp），其它服务仅其额外端口
         ports = []
         if is_primary:
-            ports.extend((c, c) for c, _l in meta["ports"])
-        ports.extend(svc.get("extra_ports") or [])
+            for p in meta["ports"]:
+                c = p[0]
+                proto = p[2] if len(p) > 2 else "tcp"
+                ports.append((c, c, proto))
+        ports.extend((hp, cp, "tcp") for hp, cp in (svc.get("extra_ports") or []))
         if ports:
             lines.append("    ports:")
-            for hp, cp in ports:
-                lines.append(f'      - "{hp}:{cp}"')
+            for hp, cp, proto in ports:
+                suffix = "" if proto == "tcp" else f"/{proto}"
+                lines.append(f'      - "{hp}:{cp}{suffix}"')
         envs = list(svc.get("extra_env") or [])
         if is_primary:
             for env_name, default, _desc in meta["envs"]:
@@ -1372,13 +2146,20 @@ def gen_data(app_id: str, meta: dict) -> str:
     versions = "".join(
         f"  - {{ tag: \"{t}\", label: \"{l}\" }}\n" for t, l in meta["versions"]
     )
-    ports = "".join(f"  - {{ container: {c}, label: \"{l}\", protocol: \"tcp\" }}\n" for c, l in meta["ports"])
+    def _port_line(p):
+        c, l = p[0], p[1]
+        proto = p[2] if len(p) > 2 else "tcp"
+        return f'  - {{ container: {c}, label: "{l}", protocol: "{proto}" }}\n'
+    ports = "".join(_port_line(p) for p in meta["ports"])
     envs = "".join(
         f"  - {{ name: \"{n}\", default: \"{d}\", desc: \"{desc}\" }}\n"
         for n, d, desc in meta["envs"]
     )
     # 安装警告（可选）：有 warn 时写入 data.yml，前端安装弹窗会展示
     warn_line = f'\nwarn: "{meta["warn"]}"\n' if meta.get("warn") else ""
+    # 商店标签（可选，如 推荐/蓝标）：写入 data.yml，前端在应用卡片渲染徽标
+    tags_block = "".join(f'  - "{t}"\n' for t in (meta.get("tags") or []))
+    tags_block = f"tags:\n{tags_block}" if tags_block else ""
     return f"""# ============================================================
 # Graw 社区应用商店 - 应用元数据 data.yml
 # ============================================================
@@ -1387,7 +2168,7 @@ name: "{meta['name']}"
 id: "{app_id}"
 
 category: "{CATEGORY.get(app_id, '其它')}"
-{warn_line}description: >
+{tags_block}{warn_line}description: >
   {meta['desc']}
 
 homepage: "{meta['homepage']}"

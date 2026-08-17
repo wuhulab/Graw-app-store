@@ -1,0 +1,30 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "ChatGPT-Next-Web"
+id: "chatgpt-next-web"
+
+category: "AI/开发"
+
+warn: "不设置 CODE 访问密码则任何可访问的人都能使用你的 API Key；原仓库已迁移至 ChatGPTNextWeb/NextChat。"
+description: >
+  跨平台 ChatGPT / 多模型聊天 Web 前端，支持多种大模型 API、会话管理、Markdown 与部署即用，是常用的自托管 AI 对话界面。
+
+homepage: "https://github.com/ChatGPTNextWeb/NextChat"
+
+source: "https://github.com/Yidadaa/ChatGPT-Next-Web"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "OPENAI_API_KEY", default: "", desc: "模型 API Key" }
+  - { name: "CODE", default: "", desc: "访问密码（设置后可防止陌生人使用）" }
+

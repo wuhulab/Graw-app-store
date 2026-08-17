@@ -1,0 +1,13 @@
+# JumpServer
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  jumpserver:
+    image: jumpserver/jms_all:${VERSION}
+    container_name: jumpserver
+    volumes:
+      - ./data:/opt/jumpserver/data
+    ports:
+      - "80:80"
+    restart: unless-stopped

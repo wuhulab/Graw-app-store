@@ -5,7 +5,6 @@
 name: "code-server"
 id: "code-server"
 
-
 category: "AI/开发"
 description: >
   在浏览器中运行的 VS Code，让你随时随地通过 Web 编写代码，支持扩展安装、终端与 Git 集成，适合远程开发与容器环境。

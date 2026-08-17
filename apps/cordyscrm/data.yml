@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "CordysCRM"
+id: "cordyscrm"
+
+category: "面板/网站"
+
+warn: "默认账密为 admin / CordysCRM，首次登录请务必修改。"
+description: >
+  1Panel 出品的新一代开源 AI CRM 系统，融合 AI 能力与客户关系管理，镜像内嵌 MySQL 与 Redis。
+
+homepage: "https://github.com/1Panel-dev/CordysCRM"
+
+source: "https://github.com/1Panel-dev/CordysCRM"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8081, label: "Web 界面", protocol: "tcp" }
+  - { container: 8082, label: "服务端口", protocol: "tcp" }
+
+env:
+

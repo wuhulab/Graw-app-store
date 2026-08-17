@@ -158,6 +158,12 @@ def check_data_yml(app_id: str, app_dir: str) -> tuple:
     elif warn and len(warn) > 500:
         errors.append("warn 文本过长（建议 500 字符以内）")
 
+    # ---- tags（可选，商店标签，如 推荐/蓝标）----
+    tags = data.get("tags")
+    if tags is not None:
+        if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
+            errors.append("tags 必须是字符串列表（如 ['推荐', '蓝标']）")
+
     return errors, warnings
 
 

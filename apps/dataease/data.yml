@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "DataEase"
+id: "dataease"
+
+category: "面板/网站"
+
+warn: "默认账密为 admin / DataEase@123456，首次登录请务必修改。"
+description: >
+  人人可用的开源 BI 分析工具，支持数据源接入、图表制作、仪表盘与分享，镜像内嵌 MySQL 与 Redis（v2 默认端口 8100）。
+
+homepage: "https://www.dataease.cn/"
+
+source: "https://github.com/dataease/dataease"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8100, label: "Web 界面", protocol: "tcp" }
+
+env:
+

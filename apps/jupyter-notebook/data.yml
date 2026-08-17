@@ -5,7 +5,6 @@
 name: "Jupyter Notebook"
 id: "jupyter-notebook"
 
-
 category: "AI/开发"
 description: >
   基于浏览器的交互式笔记本，支持 Python 代码、可视化与 Markdown 文档混合编写，是数据科学与教学科研的常用工具。

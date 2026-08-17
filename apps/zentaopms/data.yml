@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "禅道（ZenTao）"
+id: "zentaopms"
+
+category: "开发/DevOps"
+
+warn: "安装向导默认账密为 admin / 123456，请务必设置强密码。"
+description: >
+  国产开源一体化项目管理软件，覆盖产品、项目、测试、文档与 DevOps 全流程，镜像内置 MariaDB 数据库。
+
+homepage: "https://www.zentao.net/"
+
+source: "https://github.com/easysoft/zentaopms"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "MYSQL_INTERNAL", default: "1", desc: "是否使用内置数据库（1=内置）" }
+

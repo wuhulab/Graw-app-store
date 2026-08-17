@@ -5,7 +5,6 @@
 name: "Mblog"
 id: "mblog-backend"
 
-
 category: "AI/开发"
 description: >
   开源的极简朋友圈 / 微博系统后端，支持图文发布、关注与广场浏览，可自托管，需配合 MySQL 数据库使用。

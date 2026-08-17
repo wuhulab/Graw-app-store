@@ -5,7 +5,6 @@
 name: "Gitea"
 id: "gitea"
 
-
 category: "面板/网站"
 description: >
   轻量、快速、自托管的 Git 服务，内存占用小、安装简单，支持仓库、Issue、PR、CI、Wiki 与 Actions，是搭建私有代码托管平台的理想选择。

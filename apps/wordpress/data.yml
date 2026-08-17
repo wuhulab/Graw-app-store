@@ -5,7 +5,6 @@
 name: "WordPress"
 id: "wordpress"
 
-
 category: "面板/网站"
 description: >
   全球使用最广泛的开源建站与内容管理系统，插件与主题生态极其丰富，适合博客、企业站、电商等各类网站。本模板内置 MySQL 数据库。

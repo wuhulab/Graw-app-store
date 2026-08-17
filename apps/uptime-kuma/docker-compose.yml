@@ -1,7 +1,5 @@
-# Uptime Kuma - 自托管监控工具
-# 注意:
-#   - ${VERSION} 占位符由面板在安装时替换为用户选择的版本 tag
-#   - restart / 端口映射 / 环境变量 / 资源限制 由面板按安装选项注入
+# Uptime Kuma
+# ${VERSION} 占位符由面板在安装时替换
 version: "3"
 
 services:
@@ -9,9 +7,7 @@ services:
     image: louislam/uptime-kuma:${VERSION}
     container_name: uptime-kuma
     volumes:
-      - ./uptime-kuma-data:/app/data
+      - ./data:/app/data
     ports:
       - "3001:3001"
     restart: unless-stopped
-    environment:
-      - TZ=${TZ:-Asia/Shanghai}

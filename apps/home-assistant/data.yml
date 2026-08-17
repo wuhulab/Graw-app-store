@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Home Assistant"
+id: "home-assistant"
+
+category: "监控/运维"
+
+warn: "如需访问 Zigbee / 蓝牙等硬件设备，建议使用 privileged 权限或 host 网络（面板模板为普通网络模式，仅软件功能可用）。"
+description: >
+  开源家庭自动化平台，支持上千种设备接入、自动化规则、仪表盘与语音助手，是智能家居的核心中枢。
+
+homepage: "https://www.home-assistant.io/"
+
+source: "https://github.com/home-assistant/core"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "stable", label: "stable" }
+  - { tag: "latest", label: "latest" }
+
+ports:
+  - { container: 8123, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
+

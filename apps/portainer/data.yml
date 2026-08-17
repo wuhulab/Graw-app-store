@@ -2,15 +2,12 @@
 # Graw 社区应用商店 - 应用元数据 data.yml
 # ============================================================
 
-name: "Portainer CE"
+name: "Portainer"
 id: "portainer"
-
 
 category: "监控/运维"
 description: >
-  Portainer 社区版（CE）是一款轻量的容器管理面板，提供图形化界面来管理 Docker /
-  Podman 引擎：容器、镜像、网络、数据卷、栈（Stack / Compose）与模板一键部署，
-  并内置身份认证与多用户权限控制，适合与 Graw 面板互补使用。
+  最流行的 Docker / Kubernetes 可视化面板，提供容器、镜像、网络、卷与栈的一站式管理，界面直观、适合新手。
 
 homepage: "https://www.portainer.io/"
 
@@ -19,13 +16,11 @@ source: "https://github.com/portainer/portainer"
 arch:
   - "amd64"
   - "arm64"
-
 versions:
   - { tag: "latest", label: "最新" }
-  - { tag: "2.21.0", label: "2.21.0" }
 
 ports:
   - { container: 9000, label: "Web 界面", protocol: "tcp" }
 
 env:
-  - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
+

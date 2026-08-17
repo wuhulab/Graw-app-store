@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "MeterSphere"
+id: "metersphere"
+
+category: "开发/DevOps"
+
+warn: "默认账密为 admin / metersphere；资源占用较高，建议 4GB 以上内存。"
+description: >
+  新一代开源持续测试平台，覆盖接口、性能、UI 与测试跟踪，一站式质量保障，安装包内置 MySQL、Redis 等依赖。
+
+homepage: "https://metersphere.io/"
+
+source: "https://github.com/metersphere/metersphere"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8081, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,15 @@
+# phpMyAdmin
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:${VERSION}
+    container_name: phpmyadmin
+    ports:
+      - "80:80"
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - PMA_ARBITRARY=1
+    restart: unless-stopped

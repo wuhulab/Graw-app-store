@@ -5,7 +5,6 @@
 name: "SFTPGo"
 id: "sftpgo"
 
-
 category: "数据库/存储"
 description: >
   功能丰富的 SFTP / HTTP / FTP 服务器，支持本地文件系统及 S3、WebDAV、Google Drive 等存储后端，内置 Web 管理界面与虚拟用户。

@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "MCSManager"
+id: "mcsmanager"
+
+category: "开发/DevOps"
+
+warn: "守护进程挂载 /var/run/docker.sock，权限极高；无默认密码，请自行设置并妥善保管。"
+description: >
+  游戏服务器 Web 管理面板，支持多种游戏服务端的一键安装、启停、备份与文件管理，面板端口 23333。
+
+homepage: "https://mcsmanager.com/"
+
+source: "https://github.com/MCSManager/MCSManager"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 23333, label: "Web 面板", protocol: "tcp" }
+
+env:
+

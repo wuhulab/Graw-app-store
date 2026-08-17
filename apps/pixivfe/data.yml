@@ -5,7 +5,6 @@
 name: "PixivFE"
 id: "pixivfe"
 
-
 category: "网络/工具"
 description: >
   开源的 pixiv 替代前端，保护隐私、无需登录即可匿名浏览，所有请求在服务端完成，轻量现代、支持多架构镜像。

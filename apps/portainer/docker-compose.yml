@@ -1,6 +1,5 @@
-# Portainer CE - 容器管理面板
-# 注意: /var/run/docker.sock 挂载可让 Portainer 直接管理宿主机容器引擎，
-#       Podman 环境下请改为 /run/podman/podman.sock
+# Portainer
+# ${VERSION} 占位符由面板在安装时替换
 version: "3"
 
 services:
@@ -8,10 +7,8 @@ services:
     image: portainer/portainer-ce:${VERSION}
     container_name: portainer
     volumes:
-      - ./portainer-data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+      - ./socket:/var/run/docker.sock
     ports:
       - "9000:9000"
     restart: unless-stopped
-    environment:
-      - TZ=${TZ:-Asia/Shanghai}

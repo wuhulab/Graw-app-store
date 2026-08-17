@@ -1,0 +1,20 @@
+# Palworld Server Docker
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  palworld-server:
+    image: thijsvanloef/palworld-server-docker:${VERSION}
+    container_name: palworld-server
+    volumes:
+      - ./game:/palworld
+      - ./data:/palworld/Pal/Saved
+    ports:
+      - "8211:8211/udp"
+      - "27015:27015/udp"
+      - "25575:25575"
+    environment:
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - SERVER_PASSWORD=${SERVER_PASSWORD}
+      - COMMUNITY_SERVER=false
+    restart: unless-stopped

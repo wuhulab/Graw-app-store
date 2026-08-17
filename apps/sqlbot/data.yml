@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "SQLBot"
+id: "sqlbot"
+
+category: "AI/开发"
+
+warn: "默认账密为 admin / SQLBot@123456，首次登录请务必修改。"
+description: >
+  DataEase 团队出品的基于大模型 + RAG 的智能问数系统，用自然语言查询数据库并生成图表，镜像内嵌 PostgreSQL。
+
+homepage: "https://github.com/dataease/SQLBot"
+
+source: "https://github.com/dataease/SQLBot"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8000, label: "Web 界面", protocol: "tcp" }
+
+env:
+

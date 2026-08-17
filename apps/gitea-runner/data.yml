@@ -5,7 +5,6 @@
 name: "Gitea Act Runner"
 id: "gitea-runner"
 
-
 category: "开发/DevOps"
 description: >
   Gitea Actions 的运行器，在本地或专用机器上执行 Gitea 仓库的 CI/CD 流水线。需要先在 Gitea 注册 runner 获取 token。

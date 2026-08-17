@@ -66,6 +66,9 @@ ports:                         # 容器内端口（面板据此生成外部端�
   - { container: 22,   label: "SSH",      protocol: "tcp" }
 env:                           # 常用环境变量（面板据此预填）
   - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
+tags:                          # 可选，商店标签（前端在应用卡片渲染徽标）
+  - "推荐"
+  - "蓝标"
 ```
 
 #### 分类体系（category）

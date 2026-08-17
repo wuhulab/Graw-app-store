@@ -5,7 +5,6 @@
 name: "One API"
 id: "one-api"
 
-
 category: "AI/开发"
 description: >
   OpenAI 接口管理与分发系统，支持多模型统一接入、令牌管理、配额统计，可将各种模型转换为 OpenAI 格式对外提供调用。

@@ -5,7 +5,6 @@
 name: "Forgejo Runner"
 id: "forgejo-runner"
 
-
 category: "开发/DevOps"
 description: >
   Forgejo Actions 的运行器，在专用机器上执行 Forgejo 仓库的 CI/CD 流水线。需要先在 Forgejo 实例注册 runner 获取令牌。

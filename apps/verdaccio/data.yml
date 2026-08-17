@@ -5,7 +5,6 @@
 name: "Verdaccio"
 id: "verdaccio"
 
-
 category: "数据库/存储"
 description: >
   轻量级、可扩展的私有 npm 仓库代理，让你在本地或内网搭建属于自己的 Node 包源，支持代理与缓存公共 npm 包。

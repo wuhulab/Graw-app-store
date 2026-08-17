@@ -5,7 +5,6 @@
 name: "MariaDB"
 id: "mariadb"
 
-
 category: "数据库/存储"
 description: >
   MySQL 的社区分支，完全兼容并增加更多存储引擎与性能优化，是众多 Linux 发行版的默认数据库。本模板使用官方 MariaDB 11 镜像。

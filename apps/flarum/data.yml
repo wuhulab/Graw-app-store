@@ -5,7 +5,6 @@
 name: "Flarum"
 id: "flarum"
 
-
 category: "面板/网站"
 description: >
   优雅、简洁、易扩展的现代化开源论坛软件，界面清新、加载迅速，支持丰富的扩展生态，是搭建社区论坛的好选择。

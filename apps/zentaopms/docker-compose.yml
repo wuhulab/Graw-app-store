@@ -1,0 +1,16 @@
+# 禅道（ZenTao）
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  zentaopms:
+    image: easysoft/zentao:${VERSION}
+    container_name: zentaopms
+    volumes:
+      - ./data:/opt/zbox
+      - ./dbdata:/var/lib/mysql
+    ports:
+      - "80:80"
+    environment:
+      - MYSQL_INTERNAL=1
+    restart: unless-stopped

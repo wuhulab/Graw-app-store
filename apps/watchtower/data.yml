@@ -5,11 +5,9 @@
 name: "Watchtower"
 id: "watchtower"
 
-
 category: "监控/运维"
 description: >
-  Watchtower 会自动监控运行中的容器，当基础镜像发布新版本时自动拉取并重建容器，
-  让自托管应用保持最新、避免错过安全更新。可配合 Graw 面板的 Docker 管理使用。
+  自动监控运行中的容器，当基础镜像发布新版本时自动拉取并重建，让自托管应用保持最新、避免错过安全更新。
 
 homepage: "https://containrrr.dev/watchtower/"
 
@@ -19,14 +17,13 @@ arch:
   - "amd64"
   - "arm64"
   - "arm/v7"
-
 versions:
   - { tag: "latest", label: "最新" }
 
-# 无 Web 端口，安装时不映射外部端口
-ports: []
+ports:
 
 env:
   - { name: "TZ", default: "Asia/Shanghai", desc: "时区" }
   - { name: "WATCHTOWER_CLEANUP", default: "true", desc: "更新后是否删除旧镜像" }
   - { name: "WATCHTOWER_POLL_INTERVAL", default: "3600", desc: "检查间隔（秒）" }
+

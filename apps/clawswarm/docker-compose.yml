@@ -1,0 +1,13 @@
+# ClawSwarm
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  clawswarm:
+    image: 1panel/clawswarm:${VERSION}
+    container_name: clawswarm
+    volumes:
+      - ./data:/data
+    ports:
+      - "18080:18080"
+    restart: unless-stopped

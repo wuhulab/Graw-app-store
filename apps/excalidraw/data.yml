@@ -5,7 +5,6 @@
 name: "Excalidraw"
 id: "excalidraw"
 
-
 category: "面板/网站"
 description: >
   极简的手绘风格白板工具，支持在线协作、导出为图片与 SVG，适合绘制流程图、架构图与示意图，无需登录即可使用。

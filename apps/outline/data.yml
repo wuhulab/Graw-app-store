@@ -5,7 +5,6 @@
 name: "Outline"
 id: "outline"
 
-
 category: "面板/网站"
 description: >
   现代团队知识库与 Wiki 平台，支持 Markdown 实时协作编辑、全文搜索与丰富集成，需配合 PostgreSQL 与 Redis 使用。

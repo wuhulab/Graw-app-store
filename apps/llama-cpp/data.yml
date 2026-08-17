@@ -5,7 +5,6 @@
 name: "llama.cpp"
 id: "llama-cpp"
 
-
 category: "AI/开发"
 description: >
   C/C++ 实现的 LLM 推理引擎，支持 GGUF 格式本地运行各种开源大模型，内置 OpenAI 兼容的 HTTP 服务器，可离线部署私有 AI。

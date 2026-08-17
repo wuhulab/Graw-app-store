@@ -1,0 +1,33 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Palworld Server Docker"
+id: "palworld-server-docker"
+
+category: "开发/DevOps"
+
+warn: "需设置 ADMIN_PASSWORD 与 SERVER_PASSWORD 才能游玩；RCON 等端口请勿公网暴露。"
+description: >
+  幻兽帕鲁专用服务器 Docker 镜像，自带 SteamCMD 自动下载/更新服务端，提供游戏（8211/udp）、查询与 RCON 端口。
+
+homepage: "https://github.com/thijsvanloef/palworld-server-docker"
+
+source: "https://github.com/thijsvanloef/palworld-server-docker"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8211, label: "游戏端口", protocol: "udp" }
+  - { container: 27015, label: "查询端口", protocol: "udp" }
+  - { container: 25575, label: "RCON", protocol: "tcp" }
+
+env:
+  - { name: "ADMIN_PASSWORD", default: "", desc: "管理员密码（必填）" }
+  - { name: "SERVER_PASSWORD", default: "", desc: "服务器密码（必填，否则无法加入）" }
+  - { name: "COMMUNITY_SERVER", default: "false", desc: "是否社区服务器" }
+
