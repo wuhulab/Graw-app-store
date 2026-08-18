@@ -1,0 +1,8 @@
+description: >
+  An open-source distributed tracing system. The all-in-one mode works out of the box,
+  providing a web UI (16686) and OTLP ingestion (4317/4318).
+category: "Monitoring/Ops"
+ports:
+  16686: "Web UI"
+  4317: "OTLP gRPC"
+  4318: "OTLP HTTP"

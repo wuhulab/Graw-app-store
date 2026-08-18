@@ -1,0 +1,10 @@
+description: >
+  Alt-efikeca malfermita memor-bazita ŝlosilo-valora datumbazo, kiu subtenas
+  datenstrukturojn kiel ĉenoj, hash-tabelojn, listojn kaj arojn; vaste uzata
+  kiel kaŝmemoro, mesaĝvico kaj sesio-stokado. Ĉi tiu ŝablono uzas la
+  oficialan Redis 7-bildon.
+category: "Datumbazo/Stokado"
+ports:
+  6379: "Redis-servo"
+env:
+  REDIS_PASSWORD: "Alirmesa pasvorto (se malplena, ĝi ne estas ebligita)"

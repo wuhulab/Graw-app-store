@@ -1,0 +1,7 @@
+description: >
+  A C/C++ LLM inference engine that runs various open-source models locally in GGUF
+  format. It has a built-in OpenAI-compatible HTTP server for offline private AI
+  deployment.
+category: "AI/Development"
+ports:
+  8080: "HTTP service"

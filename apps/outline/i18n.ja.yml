@@ -1,0 +1,12 @@
+name: "Outline"
+description: >
+  モダンなチーム向けナレッジベース＆Wiki プラットフォーム。Markdown でのリアルタイム共同編集、全文検索、豊富なインテグレーションに対応。PostgreSQL と Redis との連携が必要です。
+category: "パネル/ウェブサイト"
+ports:
+  3000: "Web 画面"
+env:
+  DATABASE_URL: "データベース接続"
+  REDIS_URL: "Redis 接続"
+  SECRET_KEY: "シークレットキー"
+  UTILS_SECRET: "ユーティリティキー"
+  URL: "アクセスアドレス"

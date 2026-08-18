@@ -1,0 +1,7 @@
+description: >
+  Nova generacio de malfermita kontinua testado-platformo, kiu kovras
+  interfacojn, rendimenton, UI-on kaj testan spuradon, provizante unu-stacian
+  kvalitgarantion; la instalpaketo enkorpigas dependaĵojn kiel MySQL kaj Redis.
+category: "Disvolvo/DevOps"
+ports:
+  8081: "Reteja interfaco"

@@ -1,0 +1,8 @@
+name: "Memcached"
+description: >
+  高性能な分散型メモリキャッシュシステム。キー・バリュー方式でデータをキャッシュし、データベースクエリや Web アプリの応答を高速化するのに使われます。デフォルトポートは 11211 です。
+category: "データベース/ストレージ"
+ports:
+  11211: "Memcached サービス"
+env:
+  MEMCACHED_MEMORY_LIMIT: "メモリ制限（MB）"

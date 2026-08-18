@@ -1,0 +1,8 @@
+name: "Graw (ŝerca lokokupilo)"
+description: >
+  Ĉi tio estas ŝerco: uzu Graw por elŝuti Graw, kaj poste uzu Graw por
+  administri Graw — ripetiĝanta maŝino. Ĉi tio ne estas vera Graw-servila
+  panelo-bildo, sed nur ŝerca lokokupilo.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Ŝerca paĝo"

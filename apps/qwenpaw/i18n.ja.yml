@@ -1,0 +1,8 @@
+name: "QwenPaw"
+description: >
+  通義（Qwen）が公開したパーソナル AI アシスタント。ローカル/クラウドデプロイ、マルチツール呼び出し、会話オーケストレーションに対応し、イメージ内に OpenAI 互換 API を内蔵しています。
+category: "AI/開発"
+ports:
+  8088: "Web 画面"
+env:
+  QWENPAW_TOKEN: "アクセストークン（設定を推奨）"

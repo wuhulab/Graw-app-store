@@ -1,0 +1,9 @@
+description: >
+  An easy-to-use Nginx reverse proxy and free SSL certificate management panel with a
+  visual interface for configuring domain forwarding, wildcard resolution and Let's
+  Encrypt certificates.
+category: "Network/Tools"
+ports:
+  81: "Admin interface"
+  80: "HTTP proxy"
+  443: "HTTPS proxy"

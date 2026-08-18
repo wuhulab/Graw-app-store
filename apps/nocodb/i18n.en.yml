@@ -1,0 +1,9 @@
+description: >
+  An open-source Airtable alternative that turns databases into visual spreadsheets.
+  Supporting MySQL / PostgreSQL / SQLite, it lets you build data applications by drag and
+  drop and manage data without coding.
+category: "Database/Storage"
+ports:
+  8080: "Web UI"
+env:
+  NC_DB: "Database connection string (SQLite by default)"

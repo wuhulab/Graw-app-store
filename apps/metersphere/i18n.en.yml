@@ -1,0 +1,7 @@
+description: >
+  A next-generation open-source continuous testing platform covering API, performance, UI
+  and test tracking for one-stop quality assurance. The installation package bundles
+  MySQL, Redis and other dependencies.
+category: "Development/DevOps"
+ports:
+  8081: "Web UI"

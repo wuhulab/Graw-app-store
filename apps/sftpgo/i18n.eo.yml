@@ -1,0 +1,10 @@
+description: >
+  Rieĉa SFTP/HTTP/FTP-servilo, kiu subtenas lokan dosiersistemon kaj
+  stokadajn fonajn servojn kiel S3, WebDAV kaj Google Drive, kun enkonstruita
+  reta administra interfaco kaj virtualaj uzantoj.
+category: "Datumbazo/Stokado"
+ports:
+  8080: "Reteja administra interfaco"
+  2022: "SFTP-servo"
+env:
+  SFTPGO_DEFAULT_ROOT_PATH: "Defaŭlta radikodosierujo"

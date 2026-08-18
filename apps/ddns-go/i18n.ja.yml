@@ -1,0 +1,6 @@
+name: "DDNS-GO"
+description: >
+  簡単で使いやすいダイナミック DNS ツール。公網 IPv4 / IPv6 を自動取得して Alibaba Cloud、Tencent Cloud、Cloudflare など 20 以上の DNS サービスプロバイダに同期し、Web 設定画面を備えています。
+category: "ネットワーク/ツール"
+ports:
+  9876: "Web 画面"

@@ -1,0 +1,6 @@
+name: "GameServerManager"
+description: >
+  次世代ゲームサーバー管理プラットフォーム（GSM3）。複数のゲームサーバーのワンクリックデプロイ、監視、スケジューリングに対応し、Web 画面のポートは 3001 です。
+category: "開発/DevOps"
+ports:
+  3001: "Web 画面"

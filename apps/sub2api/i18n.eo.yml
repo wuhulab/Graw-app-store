@@ -1,0 +1,7 @@
+description: >
+  AI-API-pordego, kiu unuecigas abonkontojn en API-ŝlosilojn; ĝi subtenas
+  kontogrupon, ŝarĝbalancadon kaj kotizstatistikojn, kaj bezonas uzi kune kun
+  PostgreSQL kaj Redis.
+category: "Reto/Iloj"
+ports:
+  8080: "Reteja interfaco"

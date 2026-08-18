@@ -1,0 +1,9 @@
+description: >
+  The data visualization and exploration platform of the Elastic ecosystem, used together
+  with Elasticsearch. It provides charts, dashboards, log analysis and alerting, serving
+  as the visualization entry point of the ELK stack.
+category: "Monitoring/Ops"
+ports:
+  5601: "Web UI"
+env:
+  ELASTICSEARCH_HOSTS: "Elasticsearch address (can be a service name, e.g. http://elasticsearch:9200)"

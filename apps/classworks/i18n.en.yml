@@ -1,0 +1,9 @@
+description: >
+  A KV storage backend for classroom display homework boards, used for homework display
+  and data management with support for multiple class boards. Deployment requires
+  configuring OAuth and a JWT secret.
+category: "Panel/Website"
+ports:
+  3000: "Web UI"
+env:
+  JWT_SECRET: "JWT secret (required; a long random string is recommended)"

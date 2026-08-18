@@ -1,0 +1,10 @@
+description: >
+  La plej populara malfermita rilata datumbaza administra sistemo en la mondo,
+  vaste uzata en diversaj retaj aplikaĵoj, firmaj sistemoj kaj datenmagazenoj.
+  Ĉi tiu ŝablono uzas la oficialan MySQL 8-bildon kaj konservas datumojn en la
+  loka datenujo.
+category: "Datumbazo/Stokado"
+ports:
+  3306: "MySQL-servo"
+env:
+  MYSQL_ROOT_PASSWORD: "Pasvorto de root"

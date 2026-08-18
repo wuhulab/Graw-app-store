@@ -1,0 +1,6 @@
+name: "Uptime Kuma"
+description: >
+  セルフホスト型のウェブサイト/サービス可用性監視ツール。HTTP、TCP、Ping、DNS など複数のプロトコルに対応し、通知アラートとステータスページを備えています。
+category: "監視/運用"
+ports:
+  3001: "Web 画面"

@@ -1,0 +1,7 @@
+name: "Consul"
+description: >
+  HashiCorp のサービスディスカバリ＆設定センター。サービスメッシュ、KV ストア、ヘルスチェックを提供し、マルチデータセンターに対応します。本テンプレートは dev 単機モードで動作し、Web UI を開放します。
+category: "開発/DevOps"
+ports:
+  8500: "Web UI"
+  8600: "DNS インターフェース"

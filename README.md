@@ -19,6 +19,9 @@ app-store/
 │   └── <app-id>/
 │       ├── data.yml             # 应用元数据（名称/描述/分类/版本/警告/端口/环境变量等）
 │       ├── docker-compose.yml   # Docker Compose 模板
+│       ├── i18n.en.yml          # 多语言翻译（可选）：英文
+│       ├── i18n.ja.yml          # 多语言翻译（可选）：日语
+│       ├── i18n.eo.yml          # 多语言翻译（可选）：世界语
 │       └── icon.png / icon.svg  # 应用图标（建议 256x256，PNG 或 SVG）
 └── scripts/
     ├── generate_index.py # 扫描 apps/ 生成 index.json 的脚本
@@ -83,6 +86,44 @@ tags:                          # 可选，商店标签（前端在应用卡片�
 | `网络/工具` | 内网穿透、代理、网络工具 | frp、nps、RSSHub、Pixiv 工具 |
 | `监控/运维` | 监控、日志、运维平台 | Uptime Kuma、Zabbix、Kibana、Watchtower |
 | `开发/DevOps` | DevOps、CI/CD、基础设施 | GitLab、Consul、Dockge、runner |
+
+#### 多语言翻译（i18n.<locale>.yml，可选）
+
+为应用提供英文（`en`）、日语（`ja`）、世界语（`eo`）翻译，放在应用目录下的
+`i18n.<locale>.yml` 文件中（`data.yml` 保持中文原样，无需改动）。`generate_index.py`
+会自动读取并把结果合并到 `index.json` 每个应用的 `translations.<locale>` 字段下。
+
+```yaml
+# apps/<app-id>/i18n.en.yml 示例
+name: "Uptime Kuma"            # 应用名称翻译（纯英文品牌可省略）
+description: >                # 产品介绍翻译（合并为一段）
+  A self-hosted website / service availability monitoring tool.
+category: "Monitoring/Ops"     # 分类名翻译（6 类映射见下）
+ports:                         # 端口用途翻译：键为 data.yml 中的容器端口
+  3001: "Web UI"
+env:                           # 环境变量说明翻译：键为环境变量名
+  TZ: "Time zone"
+```
+
+字段说明（均可选，缺省时前端回退到 `data.yml` 的中文内容）：
+
+- `name` / `description` / `category`：应用名称、产品介绍、分类名的翻译。
+- `ports`：端口用途翻译，键为 `data.yml` 中 `ports[].container` 的端口号（整数）。
+- `env`：环境变量说明翻译，键为 `data.yml` 中 `env[].name` 的环境变量名。
+
+`category` 支持的语言映射：
+
+| 中文 | en | ja | eo |
+| --- | --- | --- | --- |
+| `数据库/存储` | Database/Storage | データベース/ストレージ | Datumbazo/Stokado |
+| `面板/网站` | Panel/Website | パネル/ウェブサイト | Panelo/Retpaĝaro |
+| `AI/开发` | AI/Development | AI/開発 | AI/Disvolvo |
+| `网络/工具` | Network/Tools | ネットワーク/ツール | Reto/Iloj |
+| `监控/运维` | Monitoring/Ops | 監視/運用 | Monitorado/Operaciado |
+| `开发/DevOps` | Development/DevOps | 開発/DevOps | Disvolvo/DevOps |
+
+> 商店已为全部 93 个应用内置了 `i18n.en.yml` / `i18n.ja.yml` / `i18n.eo.yml`
+> 三语翻译；新增应用时可参考同目录其他应用的翻译文件。
 
 #### 版本警告（warn）
 

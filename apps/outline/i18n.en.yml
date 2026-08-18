@@ -1,0 +1,13 @@
+description: >
+  A modern team knowledge base and Wiki platform supporting real-time collaborative
+  Markdown editing, full-text search and rich integrations. It requires PostgreSQL and
+  Redis.
+category: "Panel/Website"
+ports:
+  3000: "Web UI"
+env:
+  DATABASE_URL: "Database connection"
+  REDIS_URL: "Redis connection"
+  SECRET_KEY: "Secret key"
+  UTILS_SECRET: "Utils secret"
+  URL: "Access URL"

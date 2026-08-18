@@ -1,0 +1,7 @@
+description: >
+  An open-source next-generation IM and collaboration platform supporting groups,
+  channels, voice, plugins and bots. It can be fully self-hosted to build your own private
+  communication space.
+category: "Panel/Website"
+ports:
+  11002: "Web UI"

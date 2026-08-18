@@ -1,0 +1,8 @@
+description: >
+  AI-orestra platformo, kiu kunlabore pliigas la inteligentecon de agentoj; ĝi
+  provizas API (8787) kaj Web (3001) interfacojn, kaj subtenas kunlaboradon de
+  pluraj agentoj kaj aŭtomatan orkestradon.
+category: "AI/Disvolvo"
+ports:
+  8787: "API-servo"
+  3001: "Reteja interfaco"

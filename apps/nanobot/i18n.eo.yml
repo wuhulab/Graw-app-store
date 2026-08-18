@@ -1,0 +1,7 @@
+description: >
+  Ekstreme malpeza mem-gastigita persona AI-agenta kadro malfermita de HKUDS,
+  kiu provizas WebUI (8765) kaj WebSocket, subtenas ilvokojn kaj lokan
+  deplojon, kaj konsumas tre malmulte da resursoj.
+category: "AI/Disvolvo"
+ports:
+  8765: "WebUI / WebSocket"

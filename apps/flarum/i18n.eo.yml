@@ -1,0 +1,7 @@
+description: >
+  Eleganta, simpla kaj facile etendebla moderna malfermita forumo-programaro kun
+  freŝa interfaco kaj rapida ŝarĝo; ĝi havas riĉan ekosistemon de etendiloj kaj
+  estas bona elekto por krei komunuman forumon.
+category: "Panelo/Retpaĝaro"
+ports:
+  8080: "Reteja interfaco"

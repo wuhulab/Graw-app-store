@@ -1,0 +1,7 @@
+description: >
+  A next-generation game server management platform (GSM3) supporting one-click
+  deployment, monitoring and scheduling of multiple game server types, with web UI on
+  port 3001.
+category: "Development/DevOps"
+ports:
+  3001: "Web UI"

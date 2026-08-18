@@ -1,0 +1,10 @@
+name: "ZenTao"
+description: >
+  A domestically produced open-source all-in-one project management software covering the
+  entire workflow of product, project, testing, documentation and DevOps. The image
+  bundles a MariaDB database.
+category: "Development/DevOps"
+ports:
+  80: "Web UI"
+env:
+  MYSQL_INTERNAL: "Whether to use the built-in database (1 = built-in)"

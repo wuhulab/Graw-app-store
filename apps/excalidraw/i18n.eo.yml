@@ -1,0 +1,7 @@
+description: >
+  Minimumisma blanktabulilo en desegnita (mane-skiza) stilo, kiu subtenas retan
+  kunlaboron kaj eksportadon al bildoj kaj SVG; taŭga por desegni
+  fludiagramojn, arkitektajn diagramojn kaj skemojn, kaj uzebla sen ensaluto.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Reteja interfaco"

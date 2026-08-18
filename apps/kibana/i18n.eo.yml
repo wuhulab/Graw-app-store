@@ -1,0 +1,9 @@
+description: >
+  Datuma videbliga kaj esplora platformo de la Elastic-ekosistemo, uzata kune
+  kun Elasticsearch; ĝi provizas diagramojn, panelojn, protokolanalizon kaj
+  alarmojn, kaj estas la videbliga enirejo de la ELK-ilstako.
+category: "Monitorado/Operaciado"
+ports:
+  5601: "Reteja interfaco"
+env:
+  ELASTICSEARCH_HOSTS: "Adreso de Elasticsearch (povas esti servnomo, ekz. http://elasticsearch:9200)"

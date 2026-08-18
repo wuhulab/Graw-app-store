@@ -1,0 +1,7 @@
+description: >
+  A toolbox for developers integrating over a hundred common tools such as JSON
+  formatting, JWT parsing, Base64 encode/decode, hash calculation and QR code generation.
+  Everything runs locally in the browser.
+category: "Panel/Website"
+ports:
+  80: "Web UI"

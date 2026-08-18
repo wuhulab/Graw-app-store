@@ -1,0 +1,7 @@
+description: >
+  Inteligenta datum-demanda sistemo bazita sur granda modelo + RAG produktita
+  de la teamo de DataEase, kiu ebligas demandi datumbazojn per natura lingvo
+  kaj generi diagramojn; la bildo enkorpigas PostgreSQL.
+category: "AI/Disvolvo"
+ports:
+  8000: "Reteja interfaco"

@@ -1,0 +1,9 @@
+name: "Nezha Monitor"
+description: >
+  A self-hosted all-in-one server monitoring and operations tool supporting a multi-platform
+  panel, real-time alerts, remote commands and task management. It helps you keep track of
+  the status of multiple servers.
+category: "Monitoring/Ops"
+ports:
+  8008: "Panel interface"
+  5555: "Agent communication port"

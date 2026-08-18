@@ -1,0 +1,7 @@
+description: >
+  A self-hosted code snippet sharing platform similar to GitHub Gist. It supports
+  anonymous / logged-in snippet creation, syntax highlighting and comments, and is
+  backed by Git storage.
+category: "Network/Tools"
+ports:
+  6157: "Web UI"

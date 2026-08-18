@@ -1,0 +1,8 @@
+name: "ZeroCat プログラミングコミュニティ"
+description: >
+  軽量なオンラインプログラミング＆共有プラットフォーム。Scratch、Python などプログラミング初心者向けの機能を備えたコミュニティです。現在は初期段階にあり、公式はソースコードでの Dockerfile ローカルビルドのみ提供していて、プル可能なビルド済みイメージはまだありません。
+category: "パネル/ウェブサイト"
+ports:
+  3000: "Web 画面"
+env:
+  DATABASE_URL: "MySQL 接続文字列（必須、例: mysql://root:pwd@host:3306/zerocat）"

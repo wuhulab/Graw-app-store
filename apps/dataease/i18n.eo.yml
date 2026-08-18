@@ -1,0 +1,7 @@
+description: >
+  Malfermita BI-analiza ilo uzebla de ĉiuj, kiu subtenas aliron al datenfontoj,
+  kreadon de diagramoj, panelojn kaj kundividojn; la bildo enkorpigas
+  MySQL kaj Redis (v2 defaŭlte uzas havenon 8100).
+category: "Panelo/Retpaĝaro"
+ports:
+  8100: "Reteja interfaco"

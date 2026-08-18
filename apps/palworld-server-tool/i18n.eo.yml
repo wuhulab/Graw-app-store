@@ -1,0 +1,7 @@
+description: >
+  Administra ilo por servilo de Palworld, kiu provizas retan administradon
+  (8080) kaj agenton (8081), ebligante vidi ludantojn, ekonomion, sekurkopiojn
+  de konservoj kaj la statuson de la ludo.
+category: "Disvolvo/DevOps"
+ports:
+  8080: "Reteja administra interfaco"

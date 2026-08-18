@@ -1,0 +1,14 @@
+name: "frp (frpc-kliento)"
+description: >
+  La klienta flanko de alt-efikeca intretunela ilo, kiu aktive konektas al la
+  frps-servilo por eksponi la lokajn internretajn servojn al la publika reto;
+  konektaj parametroj estas agordataj per mediaj variabloj, kaj la tunelaj
+  reguloj povas esti muntitaj kiel frpc.toml sub /etc/frp.
+category: "Reto/Iloj"
+env:
+  FRP_SERVER_ADDR: "Adreso de la frps-servilo (deviga, ekz. 1.2.3.4)"
+  FRP_SERVER_PORT: "Haveno de la frps-servilo"
+  FRP_AUTH_METHOD: "Aŭtentiga metodo (token / user ktp)"
+  FRP_TOKEN: "Aŭtentiga ĵetono (devas kongrui kun la frps-agordo)"
+  FRP_SERVER_USER: "Aŭtentiga uzantnomo (laŭvola)"
+  FRP_SERVER_PASSWORD: "Aŭtentiga pasvorto (laŭvola)"

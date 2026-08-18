@@ -1,0 +1,9 @@
+description: >
+  A visual Docker Compose management panel that manages compose files by stack. It
+  supports editing, starting, stopping, logs and a terminal, with a clean and beautiful
+  interface.
+category: "Development/DevOps"
+ports:
+  5001: "Web UI"
+env:
+  DOCKGE_STACKS_DIR: "Compose files directory"

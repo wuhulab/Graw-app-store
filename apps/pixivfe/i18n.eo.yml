@@ -1,0 +1,8 @@
+description: >
+  Malfermita anstataŭa antaŭparto por pixiv, kiu protektas privatecon kaj
+  ebligas anoniman foliumadon sen ensaluto; ĉiuj petoj estas plenumataj
+  servilflanke, ĝi estas malpeza, moderna kaj subtenas bildojn por multaj
+  arkitekturoj.
+category: "Reto/Iloj"
+ports:
+  8282: "Reteja interfaco"

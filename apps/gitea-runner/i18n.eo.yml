@@ -1,0 +1,8 @@
+description: >
+  Funkciilo por Gitea Actions, kiu plenumas la CI/CD-fluojn de Gitea-deponejoj
+  loke aŭ sur dediĉita maŝino; antaŭe necesas registri la runilon ĉe Gitea por
+  akiri ĵetonon.
+category: "Disvolvo/DevOps"
+env:
+  GITEA_INSTANCE_URL: "Adreso de la Gitea-instancaĵo"
+  GITEA_RUNNER_REGISTRATION_TOKEN: "Registriĝa ĵetono de la runilo (deviga)"

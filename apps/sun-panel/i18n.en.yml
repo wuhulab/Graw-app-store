@@ -1,0 +1,7 @@
+description: >
+  A server / NAS navigation panel and browser homepage. It is clean and beautiful,
+  supporting icon management, internal/external network link switching and built-in
+  widgets, with extremely low resource usage.
+category: "Panel/Website"
+ports:
+  3002: "Web UI"

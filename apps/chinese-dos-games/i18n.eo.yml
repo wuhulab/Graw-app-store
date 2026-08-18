@@ -1,0 +1,8 @@
+name: "Ĉinia DOS-Ludaro"
+description: >
+  Reta kolekto de proksimume 1898 klasikaj ĉinlingvaj DOS-ludoj, kiujn oni
+  povas ludi rekte en la retumilo kaj kiuj vekas infanajn memorojn (ĉi tiu ero
+  uzas komunuman bildon).
+category: "Panelo/Retpaĝaro"
+ports:
+  262: "Reteja interfaco"

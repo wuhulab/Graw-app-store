@@ -1,0 +1,7 @@
+description: >
+  An open-source self-improving AI Agent from Nous Research supporting multi-platform
+  message gateways (Telegram / Discord, etc.), MCP tools, skills and a memory system, and
+  can be self-hosted.
+category: "AI/Development"
+ports:
+  8642: "API service"

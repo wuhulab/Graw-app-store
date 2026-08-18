@@ -1,0 +1,13 @@
+description: >
+  Moderna scibazo kaj Vikio-platformo por teamoj, kiu subtenas realteman
+  kunlaboran redaktadon en Markdown, plentekstan serĉon kaj riĉajn
+  integraĵojn; ĝi bezonas uzi kune kun PostgreSQL kaj Redis.
+category: "Panelo/Retpaĝaro"
+ports:
+  3000: "Reteja interfaco"
+env:
+  DATABASE_URL: "Datumbaza konekto"
+  REDIS_URL: "Redis-konekto"
+  SECRET_KEY: "Ŝlosilo"
+  UTILS_SECRET: "Ila ŝlosilo"
+  URL: "Alira adreso"

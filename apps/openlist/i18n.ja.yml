@@ -1,0 +1,9 @@
+name: "OpenList"
+description: >
+  AList コミュニティフォークのネットワークストレージ集約＆ファイルリストプログラム。Alibaba Cloud Drive、OneDrive、Baidu 網盤、クォーク、115、WebDAV など数十種類のストレージに対応し、オンラインプレビューと WebDAV 機能を備えています。
+category: "パネル/ウェブサイト"
+ports:
+  5244: "Web 画面"
+env:
+  TZ: "タイムゾーン"
+  UMASK: "ファイル権限マスク"

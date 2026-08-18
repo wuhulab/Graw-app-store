@@ -1,0 +1,11 @@
+name: "ZeroCat Programming Community"
+description: >
+  A lightweight online programming and sharing platform supporting Scratch, Python and
+  other languages, aimed at programming beginners. It is still in its early stage; the
+  official project only offers source-code Dockerfile builds locally, with no pullable
+  prebuilt image yet.
+category: "Panel/Website"
+ports:
+  3000: "Web UI"
+env:
+  DATABASE_URL: "MySQL connection string (required, e.g. mysql://root:pwd@host:3306/zerocat)"

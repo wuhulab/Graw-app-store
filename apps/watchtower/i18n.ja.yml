@@ -1,0 +1,8 @@
+name: "Watchtower"
+description: >
+  実行中のコンテナを自動監視し、ベースイメージに新バージョンがリリースされると自動で取得・再構築します。セルフホストアプリを最新に保ち、セキュリティ更新を取り逃さないようにできます。
+category: "監視/運用"
+env:
+  TZ: "タイムゾーン"
+  WATCHTOWER_CLEANUP: "更新後に古いイメージを削除するかどうか"
+  WATCHTOWER_POLL_INTERVAL: "チェック間隔（秒）"

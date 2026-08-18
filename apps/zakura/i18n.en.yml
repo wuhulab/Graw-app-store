@@ -1,0 +1,8 @@
+description: >
+  An AI orchestration platform that collaboratively boosts agent intelligence. It provides
+  an API (8787) and Web (3001) interface, supporting multi-agent collaboration and
+  automated orchestration.
+category: "AI/Development"
+ports:
+  8787: "API service"
+  3001: "Web UI"

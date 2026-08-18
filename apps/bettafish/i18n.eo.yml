@@ -1,0 +1,8 @@
+description: >
+  Orkestrita opinianaliza sistemo pelata de pluraj agentoj, kiu aŭtomate
+  kolektas enhavon de Weibo, Xiaohongshu, Douyin ktp kaj per kunlaboraj
+  AI-agentoj produktas strukturitajn analizajn raportojn.
+category: "Disvolvo/DevOps"
+ports:
+  5000: "Reteja interfaco"
+  8501: "Ĉefa servo"

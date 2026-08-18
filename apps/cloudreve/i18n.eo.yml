@@ -1,0 +1,7 @@
+description: >
+  Nuba disko kaj dosier-kundivida platformo, kiu subtenas plurajn stokadajn
+  strategiojn kiel lokan, objektan kaj foran stokadon, kun enkonstruitaj reta
+  antaŭrigardo, kundividaj ligiloj kaj WebDAV.
+category: "Panelo/Retpaĝaro"
+ports:
+  5212: "Reteja interfaco"

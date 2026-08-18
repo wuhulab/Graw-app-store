@@ -1,0 +1,9 @@
+description: >
+  An OpenAI API management and distribution system supporting unified access to multiple
+  models, token management and quota statistics. It can convert various models into the
+  OpenAI format for external invocation.
+category: "AI/Development"
+ports:
+  3000: "Web UI"
+env:
+  SESSION_SECRET: "Session secret (recommended)"

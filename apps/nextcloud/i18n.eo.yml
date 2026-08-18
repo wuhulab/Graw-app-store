@@ -1,0 +1,7 @@
+description: >
+  Mem-gastigita nuba disko kaj kunlabora platformo, kiu subtenas
+  dosiero-sinkronigon, kundividon, interretajn dokumentojn, kalendaron kaj
+  kontaktojn, tiel ke vi povas plene regi viajn proprajn datumojn.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Reteja interfaco"

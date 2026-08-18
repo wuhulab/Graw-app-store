@@ -1,0 +1,8 @@
+name: "Halo"
+description: >
+  モダンで洗練された Java 製ブログシステム。豊富なテーマとプラグインエコシステムを備え、Spring Boot ベースで構築されています。個人ブログやコンテンツ制作に適しています。
+category: "パネル/ウェブサイト"
+ports:
+  8090: "Web 画面"
+env:
+  HALO_PLUGIN_ENABLED: "有効にするプラグイン"

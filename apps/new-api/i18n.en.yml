@@ -1,0 +1,9 @@
+description: >
+  A next-generation LLM API gateway and AI asset management platform supporting unified
+  access to multiple models, token management, channel distribution, usage statistics and
+  billing. It can connect to various models such as OpenAI and DeepSeek.
+category: "Development/DevOps"
+ports:
+  3000: "Web UI"
+env:
+  SESSION_SECRET: "Session secret (recommended)"

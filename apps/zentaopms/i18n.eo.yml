@@ -1,0 +1,10 @@
+name: "ZenTao (Ĉandao)"
+description: >
+  Ĉina malfermita integrita projekt-administra programaro, kiu kovras la tutan
+  procezon de produkto, projekto, testado, dokumentoj kaj DevOps; la bildo
+  enkorpigas MariaDB-datumbazon.
+category: "Disvolvo/DevOps"
+ports:
+  80: "Reteja interfaco"
+env:
+  MYSQL_INTERNAL: "Ĉu uzi la enkonstruitan datumbazon (1=enkonstruita)"

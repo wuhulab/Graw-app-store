@@ -1,0 +1,11 @@
+name: "frp（frpc クライアント）"
+description: >
+  高性能内網トンネルツールのクライアント側。frps サーバーに能動的に接続し、ローカルの内網サービスを公網に公開します。接続パラメータは環境変数で設定し、トンネルルールは /etc/frp 配下の frpc.toml をマウントできます。
+category: "ネットワーク/ツール"
+env:
+  FRP_SERVER_ADDR: "frps サーバーのアドレス（必須、例: 1.2.3.4）"
+  FRP_SERVER_PORT: "frps サーバーのポート"
+  FRP_AUTH_METHOD: "認証方式（token / user など）"
+  FRP_TOKEN: "認証トークン（frps の設定と一致させる必要があります）"
+  FRP_SERVER_USER: "認証ユーザー名（任意）"
+  FRP_SERVER_PASSWORD: "認証パスワード（任意）"

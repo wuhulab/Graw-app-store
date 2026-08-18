@@ -1,0 +1,10 @@
+description: >
+  A community fork of AList, a cloud drive aggregation and file listing program
+  supporting dozens of storage backends including Aliyun Drive, OneDrive, Baidu Drive,
+  Quark, 115 and WebDAV, with online preview and WebDAV capabilities.
+category: "Panel/Website"
+ports:
+  5244: "Web UI"
+env:
+  TZ: "Time zone"
+  UMASK: "File permission mask"

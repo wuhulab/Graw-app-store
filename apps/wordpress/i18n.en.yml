@@ -1,0 +1,12 @@
+description: >
+  The most widely used open-source site building and content management system in the
+  world, with an extremely rich ecosystem of plugins and themes. Suitable for blogs,
+  corporate sites, e-commerce and more. This template bundles a MySQL database.
+category: "Panel/Website"
+ports:
+  80: "Web UI"
+env:
+  WORDPRESS_DB_HOST: "Database address"
+  WORDPRESS_DB_USER: "Database user"
+  WORDPRESS_DB_PASSWORD: "Database password"
+  WORDPRESS_DB_NAME: "Database name"

@@ -1,0 +1,7 @@
+description: >
+  A cloud drive and file sharing platform supporting multiple storage policies including
+  local, object and remote storage, with built-in online preview, share links and
+  WebDAV support.
+category: "Panel/Website"
+ports:
+  5212: "Web UI"

@@ -1,0 +1,8 @@
+name: "Jaeger"
+description: >
+  オープンソースの分散トレーシングシステム。all-in-one モードでそのまま利用でき、Web UI（16686）と OTLP 受信（4317/4318）を提供します。
+category: "監視/運用"
+ports:
+  16686: "Web UI"
+  4317: "OTLP gRPC"
+  4318: "OTLP HTTP"

@@ -1,0 +1,9 @@
+description: >
+  A free, open-source industrial-grade web application firewall providing WAF rule
+  protection, CC attack defense and visual security reports. The management interface
+  listens on port 4443.
+category: "Network/Tools"
+ports:
+  4443: "Admin interface (HTTPS)"
+  80: "WAF HTTP"
+  443: "WAF HTTPS"

@@ -1,0 +1,7 @@
+description: >
+  A lightweight, extensible private npm registry proxy that lets you set up your own Node
+  package source locally or on an intranet, supporting proxying and caching of public npm
+  packages.
+category: "Database/Storage"
+ports:
+  4873: "npm repository"

@@ -1,0 +1,13 @@
+description: >
+  Ilo por amasa elŝutado de Pixiv-aj ilustraĵoj, kun enkonstruita reta
+  administra interfaco (/dashboard); enigante la UID-on de artisto oni povas
+  per unu klako amase elŝuti ĉiujn liajn ilustraĵojn kun antaŭrigardo.
+  Necesas agordi Pixiv-uzantnomon kaj pasvorton; aliro al Pixiv el Ĉinio
+  bezonas prokurilon.
+category: "Reto/Iloj"
+ports:
+  5000: "Reteja administra interfaco"
+env:
+  username: "Pixiv-konto (deviga)"
+  password: "Pixiv-pasvorto (deviga)"
+  port: "Serva haveno"

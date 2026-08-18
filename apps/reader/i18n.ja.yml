@@ -1,0 +1,8 @@
+name: "Reader"
+description: >
+  セルフホスト型のオンライン読書サイト。書源管理、追更、読書進捗の同期、Web での読書に対応し、データはローカルディレクトリに保存されます。
+category: "パネル/ウェブサイト"
+ports:
+  8080: "Web 画面"
+env:
+  READER_APP_SECUREKEY: "管理パスワード（設定を推奨）"

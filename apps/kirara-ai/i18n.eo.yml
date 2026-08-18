@@ -1,0 +1,7 @@
+description: >
+  Plurplatforma babileja robota kadro liganta grandajn modelojn, subtenanta
+  platformojn kiel QQ, Telegram kaj WeCom; ĝi havas enkonstruitan WebUI (8080),
+  laborfluaranĝadon kaj kromaĵan ekosistemon.
+category: "AI/Disvolvo"
+ports:
+  8080: "WebUI"

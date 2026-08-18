@@ -1,0 +1,8 @@
+description: >
+  Funkciilo por Forgejo Actions, kiu plenumas la CI/CD-fluojn de
+  Forgejo-deponejoj sur dediĉita maŝino; antaŭe necesas registri la runilon ĉe
+  Forgejo-instancaĵo por akiri ĵetonon.
+category: "Disvolvo/DevOps"
+env:
+  FORGEJO_INSTANCE_URL: "Adreso de la Forgejo-instancaĵo (deviga)"
+  FORGEJO_RUNNER_REGISTRATION_TOKEN: "Registriĝa ĵetono de la runilo (deviga)"

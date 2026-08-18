@@ -1,0 +1,10 @@
+description: >
+  A feature-rich SFTP / HTTP / FTP server supporting local filesystems as well as storage
+  backends such as S3, WebDAV and Google Drive. It has a built-in web management
+  interface and virtual users.
+category: "Database/Storage"
+ports:
+  8080: "Web admin interface"
+  2022: "SFTP service"
+env:
+  SFTPGO_DEFAULT_ROOT_PATH: "Default root directory"

@@ -1,0 +1,9 @@
+description: >
+  Senpaga malfermita industri-nivela retaplikaĵa fajroŝirmilo (WAF), kiu
+  provizas WAF-regulprotekton, defendon kontraŭ CC-atakoj kaj videblajn
+  sekurecajn raportojn; la administra interfaco uzas havenon 4443.
+category: "Reto/Iloj"
+ports:
+  4443: "Administra interfaco (HTTPS)"
+  80: "WAF HTTP"
+  443: "WAF HTTPS"

@@ -1,0 +1,6 @@
+description: >
+  A Node.js-based flow-based programming tool that connects devices, APIs and services by
+  dragging nodes. It is suitable for IoT, automation and data-flow processing.
+category: "AI/Development"
+ports:
+  1880: "Web UI"

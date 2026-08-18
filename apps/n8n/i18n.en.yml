@@ -1,0 +1,9 @@
+description: >
+  An open-source workflow automation platform that connects apps, data and AI through
+  visual nodes. It supports 400+ integrations and can be self-hosted.
+category: "AI/Development"
+ports:
+  5678: "Web UI"
+env:
+  N8N_SECURE_COOKIE: "Whether to use secure cookies"
+  GENERIC_TIMEZONE: "Time zone"

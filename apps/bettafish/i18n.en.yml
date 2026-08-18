@@ -1,0 +1,9 @@
+name: "BettaFish (WeiYu)"
+description: >
+  A multi-agent driven public-opinion analysis system that automatically collects content
+  from platforms such as Weibo, Xiaohongshu and Douyin. Multiple AI agents collaborate to
+  generate structured analysis reports.
+category: "Development/DevOps"
+ports:
+  5000: "Web UI"
+  8501: "Main service"

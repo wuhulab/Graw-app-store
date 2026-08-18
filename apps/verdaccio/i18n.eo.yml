@@ -1,0 +1,7 @@
+description: >
+  Malpeza kaj etendebla privata npm-deponeja prokurilo, kiu ebligas krei vian
+  propran Node-pakaĵfontejon loke aŭ en intraneto; ĝi subtenas proksimumadon kaj
+  kaŝumadon de publikaj npm-pakaĵoj.
+category: "Datumbazo/Stokado"
+ports:
+  4873: "npm-deponejo"

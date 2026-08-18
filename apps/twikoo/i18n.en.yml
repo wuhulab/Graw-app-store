@@ -1,0 +1,7 @@
+description: >
+  A simple and secure comment system for static websites. It supports post comments,
+  likes, emojis and email notifications. Data is stored in local JSON files with
+  extremely low resource usage.
+category: "Network/Tools"
+ports:
+  8080: "Comment service"

@@ -1,0 +1,12 @@
+description: >
+  The dedicated server Docker image for Palworld, with built-in SteamCMD auto-download
+  and updates of the server. It provides the game (8211/udp), query and RCON ports.
+category: "Development/DevOps"
+ports:
+  8211: "Game port"
+  27015: "Query port"
+  25575: "RCON"
+env:
+  ADMIN_PASSWORD: "Admin password (required)"
+  SERVER_PASSWORD: "Server password (required, otherwise you cannot join)"
+  COMMUNITY_SERVER: "Whether this is a community server"

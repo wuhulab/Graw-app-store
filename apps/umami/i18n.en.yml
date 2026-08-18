@@ -1,0 +1,9 @@
+description: >
+  An open-source, privacy-focused website traffic analytics tool that is lightweight and
+  modern. It supports multiple sites, event tracking and custom charts, with full
+  ownership of your data. This template bundles a PostgreSQL database.
+category: "Monitoring/Ops"
+ports:
+  3000: "Web UI"
+env:
+  HASH_SALT: "Data encryption salt (change it on first deployment)"

@@ -1,0 +1,7 @@
+description: >
+  A multi-platform chatbot framework that connects LLMs, supporting QQ, Telegram, WeCom
+  and more. It comes with a built-in WebUI (8080), workflow orchestration and a plugin
+  ecosystem.
+category: "AI/Development"
+ports:
+  8080: "WebUI"

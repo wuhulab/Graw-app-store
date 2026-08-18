@@ -1,0 +1,7 @@
+description: >
+  An OpenClaw multi-agent group-chat orchestration system from 1Panel that lets multiple
+  AI agents collaborate in group chats. It requires an OpenClaw instance and plugins to
+  be used.
+category: "AI/Development"
+ports:
+  18080: "Web UI"

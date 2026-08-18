@@ -1,0 +1,7 @@
+description: >
+  Ŝparkesto por programistoj, kiu integras pli ol centon da ofte uzataj iloj
+  kiel JSON-formatigo, JWT-analizado, Base64-kodigo/malkodigo, haskalkulado kaj
+  QR-kodo-generado; ĉio funkcias loke en la retumilo.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Reteja interfaco"

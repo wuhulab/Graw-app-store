@@ -1,0 +1,7 @@
+description: >
+  Orkestra sistemo por grupaj babiloj kun pluraj AI-agentoj produktita de
+  1Panel, kiu ebligas al pluraj AI-agentoj kunlabori en grupaj konversacioj;
+  necesas uzi kune kun OpenClaw-instancaĵo kaj la responda kromaĵo.
+category: "AI/Disvolvo"
+ports:
+  18080: "Reteja interfaco"

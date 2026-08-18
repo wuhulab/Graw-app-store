@@ -1,0 +1,8 @@
+name: "Graw (joke placeholder)"
+description: >
+  This is a joke: use Graw to download Graw, then use Graw to manage Graw — a matryoshka
+  perpetual motion machine. This is not a real Graw server panel image, just a joke
+  placeholder.
+category: "Panel/Website"
+ports:
+  80: "Joke page"

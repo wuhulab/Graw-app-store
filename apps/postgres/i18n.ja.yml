@@ -1,0 +1,10 @@
+name: "PostgreSQL"
+description: >
+  強力なオープンソースのリレーショナルデータベース。信頼性と豊富なデータ型で知られ、複雑なクエリ、トランザクション、拡張、全文検索に対応します。本テンプレートは公式 PostgreSQL 16 イメージを使用します。
+category: "データベース/ストレージ"
+ports:
+  5432: "PostgreSQL サービス"
+env:
+  POSTGRES_USER: "スーパーユーザー"
+  POSTGRES_PASSWORD: "スーパーユーザーのパスワード"
+  POSTGRES_DB: "デフォルトデータベース"

@@ -1,0 +1,7 @@
+description: >
+  A Flask-based Scratch creator community supporting work publishing, communication and
+  showcasing. It is the community side of the ZeroCat ecosystem and is currently only
+  available for source-code deployment.
+category: "Panel/Website"
+ports:
+  5219: "Web UI"

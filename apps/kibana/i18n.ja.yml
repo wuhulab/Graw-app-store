@@ -1,0 +1,8 @@
+name: "Kibana"
+description: >
+  Elastic エコシステムのデータ可視化・探索プラットフォーム。Elasticsearch と組み合わせて使用し、グラフ、ダッシュボード、ログ分析、アラートを提供する、ELK スタックの可視化エントリポイントです。
+category: "監視/運用"
+ports:
+  5601: "Web 画面"
+env:
+  ELASTICSEARCH_HOSTS: "Elasticsearch のアドレス（サービス名でも可、例: http://elasticsearch:9200）"

@@ -1,0 +1,9 @@
+name: "SFTPGo"
+description: >
+  機能豊富な SFTP / HTTP / FTP サーバー。ローカルファイルシステムのほか、S3、WebDAV、Google Drive などのストレージバックエンドに対応し、Web 管理画面と仮想ユーザーを内蔵しています。
+category: "データベース/ストレージ"
+ports:
+  8080: "Web 管理画面"
+  2022: "SFTP サービス"
+env:
+  SFTPGO_DEFAULT_ROOT_PATH: "デフォルトのルートディレクトリ"

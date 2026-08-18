@@ -19,10 +19,13 @@ generate_index.py - 扫描 apps/ 下的所有应用，生成统一索引 index.j
       {
         "store": { "name", "repo", "base_url", "updated_at", "app_count" },
         "apps": [ { id, name, description, version, versions, homepage, source,
-                    arch, ports, env, icon, compose_url, data_url } ]
+                    arch, ports, env, icon, compose_url, data_url,
+                    translations? } ]
       }
-
-说明:
+    说明:
+    - 应用目录下可选的 i18n.<locale>.yml（en/ja/eo）翻译文件会被读取，
+      合并进每个应用的 translations 字段（{ locale: { name?, description?,
+      category?, ports?, env? } }），未提供的中文字段保持不变。
     - 每个应用目录必须包含 data.yml 与 docker-compose.yml（可指定文件名）。
     - icon.png 缺失时仅告警，不中断生成。
     - 所有 download_url 基于 gh-pages 分支的 raw 链接:
@@ -47,6 +50,9 @@ INDEX_PATH = os.path.join(APP_STORE_DIR, "index.json")
 
 # 需要置底的应用（排到列表末尾）：如 alist 有社区版本建议，不宜置顶
 _LAST_APPS = {"alist"}
+
+# 支持的多语言翻译文件后缀（可选，位于应用目录内，如 i18n.en.yml）
+LOCALES = ("en", "ja", "eo")
 
 
 def _entry_sort_key(name: str):
@@ -229,6 +235,47 @@ def _file_url(repo: str, rel: str) -> str:
     return f"https://raw.githubusercontent.com/{repo}/gh-pages/{rel.lstrip('/')}"
 
 
+def _parse_i18n(app_dir: str) -> dict:
+    """读取应用目录下可选的 i18n.<locale>.yml 翻译文件，返回 {locale: data}。
+
+    每个翻译文件可包含字段（均可选）:
+        name:       应用名称翻译
+        description:产品介绍翻译
+        category:   分类名翻译
+        ports:      端口用途翻译，键为容器端口（对应 data.yml 的 ports[].container）
+        env:        环境变量说明翻译，键为环境变量名（对应 data.yml 的 env[].name）
+    """
+    translations = {}
+    for locale in LOCALES:
+        path = os.path.join(app_dir, f"i18n.{locale}.yml")
+        if not os.path.isfile(path):
+            continue
+        try:
+            data = load_yml(path)
+        except Exception:
+            continue
+        if not isinstance(data, dict):
+            continue
+        entry = {}
+        for key in ("name", "description", "category"):
+            val = data.get(key)
+            if isinstance(val, str) and val.strip():
+                entry[key] = val.strip()
+        ports = data.get("ports")
+        if isinstance(ports, dict):
+            for k, v in ports.items():
+                if isinstance(v, str) and v.strip():
+                    entry.setdefault("ports", {})[str(k)] = v.strip()
+        env = data.get("env")
+        if isinstance(env, dict):
+            for k, v in env.items():
+                if isinstance(v, str) and v.strip():
+                    entry.setdefault("env", {})[str(k)] = v.strip()
+        if entry:
+            translations[locale] = entry
+    return translations
+
+
 def collect_apps(repo: str):
     """扫描 apps/ 目录，返回 (apps 列表, warnings 列表)。"""
     apps = []
@@ -276,7 +323,9 @@ def collect_apps(repo: str):
             versions = [{"tag": "latest", "label": "最新"}]
         default_version = versions[0].get("tag", "latest") if isinstance(versions[0], dict) else str(versions[0])
 
-        apps.append({
+        translations = _parse_i18n(app_dir)
+
+        entry = {
             "id": app_id,
             "name": name,
             "description": str(meta.get("description") or "").strip(),
@@ -293,7 +342,10 @@ def collect_apps(repo: str):
             "icon": _file_url(repo, icon_rel),
             "compose_url": _file_url(repo, f"apps/{app_id}/{compose_file}"),
             "data_url": _file_url(repo, f"apps/{app_id}/data.yml"),
-        })
+        }
+        if translations:
+            entry["translations"] = translations
+        apps.append(entry)
     return apps, warnings
 
 

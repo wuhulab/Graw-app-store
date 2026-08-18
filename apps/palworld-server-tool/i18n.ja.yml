@@ -1,0 +1,6 @@
+name: "Palworld Server Tool"
+description: >
+  幻兽パル（Palworld）サーバー管理ツール。Web 管理（8080）と Agent（8081）を提供し、プレイヤー、経済状況、セーブバックアップ、ゲーム状態を確認できます。
+category: "開発/DevOps"
+ports:
+  8080: "Web 管理画面"

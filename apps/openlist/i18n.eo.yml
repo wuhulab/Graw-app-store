@@ -1,0 +1,11 @@
+description: >
+  Forko de la komunumo AList: nubdisko-agreganta kaj dosierlistiga programo,
+  kiu subtenas dekojn da stokservoj kiel Alibaba Cloud Drive, OneDrive, Baidu
+  Netdisk, Quark, 115 kaj WebDAV, kun kapabloj de interreta antaŭrigardo kaj
+  WebDAV.
+category: "Panelo/Retpaĝaro"
+ports:
+  5244: "Reteja interfaco"
+env:
+  TZ: "Horzono"
+  UMASK: "Dosierpermesa masko"

@@ -1,0 +1,7 @@
+description: >
+  Videbla retej-konstrua platformo bazita sur grandaj modeloj produktita de la
+  teamo de Halo; ĝi generas retejojn per dialoga priskribo kaj havas
+  enkonstruitan AI-retejkonstruan kapablon.
+category: "Panelo/Retpaĝaro"
+ports:
+  3000: "Reteja interfaco"

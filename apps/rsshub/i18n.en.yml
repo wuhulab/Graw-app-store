@@ -1,0 +1,6 @@
+description: >
+  Everything into RSS. Generate RSS subscriptions for various content sources (websites,
+  social platforms, blogs, etc.) and aggregate every update you care about.
+category: "Network/Tools"
+ports:
+  1200: "Web UI"

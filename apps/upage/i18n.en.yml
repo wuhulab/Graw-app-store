@@ -1,0 +1,6 @@
+description: >
+  A visual website-building platform based on LLMs from the Halo team. Generate web pages
+  through conversational description, with built-in AI website-building capabilities.
+category: "Panel/Website"
+ports:
+  3000: "Web UI"

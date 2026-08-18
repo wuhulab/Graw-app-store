@@ -1,0 +1,9 @@
+description: >
+  An open-source database workbench supporting connections to 70+ databases for SQL
+  queries, data browsing, schema comparison and import/export. It comes with a built-in
+  AI assistant and MCP Server and can be self-hosted via Docker.
+category: "Development/DevOps"
+ports:
+  4224: "Web UI"
+env:
+  DBX_PASSWORD: "Web login password (recommended)"

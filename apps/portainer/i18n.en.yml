@@ -1,0 +1,7 @@
+description: >
+  The most popular visual panel for Docker / Kubernetes, providing one-stop management of
+  containers, images, networks, volumes and stacks. Its intuitive interface makes it
+  friendly for beginners.
+category: "Monitoring/Ops"
+ports:
+  9000: "Web UI"
