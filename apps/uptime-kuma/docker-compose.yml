@@ -1,0 +1,13 @@
+# Uptime Kuma
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:${VERSION}
+    container_name: uptime-kuma
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "3001:3001"
+    restart: unless-stopped

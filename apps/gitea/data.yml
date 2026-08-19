@@ -1,0 +1,30 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Gitea"
+id: "gitea"
+
+category: "面板/网站"
+description: >
+  轻量、快速、自托管的 Git 服务，内存占用小、安装简单，支持仓库、Issue、PR、CI、Wiki 与 Actions，是搭建私有代码托管平台的理想选择。
+
+homepage: "https://gitea.com/"
+
+source: "https://github.com/go-gitea/gitea"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+  - { container: 22, label: "SSH", protocol: "tcp" }
+
+env:
+  - { name: "GITEA__server__DOMAIN", default: "localhost", desc: "域名 / IP" }
+  - { name: "GITEA__server__SSH_DOMAIN", default: "localhost", desc: "SSH 域名" }
+

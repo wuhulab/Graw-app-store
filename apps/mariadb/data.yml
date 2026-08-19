@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "MariaDB"
+id: "mariadb"
+
+category: "数据库/存储"
+description: >
+  MySQL 的社区分支，完全兼容并增加更多存储引擎与性能优化，是众多 Linux 发行版的默认数据库。本模板使用官方 MariaDB 11 镜像。
+
+homepage: "https://mariadb.org/"
+
+source: "https://github.com/MariaDB/server"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "11", label: "11.x" }
+  - { tag: "10.11", label: "10.11 LTS" }
+
+ports:
+  - { container: 3306, label: "MariaDB 服务", protocol: "tcp" }
+
+env:
+  - { name: "MARIADB_ROOT_PASSWORD", default: "root123", desc: "root 密码" }
+  - { name: "MARIADB_DATABASE", default: "", desc: "默认数据库" }
+

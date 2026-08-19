@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Dockge"
+id: "dockge"
+
+category: "开发/DevOps"
+description: >
+  可视化的 Docker Compose 管理面板，以 Stack 为单位管理 compose 文件，支持编辑、启动、停止、日志与终端，界面简洁美观。
+
+homepage: "https://dockge.kuma.pet/"
+
+source: "https://github.com/louislam/dockge"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5001, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "DOCKGE_STACKS_DIR", default: "/opt/stacks", desc: "Compose 文件目录" }
+

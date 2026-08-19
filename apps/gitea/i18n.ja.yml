@@ -1,0 +1,10 @@
+name: "Gitea"
+description: >
+  軽量・高速でセルフホスト可能な Git サービス。メモリ消費が少なく簡単に導入でき、リポジトリ、Issue、PR、CI、Wiki、Actions に対応。プライベートなコードホスティングプラットフォーム構築に最適です。
+category: "パネル/ウェブサイト"
+ports:
+  3000: "Web 画面"
+  22: "SSH"
+env:
+  GITEA__server__DOMAIN: "ドメイン / IP"
+  GITEA__server__SSH_DOMAIN: "SSH ドメイン"

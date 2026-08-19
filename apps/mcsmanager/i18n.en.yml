@@ -1,0 +1,7 @@
+description: >
+  A web management panel for game servers supporting one-click installation, start/stop,
+  backup and file management for multiple game server types. The panel listens on port
+  23333.
+category: "Development/DevOps"
+ports:
+  23333: "Web panel"

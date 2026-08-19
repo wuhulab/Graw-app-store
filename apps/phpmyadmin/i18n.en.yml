@@ -1,0 +1,11 @@
+description: >
+  A PHP-based visual web management tool for MySQL / MariaDB supporting management of
+  databases, tables, SQL, users and import/export. It requires connecting to an external
+  database.
+category: "Database/Storage"
+ports:
+  80: "Web UI"
+env:
+  PMA_HOST: "Database host (e.g. mysql or a server IP)"
+  PMA_PORT: "Database port"
+  PMA_ARBITRARY: "Allow connecting to any server (1 = yes)"

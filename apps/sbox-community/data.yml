@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Sbox Community"
+id: "sbox-community"
+
+category: "面板/网站"
+tags:
+  - "推荐"
+  - "官方"
+
+warn: "官方为源码（venv + python app.py）部署，无官方镜像；商店模板采用源码构建，需先将源码放入 compose 目录。"
+description: >
+  基于 Flask 的 Scratch 创作者社区，支持作品发布、交流与展示，是 ZeroCat 生态的社区侧。当前仅提供源码部署方式。
+
+homepage: "https://github.com/wuhulab/Sbox-Community"
+
+source: "https://github.com/wuhulab/Sbox-Community"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5219, label: "Web 界面", protocol: "tcp" }
+
+env:
+

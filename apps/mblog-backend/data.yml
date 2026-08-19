@@ -1,0 +1,30 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Mblog"
+id: "mblog-backend"
+
+category: "AI/开发"
+description: >
+  开源的极简朋友圈 / 微博系统后端，支持图文发布、关注与广场浏览，可自托管，需配合 MySQL 数据库使用。
+
+homepage: "https://mblog.kingwrcy.cn/"
+
+source: "https://github.com/kingwrcy/mblog-backend"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "服务端口", protocol: "tcp" }
+
+env:
+  - { name: "MYSQL_PASS", default: "", desc: "数据库密码（必填）" }
+  - { name: "MYSQL_URL", default: "db:3306", desc: "数据库地址:端口" }
+  - { name: "MYSQL_DB", default: "mblog", desc: "数据库名" }
+  - { name: "MBLOG_FRONT_DOMAIN", default: "", desc: "前端地址" }
+

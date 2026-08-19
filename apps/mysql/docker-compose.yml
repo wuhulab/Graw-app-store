@@ -1,0 +1,15 @@
+# MySQL
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  mysql:
+    image: mysql:${VERSION}
+    container_name: mysql
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+    restart: unless-stopped

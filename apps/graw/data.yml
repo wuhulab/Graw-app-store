@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Graw（玩笑占位）"
+id: "graw"
+
+category: "面板/网站"
+
+warn: "这是一个玩笑。但这确实指向真实的 Graw 下载 —— 让你用 Graw 下载 Graw，用 Graw 部署 Graw，用 Graw 管理 Graw，这很好笑。但这只是一个笑话占位而已，镜像并非真正的 Graw 面板。"
+description: >
+  这是一个玩笑：用 Graw 下载 Graw，然后用 Graw 管理 Graw，套娃永动机。这不是真正的 Graw 服务器面板镜像，只是一个玩笑占位。
+
+homepage: "https://github.com/wuhulab/Graw"
+
+source: "https://github.com/wuhulab/Graw"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "alpine", label: "alpine" }
+
+ports:
+  - { container: 80, label: "玩笑页面", protocol: "tcp" }
+
+env:
+

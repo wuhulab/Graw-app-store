@@ -1,0 +1,7 @@
+name: "Chinese DOS Games Collection"
+description: >
+  A web collection of around 1898 classic Chinese DOS games that can be played directly
+  in the browser, evoking childhood memories (this entry uses a community image).
+category: "Panel/Website"
+ports:
+  262: "Web UI"

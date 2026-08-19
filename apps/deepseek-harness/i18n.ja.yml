@@ -1,0 +1,6 @@
+name: "DeepSeek Harness"
+description: >
+  DeepSeek 公式のオープンソース AI エージェントフレームワーク。すべてがプラグインで構成され、エージェントにファイル、ターミナル、検索、計画などの機能を提供します。ローカル Web 画面を内蔵しています。
+category: "AI/開発"
+ports:
+  3080: "Web 画面"

@@ -1,0 +1,8 @@
+name: "NocoDB"
+description: >
+  オープンソースの Airtable 代替品。データベースをビジュアルなスプレッドシート化します。MySQL / PostgreSQL / SQLite に対応し、ドラッグ＆ドロップでデータアプリを構築。プログラミング不要でデータを管理できます。
+category: "データベース/ストレージ"
+ports:
+  8080: "Web 画面"
+env:
+  NC_DB: "データベース接続文字列（デフォルトは SQLite）"

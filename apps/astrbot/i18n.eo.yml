@@ -1,0 +1,8 @@
+description: >
+  Plurplatforma AI-babilrobota kadro, kiu subtenas platformojn kiel QQ, WeChat,
+  Feishu kaj Telegram kaj povas ligiĝi al ĉefaj grandaj modeloj; ĝi havas
+  enkonstruitan WebUI-administradan panelon kaj kromaĵan ekosistemon.
+category: "AI/Disvolvo"
+ports:
+  6185: "Reteja administra interfaco"
+  6199: "OneBot / mesaĝa haveno"

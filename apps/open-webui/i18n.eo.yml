@@ -1,0 +1,9 @@
+description: >
+  Etendebla, riĉa kaj uzant-amika mem-gastigita AI-retinterfaco, kiu subtenas
+  kongruajn interfacojn de Ollama kaj OpenAI, kaj ofertas plurajn uzantojn,
+  RAG, modeladministron kaj konversacian historion.
+category: "AI/Disvolvo"
+ports:
+  8080: "Reteja interfaco"
+env:
+  OLLAMA_BASE_URL: "Adreso de Ollama (laŭvola)"

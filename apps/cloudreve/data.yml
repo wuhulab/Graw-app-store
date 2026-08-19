@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Cloudreve"
+id: "cloudreve"
+
+category: "面板/网站"
+
+warn: "首次启动会打印初始管理员账号与密码，请务必记录保管。"
+description: >
+  云网盘与文件分享平台，支持本地、对象存储、远程存储等多种存储策略，自带在线预览、分享链接与 WebDAV。
+
+homepage: "https://cloudreve.org/"
+
+source: "https://github.com/cloudreve/Cloudreve"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5212, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,13 @@
+# uPage
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  upage:
+    image: halohub/upage:${VERSION}
+    container_name: upage
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

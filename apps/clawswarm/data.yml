@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "ClawSwarm"
+id: "clawswarm"
+
+category: "AI/开发"
+
+warn: "社区项目，可能存在安全风险：默认账密为 admin / admin123456，请立即修改；需搭配 OpenClaw 实例与插件方可使用。"
+description: >
+  1Panel 出品的 OpenClaw 多智能体群聊编排系统，让多个 AI 智能体在群聊中协同工作，需搭配 OpenClaw 实例与插件使用。
+
+homepage: "https://github.com/1Panel-dev/ClawSwarm"
+
+source: "https://github.com/1Panel-dev/ClawSwarm"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 18080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

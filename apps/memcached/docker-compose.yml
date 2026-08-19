@@ -1,0 +1,14 @@
+# Memcached
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  memcached:
+    image: memcached:${VERSION}
+    container_name: memcached
+    ports:
+      - "11211:11211"
+    environment:
+      - MEMCACHED_MEMORY_LIMIT=64
+    command: memcached -m ${MEMCACHED_MEMORY_LIMIT:-64} -l 0.0.0.0
+    restart: unless-stopped

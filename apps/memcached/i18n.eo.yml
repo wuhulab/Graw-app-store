@@ -1,0 +1,9 @@
+description: >
+  Alt-efikeca distribuita memor-kaŝsistemo, kiu kaŝas datumojn laŭ
+  ŝlosilo-valoro kaj ofte estas uzata por akceli datumbazajn demandojn kaj
+  respondojn de retaj aplikaĵoj; defaŭlta haveno 11211.
+category: "Datumbazo/Stokado"
+ports:
+  11211: "Memcached-servo"
+env:
+  MEMCACHED_MEMORY_LIMIT: "Memorlimo (MB)"

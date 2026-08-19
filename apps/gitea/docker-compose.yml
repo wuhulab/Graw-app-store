@@ -1,0 +1,17 @@
+# Gitea
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  gitea:
+    image: gitea/gitea:${VERSION}
+    container_name: gitea
+    volumes:
+      - ./data:/data
+    ports:
+      - "3000:3000"
+      - "22:22"
+    environment:
+      - GITEA__server__DOMAIN=localhost
+      - GITEA__server__SSH_DOMAIN=localhost
+    restart: unless-stopped

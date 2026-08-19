@@ -1,0 +1,14 @@
+# AstrBot
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  astrbot:
+    image: soulter/astrbot:${VERSION}
+    container_name: astrbot
+    volumes:
+      - ./data:/AstrBot/data
+    ports:
+      - "6185:6185"
+      - "6199:6199"
+    restart: unless-stopped

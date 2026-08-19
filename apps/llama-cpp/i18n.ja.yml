@@ -1,0 +1,6 @@
+name: "llama.cpp"
+description: >
+  C/C++ で実装された LLM 推論エンジン。GGUF 形式で各種オープンソース大規模モデルをローカル実行でき、OpenAI 互換の HTTP サーバーを内蔵。オフラインでプライベート AI をデプロイできます。
+category: "AI/開発"
+ports:
+  8080: "HTTP サービス"

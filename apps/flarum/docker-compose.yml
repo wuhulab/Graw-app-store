@@ -1,0 +1,13 @@
+# Flarum
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  flarum:
+    image: crazymax/flarum:${VERSION}
+    container_name: flarum
+    volumes:
+      - ./data:/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

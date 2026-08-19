@@ -1,0 +1,13 @@
+# 兰空图床
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  lsky-pro:
+    image: halcyonazure/lsky-pro-docker:${VERSION}
+    container_name: lsky-pro
+    volumes:
+      - ./data:/var/www/html
+    ports:
+      - "8088:8088"
+    restart: unless-stopped

@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Excalidraw"
+id: "excalidraw"
+
+category: "面板/网站"
+description: >
+  极简的手绘风格白板工具，支持在线协作、导出为图片与 SVG，适合绘制流程图、架构图与示意图，无需登录即可使用。
+
+homepage: "https://excalidraw.com/"
+
+source: "https://github.com/excalidraw/excalidraw"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+

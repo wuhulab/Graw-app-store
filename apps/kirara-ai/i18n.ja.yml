@@ -1,0 +1,6 @@
+name: "Kirara AI"
+description: >
+  マルチプラットフォームで大規模モデルと接続するチャットボットフレームワーク。QQ、Telegram、企業微信などのプラットフォームに対応し、WebUI（8080）、ワークフロー編成、プラグインエコシステムを備えています。
+category: "AI/開発"
+ports:
+  8080: "WebUI"

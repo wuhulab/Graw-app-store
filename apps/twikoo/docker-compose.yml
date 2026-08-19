@@ -1,0 +1,13 @@
+# Twikoo
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  twikoo:
+    image: imaegoo/twikoo:${VERSION}
+    container_name: twikoo
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

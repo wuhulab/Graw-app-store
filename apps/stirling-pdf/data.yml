@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Stirling-PDF"
+id: "stirling-pdf"
+
+category: "网络/工具"
+description: >
+  功能强大的本地 PDF 工具箱，支持合并、拆分、压缩、转换、加密、水印、OCR 等 50+ 操作，所有处理均在本地完成，保护隐私。
+
+homepage: "https://stirlingtools.com/"
+
+source: "https://github.com/Stirling-Tools/Stirling-PDF"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

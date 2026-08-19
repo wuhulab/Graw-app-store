@@ -1,0 +1,13 @@
+# llama.cpp
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  llama-cpp:
+    image: ghcr.io/ggml-org/llama.cpp:${VERSION}
+    container_name: llama-cpp
+    volumes:
+      - ./models:/models
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

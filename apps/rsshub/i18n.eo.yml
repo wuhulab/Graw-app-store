@@ -1,0 +1,6 @@
+description: >
+  Ĉio povas iĝi RSS. Ĝi generas RSS-abonoj de diversaj enhavfontoj (retejoj,
+  sociaj platformoj, blogoj ktp), agreggante ĉiujn ĝisdatigojn, kiujn vi sekvas.
+category: "Reto/Iloj"
+ports:
+  1200: "Reteja interfaco"

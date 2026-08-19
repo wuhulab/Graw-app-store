@@ -1,0 +1,13 @@
+# PixivD
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  pixivd:
+    image: ghcr.io/bebound/pixivd:${VERSION}
+    container_name: pixivd
+    volumes:
+      - ./illustrations:/app/illustrations
+      - ./config:/.config/pixivd
+    entrypoint: ["/bin/sh", "-c", "sleep infinity"]
+    restart: unless-stopped

@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Redis"
+id: "redis"
+
+category: "数据库/存储"
+description: >
+  高性能的开源内存键值数据库，支持字符串、哈希、列表、集合等数据结构，广泛用作缓存、消息队列和会话存储。本模板使用官方 Redis 7 镜像。
+
+homepage: "https://redis.io/"
+
+source: "https://github.com/redis/redis"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "7", label: "7.x" }
+  - { tag: "6", label: "6.x" }
+
+ports:
+  - { container: 6379, label: "Redis 服务", protocol: "tcp" }
+
+env:
+  - { name: "REDIS_PASSWORD", default: "", desc: "访问密码（留空则不启用）" }
+

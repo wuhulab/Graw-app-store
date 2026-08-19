@@ -1,0 +1,6 @@
+name: "Jupyter Notebook"
+description: >
+  ブラウザベースのインタラクティブノートブック。Python コード、可視化、Markdown 文書を混在して記述でき、データサイエンスや教育・研究現場の定番ツールです。
+category: "AI/開発"
+ports:
+  8888: "Web 画面"

@@ -1,0 +1,9 @@
+description: >
+  A high-performance open-source in-memory key-value database supporting data structures
+  such as strings, hashes, lists and sets. It is widely used as a cache, message queue and
+  session store. This template uses the official Redis 7 image.
+category: "Database/Storage"
+ports:
+  6379: "Redis service"
+env:
+  REDIS_PASSWORD: "Access password (disabled if left empty)"

@@ -1,0 +1,15 @@
+# Gitea Act Runner
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  gitea-runner:
+    image: gitea/act_runner:${VERSION}
+    container_name: gitea-runner
+    volumes:
+      - ./data:/data
+      - ./socket:/var/run/docker.sock
+    environment:
+      - GITEA_INSTANCE_URL=https://gitea.com
+      - GITEA_RUNNER_REGISTRATION_TOKEN=${GITEA_RUNNER_REGISTRATION_TOKEN}
+    restart: unless-stopped

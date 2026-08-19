@@ -1,0 +1,13 @@
+# DataEase
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  dataease:
+    image: dataease/dataease:${VERSION}
+    container_name: dataease
+    volumes:
+      - ./data:/opt/dataease/data
+    ports:
+      - "8100:8100"
+    restart: unless-stopped

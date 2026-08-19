@@ -1,0 +1,11 @@
+description: >
+  Povuza malfermita rilata datumbazo fama pro sia fidindeco kaj riĉaj
+  datentipoj, subtenante kompleksajn demandojn, transakciojn, etendaĵojn kaj
+  plentekstan trovon. Ĉi tiu ŝablono uzas la oficialan PostgreSQL 16-bildon.
+category: "Datumbazo/Stokado"
+ports:
+  5432: "PostgreSQL-servo"
+env:
+  POSTGRES_USER: "Superuzanto"
+  POSTGRES_PASSWORD: "Pasvorto de la superuzanto"
+  POSTGRES_DB: "Defaŭlta datumbazo"

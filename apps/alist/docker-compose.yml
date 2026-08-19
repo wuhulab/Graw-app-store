@@ -1,0 +1,17 @@
+# AList
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  alist:
+    image: xhofe/alist:${VERSION}
+    container_name: alist
+    volumes:
+      - ./data:/opt/alist/data
+    ports:
+      - "5244:5244"
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+    restart: unless-stopped

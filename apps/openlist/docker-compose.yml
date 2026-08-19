@@ -1,0 +1,16 @@
+# OpenList
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  openlist:
+    image: openlistteam/openlist:${VERSION}
+    container_name: openlist
+    volumes:
+      - ./data:/opt/openlist/data
+    ports:
+      - "5244:5244"
+    environment:
+      - TZ=Asia/Shanghai
+      - UMASK=022
+    restart: unless-stopped

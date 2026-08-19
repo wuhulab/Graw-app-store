@@ -1,0 +1,10 @@
+description: >
+  The community branch of MySQL, fully compatible while adding more storage engines and
+  performance optimizations. It is the default database of many Linux distributions. This
+  template uses the official MariaDB 11 image.
+category: "Database/Storage"
+ports:
+  3306: "MariaDB service"
+env:
+  MARIADB_ROOT_PASSWORD: "root password"
+  MARIADB_DATABASE: "Default database"

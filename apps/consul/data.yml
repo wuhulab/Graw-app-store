@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Consul"
+id: "consul"
+
+category: "开发/DevOps"
+description: >
+  HashiCorp 的服务发现与配置中心，提供服务网格、KV 存储与健康检查，支持多数据中心。本模板以 dev 单机模式运行并开放 Web UI。
+
+homepage: "https://www.consul.io/"
+
+source: "https://github.com/hashicorp/consul"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8500, label: "Web UI", protocol: "tcp" }
+  - { container: 8600, label: "DNS 接口", protocol: "tcp" }
+
+env:
+

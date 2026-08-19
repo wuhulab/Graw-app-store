@@ -1,0 +1,7 @@
+description: >
+  Mem-gastigita platformo por kundividi kodo-fragmentojn, simila al GitHub
+  Gist; ĝi subtenas kreadon de fragmentoj kiel anonimo aŭ per ensaluto,
+  sintakselstarigon kaj komentadon, kaj konservas datumojn per Git.
+category: "Reto/Iloj"
+ports:
+  6157: "Reteja interfaco"

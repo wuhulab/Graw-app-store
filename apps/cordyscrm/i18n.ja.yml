@@ -1,0 +1,7 @@
+name: "CordysCRM"
+description: >
+  1Panel が開発した新世代オープンソース AI CRM システム。AI 機能と顧客関係管理を融合しており、イメージ内に MySQL と Redis が組み込まれています。
+category: "パネル/ウェブサイト"
+ports:
+  8081: "Web 画面"
+  8082: "サービスポート"

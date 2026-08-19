@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Memcached"
+id: "memcached"
+
+category: "数据库/存储"
+
+warn: "Memcached 无内置认证与加密，切勿直接暴露公网，请仅在内网供可信应用访问。"
+description: >
+  高性能分布式内存缓存系统，以键值方式缓存数据，常用于加速数据库查询与 Web 应用响应，默认端口 11211。
+
+homepage: "https://memcached.org/"
+
+source: "https://github.com/memcached/memcached"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "1.6", label: "1.6" }
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 11211, label: "Memcached 服务", protocol: "tcp" }
+
+env:
+  - { name: "MEMCACHED_MEMORY_LIMIT", default: "64", desc: "内存限制（MB）" }
+

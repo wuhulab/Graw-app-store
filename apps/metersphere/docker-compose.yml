@@ -1,0 +1,13 @@
+# MeterSphere
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  metersphere:
+    image: metersphere/metersphere-ce-allinone:${VERSION}
+    container_name: metersphere
+    volumes:
+      - ./data:/opt/metersphere/data
+    ports:
+      - "8081:8081"
+    restart: unless-stopped

@@ -1,0 +1,32 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "AList"
+id: "alist"
+
+category: "面板/网站"
+
+warn: "Alist 社区认可相对安全版本是 3.40；推荐使用新一代版本 OpenList，建议不要将其更新到更新的版本。"
+description: >
+  支持多存储的文件列表与分享程序，聚合阿里云盘、百度网盘、OneDrive、夸克等主流存储，自带 Web 界面、WebDAV 与离线下载。
+
+homepage: "https://alist.nn.ci/"
+
+source: "https://github.com/AlistGo/alist"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "v3.40.0", label: "3.40（社区推荐）" }
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5244, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "PUID", default: "0", desc: "运行用户 UID" }
+  - { name: "PGID", default: "0", desc: "运行用户 GID" }
+  - { name: "UMASK", default: "022", desc: "文件权限掩码" }
+

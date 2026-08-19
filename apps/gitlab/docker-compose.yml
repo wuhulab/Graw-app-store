@@ -1,0 +1,20 @@
+# GitLab
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:${VERSION}
+    container_name: gitlab
+    volumes:
+      - ./config:/etc/gitlab
+      - ./logs:/var/log/gitlab
+      - ./data:/var/opt/gitlab
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+    environment:
+      - GITLAB_OMNIBUS_CONFIG=${GITLAB_OMNIBUS_CONFIG}
+      - GITLAB_ROOT_PASSWORD=${GITLAB_ROOT_PASSWORD}
+    restart: unless-stopped

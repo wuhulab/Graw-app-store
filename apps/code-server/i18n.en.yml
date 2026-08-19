@@ -1,0 +1,10 @@
+description: >
+  VS Code running in the browser, letting you write code from anywhere via the web.
+  It supports installing extensions, a terminal and Git integration, making it ideal for
+  remote development and container environments.
+category: "AI/Development"
+ports:
+  8080: "Web UI"
+env:
+  PASSWORD: "Access password (auto-generated if left empty)"
+  SUDO_PASSWORD: "sudo password (optional)"

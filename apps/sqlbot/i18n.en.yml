@@ -1,0 +1,6 @@
+description: >
+  An intelligent data query system based on LLM and RAG from the DataEase team. Query
+  databases with natural language and generate charts. The image bundles PostgreSQL.
+category: "AI/Development"
+ports:
+  8000: "Web UI"

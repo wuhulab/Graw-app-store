@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Nanobot"
+id: "nanobot"
+
+category: "AI/开发"
+
+warn: "官方无预构建镜像，模板采用源码构建（build: .），需先将源码放入 compose 目录；Docker Hub 第三方镜像不受维护，勿在第三方镜像中存放密钥。"
+description: >
+  HKUDS 开源的超轻量自托管个人 AI 智能体框架，提供 WebUI（8765）与 WebSocket，支持工具调用与本地部署，资源占用极低。
+
+homepage: "https://github.com/HKUDS/nanobot"
+
+source: "https://github.com/HKUDS/nanobot"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8765, label: "WebUI / WebSocket", protocol: "tcp" }
+
+env:
+

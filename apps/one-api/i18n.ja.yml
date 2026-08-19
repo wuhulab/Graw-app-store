@@ -1,0 +1,8 @@
+name: "One API"
+description: >
+  OpenAI インターフェースの管理・配信システム。複数モデルの統合接続、トークン管理、利用量統計に対応し、各種モデルを OpenAI 形式に変換して外部に提供できます。
+category: "AI/開発"
+ports:
+  3000: "Web 画面"
+env:
+  SESSION_SECRET: "セッションキー（設定を推奨）"

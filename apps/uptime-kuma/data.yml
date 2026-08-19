@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Uptime Kuma"
+id: "uptime-kuma"
+
+category: "监控/运维"
+description: >
+  自托管的网站 / 服务可用性监控工具，支持 HTTP、TCP、Ping、DNS 等多种协议，带通知告警与状态页。
+
+homepage: "https://uptime.kuma.pet/"
+
+source: "https://github.com/louislam/uptime-kuma"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3001, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,15 @@
+# BettaFish (微舆)
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  bettafish:
+    image: ghcr.io/666ghj/bettafish:${VERSION}
+    container_name: bettafish
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    ports:
+      - "5000:5000"
+      - "8501:8501"
+    restart: unless-stopped

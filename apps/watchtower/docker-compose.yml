@@ -1,0 +1,15 @@
+# Watchtower
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  watchtower:
+    image: containrrr/watchtower:${VERSION}
+    container_name: watchtower
+    volumes:
+      - ./socket:/var/run/docker.sock
+    environment:
+      - TZ=Asia/Shanghai
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=3600
+    restart: unless-stopped

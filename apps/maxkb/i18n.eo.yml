@@ -1,0 +1,9 @@
+description: >
+  Povuza kaj facile uzebla entrepren-nivela agento-platformo de 1Panel, kiu
+  subtenas RAG-an scion, profundan dialogan aplikaĵaranĝon kaj ligojn al
+  diversaj modeloj; la bildo enkorpigas PostgreSQL-datumbazon.
+category: "AI/Disvolvo"
+ports:
+  8080: "Reteja interfaco"
+env:
+  MAXKB_ONE_MI_API_BASE_URL: "Adreso por ligi al One API (laŭvola)"

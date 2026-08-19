@@ -1,0 +1,9 @@
+description: >
+  Videbla administra panelo por Docker Compose, kiu administras compose-dosierojn
+  laŭ stackoj kaj subtenas redakton, starton, haltigon, protokolojn kaj
+  terminalon; la interfaco estas simpla kaj bela.
+category: "Disvolvo/DevOps"
+ports:
+  5001: "Reteja interfaco"
+env:
+  DOCKGE_STACKS_DIR: "Dosierujo de la compose-dosieroj"

@@ -1,0 +1,12 @@
+description: >
+  A Pixiv illustration batch download tool with a built-in web management interface
+  (/dashboard). Enter an artist UID to batch download all of their illustrations with
+  preview support. It requires configuring your Pixiv account and password, and a proxy
+  is needed to access Pixiv from mainland China.
+category: "Network/Tools"
+ports:
+  5000: "Web admin interface"
+env:
+  username: "Pixiv account (required)"
+  password: "Pixiv password (required)"
+  port: "Service port"

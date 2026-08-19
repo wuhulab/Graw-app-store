@@ -1,0 +1,7 @@
+description: >
+  Simpla kaj facile uzebla dinamika DNS-ilo, kiu aŭtomate akiras publikan IPv4
+  /IPv6 kaj sinkronigas ĝin al pli ol 20 DNS-provizantoj kiel Alibaba Cloud,
+  Tencent Cloud kaj Cloudflare, kun reta agorda interfaco.
+category: "Reto/Iloj"
+ports:
+  9876: "Reteja interfaco"

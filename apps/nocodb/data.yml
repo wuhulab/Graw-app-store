@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "NocoDB"
+id: "nocodb"
+
+category: "数据库/存储"
+description: >
+  开源的 Airtable 替代品，把数据库变成可视化电子表格。支持 MySQL / PostgreSQL / SQLite，拖拽式搭建数据应用，无需编程即可管理数据。
+
+homepage: "https://nocodb.com/"
+
+source: "https://github.com/nocodb/nocodb"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "NC_DB", default: "", desc: "数据库连接串（默认 SQLite）" }
+

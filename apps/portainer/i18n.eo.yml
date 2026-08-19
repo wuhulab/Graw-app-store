@@ -1,0 +1,7 @@
+description: >
+  La plej populara videbla panelo por Docker/Kubernetes, kiu provizas
+  unu-stacian administradon de ujoj, bildoj, retoj, volumoj kaj ŝtupoj; la
+  interfaco estas intuicia kaj taŭga por komencantoj.
+category: "Monitorado/Operaciado"
+ports:
+  9000: "Reteja interfaco"

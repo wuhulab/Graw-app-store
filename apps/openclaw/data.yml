@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "OpenClaw"
+id: "openclaw"
+
+category: "AI/开发"
+
+warn: "社区项目，可能存在安全风险：其工具可在主机上执行命令，官方明确警告请勿将 Gateway 直接暴露到公网，建议仅内网或经鉴权使用。"
+description: >
+  可运行于自有设备的个人 AI 助手，具备工具调用、DM 配对与自主执行能力，官方提供预构建 ghcr 镜像。
+
+homepage: "https://openclaw.ai/"
+
+source: "https://github.com/openclaw/openclaw"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 18789, label: "Gateway 端口", protocol: "tcp" }
+
+env:
+

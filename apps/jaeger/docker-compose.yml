@@ -1,0 +1,16 @@
+# Jaeger
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  jaeger:
+    image: jaegertracing/jaeger:${VERSION}
+    container_name: jaeger
+    volumes:
+      - ./data:/tmp/jaeger
+    ports:
+      - "16686:16686"
+      - "4317:4317"
+      - "4318:4318"
+    command: --query.ui-config=/dev/null
+    restart: unless-stopped

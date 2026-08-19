@@ -1,0 +1,18 @@
+# frp (frpc 客户端)
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  frpc:
+    image: snowdreamtech/frpc:${VERSION}
+    container_name: frpc
+    volumes:
+      - ./conf:/etc/frp
+    environment:
+      - FRP_SERVER_ADDR=${FRP_SERVER_ADDR}
+      - FRP_SERVER_PORT=7000
+      - FRP_AUTH_METHOD=token
+      - FRP_TOKEN=${FRP_TOKEN}
+      - FRP_SERVER_USER=${FRP_SERVER_USER}
+      - FRP_SERVER_PASSWORD=${FRP_SERVER_PASSWORD}
+    restart: unless-stopped

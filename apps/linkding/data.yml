@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Linkding"
+id: "linkding"
+
+category: "网络/工具"
+description: >
+  自托管的轻量书签管理器，支持标签、搜索、归档与自动抓取网页元数据，默认使用 SQLite，可选 PostgreSQL。
+
+homepage: "https://linkding.link/"
+
+source: "https://github.com/sissbruecker/linkding"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 9090, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "LD_SUPERUSER_NAME", default: "admin", desc: "超级用户名" }
+  - { name: "LD_SUPERUSER_PASSWORD", default: "", desc: "超级用户密码（首次启动自动创建）" }
+

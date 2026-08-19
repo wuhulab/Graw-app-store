@@ -1,0 +1,8 @@
+name: "MaxKB"
+description: >
+  1Panel が開発した強力かつ使いやすいエンタープライズ向け AI エージェントプラットフォーム。知識ベース RAG、チャットアプリの編成、複数モデルの接続に対応し、イメージ内に PostgreSQL データベースが組み込まれています。
+category: "AI/開発"
+ports:
+  8080: "Web 画面"
+env:
+  MAXKB_ONE_MI_API_BASE_URL: "One API 連携のアドレス（任意）"

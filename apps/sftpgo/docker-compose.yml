@@ -1,0 +1,17 @@
+# SFTPGo
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  sftpgo:
+    image: drakkan/sftpgo:${VERSION}
+    container_name: sftpgo
+    volumes:
+      - ./data:/srv/sftpgo/data
+      - ./home:/srv/sftpgo/home
+    ports:
+      - "8080:8080"
+      - "2022:2022"
+    environment:
+      - SFTPGO_DEFAULT_ROOT_PATH=/srv/sftpgo/data
+    restart: unless-stopped

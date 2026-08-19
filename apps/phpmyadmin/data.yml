@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "phpMyAdmin"
+id: "phpmyadmin"
+
+category: "数据库/存储"
+
+warn: "phpMyAdmin 无内置认证，仅凭数据库账号密码登录，请勿裸暴露公网，建议配合反代与 HTTPS。"
+description: >
+  基于 PHP 的 MySQL / MariaDB 可视化 Web 管理工具，支持数据库、表、SQL、用户与导入导出管理，需连接外部数据库。
+
+homepage: "https://www.phpmyadmin.net/"
+
+source: "https://github.com/phpmyadmin/phpmyadmin"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "PMA_HOST", default: "mysql", desc: "数据库主机（如 mysql 或服务器 IP）" }
+  - { name: "PMA_PORT", default: "3306", desc: "数据库端口" }
+  - { name: "PMA_ARBITRARY", default: "1", desc: "允许连接任意服务器（1=是）" }
+

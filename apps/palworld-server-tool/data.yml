@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Palworld Server Tool"
+id: "palworld-server-tool"
+
+category: "开发/DevOps"
+
+warn: "首个访问者即成为管理员（先到先得）；解析游戏存档瞬间可能消耗 1-3GB 内存，请评估机器配置。"
+description: >
+  幻兽帕鲁服务器管理工具，提供 Web 管理（8080）与 Agent（8081），可查看玩家、经济、存档备份与游戏状态。
+
+homepage: "https://github.com/zaigie/palworld-server-tool"
+
+source: "https://github.com/zaigie/palworld-server-tool"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 管理界面", protocol: "tcp" }
+
+env:
+

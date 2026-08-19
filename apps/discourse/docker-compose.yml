@@ -1,0 +1,21 @@
+# Discourse
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  discourse:
+    image: discourse/discourse:${VERSION}
+    container_name: discourse
+    volumes:
+      - ./shared:/shared
+      - ./data:/var/www/discourse
+    ports:
+      - "80:80"
+    environment:
+      - DISCOURSE_HOSTNAME=localhost
+      - DISCOURSE_DEVELOPER_EMAILS=admin@example.com
+      - DISCOURSE_SMTP_ADDRESS=${DISCOURSE_SMTP_ADDRESS}
+      - DISCOURSE_SMTP_PORT=587
+      - DISCOURSE_SMTP_USER_NAME=${DISCOURSE_SMTP_USER_NAME}
+      - DISCOURSE_SMTP_PASSWORD=${DISCOURSE_SMTP_PASSWORD}
+    restart: unless-stopped

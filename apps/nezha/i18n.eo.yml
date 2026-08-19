@@ -1,0 +1,9 @@
+name: "Nezha-Monitoro"
+description: >
+  Mem-gastigita unu-stacia servilmonitorado kaj operacia ilo, kiu subtenas
+  plurflankajn panelojn, realtempan alarmilon, forajn komandojn kaj
+  taskadministradon, helpante regi la statuson de pluraj serviloj.
+category: "Monitorado/Operaciado"
+ports:
+  8008: "Panela interfaco"
+  5555: "Komunika haveno de Agent"

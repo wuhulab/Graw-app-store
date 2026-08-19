@@ -1,0 +1,12 @@
+description: >
+  A complete DevOps lifecycle platform integrating code repositories, CI/CD, container
+  images, Issues and Wiki, suitable for team self-hosting. It has a relatively high
+  memory footprint; 4GB or more is recommended.
+category: "Development/DevOps"
+ports:
+  80: "HTTP"
+  443: "HTTPS"
+  22: "SSH"
+env:
+  GITLAB_OMNIBUS_CONFIG: "Custom configuration (optional)"
+  GITLAB_ROOT_PASSWORD: "Initial root password"

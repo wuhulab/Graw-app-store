@@ -1,0 +1,8 @@
+description: >
+  A runner for Forgejo Actions that executes CI/CD pipelines for Forgejo repositories on a
+  dedicated machine. You must first register the runner on a Forgejo instance to obtain a
+  token.
+category: "Development/DevOps"
+env:
+  FORGEJO_INSTANCE_URL: "Forgejo instance address (required)"
+  FORGEJO_RUNNER_REGISTRATION_TOKEN: "Runner registration token (required)"

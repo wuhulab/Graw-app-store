@@ -1,0 +1,7 @@
+description: >
+  La oficiala malfermita AI-agenta kadro de DeepSeek, kie ĉio estas kromaĵo;
+  ĝi provizas al la agento kapablojn kiel dosieroj, terminalo, serĉado kaj
+  planado, kaj havas enkonstruitan lokan retan interfacon.
+category: "AI/Disvolvo"
+ports:
+  3080: "Reteja interfaco"

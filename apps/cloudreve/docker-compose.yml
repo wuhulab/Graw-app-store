@@ -1,0 +1,14 @@
+# Cloudreve
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  cloudreve:
+    image: cloudreve/cloudreve:${VERSION}
+    container_name: cloudreve
+    volumes:
+      - ./data:/data
+      - ./uploads:/cloudreve/uploads
+    ports:
+      - "5212:5212"
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+description: >
+  Malfermita laborfluo-aŭtomatiga platformo, kiu per videblaj nodoj ligas
+  aplikaĵojn, datumojn kaj AI-on; ĝi subtenas pli ol 400 integraĵojn kaj povas
+  esti mem-gastigita.
+category: "AI/Disvolvo"
+ports:
+  5678: "Reteja interfaco"
+env:
+  N8N_SECURE_COOKIE: "Ĉu uzi sekurecan kuketon"
+  GENERIC_TIMEZONE: "Horzono"

@@ -1,0 +1,8 @@
+description: >
+  A runner for Gitea Actions that executes CI/CD pipelines for Gitea repositories locally
+  or on a dedicated machine. You must first register the runner on Gitea to obtain a
+  token.
+category: "Development/DevOps"
+env:
+  GITEA_INSTANCE_URL: "Gitea instance address"
+  GITEA_RUNNER_REGISTRATION_TOKEN: "Runner registration token (required)"

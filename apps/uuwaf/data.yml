@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "uuWAF"
+id: "uuwaf"
+
+category: "网络/工具"
+
+warn: "默认账密为 admin / #Passw0rd，请立即修改；WAF 通常需要占用 80/443 甚至 host 网络以拦截流量，端口冲突时请调整映射。"
+description: >
+  免费开源的工业级 Web 应用防火墙，提供 WAF 规则防护、CC 攻击防御与可视化安全报表，管理界面端口 4443。
+
+homepage: "https://github.com/Safe3/uuWAF"
+
+source: "https://github.com/Safe3/uuWAF"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 4443, label: "管理界面(HTTPS)", protocol: "tcp" }
+  - { container: 80, label: "WAF HTTP", protocol: "tcp" }
+  - { container: 443, label: "WAF HTTPS", protocol: "tcp" }
+
+env:
+

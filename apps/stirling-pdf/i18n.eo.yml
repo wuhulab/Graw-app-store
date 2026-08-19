@@ -1,0 +1,7 @@
+description: >
+  Povuza loka PDF-ilskatolo, kiu subtenas pli ol 50 operaciojn kiel kunigon,
+  disigon, kunpremon, konvertigon, ĉifradon, akvomarkon kaj OCR; ĉiu
+  prilaborado okazas loke, protektante vian privatecon.
+category: "Reto/Iloj"
+ports:
+  8080: "Reteja interfaco"

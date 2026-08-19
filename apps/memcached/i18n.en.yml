@@ -1,0 +1,9 @@
+description: >
+  A high-performance distributed in-memory caching system that caches data as key-value
+  pairs. It is commonly used to accelerate database queries and web application
+  responses, with a default port of 11211.
+category: "Database/Storage"
+ports:
+  11211: "Memcached service"
+env:
+  MEMCACHED_MEMORY_LIMIT: "Memory limit (MB)"

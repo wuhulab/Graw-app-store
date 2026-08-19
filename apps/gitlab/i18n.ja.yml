@@ -1,0 +1,11 @@
+name: "GitLab"
+description: >
+  完全な DevOps ライフサイクルプラットフォーム。コードリポジトリ、CI/CD、コンテナイメージ、Issue、Wiki を統合し、チームでのセルフホストに適しています。メモリ消費が大きいため、4GB 以上のメモリを推奨します。
+category: "開発/DevOps"
+ports:
+  80: "HTTP"
+  443: "HTTPS"
+  22: "SSH"
+env:
+  GITLAB_OMNIBUS_CONFIG: "カスタム設定（任意）"
+  GITLAB_ROOT_PASSWORD: "root 初期パスワード"

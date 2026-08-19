@@ -1,0 +1,9 @@
+description: >
+  OpenAI-interfaca administra kaj distribuada sistemo, kiu subtenas unuigitan
+  aliron al pluraj modeloj, ĵeton-administron kaj kotizstatistikon; ĝi povas
+  konverti diversajn modelojn al OpenAI-formato por ekstera invokado.
+category: "AI/Disvolvo"
+ports:
+  3000: "Reteja interfaco"
+env:
+  SESSION_SECRET: "Sesio-ŝlosilo (rekomendita)"

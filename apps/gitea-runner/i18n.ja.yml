@@ -1,0 +1,7 @@
+name: "Gitea Act Runner"
+description: >
+  Gitea Actions 用ランナー。ローカルまたは専用マシン上で Gitea リポジトリの CI/CD パイプラインを実行します。事前に Gitea でランナーを登録し、トークンを取得する必要があります。
+category: "開発/DevOps"
+env:
+  GITEA_INSTANCE_URL: "Gitea インスタンスのアドレス"
+  GITEA_RUNNER_REGISTRATION_TOKEN: "Runner 登録トークン（必須）"

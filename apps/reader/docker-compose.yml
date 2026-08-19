@@ -1,0 +1,16 @@
+# Reader
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  reader:
+    image: hectorqin/reader:${VERSION}
+    container_name: reader
+    volumes:
+      - ./logs:/logs
+      - ./storage:/storage
+    ports:
+      - "8080:8080"
+    environment:
+      - READER_APP_SECUREKEY=${READER_APP_SECUREKEY}
+    restart: unless-stopped

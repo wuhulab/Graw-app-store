@@ -1,0 +1,8 @@
+description: >
+  An enterprise-grade open-source monitoring solution supporting monitoring of hosts,
+  networks, applications and databases with multi-channel alerting and built-in visual
+  dashboards. This template bundles a PostgreSQL database and exposes the web on port
+  8080.
+category: "Monitoring/Ops"
+ports:
+  8080: "Web UI"

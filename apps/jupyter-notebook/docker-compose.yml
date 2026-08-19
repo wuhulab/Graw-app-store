@@ -1,0 +1,13 @@
+# Jupyter Notebook
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  jupyter:
+    image: jupyter/notebook:${VERSION}
+    container_name: jupyter
+    volumes:
+      - ./work:/home/jovyan/work
+    ports:
+      - "8888:8888"
+    restart: unless-stopped

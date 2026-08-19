@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Portainer"
+id: "portainer"
+
+category: "监控/运维"
+description: >
+  最流行的 Docker / Kubernetes 可视化面板，提供容器、镜像、网络、卷与栈的一站式管理，界面直观、适合新手。
+
+homepage: "https://www.portainer.io/"
+
+source: "https://github.com/portainer/portainer"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 9000, label: "Web 界面", protocol: "tcp" }
+
+env:
+

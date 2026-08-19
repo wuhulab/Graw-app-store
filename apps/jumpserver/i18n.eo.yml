@@ -1,0 +1,7 @@
+description: >
+  Tre populara malfermita bastiono (PAM), kiu provizas aktivadministradon,
+  kontan gastigadon, operacian aŭditon kaj laborpetan aprobon; ĝi estas sekura
+  operacia enirejo.
+category: "Monitorado/Operaciado"
+ports:
+  80: "Reteja interfaco"

@@ -1,0 +1,8 @@
+description: >
+  A modern, clean Java blog system built on Spring Boot with a rich theme and plugin
+  ecosystem, suitable for personal blogs and content creation.
+category: "Panel/Website"
+ports:
+  8090: "Web UI"
+env:
+  HALO_PLUGIN_ENABLED: "Plugins to enable"

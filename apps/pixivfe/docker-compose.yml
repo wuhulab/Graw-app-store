@@ -1,0 +1,13 @@
+# PixivFE
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  pixivfe:
+    image: registry.gitlab.com/pixivfe/pixivfe:${VERSION}
+    container_name: pixivfe
+    volumes:
+      - ./data:/pixivfe/data
+    ports:
+      - "8282:8282"
+    restart: unless-stopped

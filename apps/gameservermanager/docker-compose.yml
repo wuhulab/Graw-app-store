@@ -1,0 +1,15 @@
+# GameServerManager
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  gameservermanager:
+    image: xiaozhu674/gameservermanager:${VERSION}
+    container_name: gameservermanager
+    volumes:
+      - ./data:/data
+      - ./games:/games
+      - ./socket:/var/run/docker.sock
+    ports:
+      - "3001:3001"
+    restart: unless-stopped

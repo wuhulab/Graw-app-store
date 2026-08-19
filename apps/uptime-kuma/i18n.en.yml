@@ -1,0 +1,6 @@
+description: >
+  A self-hosted website / service availability monitoring tool supporting protocols such
+  as HTTP, TCP, Ping and DNS, with notifications, alerting and status pages.
+category: "Monitoring/Ops"
+ports:
+  3001: "Web UI"

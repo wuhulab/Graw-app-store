@@ -1,0 +1,6 @@
+name: "Nanobot"
+description: >
+  HKUDS が公開した超軽量セルフホスト型の個人向け AI エージェントフレームワーク。WebUI（8765）と WebSocket を提供し、ツール呼び出しとローカルデプロイに対応、リソース消費が非常に低いのが特徴です。
+category: "AI/開発"
+ports:
+  8765: "WebUI / WebSocket"

@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Outline"
+id: "outline"
+
+category: "面板/网站"
+description: >
+  现代团队知识库与 Wiki 平台，支持 Markdown 实时协作编辑、全文搜索与丰富集成，需配合 PostgreSQL 与 Redis 使用。
+
+homepage: "https://www.getoutline.com/"
+
+source: "https://github.com/outline/outline"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "DATABASE_URL", default: "postgres://outline:outline@db:5432/outline", desc: "数据库连接" }
+  - { name: "REDIS_URL", default: "redis://redis:6379", desc: "Redis 连接" }
+  - { name: "SECRET_KEY", default: "change-me", desc: "密钥" }
+  - { name: "UTILS_SECRET", default: "change-me", desc: "工具密钥" }
+  - { name: "URL", default: "http://localhost:3000", desc: "访问地址" }
+

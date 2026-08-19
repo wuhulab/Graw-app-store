@@ -1,0 +1,9 @@
+description: >
+  The world's most popular open-source relational database management system, widely used
+  across web applications, enterprise systems and data warehouses. This template uses the
+  official MySQL 8 image and persists data to a local data directory.
+category: "Database/Storage"
+ports:
+  3306: "MySQL service"
+env:
+  MYSQL_ROOT_PASSWORD: "root password"

@@ -1,0 +1,31 @@
+# WordPress
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    volumes:
+      - ./dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress123
+      - MYSQL_ROOT_PASSWORD=root123
+    restart: unless-stopped
+  wordpress:
+    image: wordpress:${VERSION}
+    container_name: wordpress
+    volumes:
+      - ./wpdata:/var/www/html
+    ports:
+      - "80:80"
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress123
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+    restart: unless-stopped

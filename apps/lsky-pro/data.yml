@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "兰空图床"
+id: "lsky-pro"
+
+category: "面板/网站"
+
+warn: "官方无 Docker 镜像，本条目使用社区镜像 halcyonazure/lsky-pro-docker；开源版已停止维护，生产使用请评估。"
+description: >
+  开源图床系统，支持本地上传、外链、相册管理与多种存储策略，适合自建个人/团队图床（开源版已停止维护）。
+
+homepage: "https://www.lsky.pro/"
+
+source: "https://github.com/lsky-org/lsky-pro"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8088, label: "Web 界面", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "llama.cpp"
+id: "llama-cpp"
+
+category: "AI/开发"
+description: >
+  C/C++ 实现的 LLM 推理引擎，支持 GGUF 格式本地运行各种开源大模型，内置 OpenAI 兼容的 HTTP 服务器，可离线部署私有 AI。
+
+homepage: "https://github.com/ggml-org/llama.cpp"
+
+source: "https://github.com/ggml-org/llama.cpp"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "HTTP 服务", protocol: "tcp" }
+
+env:
+

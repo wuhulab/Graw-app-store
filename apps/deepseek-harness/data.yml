@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "DeepSeek Harness"
+id: "deepseek-harness"
+
+category: "AI/开发"
+description: >
+  DeepSeek 官方的开源 AI Agent 框架，一切皆插件，为智能体提供文件、终端、搜索、规划等能力，自带本地 Web 界面。
+
+homepage: "https://deepseek-harness.github.io/deepseek-harness/"
+
+source: "https://github.com/deepseek-ai/deepseek-harness"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3080, label: "Web 界面", protocol: "tcp" }
+
+env:
+

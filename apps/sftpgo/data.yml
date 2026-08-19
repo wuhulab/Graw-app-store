@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "SFTPGo"
+id: "sftpgo"
+
+category: "数据库/存储"
+description: >
+  功能丰富的 SFTP / HTTP / FTP 服务器，支持本地文件系统及 S3、WebDAV、Google Drive 等存储后端，内置 Web 管理界面与虚拟用户。
+
+homepage: "https://sftpgo.com/"
+
+source: "https://github.com/drakkan/sftpgo"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 管理界面", protocol: "tcp" }
+  - { container: 2022, label: "SFTP 服务", protocol: "tcp" }
+
+env:
+  - { name: "SFTPGO_DEFAULT_ROOT_PATH", default: "/srv/sftpgo/data", desc: "默认根目录" }
+

@@ -1,0 +1,24 @@
+# MCSManager
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  mcsmanager-web:
+    image: githubyumao/mcsmanager-web:${VERSION}
+    container_name: mcsmanager-web
+    ports:
+      - "23333:23333"
+    environment:
+      - TZ=Asia/Shanghai
+    depends_on:
+      - mcsmanager-daemon
+    restart: unless-stopped
+  mcsmanager-daemon:
+    image: githubyumao/mcsmanager-daemon:latest
+    container_name: mcsmanager-daemon
+    volumes:
+      - ./data:/opt/mcsmanager
+      - ./socket:/var/run/docker.sock
+    ports:
+      - "24444:24444"
+    restart: unless-stopped

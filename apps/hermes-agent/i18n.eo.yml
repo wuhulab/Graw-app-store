@@ -1,0 +1,7 @@
+description: >
+  Mem-pliboniĝanta AI-agento malfermita de Nous Research, kiu subtenas
+  plurplatformajn mesaĝpordojn (Telegram / Discord ktp), MCP-ilo-ojn,
+  kapabloj-ojn kaj memor-sistemon, kaj povas esti mem-gastigita.
+category: "AI/Disvolvo"
+ports:
+  8642: "API-servo"

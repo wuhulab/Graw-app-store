@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Nextcloud"
+id: "nextcloud"
+
+category: "面板/网站"
+description: >
+  自托管的网盘与协作平台，支持文件同步、分享、在线文档、日历、联系人等，可完全掌控自己的数据。
+
+homepage: "https://nextcloud.com/"
+
+source: "https://github.com/nextcloud/server"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+

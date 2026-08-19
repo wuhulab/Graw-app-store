@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Kibana"
+id: "kibana"
+
+category: "监控/运维"
+description: >
+  Elastic 生态的数据可视化与探索平台，配合 Elasticsearch 使用，提供图表、仪表盘、日志分析与告警，是 ELK 栈的可视化入口。
+
+homepage: "https://www.elastic.co/kibana/"
+
+source: "https://github.com/elastic/kibana"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5601, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "ELASTICSEARCH_HOSTS", default: "http://localhost:9200", desc: "Elasticsearch 地址（可填服务名，如 http://elasticsearch:9200）" }
+

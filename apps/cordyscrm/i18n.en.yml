@@ -1,0 +1,7 @@
+description: >
+  A next-generation open-source AI CRM system from 1Panel that combines AI capabilities
+  with customer relationship management. The image bundles MySQL and Redis.
+category: "Panel/Website"
+ports:
+  8081: "Web UI"
+  8082: "Service port"

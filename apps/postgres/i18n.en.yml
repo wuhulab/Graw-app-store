@@ -1,0 +1,11 @@
+description: >
+  A powerful open-source relational database renowned for its reliability and rich data
+  types, supporting complex queries, transactions, extensions and full-text search. This
+  template uses the official PostgreSQL 16 image.
+category: "Database/Storage"
+ports:
+  5432: "PostgreSQL service"
+env:
+  POSTGRES_USER: "Superuser"
+  POSTGRES_PASSWORD: "Superuser password"
+  POSTGRES_DB: "Default database"

@@ -1,0 +1,10 @@
+description: >
+  A self-hosted lightweight bookmark manager supporting tags, search, archiving and
+  automatic fetching of webpage metadata. It uses SQLite by default, with PostgreSQL as
+  an option.
+category: "Network/Tools"
+ports:
+  9090: "Web UI"
+env:
+  LD_SUPERUSER_NAME: "Superuser name"
+  LD_SUPERUSER_PASSWORD: "Superuser password (auto-created on first start)"

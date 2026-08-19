@@ -1,0 +1,8 @@
+description: >
+  Nova generacio de malfermita AI CRM-sistemo produktita de 1Panel, kiu
+  kunigas AI-kapablojn kun klientrilata administrado; la bildo enkorpigas MySQL
+  kaj Redis.
+category: "Panelo/Retpaĝaro"
+ports:
+  8081: "Reteja interfaco"
+  8082: "Serva haveno"

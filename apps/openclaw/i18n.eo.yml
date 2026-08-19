@@ -1,0 +1,7 @@
+description: >
+  Persona AI-helpanto funkciebla sur viaj propraj aparatoj, kun il-invoko-,
+  DM-pariĝo- kaj aŭtonoma plenumaj kapabloj; la oficialo provizas
+  antaŭkompilitan ghcr-bildon.
+category: "AI/Disvolvo"
+ports:
+  18789: "Haveno de Gateway"

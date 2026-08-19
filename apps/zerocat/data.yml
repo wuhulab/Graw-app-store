@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "ZeroCat 编程社区"
+id: "zerocat"
+
+category: "面板/网站"
+tags:
+  - "推荐"
+
+warn: "官方尚未发布可拉取的预构建镜像，商店模板采用源码构建（build: .）。安装前需先将 ZeroCat 源码放入 compose 目录（或改用可用镜像名），否则构建/拉取会失败。"
+description: >
+  轻量级的在线编程、分享平台，支持 Scratch、Python 等适合编程初学者的社区。目前处于早期阶段，官方仅提供源码 Dockerfile 本地构建，尚无可拉取的预构建镜像。
+
+homepage: "https://github.com/Moonrend/ZeroCat"
+
+source: "https://github.com/Moonrend/ZeroCat"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "1.0.0", label: "1.0.0" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "DATABASE_URL", default: "", desc: "MySQL 连接串（必填，如 mysql://root:pwd@host:3306/zerocat）" }
+

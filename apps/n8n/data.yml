@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "n8n"
+id: "n8n"
+
+category: "AI/开发"
+description: >
+  开源的工作流自动化平台，通过可视化节点把应用、数据与 AI 连接起来，支持 400+ 集成，可自托管部署。
+
+homepage: "https://n8n.io/"
+
+source: "https://github.com/n8n-io/n8n"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5678, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "N8N_SECURE_COOKIE", default: "false", desc: "是否安全 Cookie" }
+  - { name: "GENERIC_TIMEZONE", default: "Asia/Shanghai", desc: "时区" }
+

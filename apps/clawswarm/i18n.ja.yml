@@ -1,0 +1,6 @@
+name: "ClawSwarm"
+description: >
+  1Panel が開発した OpenClaw マルチエージェントのグルチャットオーケストレーションシステム。複数の AI エージェントをグルチャット内で協調させます。利用には OpenClaw インスタンスとプラグインが必要です。
+category: "AI/開発"
+ports:
+  18080: "Web 画面"

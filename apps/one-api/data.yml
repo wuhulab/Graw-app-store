@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "One API"
+id: "one-api"
+
+category: "AI/开发"
+description: >
+  OpenAI 接口管理与分发系统，支持多模型统一接入、令牌管理、配额统计，可将各种模型转换为 OpenAI 格式对外提供调用。
+
+homepage: "https://github.com/songquanpeng/one-api"
+
+source: "https://github.com/songquanpeng/one-api"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "SESSION_SECRET", default: "", desc: "会话密钥（建议设置）" }
+

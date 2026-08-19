@@ -1,0 +1,8 @@
+name: "Dockge"
+description: >
+  ビジュアルな Docker Compose 管理パネル。スタック単位で compose ファイルを管理し、編集、起動、停止、ログ、ターミナルに対応。シンプルで美しいインターフェースを備えています。
+category: "開発/DevOps"
+ports:
+  5001: "Web 画面"
+env:
+  DOCKGE_STACKS_DIR: "Compose ファイルディレクトリ"

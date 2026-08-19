@@ -1,0 +1,7 @@
+description: >
+  Komandlinia ilo por amasa elŝutado de Pixiv-aj bildoj (oficiala ghcr-bildo),
+  kiu subtenas amasan elŝuton de ilustraĵoj laŭ artisma ID kaj laŭ ĉiutaga aŭ
+  historia rangolisto; la ujo funkcias en daŭra reĝimo, do la komando pixivd
+  estas plenumata en la terminalo de la ujo (ekz. pixivd &lt;UID&gt; aŭ
+  pixivd -r), kaj la elŝutitaj rezultoj estas konservataj en la
+  ilustraĵ-dosierujo.

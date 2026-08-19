@@ -1,0 +1,13 @@
+description: >
+  Malfermita komunuma forumo-platformo, povuza moderna BBS, kun enkonstruitaj
+  PostgreSQL, Redis kaj Nginx; necesas agordi domajnon kaj SMTP-retpoŝton.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Reteja interfaco"
+env:
+  DISCOURSE_HOSTNAME: "Eja domajno (deviga)"
+  DISCOURSE_DEVELOPER_EMAILS: "Retpoŝto de la administranto"
+  DISCOURSE_SMTP_ADDRESS: "SMTP-servilo"
+  DISCOURSE_SMTP_PORT: "SMTP-haveno"
+  DISCOURSE_SMTP_USER_NAME: "SMTP-uzantnomo"
+  DISCOURSE_SMTP_PASSWORD: "SMTP-pasvorto"

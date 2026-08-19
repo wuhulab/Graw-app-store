@@ -1,0 +1,15 @@
+# QwenPaw
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  qwenpaw:
+    image: agentscope/qwenpaw:${VERSION}
+    container_name: qwenpaw
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8088:8088"
+    environment:
+      - QWENPAW_TOKEN=${QWENPAW_TOKEN}
+    restart: unless-stopped

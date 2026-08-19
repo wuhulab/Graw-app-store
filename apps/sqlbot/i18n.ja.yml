@@ -1,0 +1,6 @@
+name: "SQLBot"
+description: >
+  DataEase チームが開発した大規模モデル + RAG ベースのインテリジェント問い合わせシステム。自然言語でデータベースを照会しグラフを生成できます。イメージ内に PostgreSQL が組み込まれています。
+category: "AI/開発"
+ports:
+  8000: "Web 画面"

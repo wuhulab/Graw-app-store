@@ -1,0 +1,6 @@
+description: >
+  A Palworld server management tool providing a web management interface (8080) and an
+  Agent (8081). You can view players, economy, save backups and game status.
+category: "Development/DevOps"
+ports:
+  8080: "Web admin interface"

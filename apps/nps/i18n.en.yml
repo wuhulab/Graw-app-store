@@ -1,0 +1,9 @@
+name: "nps (intranet penetration)"
+description: >
+  A lightweight, high-performance intranet penetration tool server with a built-in web
+  management interface, supporting TCP, UDP, HTTP(S), Socks5 and P2P tunnels as well as
+  traffic statistics.
+category: "Network/Tools"
+ports:
+  8080: "Web admin interface"
+  8024: "Client connection port"

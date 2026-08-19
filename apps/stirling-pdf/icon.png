@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="/app/" />
+    <link rel="icon" href="modern-logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="The Free Adobe Acrobat alternative (10M+ Downloads)" />
+    <link rel="apple-touch-icon" href="modern-logo/logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <title>Stirling PDF</title>
+    <script type="module" crossorigin src="/app/assets/index-MKsYveQA.js"></script>
+    <link rel="modulepreload" crossorigin href="/app/assets/vendor-react-CW0cBZaz.js">
+    <link rel="modulepreload" crossorigin href="/app/assets/pdf-engine-Dg9_90xz.js">
+    <link rel="stylesheet" crossorigin href="/app/assets/index-TXaRqRS1.css">
+    <!-- og:start -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Stirling PDF" />
+    <meta property="og:title" content="Stirling PDF" />
+    <meta property="og:description" content="The Free Adobe Acrobat alternative (10M+ Downloads)" />
+    <meta property="og:url" content="https://8e4c5029.stirling-pdf-653.pages.dev/" />
+    <meta property="og:image" content="https://8e4c5029.stirling-pdf-653.pages.dev/og_images/home.png" />
+    <meta property="og:image:secure_url" content="https://8e4c5029.stirling-pdf-653.pages.dev/og_images/home.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stirling PDF" />
+    <meta name="twitter:description" content="The Free Adobe Acrobat alternative (10M+ Downloads)" />
+    <meta name="twitter:image" content="https://8e4c5029.stirling-pdf-653.pages.dev/og_images/home.png" />
+    <!-- og:end -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"07b7f9ddb73f4c1484feae09baaa2e41"}' crossorigin="anonymous"></script>
+</body>
+</html>

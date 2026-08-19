@@ -1,0 +1,13 @@
+# Node-RED
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  node-red:
+    image: nodered/node-red:${VERSION}
+    container_name: node-red
+    volumes:
+      - ./data:/data
+    ports:
+      - "1880:1880"
+    restart: unless-stopped

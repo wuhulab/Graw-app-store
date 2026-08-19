@@ -1,0 +1,11 @@
+description: >
+  Videbla administra ilo de MySQL/MariaDB bazita sur PHP, kiu subtenas
+  datumbazojn, tabelojn, SQL, uzantojn kaj importon/eksporton; ĝi bezonas
+  konekti al ekstera datumbazo.
+category: "Datumbazo/Stokado"
+ports:
+  80: "Reteja interfaco"
+env:
+  PMA_HOST: "Datumbaza mastrumilo (ekz. mysql aŭ servila IP)"
+  PMA_PORT: "Datumbaza haveno"
+  PMA_ARBITRARY: "Permesi konekton al iu ajn servilo (1=jes)"

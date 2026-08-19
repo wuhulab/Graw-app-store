@@ -1,0 +1,9 @@
+name: "nps (Intretunelo)"
+description: >
+  Malpeza kaj alt-efikeca servila flanko de intretunela ilo, kiu havas
+  enkonstruitan retan administran interfacon kaj subtenas TCP, UDP, HTTP(S),
+  Socks5 kaj P2P-tunelojn, kun trafikstatistiko.
+category: "Reto/Iloj"
+ports:
+  8080: "Reteja administra interfaco"
+  8024: "Klienta konekta haveno"

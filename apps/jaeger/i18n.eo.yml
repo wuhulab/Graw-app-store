@@ -1,0 +1,9 @@
+description: >
+  Malfermita distribuita spurrentada sistemo; en la all-in-one reĝimo ĝi estas
+  uzebla sen agordo kaj provizas retan uzantinterfacon (16686) kaj enfluon per
+  OTLP (4317/4318).
+category: "Monitorado/Operaciado"
+ports:
+  16686: "Reteja uzantinterfaco"
+  4317: "OTLP gRPC"
+  4318: "OTLP HTTP"

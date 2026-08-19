@@ -1,0 +1,14 @@
+# 哪吒监控
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nezha:
+    image: ghcr.io/nezhahq/nezha:${VERSION}
+    container_name: nezha
+    volumes:
+      - ./data:/dashboard/data
+    ports:
+      - "8008:8008"
+      - "5555:5555"
+    restart: unless-stopped

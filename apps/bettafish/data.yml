@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "BettaFish (微舆)"
+id: "bettafish"
+
+category: "开发/DevOps"
+description: >
+  多智能体驱动的舆情分析系统，自动采集微博、小红书、抖音等平台内容，由多个 AI Agent 协作生成结构化分析报告。
+
+homepage: "https://github.com/666ghj/BettaFish"
+
+source: "https://github.com/666ghj/BettaFish"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 5000, label: "Web 界面", protocol: "tcp" }
+  - { container: 8501, label: "主服务", protocol: "tcp" }
+
+env:
+

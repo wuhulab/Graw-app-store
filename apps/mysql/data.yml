@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "MySQL"
+id: "mysql"
+
+category: "数据库/存储"
+description: >
+  世界最流行的开源关系型数据库管理系统，广泛用于各类 Web 应用、企业系统和数据仓库。本模板使用 MySQL 8 官方镜像，数据持久化到本地 data 目录。
+
+homepage: "https://www.mysql.com/"
+
+source: "https://github.com/mysql/mysql-server"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "8", label: "8.x" }
+  - { tag: "5.7", label: "5.7" }
+
+ports:
+  - { container: 3306, label: "MySQL 服务", protocol: "tcp" }
+
+env:
+  - { name: "MYSQL_ROOT_PASSWORD", default: "root123", desc: "root 密码" }
+

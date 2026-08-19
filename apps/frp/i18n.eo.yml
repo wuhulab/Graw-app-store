@@ -1,0 +1,8 @@
+name: "frp (frps-servilo)"
+description: >
+  La servila flanko de alt-efikeca intretunela ilo, kiu sekure eksponas
+  internretajn servojn al la publika reto per inversa prokura servo; ĝi
+  subtenas la protokolojn TCP, UDP, HTTP kaj HTTPS.
+category: "Reto/Iloj"
+ports:
+  7000: "frps-komunika haveno"

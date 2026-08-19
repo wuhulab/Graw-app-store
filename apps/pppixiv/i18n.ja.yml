@@ -1,0 +1,10 @@
+name: "pppixiv"
+description: >
+  Pixiv イラスト一括ダウンロードツール。Web 管理画面（/dashboard）を内蔵し、絵師の UID を入力するだけでワンクリックで全イラストを一括ダウンロードでき、プレビューも可能です。Pixiv のアカウントとパスワードの設定が必要で、中国国内からの Pixiv アクセスはプロキシが必要です。
+category: "ネットワーク/ツール"
+ports:
+  5000: "Web 管理画面"
+env:
+  username: "Pixiv アカウント（必須）"
+  password: "Pixiv パスワード（必須）"
+  port: "サービスポート"

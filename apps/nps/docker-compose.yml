@@ -1,0 +1,14 @@
+# nps (内网穿透)
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nps:
+    image: yisier1/nps:${VERSION}
+    container_name: nps
+    volumes:
+      - ./conf:/conf
+    ports:
+      - "8080:8080"
+      - "8024:8024"
+    restart: unless-stopped

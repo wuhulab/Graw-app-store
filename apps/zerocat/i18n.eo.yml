@@ -1,0 +1,11 @@
+name: "ZeroCat (Programada Komunumo)"
+description: >
+  Malpeza interreta programado- kaj kundivida platformo, kiu subtenas
+  komunumojn konvenajn por programado-komencantoj kiel Scratch kaj Python.
+  Nuntempe ĝi estas en frua stadio: la oficialo provizas nur lokan konstruon per
+  fonta Dockerfile, kaj ankoraŭ ne ekzistas elŝutebla antaŭkompilita bildo.
+category: "Panelo/Retpaĝaro"
+ports:
+  3000: "Reteja interfaco"
+env:
+  DATABASE_URL: "MySQL-konekta ĉeno (deviga, ekz. mysql://root:pwd@host:3306/zerocat)"

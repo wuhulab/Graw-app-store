@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Reader"
+id: "reader"
+
+category: "面板/网站"
+
+warn: "原仓库已于 2026-06 归档停止维护；首次使用请设置管理密码与邀请码。"
+description: >
+  自托管的在线阅读站，支持书源管理、追更、阅读进度同步与 Web 阅读，数据保存在本地目录。
+
+homepage: "https://github.com/hectorqin/reader"
+
+source: "https://github.com/hectorqin/reader"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "READER_APP_SECUREKEY", default: "", desc: "管理密码（建议设置）" }
+

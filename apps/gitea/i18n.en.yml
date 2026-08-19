@@ -1,0 +1,11 @@
+description: >
+  A lightweight, fast, self-hosted Git service with low memory usage and easy
+  installation. It supports repositories, Issues, PRs, CI, Wiki and Actions, making it an
+  ideal choice for building a private code hosting platform.
+category: "Panel/Website"
+ports:
+  3000: "Web UI"
+  22: "SSH"
+env:
+  GITEA__server__DOMAIN: "Domain / IP"
+  GITEA__server__SSH_DOMAIN: "SSH domain"

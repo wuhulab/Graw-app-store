@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Nginx Proxy Manager"
+id: "nginx-proxy-manager"
+
+category: "网络/工具"
+
+warn: "默认账密为 admin@example.com / changeme，请立即修改；80/443 端口对外暴露请谨慎配置代理规则。"
+description: >
+  易用的 Nginx 反向代理 + 免费 SSL 证书管理面板，支持可视化配置域名转发、泛解析与 Let's Encrypt 证书。
+
+homepage: "https://nginxproxymanager.com/"
+
+source: "https://github.com/NginxProxyManager/nginx-proxy-manager"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 81, label: "管理界面", protocol: "tcp" }
+  - { container: 80, label: "HTTP 代理", protocol: "tcp" }
+  - { container: 443, label: "HTTPS 代理", protocol: "tcp" }
+
+env:
+

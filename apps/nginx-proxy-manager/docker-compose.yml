@@ -1,0 +1,16 @@
+# Nginx Proxy Manager
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:${VERSION}
+    container_name: nginx-proxy-manager
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    ports:
+      - "81:81"
+      - "80:80"
+      - "443:443"
+    restart: unless-stopped

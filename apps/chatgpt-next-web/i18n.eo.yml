@@ -1,0 +1,10 @@
+description: >
+  Transplatforma reta fronto de ChatGPT / plurlmodela babilejo, kiu subtenas
+  API-ojn de diversaj grandaj modeloj, konversacian administradon, Markdown kaj
+  tujan deplojon; ĝi estas ofte uzata mem-gastigita AI-interfaco por babilado.
+category: "AI/Disvolvo"
+ports:
+  3000: "Reteja interfaco"
+env:
+  OPENAI_API_KEY: "API-ŝlosilo de la modelo"
+  CODE: "Alirmesa pasvorto (se agordita, ĝi malhelpas nekonatojn uzi la servon)"

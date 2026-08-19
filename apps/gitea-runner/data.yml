@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Gitea Act Runner"
+id: "gitea-runner"
+
+category: "开发/DevOps"
+description: >
+  Gitea Actions 的运行器，在本地或专用机器上执行 Gitea 仓库的 CI/CD 流水线。需要先在 Gitea 注册 runner 获取 token。
+
+homepage: "https://docs.gitea.com/usage/actions/act-runner"
+
+source: "https://gitea.com/gitea/runner"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+
+env:
+  - { name: "GITEA_INSTANCE_URL", default: "https://gitea.com", desc: "Gitea 实例地址" }
+  - { name: "GITEA_RUNNER_REGISTRATION_TOKEN", default: "", desc: "Runner 注册令牌（必填）" }
+

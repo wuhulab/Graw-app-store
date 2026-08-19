@@ -1,0 +1,30 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "WordPress"
+id: "wordpress"
+
+category: "面板/网站"
+description: >
+  全球使用最广泛的开源建站与内容管理系统，插件与主题生态极其丰富，适合博客、企业站、电商等各类网站。本模板内置 MySQL 数据库。
+
+homepage: "https://wordpress.org/"
+
+source: "https://github.com/WordPress/WordPress"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "WORDPRESS_DB_HOST", default: "db:3306", desc: "数据库地址" }
+  - { name: "WORDPRESS_DB_USER", default: "wordpress", desc: "数据库用户" }
+  - { name: "WORDPRESS_DB_PASSWORD", default: "wordpress123", desc: "数据库密码" }
+  - { name: "WORDPRESS_DB_NAME", default: "wordpress", desc: "数据库名" }
+

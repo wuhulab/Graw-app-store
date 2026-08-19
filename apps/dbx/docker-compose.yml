@@ -1,0 +1,15 @@
+# DBX
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  dbx:
+    image: t8y2/dbx:${VERSION}
+    container_name: dbx
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "4224:4224"
+    environment:
+      - DBX_PASSWORD=${DBX_PASSWORD}
+    restart: unless-stopped

@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "code-server"
+id: "code-server"
+
+category: "AI/开发"
+description: >
+  在浏览器中运行的 VS Code，让你随时随地通过 Web 编写代码，支持扩展安装、终端与 Git 集成，适合远程开发与容器环境。
+
+homepage: "https://coder.com/"
+
+source: "https://github.com/coder/code-server"
+
+arch:
+  - "amd64"
+  - "arm64"
+  - "arm/v7"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "PASSWORD", default: "", desc: "访问密码（留空则自动生成）" }
+  - { name: "SUDO_PASSWORD", default: "", desc: "sudo 密码（可选）" }
+

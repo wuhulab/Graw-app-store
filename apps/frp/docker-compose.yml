@@ -1,0 +1,13 @@
+# frp (frps 服务端)
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  frps:
+    image: snowdreamtech/frps:${VERSION}
+    container_name: frps
+    volumes:
+      - ./conf:/etc/frp
+    ports:
+      - "7000:7000"
+    restart: unless-stopped

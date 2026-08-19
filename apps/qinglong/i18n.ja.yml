@@ -1,0 +1,6 @@
+name: "青竜パネル（QingLong）"
+description: >
+  スケジュールタスク管理パネル。JavaScript / Python / Shell スクリプトに対応し、自動チェックインや放置タスクなどの自動化に利用できます。依存関係管理とログ表示を内蔵しています。
+category: "パネル/ウェブサイト"
+ports:
+  5700: "Web 画面"

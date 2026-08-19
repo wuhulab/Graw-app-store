@@ -1,0 +1,13 @@
+# Sub2API
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  sub2api:
+    image: weishaw/sub2api:${VERSION}
+    container_name: sub2api
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

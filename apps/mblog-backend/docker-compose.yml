@@ -1,0 +1,29 @@
+# Mblog
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: db
+    volumes:
+      - ./dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=mblog
+      - MYSQL_ROOT_PASSWORD=root123
+    restart: unless-stopped
+  mblog:
+    image: kingwrcy/mblog-backend:${VERSION}
+    container_name: mblog
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8080:8080"
+    environment:
+      - MYSQL_PASS=${MYSQL_PASS}
+      - MYSQL_URL=db:3306
+      - MYSQL_DB=mblog
+      - MBLOG_FRONT_DOMAIN=${MBLOG_FRONT_DOMAIN}
+    depends_on:
+      - db
+    restart: unless-stopped

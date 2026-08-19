@@ -1,0 +1,8 @@
+name: "Nginx Proxy Manager"
+description: >
+  使いやすい Nginx リバースプロキシ + 無料 SSL 証明書管理パネル。ドメイン転送、ワイルドカード、Let's Encrypt 証明書をビジュアルに設定できます。
+category: "ネットワーク/ツール"
+ports:
+  81: "管理画面"
+  80: "HTTP プロキシ"
+  443: "HTTPS プロキシ"

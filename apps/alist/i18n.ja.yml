@@ -1,0 +1,10 @@
+name: "AList"
+description: >
+  複数のストレージを統合できるファイルリスト＆共有プログラム。Alibaba Cloud Drive、Baidu 網盤、OneDrive、クォークなど主要ストレージを集約し、Web 画面、WebDAV、オフラインダウンロードを内蔵しています。
+category: "パネル/ウェブサイト"
+ports:
+  5244: "Web 画面"
+env:
+  PUID: "実行ユーザーの UID"
+  PGID: "実行ユーザーの GID"
+  UMASK: "ファイル権限マスク"

@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "QwenPaw"
+id: "qwenpaw"
+
+category: "AI/开发"
+
+warn: "官方示例默认仅绑定 127.0.0.1；远程访问需显式开放监听地址并配置 Token。"
+description: >
+  通义开源的个人 AI 助手，支持本地/云端部署、多工具调用与对话编排，镜像内置 OpenAI 兼容接口。
+
+homepage: "https://github.com/agentscope-ai/QwenPaw"
+
+source: "https://github.com/agentscope-ai/QwenPaw"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8088, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "QWENPAW_TOKEN", default: "", desc: "访问 Token（建议设置）" }
+

@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Tailchat"
+id: "tailchat"
+
+category: "面板/网站"
+description: >
+  开源的下一代 IM 与协作平台，支持群组、频道、语音、插件与机器人，可完全自托管，构建属于自己的私密通信空间。
+
+homepage: "https://tailchat.msgbyte.com/"
+
+source: "https://github.com/msgbyte/tailchat"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 11002, label: "Web 界面", protocol: "tcp" }
+
+env:
+

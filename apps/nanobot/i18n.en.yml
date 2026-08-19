@@ -1,0 +1,7 @@
+description: >
+  An ultra-lightweight, self-hosted personal AI agent framework from HKUDS. It provides a
+  WebUI (8765) and WebSocket, supports tool calling and local deployment with extremely
+  low resource usage.
+category: "AI/Development"
+ports:
+  8765: "WebUI / WebSocket"

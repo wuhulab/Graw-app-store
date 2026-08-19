@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Zakura"
+id: "zakura"
+
+category: "AI/开发"
+
+warn: "默认挂载 /var/run/docker.sock 属于高权限，请仅在受信任主机部署。"
+description: >
+  协同提升 Agent 智能的 AI 编排平台，提供 API（8787）与 Web（3001）界面，支持多 Agent 协同与自动化编排。
+
+homepage: "https://github.com/Moonrend/Zakura"
+
+source: "https://github.com/Moonrend/Zakura"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8787, label: "API 服务", protocol: "tcp" }
+  - { container: 3001, label: "Web 界面", protocol: "tcp" }
+
+env:
+

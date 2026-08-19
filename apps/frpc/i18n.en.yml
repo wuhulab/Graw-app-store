@@ -1,0 +1,14 @@
+name: "frp (frpc client)"
+description: >
+  The client side of a high-performance intranet penetration tool that actively connects
+  to the frps server to expose local internal services to the public internet. Connection
+  parameters are configured via environment variables, and tunnel rules can be mounted via
+  frpc.toml under /etc/frp.
+category: "Network/Tools"
+env:
+  FRP_SERVER_ADDR: "frps server address (required, e.g. 1.2.3.4)"
+  FRP_SERVER_PORT: "frps server port"
+  FRP_AUTH_METHOD: "Authentication method (token / user, etc.)"
+  FRP_TOKEN: "Authentication token (must match frps configuration)"
+  FRP_SERVER_USER: "Authentication username (optional)"
+  FRP_SERVER_PASSWORD: "Authentication password (optional)"

@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Kirara AI"
+id: "kirara-ai"
+
+category: "AI/开发"
+
+warn: "WebUI 默认仅监听 127.0.0.1，公网部署需按官方文档修改监听地址并自行加鉴权；若镜像不存在请按官方 docker compose 部署。"
+description: >
+  多平台接入大模型的聊天机器人框架，支持 QQ、Telegram、企业微信等平台，自带 WebUI（8080）、工作流编排与插件生态。
+
+homepage: "https://github.com/lss233/kirara-ai"
+
+source: "https://github.com/lss233/kirara-ai"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "WebUI", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,7 @@
+description: >
+  Interaga notlibro bazita sur la retumilo, kiu subtenas miksan verkadon de
+  Python-kodo, videbloj kaj Markdown-dokumentoj; ĝi estas ofte uzata ilo en
+  datumscienco kaj instruado.
+category: "AI/Disvolvo"
+ports:
+  8888: "Reteja interfaco"

@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Verdaccio"
+id: "verdaccio"
+
+category: "数据库/存储"
+description: >
+  轻量级、可扩展的私有 npm 仓库代理，让你在本地或内网搭建属于自己的 Node 包源，支持代理与缓存公共 npm 包。
+
+homepage: "https://verdaccio.org/"
+
+source: "https://github.com/verdaccio/verdaccio"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 4873, label: "npm 仓库", protocol: "tcp" }
+
+env:
+

@@ -1,0 +1,11 @@
+# 中文 DOS 游戏合集
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  chinese-dos-games:
+    image: oldiy/dosgame-web-docker:${VERSION}
+    container_name: chinese-dos-games
+    ports:
+      - "262:262"
+    restart: unless-stopped

@@ -1,0 +1,14 @@
+# Nanobot
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nanobot:
+    build: .
+    image: nanobot:latest
+    container_name: nanobot
+    volumes:
+      - ./data:/root/.nanobot
+    ports:
+      - "8765:8765"
+    restart: unless-stopped

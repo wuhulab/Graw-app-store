@@ -1,0 +1,31 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "ClassworksKV"
+id: "classworks"
+
+category: "面板/网站"
+tags:
+  - "推荐"
+
+warn: "部署需配置 STCN OAuth 客户端与 JWT_SECRET；官方示例曾泄漏 Client Secret，请勿照抄示例密钥。"
+description: >
+  班级大屏作业板 KV 存储后端，用于班级作业展示与数据管理，支持多班任务板。部署需配置 OAuth 与 JWT 密钥。
+
+homepage: "https://github.com/Moonrend/ClassworksKV"
+
+source: "https://github.com/Moonrend/ClassworksKV"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "JWT_SECRET", default: "", desc: "JWT 密钥（必填，建议长随机串）" }
+

@@ -1,0 +1,9 @@
+description: >
+  Automatically monitors running containers and pulls and rebuilds them when their base
+  image releases a new version. It keeps self-hosted applications up to date and avoids
+  missing security updates.
+category: "Monitoring/Ops"
+env:
+  TZ: "Time zone"
+  WATCHTOWER_CLEANUP: "Remove old images after updating"
+  WATCHTOWER_POLL_INTERVAL: "Check interval (seconds)"

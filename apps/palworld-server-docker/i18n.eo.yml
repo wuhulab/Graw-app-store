@@ -1,0 +1,13 @@
+description: >
+  Docker-bildo por dediĉita servilo de la ludo Palworld, kiu mem aŭtomate
+  elŝutas / ĝisdatigas la servan programon per SteamCMD kaj provizas la
+  ludhavenon (8211/udp), la demandan havenon kaj la RCON-havenon.
+category: "Disvolvo/DevOps"
+ports:
+  8211: "Lud-haveno"
+  27015: "Demanda haveno"
+  25575: "RCON"
+env:
+  ADMIN_PASSWORD: "Administra pasvorto (deviga)"
+  SERVER_PASSWORD: "Serva pasvorto (deviga, alie oni ne povas aliĝi)"
+  COMMUNITY_SERVER: "Ĉu ĝi estas komunuma servilo"

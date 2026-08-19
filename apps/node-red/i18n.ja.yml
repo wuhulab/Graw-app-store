@@ -1,0 +1,6 @@
+name: "Node-RED"
+description: >
+  Node.js ベースのフローベースプログラミングツール。ノードのドラッグ＆ドロップでデバイス、API、サービスを接続でき、IoT、自動化、データフロー処理に適しています。
+category: "AI/開発"
+ports:
+  1880: "Web 画面"

@@ -1,0 +1,28 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "New API"
+id: "new-api"
+
+category: "开发/DevOps"
+description: >
+  新一代大模型 API 网关与 AI 资产管理平台，支持多模型统一接入、令牌管理、渠道分发、用量统计与计费，可对接 OpenAI / DeepSeek 等各类模型。
+
+homepage: "https://docs.newapi.pro/"
+
+source: "https://github.com/QuantumNous/new-api"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+  - { tag: "0.13.2", label: "0.13.2" }
+
+ports:
+  - { container: 3000, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "SESSION_SECRET", default: "", desc: "会话密钥（建议设置）" }
+

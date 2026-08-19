@@ -1,0 +1,13 @@
+# Nextcloud
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  nextcloud:
+    image: nextcloud:${VERSION}
+    container_name: nextcloud
+    volumes:
+      - ./data:/var/www/html
+    ports:
+      - "80:80"
+    restart: unless-stopped

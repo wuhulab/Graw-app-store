@@ -1,0 +1,9 @@
+description: >
+  Aŭtomate monitoras la funkciantajn ujojn; kiam la baza bildo publikigas novan
+  version, ĝi aŭtomate elŝutas kaj rekonstruas, tenante mem-gastigitajn
+  aplikaĵojn ĝisdataj kaj evitante maltrafi sekurecajn ĝisdatigojn.
+category: "Monitorado/Operaciado"
+env:
+  TZ: "Horzono"
+  WATCHTOWER_CLEANUP: "Ĉu forigi la malnovajn bildojn post ĝisdatigo"
+  WATCHTOWER_POLL_INTERVAL: "Kontrolintervalo (sekundoj)"

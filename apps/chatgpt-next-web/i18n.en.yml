@@ -1,0 +1,10 @@
+description: >
+  A cross-platform ChatGPT / multi-model chat web frontend supporting multiple LLM APIs,
+  conversation management, Markdown and ready-to-deploy use. It is a popular self-hosted
+  AI chat interface.
+category: "AI/Development"
+ports:
+  3000: "Web UI"
+env:
+  OPENAI_API_KEY: "Model API key"
+  CODE: "Access password (set to prevent strangers from using your key)"

@@ -1,0 +1,16 @@
+# Linkding
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  linkding:
+    image: sissbruecker/linkding:${VERSION}
+    container_name: linkding
+    volumes:
+      - ./data:/etc/linkding/data
+    ports:
+      - "9090:9090"
+    environment:
+      - LD_SUPERUSER_NAME=admin
+      - LD_SUPERUSER_PASSWORD=${LD_SUPERUSER_PASSWORD}
+    restart: unless-stopped

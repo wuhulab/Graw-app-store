@@ -1,0 +1,6 @@
+description: >
+  A Pixiv command-line batch download tool (official ghcr image) supporting bulk download
+  of illustrations by artist ID and daily / historical rankings. The container runs in
+  keep-alive mode; after installation run the pixivd command in the container terminal
+  (e.g. pixivd <UID> or pixivd -r). Downloads are saved in the illustrations directory.
+category: "Network/Tools"

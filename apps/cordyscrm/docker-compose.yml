@@ -1,0 +1,14 @@
+# CordysCRM
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  cordyscrm:
+    image: 1panel/cordys-crm:${VERSION}
+    container_name: cordyscrm
+    volumes:
+      - ./data:/data
+    ports:
+      - "8081:8081"
+      - "8082:8082"
+    restart: unless-stopped

@@ -1,0 +1,14 @@
+# Portainer
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  portainer:
+    image: portainer/portainer-ce:${VERSION}
+    container_name: portainer
+    volumes:
+      - ./data:/data
+      - ./socket:/var/run/docker.sock
+    ports:
+      - "9000:9000"
+    restart: unless-stopped

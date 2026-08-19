@@ -1,0 +1,34 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "Discourse"
+id: "discourse"
+
+category: "面板/网站"
+
+warn: "官方仅支持 Docker 部署，首次安装需配置域名、SMTP 并完成初始化向导；模板使用历史单镜像，完整部署请参考官方 launcher 文档。"
+description: >
+  开源社区论坛平台，功能强大的现代化 BBS，内置 PostgreSQL、Redis 与 Nginx，需配置域名与 SMTP 邮箱。
+
+homepage: "https://www.discourse.org/"
+
+source: "https://github.com/discourse/discourse"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "DISCOURSE_HOSTNAME", default: "localhost", desc: "站点域名（必填）" }
+  - { name: "DISCOURSE_DEVELOPER_EMAILS", default: "admin@example.com", desc: "管理员邮箱" }
+  - { name: "DISCOURSE_SMTP_ADDRESS", default: "", desc: "SMTP 服务器" }
+  - { name: "DISCOURSE_SMTP_PORT", default: "587", desc: "SMTP 端口" }
+  - { name: "DISCOURSE_SMTP_USER_NAME", default: "", desc: "SMTP 用户名" }
+  - { name: "DISCOURSE_SMTP_PASSWORD", default: "", desc: "SMTP 密码" }
+

@@ -1,0 +1,14 @@
+# OpenClaw
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  openclaw:
+    image: ghcr.io/openclaw/openclaw:${VERSION}
+    container_name: openclaw
+    volumes:
+      - ./data:/app/data
+      - ./socket:/var/run/docker.sock
+    ports:
+      - "18789:18789"
+    restart: unless-stopped

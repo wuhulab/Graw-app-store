@@ -1,0 +1,15 @@
+# One API
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  one-api:
+    image: justsong/one-api:${VERSION}
+    container_name: one-api
+    volumes:
+      - ./data:/data
+    ports:
+      - "3000:3000"
+    environment:
+      - SESSION_SECRET=${SESSION_SECRET}
+    restart: unless-stopped

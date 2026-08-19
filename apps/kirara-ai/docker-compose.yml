@@ -1,0 +1,14 @@
+# Kirara AI
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  kirara-ai:
+    image: lss233/chatgpt-mirai-qq-bot:${VERSION}
+    container_name: kirara-ai
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

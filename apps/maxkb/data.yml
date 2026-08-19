@@ -1,0 +1,29 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "MaxKB"
+id: "maxkb"
+
+category: "AI/开发"
+
+warn: "默认账密为 admin / MaxKB@123..，首次登录请务必修改。"
+description: >
+  1Panel 出品的强大易用企业级智能体平台，支持知识库 RAG、对话应用编排与多种模型接入，镜像内嵌 PostgreSQL 数据库。
+
+homepage: "https://maxkb.cn/"
+
+source: "https://github.com/1Panel-dev/MaxKB"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 8080, label: "Web 界面", protocol: "tcp" }
+
+env:
+  - { name: "MAXKB_ONE_MI_API_BASE_URL", default: "", desc: "对接 One API 的地址（可选）" }
+

@@ -1,0 +1,6 @@
+name: "Sub2API"
+description: >
+  サブスクリプションアカウントを統一 API キーに変換する AI API ゲートウェイ。アカウントグループ、ロードバランシング、利用量統計に対応し、PostgreSQL と Redis の連携が必要です。
+category: "ネットワーク/ツール"
+ports:
+  8080: "Web 画面"

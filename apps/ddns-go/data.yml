@@ -1,0 +1,26 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "DDNS-GO"
+id: "ddns-go"
+
+category: "网络/工具"
+description: >
+  简单易用的动态域名解析工具，自动获取公网 IPv4 / IPv6 并同步到阿里云、腾讯云、Cloudflare 等 20+ DNS 服务商，带 Web 配置界面。
+
+homepage: "https://github.com/jeessy2/ddns-go"
+
+source: "https://github.com/jeessy2/ddns-go"
+
+arch:
+  - "amd64"
+  - "arm64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 9876, label: "Web 界面", protocol: "tcp" }
+
+env:
+

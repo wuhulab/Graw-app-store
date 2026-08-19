@@ -1,0 +1,15 @@
+# Verdaccio
+# ${VERSION} 占位符由面板在安装时替换
+version: "3"
+
+services:
+  verdaccio:
+    image: verdaccio/verdaccio:${VERSION}
+    container_name: verdaccio
+    volumes:
+      - ./storage:/verdaccio/storage
+      - ./config:/verdaccio/conf
+      - ./plugins:/verdaccio/plugins
+    ports:
+      - "4873:4873"
+    restart: unless-stopped

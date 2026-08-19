@@ -1,0 +1,6 @@
+name: "RSSHub"
+description: >
+  万物は RSS になる。ウェブサイト、SNS、ブログなどさまざまなコンテンツソースから RSS 購読を生成し、気になるすべての更新を集約します。
+category: "ネットワーク/ツール"
+ports:
+  1200: "Web 画面"

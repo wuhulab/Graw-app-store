@@ -1,0 +1,27 @@
+# ============================================================
+# Graw 社区应用商店 - 应用元数据 data.yml
+# ============================================================
+
+name: "JumpServer"
+id: "jumpserver"
+
+category: "监控/运维"
+
+warn: "默认账密为 admin / ChangeMe，请立即修改；JumpServer 属安全敏感产品，请妥善保管管理员凭据。"
+description: >
+  广受欢迎的开源堡垒机（PAM），提供资产纳管、账号托管、运维审计与工单审批，是安全的运维入口。
+
+homepage: "https://www.jumpserver.org/"
+
+source: "https://github.com/jumpserver/jumpserver"
+
+arch:
+  - "amd64"
+versions:
+  - { tag: "latest", label: "最新" }
+
+ports:
+  - { container: 80, label: "Web 界面", protocol: "tcp" }
+
+env:
+

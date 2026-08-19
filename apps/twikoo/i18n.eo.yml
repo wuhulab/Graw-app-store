@@ -1,0 +1,7 @@
+description: >
+  Simpla kaj sekura komentad-sistemo por statikaj retejoj, kiu subtenas
+  artikolkomentojn, ŝatojn, emoci-ikonojn kaj retpoŝtajn sciigojn; datumoj
+  estas konservataj en loka JSON-dosiero, kun tre malalta resurso-konsumo.
+category: "Reto/Iloj"
+ports:
+  8080: "Komenta servo"
