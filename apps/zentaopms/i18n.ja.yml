@@ -1,0 +1,8 @@
+name: "禅道（ZenTao）"
+description: >
+  国内発のオープンソース統合プロジェクト管理ソフトウェア。製品、プロジェクト、テスト、ドキュメント、DevOps の全プロセスをカバーし、イメージ内に MariaDB データベースが組み込まれています。
+category: "開発/DevOps"
+ports:
+  80: "Web 画面"
+env:
+  MYSQL_INTERNAL: "内蔵データベースを使うかどうか（1=内蔵）"

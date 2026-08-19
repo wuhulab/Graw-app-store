@@ -1,0 +1,9 @@
+name: "Lsky-Pro (Bildoservo)"
+description: >
+  Malfermita bildgastiga sistemo, kiu subtenas lokan alŝuton, eksterajn
+  ligilojn, albumadministradon kaj plurajn stokadajn strategiojn; taŭga por
+  mem konstrui personan aŭ teaman bildgastejon (la malfermita versio jam ne
+  plu estas prizorgata).
+category: "Panelo/Retpaĝaro"
+ports:
+  8088: "Reteja interfaco"

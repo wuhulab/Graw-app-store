@@ -1,0 +1,12 @@
+name: "Palworld Server Docker"
+description: >
+  幻兽パル（Palworld）専用サーバーの Docker イメージ。SteamCMD によるサーバーソフトの自動ダウンロード/アップデートを内蔵し、ゲーム（8211/udp）、クエリ、RCON ポートを提供します。
+category: "開発/DevOps"
+ports:
+  8211: "ゲームポート"
+  27015: "クエリポート"
+  25575: "RCON"
+env:
+  ADMIN_PASSWORD: "管理者パスワード（必須）"
+  SERVER_PASSWORD: "サーバーパスワード（必須。設定しないと参加できません）"
+  COMMUNITY_SERVER: "コミュニティサーバーにするかどうか"

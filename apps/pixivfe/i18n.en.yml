@@ -1,0 +1,7 @@
+description: >
+  An open-source alternative frontend for pixiv that protects privacy and allows
+  anonymous browsing without logging in. All requests are performed server-side; it is
+  lightweight, modern and supports multi-architecture images.
+category: "Network/Tools"
+ports:
+  8282: "Web UI"

@@ -1,0 +1,12 @@
+description: >
+  Programo de dosierlistigo kaj kundivido, kiu subtenas multajn stokejojn: ĝi
+  kunigas ĉefajn stokservojn kiel Alibaba Cloud Drive, Baidu Netdisk, OneDrive
+  kaj Quark, kaj havas enkonstruitan retan interfacon, WebDAV kaj eksterretan
+  elŝuton.
+category: "Panelo/Retpaĝaro"
+ports:
+  5244: "Reteja interfaco"
+env:
+  PUID: "UID de la funkciiga uzanto"
+  PGID: "GID de la funkciiga uzanto"
+  UMASK: "Dosierpermesa masko"

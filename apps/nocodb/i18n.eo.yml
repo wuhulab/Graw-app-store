@@ -1,0 +1,10 @@
+description: >
+  Malfermita alternativo al Airtable, kiu transformas datumbazojn en videblajn
+  kalkultad-tabelojn; ĝi subtenas MySQL, PostgreSQL kaj SQLite, kaj per
+  trenado-kaj-lasi ebligas konstrui datumaplikojn kaj administri datumojn sen
+  programado.
+category: "Datumbazo/Stokado"
+ports:
+  8080: "Reteja interfaco"
+env:
+  NC_DB: "Datumbaza konekta ĉeno (defaŭlte SQLite)"

@@ -1,0 +1,7 @@
+description: >
+  A minimalist hand-drawn style whiteboard tool with online collaboration and export to
+  image and SVG. Ideal for diagrams, architecture drawings and illustrations, usable
+  without logging in.
+category: "Panel/Website"
+ports:
+  80: "Web UI"

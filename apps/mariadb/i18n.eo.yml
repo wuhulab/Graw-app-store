@@ -1,0 +1,10 @@
+description: >
+  Komunuma branĉo de MySQL, plene kongrua kaj krome havanta pli da stokadaj
+  rimarkoj kaj rendimentaj plibonigoj; ĝi estas la defaŭlta datumbazo de multaj
+  Linux-distribuaĵoj. Ĉi tiu ŝablono uzas la oficialan MariaDB 11-bildon.
+category: "Datumbazo/Stokado"
+ports:
+  3306: "MariaDB-servo"
+env:
+  MARIADB_ROOT_PASSWORD: "Pasvorto de root"
+  MARIADB_DATABASE: "Defaŭlta datumbazo"

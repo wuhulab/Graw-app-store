@@ -1,0 +1,7 @@
+description: >
+  A browser-based interactive notebook supporting mixed authoring of Python code,
+  visualizations and Markdown documents. It is a common tool for data science, teaching
+  and research.
+category: "AI/Development"
+ports:
+  8888: "Web UI"

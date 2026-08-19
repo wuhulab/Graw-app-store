@@ -1,0 +1,6 @@
+name: "Sbox Community"
+description: >
+  Flask ベースの Scratch クリエイター向けコミュニティ。作品の公開、交流、展示に対応し、ZeroCat エコシステムのコミュニティ側です。現在はソースコードでのデプロイのみ提供されています。
+category: "パネル/ウェブサイト"
+ports:
+  5219: "Web 画面"

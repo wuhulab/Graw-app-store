@@ -1,0 +1,9 @@
+name: "code-server"
+description: >
+  ブラウザ上で動作する VS Code。場所を問わず Web からコードを書けるほか、拡張機能のインストール、ターミナル、Git 連携に対応し、リモート開発やコンテナ環境に適しています。
+category: "AI/開発"
+ports:
+  8080: "Web 画面"
+env:
+  PASSWORD: "アクセスパスワード（空欄の場合は自動生成）"
+  SUDO_PASSWORD: "sudo パスワード（任意）"

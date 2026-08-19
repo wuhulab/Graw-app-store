@@ -1,0 +1,8 @@
+name: "DBX"
+description: >
+  オープンソースのデータベースワークベンチ。70 以上のデータベース接続と SQL クエリ、データ参照、Schema 比較、インポート/エクスポートに対応し、AI アシスタントと MCP Server を内蔵。Docker でセルフホストできます。
+category: "開発/DevOps"
+ports:
+  4224: "Web 画面"
+env:
+  DBX_PASSWORD: "Web ログインパスワード（設定を推奨）"

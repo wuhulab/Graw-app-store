@@ -1,0 +1,9 @@
+name: "MariaDB"
+description: >
+  MySQL のコミュニティフォークで、完全互換を維持しつつ追加のストレージエンジンとパフォーマンス最適化を提供します。多くの Linux ディストリビューションのデフォルトデータベースです。本テンプレートは公式 MariaDB 11 イメージを使用します。
+category: "データベース/ストレージ"
+ports:
+  3306: "MariaDB サービス"
+env:
+  MARIADB_ROOT_PASSWORD: "root パスワード"
+  MARIADB_DATABASE: "デフォルトデータベース"

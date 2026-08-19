@@ -1,0 +1,8 @@
+name: "Qinglong Panel"
+description: >
+  A scheduled task management panel supporting JavaScript / Python / Shell scripts. It can
+  be used to automate tasks such as check-ins and farming, with built-in dependency
+  management and log viewing.
+category: "Panel/Website"
+ports:
+  5700: "Web UI"

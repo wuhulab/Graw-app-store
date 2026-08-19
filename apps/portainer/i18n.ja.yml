@@ -1,0 +1,6 @@
+name: "Portainer"
+description: >
+  最も人気のある Docker / Kubernetes ビジュアルパネル。コンテナ、イメージ、ネットワーク、ボリューム、スタックのワンストップ管理を提供し、直感的なインターフェースで初心者にも使いやすいのが特徴です。
+category: "監視/運用"
+ports:
+  9000: "Web 画面"

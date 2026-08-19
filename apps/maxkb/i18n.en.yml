@@ -1,0 +1,9 @@
+description: >
+  A powerful, easy-to-use enterprise agent platform from 1Panel supporting knowledge base
+  RAG, conversational application orchestration and multiple model integrations. The
+  image bundles a PostgreSQL database.
+category: "AI/Development"
+ports:
+  8080: "Web UI"
+env:
+  MAXKB_ONE_MI_API_BASE_URL: "One API endpoint to connect to (optional)"

@@ -1,0 +1,11 @@
+name: "WordPress"
+description: >
+  世界中で最も広く使われているオープンソースのウェブサイト構築・CMS。プラグインとテーマのエコシステムが非常に豊富で、ブログ、企業サイト、EC などあらゆる種類のサイトに適しています。本テンプレートには MySQL データベースが内蔵されています。
+category: "パネル/ウェブサイト"
+ports:
+  80: "Web 画面"
+env:
+  WORDPRESS_DB_HOST: "データベースのアドレス"
+  WORDPRESS_DB_USER: "データベースユーザー"
+  WORDPRESS_DB_PASSWORD: "データベースパスワード"
+  WORDPRESS_DB_NAME: "データベース名"

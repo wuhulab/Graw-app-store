@@ -1,0 +1,6 @@
+name: "OpenClaw"
+description: >
+  自分のデバイスで動作するパーソナル AI アシスタント。ツール呼び出し、DM ペアリング、自律実行機能を備え、公式が事前ビルド済みの ghcr イメージを提供しています。
+category: "AI/開発"
+ports:
+  18789: "Gateway ポート"

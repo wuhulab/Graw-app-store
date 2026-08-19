@@ -1,0 +1,9 @@
+name: "Linkding"
+description: >
+  セルフホスト型の軽量ブックマークマネージャー。タグ、検索、アーカイブ、および Web メタデータの自動取得に対応し、デフォルトでは SQLite、オプションで PostgreSQL を使用します。
+category: "ネットワーク/ツール"
+ports:
+  9090: "Web 画面"
+env:
+  LD_SUPERUSER_NAME: "スーパーユーザー名"
+  LD_SUPERUSER_PASSWORD: "スーパーユーザーのパスワード（初回起動時に自動生成）"

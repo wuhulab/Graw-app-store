@@ -1,0 +1,9 @@
+description: >
+  KV-stokada apogservilo por klasa lernoplanejo (ema taska tabulo), uzata por
+  montri klasajn taskojn kaj administri datumojn, subtenas taskotabulojn de
+  pluraj klasoj; deplojo postulas agordi OAuth-klienton kaj JWT-ŝlosilon.
+category: "Panelo/Retpaĝaro"
+ports:
+  3000: "Reteja interfaco"
+env:
+  JWT_SECRET: "JWT-ŝlosilo (deviga, rekomendata longa hazarda ĉeno)"

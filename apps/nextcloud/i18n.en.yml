@@ -1,0 +1,7 @@
+description: >
+  A self-hosted cloud drive and collaboration platform supporting file synchronization,
+  sharing, online documents, calendar and contacts, letting you stay in full control of
+  your data.
+category: "Panel/Website"
+ports:
+  80: "Web UI"

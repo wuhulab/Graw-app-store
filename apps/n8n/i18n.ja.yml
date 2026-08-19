@@ -1,0 +1,9 @@
+name: "n8n"
+description: >
+  オープンソースのワークフロー自動化プラットフォーム。ビジュアルノードでアプリ、データ、AI を接続し、400 以上のインテグレーションに対応。セルフホストでデプロイできます。
+category: "AI/開発"
+ports:
+  5678: "Web 画面"
+env:
+  N8N_SECURE_COOKIE: "セキュア Cookie にするかどうか"
+  GENERIC_TIMEZONE: "タイムゾーン"

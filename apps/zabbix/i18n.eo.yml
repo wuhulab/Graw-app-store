@@ -1,0 +1,8 @@
+description: >
+  Entrepren-nivela malfermita monitorado-solvo, kiu subtenas monitoradon de
+  mastrumiloj, retoj, aplikaĵoj kaj datumbazoj kun multkanalaj alarmoj, kaj
+  havas enkonstruitan videblan panelon; ĉi tiu ŝablono enkorpigas
+  PostgreSQL-datumbazon kaj uzas retan havenon 8080.
+category: "Monitorado/Operaciado"
+ports:
+  8080: "Reteja interfaco"

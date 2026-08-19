@@ -1,0 +1,6 @@
+name: "Hermes Agent"
+description: >
+  Nous Research が公開した自己改善型 AI エージェント。マルチプラットフォームのメッセージゲートウェイ（Telegram / Discord など）、MCP ツール、スキル、記憶システムに対応し、セルフホストでデプロイできます。
+category: "AI/開発"
+ports:
+  8642: "API サービス"

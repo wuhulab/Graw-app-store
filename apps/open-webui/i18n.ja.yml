@@ -1,0 +1,8 @@
+name: "Open WebUI"
+description: >
+  拡張可能で機能豊富、ユーザーフレンドリーなセルフホスト型 AI Web インターフェース。Ollama と OpenAI 互換 API に対応し、マルチユーザー、RAG、モデル管理、会話履歴を提供します。
+category: "AI/開発"
+ports:
+  8080: "Web 画面"
+env:
+  OLLAMA_BASE_URL: "Ollama のアドレス（任意）"

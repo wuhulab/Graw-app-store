@@ -1,0 +1,10 @@
+description: >
+  VS Code funkcianta en la retumilo, kiu ebligas verki kodon per la reto ĉie
+  kaj ĉiam; ĝi subtenas instaladon de kromaĵoj, terminalon kaj Git-integron,
+  taŭga por fora disvolvado kaj ujaj medioj.
+category: "AI/Disvolvo"
+ports:
+  8080: "Reteja interfaco"
+env:
+  PASSWORD: "Alirmesa pasvorto (se lasita malplena, ĝi estas aŭtomate generata)"
+  SUDO_PASSWORD: "Pasvorto por sudo (laŭvola)"

@@ -1,0 +1,13 @@
+name: "Discourse"
+description: >
+  オープンソースのコミュニティフォーラムプラットフォーム。機能豊富なモダンな BBS で、PostgreSQL、Redis、Nginx を内蔵しています。ドメインと SMTP メールの設定が必要です。
+category: "パネル/ウェブサイト"
+ports:
+  80: "Web 画面"
+env:
+  DISCOURSE_HOSTNAME: "サイトのドメイン（必須）"
+  DISCOURSE_DEVELOPER_EMAILS: "管理者メールアドレス"
+  DISCOURSE_SMTP_ADDRESS: "SMTP サーバー"
+  DISCOURSE_SMTP_PORT: "SMTP ポート"
+  DISCOURSE_SMTP_USER_NAME: "SMTP ユーザー名"
+  DISCOURSE_SMTP_PASSWORD: "SMTP パスワード"

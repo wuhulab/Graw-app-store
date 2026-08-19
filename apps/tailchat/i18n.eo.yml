@@ -1,0 +1,7 @@
+description: >
+  Malfermita venontgeneracia IM- kaj kunlabora-platformo, kiu subtenas grupojn,
+  kanalojn, voĉon, kromaĵojn kaj robotojn; ĝi povas esti plene mem-gastigita
+  por konstrui vian propran privatan komunikan spacon.
+category: "Panelo/Retpaĝaro"
+ports:
+  11002: "Reteja interfaco"

@@ -1,0 +1,10 @@
+description: >
+  Malfermita datumbazlaborstacio, kiu subtenas konekton al pli ol 70 specoj de
+  datumbazoj, SQL-demandojn, datumfoliumadon, komparadon de skemoj, importojn
+  kaj eksportojn; ĝi havas enkonstruitan AI-helpilon kaj MCP-servilon, kaj
+  ebligas mem-gastigitan deplojon per Docker.
+category: "Disvolvo/DevOps"
+ports:
+  4224: "Reteja interfaco"
+env:
+  DBX_PASSWORD: "Retema ensaluta pasvorto (rekomendita)"

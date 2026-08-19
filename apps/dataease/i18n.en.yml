@@ -1,0 +1,7 @@
+description: >
+  An open-source BI analysis tool usable by everyone, supporting data source connection,
+  chart creation, dashboards and sharing. The image bundles MySQL and Redis (v2 default
+  port 8100).
+category: "Panel/Website"
+ports:
+  8100: "Web UI"

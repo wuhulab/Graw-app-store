@@ -1,0 +1,12 @@
+description: >
+  Kompleta DevOps-vivciklo-platformo, kiu integras kod-registrojn, CI/CD,
+  ujbildojn, issue-ojn kaj Vikiojn, taŭga por mem-gastigi teaman uzon; ĝi
+  bezonas multe da memoro, rekomendante almenaŭ 4 GB.
+category: "Disvolvo/DevOps"
+ports:
+  80: "HTTP"
+  443: "HTTPS"
+  22: "SSH"
+env:
+  GITLAB_OMNIBUS_CONFIG: "Propra agordo (laŭvola)"
+  GITLAB_ROOT_PASSWORD: "Komenca pasvorto de root"

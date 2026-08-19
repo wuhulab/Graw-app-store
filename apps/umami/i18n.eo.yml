@@ -1,0 +1,10 @@
+description: >
+  Malfermita, privateco-orientita analiza ilo por reteja trafiko, malpeza kaj
+  moderna; ĝi subtenas plurajn retejojn, eventan spurdon kaj laŭmendajn
+  diagramojn, kaj viaj datumoj apartenas tute al vi. Ĉi tiu ŝablono enkorpigas
+  PostgreSQL-datumbazon.
+category: "Monitorado/Operaciado"
+ports:
+  3000: "Reteja interfaco"
+env:
+  HASH_SALT: "Datumĉifrada salo (modifu ĉe la unua deplojo)"

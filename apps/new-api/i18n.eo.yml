@@ -1,0 +1,10 @@
+description: >
+  Nova generacio de API-pordego por grandaj modeloj kaj AI-aktiva administra
+  platformo, kiu subtenas unuigitan aliron al pluraj modeloj, ĵeton-administron,
+  distribuadon de kanaloj, uzokvantan statistikon kaj fakturigon; ĝi povas
+  ligi al diversaj modeloj kiel OpenAI kaj DeepSeek.
+category: "Disvolvo/DevOps"
+ports:
+  3000: "Reteja interfaco"
+env:
+  SESSION_SECRET: "Sesio-ŝlosilo (rekomendita)"

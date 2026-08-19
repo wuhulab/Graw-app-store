@@ -1,0 +1,7 @@
+description: >
+  Scratch-kreantkomunumo bazita sur Flask, kiu subtenas publikigon, diskuton
+  kaj prezenton de verkoj; ĝi estas la komunuma flanko de la ZeroCat-ekosistemo.
+  Nuntempe ĝi estas disponebla nur per fonta deplojo.
+category: "Panelo/Retpaĝaro"
+ports:
+  5219: "Reteja interfaco"

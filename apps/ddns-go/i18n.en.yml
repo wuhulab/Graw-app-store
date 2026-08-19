@@ -1,0 +1,7 @@
+description: >
+  A simple and easy-to-use dynamic DNS tool that automatically fetches public IPv4 / IPv6
+  addresses and syncs them to 20+ DNS providers such as Aliyun, Tencent Cloud and
+  Cloudflare, with a web configuration interface.
+category: "Network/Tools"
+ports:
+  9876: "Web UI"

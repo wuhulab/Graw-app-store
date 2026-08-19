@@ -1,0 +1,11 @@
+description: >
+  A file listing and sharing program with multi-storage support, aggregating popular
+  storage services such as Aliyun Drive, Baidu Drive, OneDrive and Quark. It comes with
+  a built-in web interface, WebDAV support and offline downloads.
+category: "Panel/Website"
+ports:
+  5244: "Web UI"
+env:
+  PUID: "Runtime user UID"
+  PGID: "Runtime user GID"
+  UMASK: "File permission mask"

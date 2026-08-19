@@ -1,0 +1,8 @@
+name: "Lsky Pro"
+description: >
+  An open-source image hosting system supporting local uploads, external links, album
+  management and multiple storage policies, suitable for building a personal or team
+  image hosting site (the open-source edition is no longer maintained).
+category: "Panel/Website"
+ports:
+  8088: "Web UI"

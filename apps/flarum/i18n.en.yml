@@ -1,0 +1,7 @@
+description: >
+  An elegant, simple and extensible modern open-source forum software with a fresh
+  interface and fast loading. It supports a rich extension ecosystem and is a great choice
+  for building community forums.
+category: "Panel/Website"
+ports:
+  8080: "Web UI"

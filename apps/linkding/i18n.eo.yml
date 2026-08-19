@@ -1,0 +1,10 @@
+description: >
+  Mem-gastigita malpeza legosign-administrilo, kiu subtenas etikedojn, serĉon,
+  arkivigon kaj aŭtomatan skrapadon de retpaĝaj metadatumoj; defaŭlte ĝi uzas
+  SQLite, kun laŭvola PostgreSQL.
+category: "Reto/Iloj"
+ports:
+  9090: "Reteja interfaco"
+env:
+  LD_SUPERUSER_NAME: "Uzantnomo de la superuzanto"
+  LD_SUPERUSER_PASSWORD: "Pasvorto de la superuzanto (aŭtomate kreita ĉe la unua starto)"

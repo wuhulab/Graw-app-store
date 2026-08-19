@@ -1,0 +1,9 @@
+description: >
+  Malfermita hejma aŭtomatiga platformo, kiu subtenas integron de miloj da
+  aparatoj, aŭtomatigajn regulojn, panelojn kaj voĉhelpilojn; ĝi estas la ĉefa
+  kerno de inteligenta hejmo.
+category: "Monitorado/Operaciado"
+ports:
+  8123: "Reteja interfaco"
+env:
+  TZ: "Horzono"

@@ -1,0 +1,7 @@
+description: >
+  Flua programado-ilo bazita sur Node.js, kiu per trenado de nodoj ligas
+  aparatojn, API-ojn kaj servojn; konvenas por aĵa interreto (IoT), aŭtomatigo
+  kaj datumfluo-procesado.
+category: "AI/Disvolvo"
+ports:
+  1880: "Reteja interfaco"

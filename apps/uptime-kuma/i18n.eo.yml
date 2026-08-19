@@ -1,0 +1,7 @@
+description: >
+  Mem-gastigita kontrolebla ilo por la disponebleco de retejoj/servoj, kiu
+  subtenas plurajn protokolojn kiel HTTP, TCP, Ping kaj DNS, kun sciigaj
+  alarmoj kaj statuspaĝo.
+category: "Monitorado/Operaciado"
+ports:
+  3001: "Reteja interfaco"

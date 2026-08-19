@@ -1,0 +1,8 @@
+name: "Qinglong-Panelo"
+description: >
+  Administra panelo por planitaj taskoj, kiu subtenas JavaScript-, Python- kaj
+  Shell-skriptojn; ĝi povas esti uzata por aŭtomataj salutado, restado kaj
+  similaj taskoj, kun enkompleksa dependecadministrado kaj protokolvidado.
+category: "Panelo/Retpaĝaro"
+ports:
+  5700: "Reteja interfaco"

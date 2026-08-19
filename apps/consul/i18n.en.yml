@@ -1,0 +1,8 @@
+description: >
+  HashiCorp's service discovery and configuration center, providing service mesh, KV
+  storage and health checks with multi-datacenter support. This template runs in dev
+  single-node mode and exposes the web UI.
+category: "Development/DevOps"
+ports:
+  8500: "Web UI"
+  8600: "DNS interface"

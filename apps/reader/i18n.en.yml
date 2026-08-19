@@ -1,0 +1,8 @@
+description: >
+  A self-hosted online reading site supporting book source management, serial tracking,
+  reading progress synchronization and web reading. Data is stored in a local directory.
+category: "Panel/Website"
+ports:
+  8080: "Web UI"
+env:
+  READER_APP_SECUREKEY: "Admin password (recommended)"

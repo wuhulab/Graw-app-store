@@ -1,0 +1,13 @@
+description: >
+  An open-source community forum platform and a powerful modern BBS with built-in
+  PostgreSQL, Redis and Nginx. It requires configuring a domain name and SMTP email.
+category: "Panel/Website"
+ports:
+  80: "Web UI"
+env:
+  DISCOURSE_HOSTNAME: "Site domain (required)"
+  DISCOURSE_DEVELOPER_EMAILS: "Admin email"
+  DISCOURSE_SMTP_ADDRESS: "SMTP server"
+  DISCOURSE_SMTP_PORT: "SMTP port"
+  DISCOURSE_SMTP_USER_NAME: "SMTP username"
+  DISCOURSE_SMTP_PASSWORD: "SMTP password"

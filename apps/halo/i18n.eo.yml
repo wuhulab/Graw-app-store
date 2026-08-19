@@ -1,0 +1,9 @@
+description: >
+  Moderna, eleganta Java-bloga sistemo kun riĉa ekosistemo de temoj kaj
+  kromaĵoj; baziĝas sur Spring Boot kaj taŭgas por personaj blogoj kaj
+  enhavokreado.
+category: "Panelo/Retpaĝaro"
+ports:
+  8090: "Reteja interfaco"
+env:
+  HALO_PLUGIN_ENABLED: "Kromaĵoj, kiujn oni bezonas ebligi"

@@ -3,7 +3,7 @@
     "name": "Graw Community App Store",
     "repo": "wuhulab/Graw",
     "base_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/",
-    "updated_at": "2026-08-17T06:32:15.812208+00:00",
+    "updated_at": "2026-08-18T15:59:32.453326+00:00",
     "app_count": 93
   },
   "apps": [
@@ -42,7 +42,34 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/astrbot/data.yml",
+      "translations": {
+        "en": {
+          "description": "A multi-platform AI chatbot framework supporting QQ, WeChat, Feishu, Telegram and more. It connects to mainstream LLMs and ships with a built-in WebUI management panel and a plugin ecosystem.",
+          "category": "AI/Development",
+          "ports": {
+            "6185": "Web admin UI",
+            "6199": "OneBot / message port"
+          }
+        },
+        "ja": {
+          "name": "AstrBot",
+          "description": "マルチプラットフォームの AI チャットボットフレームワーク。QQ、微信、飛書、Telegram などのプラットフォームに対応し、主要な大規模モデルと接続できます。WebUI 管理パネルとプラグインエコシステムを内蔵しています。",
+          "category": "AI/開発",
+          "ports": {
+            "6185": "Web 管理画面",
+            "6199": "OneBot / メッセージポート"
+          }
+        },
+        "eo": {
+          "description": "Plurplatforma AI-babilrobota kadro, kiu subtenas platformojn kiel QQ, WeChat, Feishu kaj Telegram kaj povas ligiĝi al ĉefaj grandaj modeloj; ĝi havas enkonstruitan WebUI-administradan panelon kaj kromaĵan ekosistemon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "6185": "Reteja administra interfaco",
+            "6199": "OneBot / mesaĝa haveno"
+          }
+        }
+      }
     },
     {
       "id": "bettafish",
@@ -78,7 +105,35 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/bettafish/data.yml",
+      "translations": {
+        "en": {
+          "name": "BettaFish (WeiYu)",
+          "description": "A multi-agent driven public-opinion analysis system that automatically collects content from platforms such as Weibo, Xiaohongshu and Douyin. Multiple AI agents collaborate to generate structured analysis reports.",
+          "category": "Development/DevOps",
+          "ports": {
+            "5000": "Web UI",
+            "8501": "Main service"
+          }
+        },
+        "ja": {
+          "name": "BettaFish（微輿）",
+          "description": "マルチエージェント駆動の世論分析システム。微博、小紅書、抖音などのプラットフォームのコンテンツを自動収集し、複数の AI エージェントが協調して構造化された分析レポートを生成します。",
+          "category": "開発/DevOps",
+          "ports": {
+            "5000": "Web 画面",
+            "8501": "メインサービス"
+          }
+        },
+        "eo": {
+          "description": "Orkestrita opinianaliza sistemo pelata de pluraj agentoj, kiu aŭtomate kolektas enhavon de Weibo, Xiaohongshu, Douyin ktp kaj per kunlaboraj AI-agentoj produktas strukturitajn analizajn raportojn.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "5000": "Reteja interfaco",
+            "8501": "Ĉefa servo"
+          }
+        }
+      }
     },
     {
       "id": "chatgpt-next-web",
@@ -121,7 +176,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chatgpt-next-web/data.yml",
+      "translations": {
+        "en": {
+          "description": "A cross-platform ChatGPT / multi-model chat web frontend supporting multiple LLM APIs, conversation management, Markdown and ready-to-deploy use. It is a popular self-hosted AI chat interface.",
+          "category": "AI/Development",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "OPENAI_API_KEY": "Model API key",
+            "CODE": "Access password (set to prevent strangers from using your key)"
+          }
+        },
+        "ja": {
+          "name": "ChatGPT-Next-Web",
+          "description": "クロスプラットフォームの ChatGPT / マルチモデルチャット用 Web フロントエンド。複数の大規模言語モデル API、会話管理、Markdown に対応し、そのままデプロイして使える自ホスト型 AI チャット画面です。",
+          "category": "AI/開発",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "OPENAI_API_KEY": "モデル API キー",
+            "CODE": "アクセスパスワード（設定すると他人による利用を防げます）"
+          }
+        },
+        "eo": {
+          "description": "Transplatforma reta fronto de ChatGPT / plurlmodela babilejo, kiu subtenas API-ojn de diversaj grandaj modeloj, konversacian administradon, Markdown kaj tujan deplojon; ĝi estas ofte uzata mem-gastigita AI-interfaco por babilado.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "OPENAI_API_KEY": "API-ŝlosilo de la modelo",
+            "CODE": "Alirmesa pasvorto (se agordita, ĝi malhelpas nekonatojn uzi la servon)"
+          }
+        }
+      }
     },
     {
       "id": "chinese-dos-games",
@@ -153,7 +244,33 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/chinese-dos-games/data.yml",
+      "translations": {
+        "en": {
+          "name": "Chinese DOS Games Collection",
+          "description": "A web collection of around 1898 classic Chinese DOS games that can be played directly in the browser, evoking childhood memories (this entry uses a community image).",
+          "category": "Panel/Website",
+          "ports": {
+            "262": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "中文DOSゲーム集",
+          "description": "約 1898 本のクラシックな中文 DOS ゲームを収録した Web ゲーム集。ブラウザ上でそのままプレイでき、懐かしい記憶を思い起こさせます（本項目はコミュニティ製イメージを使用）。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "262": "Web 画面"
+          }
+        },
+        "eo": {
+          "name": "Ĉinia DOS-Ludaro",
+          "description": "Reta kolekto de proksimume 1898 klasikaj ĉinlingvaj DOS-ludoj, kiujn oni povas ludi rekte en la retumilo kaj kiuj vekas infanajn memorojn (ĉi tiu ero uzas komunuman bildon).",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "262": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "classworks",
@@ -193,7 +310,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/classworks/data.yml",
+      "translations": {
+        "en": {
+          "description": "A KV storage backend for classroom display homework boards, used for homework display and data management with support for multiple class boards. Deployment requires configuring OAuth and a JWT secret.",
+          "category": "Panel/Website",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "JWT_SECRET": "JWT secret (required; a long random string is recommended)"
+          }
+        },
+        "ja": {
+          "name": "ClassworksKV",
+          "description": "クラスの大画面掲示板（宿題掲示板）向け KV ストレージバックエンド。クラスの宿題表示とデータ管理に利用でき、複数クラスのタスクボードに対応します。デプロイには OAuth と JWT シークレットの設定が必要です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "JWT_SECRET": "JWT シークレット（必須、長いランダム文字列を推奨）"
+          }
+        },
+        "eo": {
+          "description": "KV-stokada apogservilo por klasa lernoplanejo (ema taska tabulo), uzata por montri klasajn taskojn kaj administri datumojn, subtenas taskotabulojn de pluraj klasoj; deplojo postulas agordi OAuth-klienton kaj JWT-ŝlosilon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "JWT_SECRET": "JWT-ŝlosilo (deviga, rekomendata longa hazarda ĉeno)"
+          }
+        }
+      }
     },
     {
       "id": "clawswarm",
@@ -225,7 +375,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/clawswarm/data.yml",
+      "translations": {
+        "en": {
+          "description": "An OpenClaw multi-agent group-chat orchestration system from 1Panel that lets multiple AI agents collaborate in group chats. It requires an OpenClaw instance and plugins to be used.",
+          "category": "AI/Development",
+          "ports": {
+            "18080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "ClawSwarm",
+          "description": "1Panel が開発した OpenClaw マルチエージェントのグルチャットオーケストレーションシステム。複数の AI エージェントをグルチャット内で協調させます。利用には OpenClaw インスタンスとプラグインが必要です。",
+          "category": "AI/開発",
+          "ports": {
+            "18080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Orkestra sistemo por grupaj babiloj kun pluraj AI-agentoj produktita de 1Panel, kiu ebligas al pluraj AI-agentoj kunlabori en grupaj konversacioj; necesas uzi kune kun OpenClaw-instancaĵo kaj la responda kromaĵo.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "18080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "cloudreve",
@@ -257,7 +431,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cloudreve/data.yml",
+      "translations": {
+        "en": {
+          "description": "A cloud drive and file sharing platform supporting multiple storage policies including local, object and remote storage, with built-in online preview, share links and WebDAV support.",
+          "category": "Panel/Website",
+          "ports": {
+            "5212": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Cloudreve",
+          "description": "クラウドストレージ＆ファイル共有プラットフォーム。ローカル、オブジェクトストレージ、リモートストレージなどの複数のストレージ戦略に対応し、オンラインプレビュー、共有リンク、WebDAV を内蔵しています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "5212": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Nuba disko kaj dosier-kundivida platformo, kiu subtenas plurajn stokadajn strategiojn kiel lokan, objektan kaj foran stokadon, kun enkonstruitaj reta antaŭrigardo, kundividaj ligiloj kaj WebDAV.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "5212": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "code-server",
@@ -301,7 +499,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/code-server/data.yml",
+      "translations": {
+        "en": {
+          "description": "VS Code running in the browser, letting you write code from anywhere via the web. It supports installing extensions, a terminal and Git integration, making it ideal for remote development and container environments.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "Web UI"
+          },
+          "env": {
+            "PASSWORD": "Access password (auto-generated if left empty)",
+            "SUDO_PASSWORD": "sudo password (optional)"
+          }
+        },
+        "ja": {
+          "name": "code-server",
+          "description": "ブラウザ上で動作する VS Code。場所を問わず Web からコードを書けるほか、拡張機能のインストール、ターミナル、Git 連携に対応し、リモート開発やコンテナ環境に適しています。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "Web 画面"
+          },
+          "env": {
+            "PASSWORD": "アクセスパスワード（空欄の場合は自動生成）",
+            "SUDO_PASSWORD": "sudo パスワード（任意）"
+          }
+        },
+        "eo": {
+          "description": "VS Code funkcianta en la retumilo, kiu ebligas verki kodon per la reto ĉie kaj ĉiam; ĝi subtenas instaladon de kromaĵoj, terminalon kaj Git-integron, taŭga por fora disvolvado kaj ujaj medioj.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "Reteja interfaco"
+          },
+          "env": {
+            "PASSWORD": "Alirmesa pasvorto (se lasita malplena, ĝi estas aŭtomate generata)",
+            "SUDO_PASSWORD": "Pasvorto por sudo (laŭvola)"
+          }
+        }
+      }
     },
     {
       "id": "consul",
@@ -338,7 +572,34 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/consul/data.yml",
+      "translations": {
+        "en": {
+          "description": "HashiCorp's service discovery and configuration center, providing service mesh, KV storage and health checks with multi-datacenter support. This template runs in dev single-node mode and exposes the web UI.",
+          "category": "Development/DevOps",
+          "ports": {
+            "8500": "Web UI",
+            "8600": "DNS interface"
+          }
+        },
+        "ja": {
+          "name": "Consul",
+          "description": "HashiCorp のサービスディスカバリ＆設定センター。サービスメッシュ、KV ストア、ヘルスチェックを提供し、マルチデータセンターに対応します。本テンプレートは dev 単機モードで動作し、Web UI を開放します。",
+          "category": "開発/DevOps",
+          "ports": {
+            "8500": "Web UI",
+            "8600": "DNS インターフェース"
+          }
+        },
+        "eo": {
+          "description": "Servodiscovera kaj agorda centro de HashiCorp, kiu provizas servomatricon, KV-stokadon kaj sanec-kontrolojn kaj subtenas plurajn datucentrojn; ĉi tiu ŝablono funkcias en dev-unuomaŝina reĝimo kaj eksponas la retan uzantinterfacon.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "8500": "Reteja uzantinterfaco",
+            "8600": "DNS-interfaco"
+          }
+        }
+      }
     },
     {
       "id": "cordyscrm",
@@ -375,7 +636,34 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/cordyscrm/data.yml",
+      "translations": {
+        "en": {
+          "description": "A next-generation open-source AI CRM system from 1Panel that combines AI capabilities with customer relationship management. The image bundles MySQL and Redis.",
+          "category": "Panel/Website",
+          "ports": {
+            "8081": "Web UI",
+            "8082": "Service port"
+          }
+        },
+        "ja": {
+          "name": "CordysCRM",
+          "description": "1Panel が開発した新世代オープンソース AI CRM システム。AI 機能と顧客関係管理を融合しており、イメージ内に MySQL と Redis が組み込まれています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8081": "Web 画面",
+            "8082": "サービスポート"
+          }
+        },
+        "eo": {
+          "description": "Nova generacio de malfermita AI CRM-sistemo produktita de 1Panel, kiu kunigas AI-kapablojn kun klientrilata administrado; la bildo enkorpigas MySQL kaj Redis.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8081": "Reteja interfaco",
+            "8082": "Serva haveno"
+          }
+        }
+      }
     },
     {
       "id": "dataease",
@@ -407,7 +695,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dataease/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source BI analysis tool usable by everyone, supporting data source connection, chart creation, dashboards and sharing. The image bundles MySQL and Redis (v2 default port 8100).",
+          "category": "Panel/Website",
+          "ports": {
+            "8100": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "DataEase",
+          "description": "誰でも使えるオープンソースの BI 分析ツール。データソース接続、グラフ作成、ダッシュボード、共有に対応し、イメージ内に MySQL と Redis が組み込まれています（v2 デフォルトポートは 8100）。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8100": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Malfermita BI-analiza ilo uzebla de ĉiuj, kiu subtenas aliron al datenfontoj, kreadon de diagramoj, panelojn kaj kundividojn; la bildo enkorpigas MySQL kaj Redis (v2 defaŭlte uzas havenon 8100).",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8100": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "dbx",
@@ -445,7 +757,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dbx/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source database workbench supporting connections to 70+ databases for SQL queries, data browsing, schema comparison and import/export. It comes with a built-in AI assistant and MCP Server and can be self-hosted via Docker.",
+          "category": "Development/DevOps",
+          "ports": {
+            "4224": "Web UI"
+          },
+          "env": {
+            "DBX_PASSWORD": "Web login password (recommended)"
+          }
+        },
+        "ja": {
+          "name": "DBX",
+          "description": "オープンソースのデータベースワークベンチ。70 以上のデータベース接続と SQL クエリ、データ参照、Schema 比較、インポート/エクスポートに対応し、AI アシスタントと MCP Server を内蔵。Docker でセルフホストできます。",
+          "category": "開発/DevOps",
+          "ports": {
+            "4224": "Web 画面"
+          },
+          "env": {
+            "DBX_PASSWORD": "Web ログインパスワード（設定を推奨）"
+          }
+        },
+        "eo": {
+          "description": "Malfermita datumbazlaborstacio, kiu subtenas konekton al pli ol 70 specoj de datumbazoj, SQL-demandojn, datumfoliumadon, komparadon de skemoj, importojn kaj eksportojn; ĝi havas enkonstruitan AI-helpilon kaj MCP-servilon, kaj ebligas mem-gastigitan deplojon per Docker.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "4224": "Reteja interfaco"
+          },
+          "env": {
+            "DBX_PASSWORD": "Retema ensaluta pasvorto (rekomendita)"
+          }
+        }
+      }
     },
     {
       "id": "ddns-go",
@@ -477,7 +822,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/ddns-go/data.yml",
+      "translations": {
+        "en": {
+          "description": "A simple and easy-to-use dynamic DNS tool that automatically fetches public IPv4 / IPv6 addresses and syncs them to 20+ DNS providers such as Aliyun, Tencent Cloud and Cloudflare, with a web configuration interface.",
+          "category": "Network/Tools",
+          "ports": {
+            "9876": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "DDNS-GO",
+          "description": "簡単で使いやすいダイナミック DNS ツール。公網 IPv4 / IPv6 を自動取得して Alibaba Cloud、Tencent Cloud、Cloudflare など 20 以上の DNS サービスプロバイダに同期し、Web 設定画面を備えています。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "9876": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Simpla kaj facile uzebla dinamika DNS-ilo, kiu aŭtomate akiras publikan IPv4 /IPv6 kaj sinkronigas ĝin al pli ol 20 DNS-provizantoj kiel Alibaba Cloud, Tencent Cloud kaj Cloudflare, kun reta agorda interfaco.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "9876": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "deepseek-harness",
@@ -509,7 +878,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/deepseek-harness/data.yml",
+      "translations": {
+        "en": {
+          "description": "DeepSeek's official open-source AI Agent framework where everything is a plugin. It provides agents with capabilities such as file, terminal, search and planning, and ships with a built-in local web interface.",
+          "category": "AI/Development",
+          "ports": {
+            "3080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "DeepSeek Harness",
+          "description": "DeepSeek 公式のオープンソース AI エージェントフレームワーク。すべてがプラグインで構成され、エージェントにファイル、ターミナル、検索、計画などの機能を提供します。ローカル Web 画面を内蔵しています。",
+          "category": "AI/開発",
+          "ports": {
+            "3080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "La oficiala malfermita AI-agenta kadro de DeepSeek, kie ĉio estas kromaĵo; ĝi provizas al la agento kapablojn kiel dosieroj, terminalo, serĉado kaj planado, kaj havas enkonstruitan lokan retan interfacon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "3080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "discourse",
@@ -572,7 +965,55 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/discourse/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source community forum platform and a powerful modern BBS with built-in PostgreSQL, Redis and Nginx. It requires configuring a domain name and SMTP email.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Web UI"
+          },
+          "env": {
+            "DISCOURSE_HOSTNAME": "Site domain (required)",
+            "DISCOURSE_DEVELOPER_EMAILS": "Admin email",
+            "DISCOURSE_SMTP_ADDRESS": "SMTP server",
+            "DISCOURSE_SMTP_PORT": "SMTP port",
+            "DISCOURSE_SMTP_USER_NAME": "SMTP username",
+            "DISCOURSE_SMTP_PASSWORD": "SMTP password"
+          }
+        },
+        "ja": {
+          "name": "Discourse",
+          "description": "オープンソースのコミュニティフォーラムプラットフォーム。機能豊富なモダンな BBS で、PostgreSQL、Redis、Nginx を内蔵しています。ドメインと SMTP メールの設定が必要です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "Web 画面"
+          },
+          "env": {
+            "DISCOURSE_HOSTNAME": "サイトのドメイン（必須）",
+            "DISCOURSE_DEVELOPER_EMAILS": "管理者メールアドレス",
+            "DISCOURSE_SMTP_ADDRESS": "SMTP サーバー",
+            "DISCOURSE_SMTP_PORT": "SMTP ポート",
+            "DISCOURSE_SMTP_USER_NAME": "SMTP ユーザー名",
+            "DISCOURSE_SMTP_PASSWORD": "SMTP パスワード"
+          }
+        },
+        "eo": {
+          "description": "Malfermita komunuma forumo-platformo, povuza moderna BBS, kun enkonstruitaj PostgreSQL, Redis kaj Nginx; necesas agordi domajnon kaj SMTP-retpoŝton.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Reteja interfaco"
+          },
+          "env": {
+            "DISCOURSE_HOSTNAME": "Eja domajno (deviga)",
+            "DISCOURSE_DEVELOPER_EMAILS": "Retpoŝto de la administranto",
+            "DISCOURSE_SMTP_ADDRESS": "SMTP-servilo",
+            "DISCOURSE_SMTP_PORT": "SMTP-haveno",
+            "DISCOURSE_SMTP_USER_NAME": "SMTP-uzantnomo",
+            "DISCOURSE_SMTP_PASSWORD": "SMTP-pasvorto"
+          }
+        }
+      }
     },
     {
       "id": "dockge",
@@ -610,7 +1051,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/dockge/data.yml",
+      "translations": {
+        "en": {
+          "description": "A visual Docker Compose management panel that manages compose files by stack. It supports editing, starting, stopping, logs and a terminal, with a clean and beautiful interface.",
+          "category": "Development/DevOps",
+          "ports": {
+            "5001": "Web UI"
+          },
+          "env": {
+            "DOCKGE_STACKS_DIR": "Compose files directory"
+          }
+        },
+        "ja": {
+          "name": "Dockge",
+          "description": "ビジュアルな Docker Compose 管理パネル。スタック単位で compose ファイルを管理し、編集、起動、停止、ログ、ターミナルに対応。シンプルで美しいインターフェースを備えています。",
+          "category": "開発/DevOps",
+          "ports": {
+            "5001": "Web 画面"
+          },
+          "env": {
+            "DOCKGE_STACKS_DIR": "Compose ファイルディレクトリ"
+          }
+        },
+        "eo": {
+          "description": "Videbla administra panelo por Docker Compose, kiu administras compose-dosierojn laŭ stackoj kaj subtenas redakton, starton, haltigon, protokolojn kaj terminalon; la interfaco estas simpla kaj bela.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "5001": "Reteja interfaco"
+          },
+          "env": {
+            "DOCKGE_STACKS_DIR": "Dosierujo de la compose-dosieroj"
+          }
+        }
+      }
     },
     {
       "id": "excalidraw",
@@ -642,7 +1116,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/excalidraw/data.yml",
+      "translations": {
+        "en": {
+          "description": "A minimalist hand-drawn style whiteboard tool with online collaboration and export to image and SVG. Ideal for diagrams, architecture drawings and illustrations, usable without logging in.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Excalidraw",
+          "description": "ミニマルな手書き風ホワイトボードツール。オンラインでの共同作業、PNG/SVG への書き出しに対応し、フローチャート、アーキテクチャ図、模式図の作成に最適。ログイン不要で利用できます。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Minimumisma blanktabulilo en desegnita (mane-skiza) stilo, kiu subtenas retan kunlaboron kaj eksportadon al bildoj kaj SVG; taŭga por desegni fludiagramojn, arkitektajn diagramojn kaj skemojn, kaj uzebla sen ensaluto.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "flarum",
@@ -674,7 +1172,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/flarum/data.yml",
+      "translations": {
+        "en": {
+          "description": "An elegant, simple and extensible modern open-source forum software with a fresh interface and fast loading. It supports a rich extension ecosystem and is a great choice for building community forums.",
+          "category": "Panel/Website",
+          "ports": {
+            "8080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Flarum",
+          "description": "エレガントでシンプル、拡張性の高いモダンなオープンソースフォーラムソフトウェア。洗練されたインターフェースで読み込みが高速、豊富な拡張エコシステムを備え、コミュニティフォーラム構築に最適です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Eleganta, simpla kaj facile etendebla moderna malfermita forumo-programaro kun freŝa interfaco kaj rapida ŝarĝo; ĝi havas riĉan ekosistemon de etendiloj kaj estas bona elekto por krei komunuman forumon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "forgejo-runner",
@@ -711,7 +1233,34 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/forgejo-runner/data.yml",
+      "translations": {
+        "en": {
+          "description": "A runner for Forgejo Actions that executes CI/CD pipelines for Forgejo repositories on a dedicated machine. You must first register the runner on a Forgejo instance to obtain a token.",
+          "category": "Development/DevOps",
+          "env": {
+            "FORGEJO_INSTANCE_URL": "Forgejo instance address (required)",
+            "FORGEJO_RUNNER_REGISTRATION_TOKEN": "Runner registration token (required)"
+          }
+        },
+        "ja": {
+          "name": "Forgejo Runner",
+          "description": "Forgejo Actions 用ランナー。専用マシン上で Forgejo リポジトリの CI/CD パイプラインを実行します。事前に Forgejo インスタンスでランナーを登録し、トークンを取得する必要があります。",
+          "category": "開発/DevOps",
+          "env": {
+            "FORGEJO_INSTANCE_URL": "Forgejo インスタンスのアドレス（必須）",
+            "FORGEJO_RUNNER_REGISTRATION_TOKEN": "Runner 登録トークン（必須）"
+          }
+        },
+        "eo": {
+          "description": "Funkciilo por Forgejo Actions, kiu plenumas la CI/CD-fluojn de Forgejo-deponejoj sur dediĉita maŝino; antaŭe necesas registri la runilon ĉe Forgejo-instancaĵo por akiri ĵetonon.",
+          "category": "Disvolvo/DevOps",
+          "env": {
+            "FORGEJO_INSTANCE_URL": "Adreso de la Forgejo-instancaĵo (deviga)",
+            "FORGEJO_RUNNER_REGISTRATION_TOKEN": "Registriĝa ĵetono de la runilo (deviga)"
+          }
+        }
+      }
     },
     {
       "id": "frp",
@@ -743,7 +1292,33 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frp/data.yml",
+      "translations": {
+        "en": {
+          "name": "frp (frps server)",
+          "description": "The server side of a high-performance intranet penetration tool that securely exposes internal services to the public internet via reverse proxying, supporting TCP, UDP, HTTP and HTTPS protocols.",
+          "category": "Network/Tools",
+          "ports": {
+            "7000": "frps communication port"
+          }
+        },
+        "ja": {
+          "name": "frp（frps サーバー）",
+          "description": "高性能内網トンネルツールのサーバー側。リバースプロキシによって内網サービスを安全に公網へ公開し、TCP / UDP / HTTP / HTTPS プロトコルに対応します。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "7000": "frps 通信ポート"
+          }
+        },
+        "eo": {
+          "name": "frp (frps-servilo)",
+          "description": "La servila flanko de alt-efikeca intretunela ilo, kiu sekure eksponas internretajn servojn al la publika reto per inversa prokura servo; ĝi subtenas la protokolojn TCP, UDP, HTTP kaj HTTPS.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "7000": "frps-komunika haveno"
+          }
+        }
+      }
     },
     {
       "id": "frpc",
@@ -800,7 +1375,48 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/frpc/data.yml",
+      "translations": {
+        "en": {
+          "name": "frp (frpc client)",
+          "description": "The client side of a high-performance intranet penetration tool that actively connects to the frps server to expose local internal services to the public internet. Connection parameters are configured via environment variables, and tunnel rules can be mounted via frpc.toml under /etc/frp.",
+          "category": "Network/Tools",
+          "env": {
+            "FRP_SERVER_ADDR": "frps server address (required, e.g. 1.2.3.4)",
+            "FRP_SERVER_PORT": "frps server port",
+            "FRP_AUTH_METHOD": "Authentication method (token / user, etc.)",
+            "FRP_TOKEN": "Authentication token (must match frps configuration)",
+            "FRP_SERVER_USER": "Authentication username (optional)",
+            "FRP_SERVER_PASSWORD": "Authentication password (optional)"
+          }
+        },
+        "ja": {
+          "name": "frp（frpc クライアント）",
+          "description": "高性能内網トンネルツールのクライアント側。frps サーバーに能動的に接続し、ローカルの内網サービスを公網に公開します。接続パラメータは環境変数で設定し、トンネルルールは /etc/frp 配下の frpc.toml をマウントできます。",
+          "category": "ネットワーク/ツール",
+          "env": {
+            "FRP_SERVER_ADDR": "frps サーバーのアドレス（必須、例: 1.2.3.4）",
+            "FRP_SERVER_PORT": "frps サーバーのポート",
+            "FRP_AUTH_METHOD": "認証方式（token / user など）",
+            "FRP_TOKEN": "認証トークン（frps の設定と一致させる必要があります）",
+            "FRP_SERVER_USER": "認証ユーザー名（任意）",
+            "FRP_SERVER_PASSWORD": "認証パスワード（任意）"
+          }
+        },
+        "eo": {
+          "name": "frp (frpc-kliento)",
+          "description": "La klienta flanko de alt-efikeca intretunela ilo, kiu aktive konektas al la frps-servilo por eksponi la lokajn internretajn servojn al la publika reto; konektaj parametroj estas agordataj per mediaj variabloj, kaj la tunelaj reguloj povas esti muntitaj kiel frpc.toml sub /etc/frp.",
+          "category": "Reto/Iloj",
+          "env": {
+            "FRP_SERVER_ADDR": "Adreso de la frps-servilo (deviga, ekz. 1.2.3.4)",
+            "FRP_SERVER_PORT": "Haveno de la frps-servilo",
+            "FRP_AUTH_METHOD": "Aŭtentiga metodo (token / user ktp)",
+            "FRP_TOKEN": "Aŭtentiga ĵetono (devas kongrui kun la frps-agordo)",
+            "FRP_SERVER_USER": "Aŭtentiga uzantnomo (laŭvola)",
+            "FRP_SERVER_PASSWORD": "Aŭtentiga pasvorto (laŭvola)"
+          }
+        }
+      }
     },
     {
       "id": "gameservermanager",
@@ -831,7 +1447,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gameservermanager/data.yml",
+      "translations": {
+        "en": {
+          "description": "A next-generation game server management platform (GSM3) supporting one-click deployment, monitoring and scheduling of multiple game server types, with web UI on port 3001.",
+          "category": "Development/DevOps",
+          "ports": {
+            "3001": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "GameServerManager",
+          "description": "次世代ゲームサーバー管理プラットフォーム（GSM3）。複数のゲームサーバーのワンクリックデプロイ、監視、スケジューリングに対応し、Web 画面のポートは 3001 です。",
+          "category": "開発/DevOps",
+          "ports": {
+            "3001": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Novgeneracia administra platformo por ludserviloj (GSM3), kiu subtenas unu-klakan deplojon, monitoradon kaj planadon de diversaj ludserviloj; la reta interfaco uzas havenon 3001.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "3001": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "gitea",
@@ -880,7 +1520,46 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea/data.yml",
+      "translations": {
+        "en": {
+          "description": "A lightweight, fast, self-hosted Git service with low memory usage and easy installation. It supports repositories, Issues, PRs, CI, Wiki and Actions, making it an ideal choice for building a private code hosting platform.",
+          "category": "Panel/Website",
+          "ports": {
+            "3000": "Web UI",
+            "22": "SSH"
+          },
+          "env": {
+            "GITEA__server__DOMAIN": "Domain / IP",
+            "GITEA__server__SSH_DOMAIN": "SSH domain"
+          }
+        },
+        "ja": {
+          "name": "Gitea",
+          "description": "軽量・高速でセルフホスト可能な Git サービス。メモリ消費が少なく簡単に導入でき、リポジトリ、Issue、PR、CI、Wiki、Actions に対応。プライベートなコードホスティングプラットフォーム構築に最適です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3000": "Web 画面",
+            "22": "SSH"
+          },
+          "env": {
+            "GITEA__server__DOMAIN": "ドメイン / IP",
+            "GITEA__server__SSH_DOMAIN": "SSH ドメイン"
+          }
+        },
+        "eo": {
+          "description": "Malpeza, rapida kaj mem-gastigita git-servo kun malgranda memoruzo kaj simpla instalado; ĝi subtenas deponejojn, issue-ojn, PR-ojn, CI, Vikiojn kaj Actions, kaj estas ideala elekto por krei privatan kodan gastigan platformon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3000": "Reteja interfaco",
+            "22": "SSH"
+          },
+          "env": {
+            "GITEA__server__DOMAIN": "Domajno / IP",
+            "GITEA__server__SSH_DOMAIN": "SSH-domajno"
+          }
+        }
+      }
     },
     {
       "id": "gitea-runner",
@@ -917,7 +1596,34 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitea-runner/data.yml",
+      "translations": {
+        "en": {
+          "description": "A runner for Gitea Actions that executes CI/CD pipelines for Gitea repositories locally or on a dedicated machine. You must first register the runner on Gitea to obtain a token.",
+          "category": "Development/DevOps",
+          "env": {
+            "GITEA_INSTANCE_URL": "Gitea instance address",
+            "GITEA_RUNNER_REGISTRATION_TOKEN": "Runner registration token (required)"
+          }
+        },
+        "ja": {
+          "name": "Gitea Act Runner",
+          "description": "Gitea Actions 用ランナー。ローカルまたは専用マシン上で Gitea リポジトリの CI/CD パイプラインを実行します。事前に Gitea でランナーを登録し、トークンを取得する必要があります。",
+          "category": "開発/DevOps",
+          "env": {
+            "GITEA_INSTANCE_URL": "Gitea インスタンスのアドレス",
+            "GITEA_RUNNER_REGISTRATION_TOKEN": "Runner 登録トークン（必須）"
+          }
+        },
+        "eo": {
+          "description": "Funkciilo por Gitea Actions, kiu plenumas la CI/CD-fluojn de Gitea-deponejoj loke aŭ sur dediĉita maŝino; antaŭe necesas registri la runilon ĉe Gitea por akiri ĵetonon.",
+          "category": "Disvolvo/DevOps",
+          "env": {
+            "GITEA_INSTANCE_URL": "Adreso de la Gitea-instancaĵo",
+            "GITEA_RUNNER_REGISTRATION_TOKEN": "Registriĝa ĵetono de la runilo (deviga)"
+          }
+        }
+      }
     },
     {
       "id": "gitlab",
@@ -970,7 +1676,49 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/gitlab/data.yml",
+      "translations": {
+        "en": {
+          "description": "A complete DevOps lifecycle platform integrating code repositories, CI/CD, container images, Issues and Wiki, suitable for team self-hosting. It has a relatively high memory footprint; 4GB or more is recommended.",
+          "category": "Development/DevOps",
+          "ports": {
+            "80": "HTTP",
+            "443": "HTTPS",
+            "22": "SSH"
+          },
+          "env": {
+            "GITLAB_OMNIBUS_CONFIG": "Custom configuration (optional)",
+            "GITLAB_ROOT_PASSWORD": "Initial root password"
+          }
+        },
+        "ja": {
+          "name": "GitLab",
+          "description": "完全な DevOps ライフサイクルプラットフォーム。コードリポジトリ、CI/CD、コンテナイメージ、Issue、Wiki を統合し、チームでのセルフホストに適しています。メモリ消費が大きいため、4GB 以上のメモリを推奨します。",
+          "category": "開発/DevOps",
+          "ports": {
+            "80": "HTTP",
+            "443": "HTTPS",
+            "22": "SSH"
+          },
+          "env": {
+            "GITLAB_OMNIBUS_CONFIG": "カスタム設定（任意）",
+            "GITLAB_ROOT_PASSWORD": "root 初期パスワード"
+          }
+        },
+        "eo": {
+          "description": "Kompleta DevOps-vivciklo-platformo, kiu integras kod-registrojn, CI/CD, ujbildojn, issue-ojn kaj Vikiojn, taŭga por mem-gastigi teaman uzon; ĝi bezonas multe da memoro, rekomendante almenaŭ 4 GB.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "80": "HTTP",
+            "443": "HTTPS",
+            "22": "SSH"
+          },
+          "env": {
+            "GITLAB_OMNIBUS_CONFIG": "Propra agordo (laŭvola)",
+            "GITLAB_ROOT_PASSWORD": "Komenca pasvorto de root"
+          }
+        }
+      }
     },
     {
       "id": "graw",
@@ -1002,7 +1750,33 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/graw/data.yml",
+      "translations": {
+        "en": {
+          "name": "Graw (joke placeholder)",
+          "description": "This is a joke: use Graw to download Graw, then use Graw to manage Graw — a matryoshka perpetual motion machine. This is not a real Graw server panel image, just a joke placeholder.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Joke page"
+          }
+        },
+        "ja": {
+          "name": "Graw（ジョーク用プレースホルダ）",
+          "description": "これはジョークです。Graw で Graw をダウンロードし、Graw で Graw を管理するという、入れ子構造の永久機関です。実際の Graw サーバーパネルのイメージではなく、あくまでジョーク用のプレースホルダです。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "ジョーク用ページ"
+          }
+        },
+        "eo": {
+          "name": "Graw (ŝerca lokokupilo)",
+          "description": "Ĉi tio estas ŝerco: uzu Graw por elŝuti Graw, kaj poste uzu Graw por administri Graw — ripetiĝanta maŝino. Ĉi tio ne estas vera Graw-servila panelo-bildo, sed nur ŝerca lokokupilo.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Ŝerca paĝo"
+          }
+        }
+      }
     },
     {
       "id": "halo",
@@ -1044,7 +1818,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/halo/data.yml",
+      "translations": {
+        "en": {
+          "description": "A modern, clean Java blog system built on Spring Boot with a rich theme and plugin ecosystem, suitable for personal blogs and content creation.",
+          "category": "Panel/Website",
+          "ports": {
+            "8090": "Web UI"
+          },
+          "env": {
+            "HALO_PLUGIN_ENABLED": "Plugins to enable"
+          }
+        },
+        "ja": {
+          "name": "Halo",
+          "description": "モダンで洗練された Java 製ブログシステム。豊富なテーマとプラグインエコシステムを備え、Spring Boot ベースで構築されています。個人ブログやコンテンツ制作に適しています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8090": "Web 画面"
+          },
+          "env": {
+            "HALO_PLUGIN_ENABLED": "有効にするプラグイン"
+          }
+        },
+        "eo": {
+          "description": "Moderna, eleganta Java-bloga sistemo kun riĉa ekosistemo de temoj kaj kromaĵoj; baziĝas sur Spring Boot kaj taŭgas por personaj blogoj kaj enhavokreado.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8090": "Reteja interfaco"
+          },
+          "env": {
+            "HALO_PLUGIN_ENABLED": "Kromaĵoj, kiujn oni bezonas ebligi"
+          }
+        }
+      }
     },
     {
       "id": "hermes-agent",
@@ -1076,7 +1883,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/hermes-agent/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source self-improving AI Agent from Nous Research supporting multi-platform message gateways (Telegram / Discord, etc.), MCP tools, skills and a memory system, and can be self-hosted.",
+          "category": "AI/Development",
+          "ports": {
+            "8642": "API service"
+          }
+        },
+        "ja": {
+          "name": "Hermes Agent",
+          "description": "Nous Research が公開した自己改善型 AI エージェント。マルチプラットフォームのメッセージゲートウェイ（Telegram / Discord など）、MCP ツール、スキル、記憶システムに対応し、セルフホストでデプロイできます。",
+          "category": "AI/開発",
+          "ports": {
+            "8642": "API サービス"
+          }
+        },
+        "eo": {
+          "description": "Mem-pliboniĝanta AI-agento malfermita de Nous Research, kiu subtenas plurplatformajn mesaĝpordojn (Telegram / Discord ktp), MCP-ilo-ojn, kapabloj-ojn kaj memor-sistemon, kaj povas esti mem-gastigita.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8642": "API-servo"
+          }
+        }
+      }
     },
     {
       "id": "home-assistant",
@@ -1119,7 +1950,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/home-assistant/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source home automation platform supporting integration with thousands of devices, automation rules, dashboards and voice assistants. It is the core hub of a smart home.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "8123": "Web UI"
+          },
+          "env": {
+            "TZ": "Time zone"
+          }
+        },
+        "ja": {
+          "name": "Home Assistant",
+          "description": "オープンソースのホームオートメーションプラットフォーム。数千種類のデバイス接続、自動化ルール、ダッシュボード、音声アシスタントに対応し、スマートホームの中核となるハブです。",
+          "category": "監視/運用",
+          "ports": {
+            "8123": "Web 画面"
+          },
+          "env": {
+            "TZ": "タイムゾーン"
+          }
+        },
+        "eo": {
+          "description": "Malfermita hejma aŭtomatiga platformo, kiu subtenas integron de miloj da aparatoj, aŭtomatigajn regulojn, panelojn kaj voĉhelpilojn; ĝi estas la ĉefa kerno de inteligenta hejmo.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "8123": "Reteja interfaco"
+          },
+          "env": {
+            "TZ": "Horzono"
+          }
+        }
+      }
     },
     {
       "id": "it-tools",
@@ -1151,7 +2015,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/it-tools/data.yml",
+      "translations": {
+        "en": {
+          "description": "A toolbox for developers integrating over a hundred common tools such as JSON formatting, JWT parsing, Base64 encode/decode, hash calculation and QR code generation. Everything runs locally in the browser.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "IT Tools",
+          "description": "開発者のためのアイテムボックス。JSON 整形、JWT 解析、Base64 エンコード/デコード、ハッシュ計算、QR コード生成など 100 以上の便利なツールを統合し、すべてブラウザのローカルで動作します。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Ŝparkesto por programistoj, kiu integras pli ol centon da ofte uzataj iloj kiel JSON-formatigo, JWT-analizado, Base64-kodigo/malkodigo, haskalkulado kaj QR-kodo-generado; ĉio funkcias loke en la retumilo.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "jaeger",
@@ -1193,7 +2081,37 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jaeger/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source distributed tracing system. The all-in-one mode works out of the box, providing a web UI (16686) and OTLP ingestion (4317/4318).",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "16686": "Web UI",
+            "4317": "OTLP gRPC",
+            "4318": "OTLP HTTP"
+          }
+        },
+        "ja": {
+          "name": "Jaeger",
+          "description": "オープンソースの分散トレーシングシステム。all-in-one モードでそのまま利用でき、Web UI（16686）と OTLP 受信（4317/4318）を提供します。",
+          "category": "監視/運用",
+          "ports": {
+            "16686": "Web UI",
+            "4317": "OTLP gRPC",
+            "4318": "OTLP HTTP"
+          }
+        },
+        "eo": {
+          "description": "Malfermita distribuita spurrentada sistemo; en la all-in-one reĝimo ĝi estas uzebla sen agordo kaj provizas retan uzantinterfacon (16686) kaj enfluon per OTLP (4317/4318).",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "16686": "Reteja uzantinterfaco",
+            "4317": "OTLP gRPC",
+            "4318": "OTLP HTTP"
+          }
+        }
+      }
     },
     {
       "id": "jumpserver",
@@ -1224,7 +2142,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jumpserver/data.yml",
+      "translations": {
+        "en": {
+          "description": "A widely popular open-source bastion host (PAM) providing asset management, account hosting, operation audit and ticket approval. It serves as a secure operations entry point.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "80": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "JumpServer",
+          "description": "広く利用されているオープンソースの堡垒機（PAM）。アセット管理、アカウント管理、運用監査、チケット承認を提供し、安全な運用エントリポイントを実現します。",
+          "category": "監視/運用",
+          "ports": {
+            "80": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Tre populara malfermita bastiono (PAM), kiu provizas aktivadministradon, kontan gastigadon, operacian aŭditon kaj laborpetan aprobon; ĝi estas sekura operacia enirejo.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "80": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "jupyter-notebook",
@@ -1256,7 +2198,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/jupyter-notebook/data.yml",
+      "translations": {
+        "en": {
+          "description": "A browser-based interactive notebook supporting mixed authoring of Python code, visualizations and Markdown documents. It is a common tool for data science, teaching and research.",
+          "category": "AI/Development",
+          "ports": {
+            "8888": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Jupyter Notebook",
+          "description": "ブラウザベースのインタラクティブノートブック。Python コード、可視化、Markdown 文書を混在して記述でき、データサイエンスや教育・研究現場の定番ツールです。",
+          "category": "AI/開発",
+          "ports": {
+            "8888": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Interaga notlibro bazita sur la retumilo, kiu subtenas miksan verkadon de Python-kodo, videbloj kaj Markdown-dokumentoj; ĝi estas ofte uzata ilo en datumscienco kaj instruado.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8888": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "kibana",
@@ -1294,7 +2260,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kibana/data.yml",
+      "translations": {
+        "en": {
+          "description": "The data visualization and exploration platform of the Elastic ecosystem, used together with Elasticsearch. It provides charts, dashboards, log analysis and alerting, serving as the visualization entry point of the ELK stack.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "5601": "Web UI"
+          },
+          "env": {
+            "ELASTICSEARCH_HOSTS": "Elasticsearch address (can be a service name, e.g. http://elasticsearch:9200)"
+          }
+        },
+        "ja": {
+          "name": "Kibana",
+          "description": "Elastic エコシステムのデータ可視化・探索プラットフォーム。Elasticsearch と組み合わせて使用し、グラフ、ダッシュボード、ログ分析、アラートを提供する、ELK スタックの可視化エントリポイントです。",
+          "category": "監視/運用",
+          "ports": {
+            "5601": "Web 画面"
+          },
+          "env": {
+            "ELASTICSEARCH_HOSTS": "Elasticsearch のアドレス（サービス名でも可、例: http://elasticsearch:9200）"
+          }
+        },
+        "eo": {
+          "description": "Datuma videbliga kaj esplora platformo de la Elastic-ekosistemo, uzata kune kun Elasticsearch; ĝi provizas diagramojn, panelojn, protokolanalizon kaj alarmojn, kaj estas la videbliga enirejo de la ELK-ilstako.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "5601": "Reteja interfaco"
+          },
+          "env": {
+            "ELASTICSEARCH_HOSTS": "Adreso de Elasticsearch (povas esti servnomo, ekz. http://elasticsearch:9200)"
+          }
+        }
+      }
     },
     {
       "id": "kirara-ai",
@@ -1326,7 +2325,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/kirara-ai/data.yml",
+      "translations": {
+        "en": {
+          "description": "A multi-platform chatbot framework that connects LLMs, supporting QQ, Telegram, WeCom and more. It comes with a built-in WebUI (8080), workflow orchestration and a plugin ecosystem.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "WebUI"
+          }
+        },
+        "ja": {
+          "name": "Kirara AI",
+          "description": "マルチプラットフォームで大規模モデルと接続するチャットボットフレームワーク。QQ、Telegram、企業微信などのプラットフォームに対応し、WebUI（8080）、ワークフロー編成、プラグインエコシステムを備えています。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "WebUI"
+          }
+        },
+        "eo": {
+          "description": "Plurplatforma babileja robota kadro liganta grandajn modelojn, subtenanta platformojn kiel QQ, Telegram kaj WeCom; ĝi havas enkonstruitan WebUI (8080), laborfluaranĝadon kaj kromaĵan ekosistemon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "WebUI"
+          }
+        }
+      }
     },
     {
       "id": "linkding",
@@ -1369,7 +2392,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/linkding/data.yml",
+      "translations": {
+        "en": {
+          "description": "A self-hosted lightweight bookmark manager supporting tags, search, archiving and automatic fetching of webpage metadata. It uses SQLite by default, with PostgreSQL as an option.",
+          "category": "Network/Tools",
+          "ports": {
+            "9090": "Web UI"
+          },
+          "env": {
+            "LD_SUPERUSER_NAME": "Superuser name",
+            "LD_SUPERUSER_PASSWORD": "Superuser password (auto-created on first start)"
+          }
+        },
+        "ja": {
+          "name": "Linkding",
+          "description": "セルフホスト型の軽量ブックマークマネージャー。タグ、検索、アーカイブ、および Web メタデータの自動取得に対応し、デフォルトでは SQLite、オプションで PostgreSQL を使用します。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "9090": "Web 画面"
+          },
+          "env": {
+            "LD_SUPERUSER_NAME": "スーパーユーザー名",
+            "LD_SUPERUSER_PASSWORD": "スーパーユーザーのパスワード（初回起動時に自動生成）"
+          }
+        },
+        "eo": {
+          "description": "Mem-gastigita malpeza legosign-administrilo, kiu subtenas etikedojn, serĉon, arkivigon kaj aŭtomatan skrapadon de retpaĝaj metadatumoj; defaŭlte ĝi uzas SQLite, kun laŭvola PostgreSQL.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "9090": "Reteja interfaco"
+          },
+          "env": {
+            "LD_SUPERUSER_NAME": "Uzantnomo de la superuzanto",
+            "LD_SUPERUSER_PASSWORD": "Pasvorto de la superuzanto (aŭtomate kreita ĉe la unua starto)"
+          }
+        }
+      }
     },
     {
       "id": "llama-cpp",
@@ -1401,7 +2460,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/llama-cpp/data.yml",
+      "translations": {
+        "en": {
+          "description": "A C/C++ LLM inference engine that runs various open-source models locally in GGUF format. It has a built-in OpenAI-compatible HTTP server for offline private AI deployment.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "HTTP service"
+          }
+        },
+        "ja": {
+          "name": "llama.cpp",
+          "description": "C/C++ で実装された LLM 推論エンジン。GGUF 形式で各種オープンソース大規模モデルをローカル実行でき、OpenAI 互換の HTTP サーバーを内蔵。オフラインでプライベート AI をデプロイできます。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "HTTP サービス"
+          }
+        },
+        "eo": {
+          "description": "LLM-inferenca rimarkokomotoro programita en C/C++, kiu subtenas lokan funkciadon de diversaj malfermitaj grandaj modeloj en GGUF-formato; ĝi havas enkonstruitan HTTP-servilon kongruan kun OpenAI kaj povas esti uzata por aŭtonoma privata AI-deplojo.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "HTTP-servilo"
+          }
+        }
+      }
     },
     {
       "id": "lsky-pro",
@@ -1433,7 +2516,33 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/lsky-pro/data.yml",
+      "translations": {
+        "en": {
+          "name": "Lsky Pro",
+          "description": "An open-source image hosting system supporting local uploads, external links, album management and multiple storage policies, suitable for building a personal or team image hosting site (the open-source edition is no longer maintained).",
+          "category": "Panel/Website",
+          "ports": {
+            "8088": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "兰空图床（Lsky Pro）",
+          "description": "オープンソースの画像ホスティング（図床）システム。ローカルアップロード、外部リンク、アルバム管理、複数のストレージ戦略に対応し、個人・チーム向け図床の自前構築に適しています（オープンソース版はメンテナンス終了）。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8088": "Web 画面"
+          }
+        },
+        "eo": {
+          "name": "Lsky-Pro (Bildoservo)",
+          "description": "Malfermita bildgastiga sistemo, kiu subtenas lokan alŝuton, eksterajn ligilojn, albumadministradon kaj plurajn stokadajn strategiojn; taŭga por mem konstrui personan aŭ teaman bildgastejon (la malfermita versio jam ne plu estas prizorgata).",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8088": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "mariadb",
@@ -1480,7 +2589,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mariadb/data.yml",
+      "translations": {
+        "en": {
+          "description": "The community branch of MySQL, fully compatible while adding more storage engines and performance optimizations. It is the default database of many Linux distributions. This template uses the official MariaDB 11 image.",
+          "category": "Database/Storage",
+          "ports": {
+            "3306": "MariaDB service"
+          },
+          "env": {
+            "MARIADB_ROOT_PASSWORD": "root password",
+            "MARIADB_DATABASE": "Default database"
+          }
+        },
+        "ja": {
+          "name": "MariaDB",
+          "description": "MySQL のコミュニティフォークで、完全互換を維持しつつ追加のストレージエンジンとパフォーマンス最適化を提供します。多くの Linux ディストリビューションのデフォルトデータベースです。本テンプレートは公式 MariaDB 11 イメージを使用します。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "3306": "MariaDB サービス"
+          },
+          "env": {
+            "MARIADB_ROOT_PASSWORD": "root パスワード",
+            "MARIADB_DATABASE": "デフォルトデータベース"
+          }
+        },
+        "eo": {
+          "description": "Komunuma branĉo de MySQL, plene kongrua kaj krome havanta pli da stokadaj rimarkoj kaj rendimentaj plibonigoj; ĝi estas la defaŭlta datumbazo de multaj Linux-distribuaĵoj. Ĉi tiu ŝablono uzas la oficialan MariaDB 11-bildon.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "3306": "MariaDB-servo"
+          },
+          "env": {
+            "MARIADB_ROOT_PASSWORD": "Pasvorto de root",
+            "MARIADB_DATABASE": "Defaŭlta datumbazo"
+          }
+        }
+      }
     },
     {
       "id": "maxkb",
@@ -1518,7 +2663,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/maxkb/data.yml",
+      "translations": {
+        "en": {
+          "description": "A powerful, easy-to-use enterprise agent platform from 1Panel supporting knowledge base RAG, conversational application orchestration and multiple model integrations. The image bundles a PostgreSQL database.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "Web UI"
+          },
+          "env": {
+            "MAXKB_ONE_MI_API_BASE_URL": "One API endpoint to connect to (optional)"
+          }
+        },
+        "ja": {
+          "name": "MaxKB",
+          "description": "1Panel が開発した強力かつ使いやすいエンタープライズ向け AI エージェントプラットフォーム。知識ベース RAG、チャットアプリの編成、複数モデルの接続に対応し、イメージ内に PostgreSQL データベースが組み込まれています。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "Web 画面"
+          },
+          "env": {
+            "MAXKB_ONE_MI_API_BASE_URL": "One API 連携のアドレス（任意）"
+          }
+        },
+        "eo": {
+          "description": "Povuza kaj facile uzebla entrepren-nivela agento-platformo de 1Panel, kiu subtenas RAG-an scion, profundan dialogan aplikaĵaranĝon kaj ligojn al diversaj modeloj; la bildo enkorpigas PostgreSQL-datumbazon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "Reteja interfaco"
+          },
+          "env": {
+            "MAXKB_ONE_MI_API_BASE_URL": "Adreso por ligi al One API (laŭvola)"
+          }
+        }
+      }
     },
     {
       "id": "mblog-backend",
@@ -1571,7 +2749,49 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mblog-backend/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source minimalistic Moments/Weibo-style social backend supporting image-text posting, following and a public feed. It can be self-hosted and requires a MySQL database.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "Service port"
+          },
+          "env": {
+            "MYSQL_PASS": "Database password (required)",
+            "MYSQL_URL": "Database address:port",
+            "MYSQL_DB": "Database name",
+            "MBLOG_FRONT_DOMAIN": "Frontend address"
+          }
+        },
+        "ja": {
+          "name": "Mblog",
+          "description": "オープンソースのミニマルな友人関係 / 微博（Weibo）系システムのバックエンド。画像・テキストの投稿、フォロー、プラザ閲覧に対応し、セルフホストできます。MySQL データベースとの連携が必要です。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "サービスポート"
+          },
+          "env": {
+            "MYSQL_PASS": "データベースパスワード（必須）",
+            "MYSQL_URL": "データベースのアドレス:ポート",
+            "MYSQL_DB": "データベース名",
+            "MBLOG_FRONT_DOMAIN": "フロントエンドのアドレス"
+          }
+        },
+        "eo": {
+          "description": "Malfermita minimalisma retro-servilo de amikcirka/mikroblogo-sistemo, kiu subtenas publikadon de bildoj kaj teksto, abonadon kaj foliumadon en la publika paĝo; ĝi povas esti mem-gastigita kaj bezonas uzi kune kun MySQL-datumbazo.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "Serva haveno"
+          },
+          "env": {
+            "MYSQL_PASS": "Datumbaza pasvorto (deviga)",
+            "MYSQL_URL": "Datumbaza adreso:haveno",
+            "MYSQL_DB": "Nomo de la datumbazo",
+            "MBLOG_FRONT_DOMAIN": "Adreso de la fronta parto"
+          }
+        }
+      }
     },
     {
       "id": "mcsmanager",
@@ -1603,7 +2823,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mcsmanager/data.yml",
+      "translations": {
+        "en": {
+          "description": "A web management panel for game servers supporting one-click installation, start/stop, backup and file management for multiple game server types. The panel listens on port 23333.",
+          "category": "Development/DevOps",
+          "ports": {
+            "23333": "Web panel"
+          }
+        },
+        "ja": {
+          "name": "MCSManager",
+          "description": "ゲームサーバー用 Web 管理パネル。複数のゲームサーバーのワンクリックインストール、開始/停止、バックアップ、ファイル管理に対応し、パネルのポートは 23333 です。",
+          "category": "開発/DevOps",
+          "ports": {
+            "23333": "Web パネル"
+          }
+        },
+        "eo": {
+          "description": "Reta administra panelo por ludserviloj, kiu subtenas unu-klakan instaladon, starton/haltigon, sekurkopiojn kaj dosieradministradon de diversaj ludserviloj; la panelo uzas havenon 23333.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "23333": "Reteja panelo"
+          }
+        }
+      }
     },
     {
       "id": "memcached",
@@ -1646,7 +2890,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/memcached/data.yml",
+      "translations": {
+        "en": {
+          "description": "A high-performance distributed in-memory caching system that caches data as key-value pairs. It is commonly used to accelerate database queries and web application responses, with a default port of 11211.",
+          "category": "Database/Storage",
+          "ports": {
+            "11211": "Memcached service"
+          },
+          "env": {
+            "MEMCACHED_MEMORY_LIMIT": "Memory limit (MB)"
+          }
+        },
+        "ja": {
+          "name": "Memcached",
+          "description": "高性能な分散型メモリキャッシュシステム。キー・バリュー方式でデータをキャッシュし、データベースクエリや Web アプリの応答を高速化するのに使われます。デフォルトポートは 11211 です。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "11211": "Memcached サービス"
+          },
+          "env": {
+            "MEMCACHED_MEMORY_LIMIT": "メモリ制限（MB）"
+          }
+        },
+        "eo": {
+          "description": "Alt-efikeca distribuita memor-kaŝsistemo, kiu kaŝas datumojn laŭ ŝlosilo-valoro kaj ofte estas uzata por akceli datumbazajn demandojn kaj respondojn de retaj aplikaĵoj; defaŭlta haveno 11211.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "11211": "Memcached-servo"
+          },
+          "env": {
+            "MEMCACHED_MEMORY_LIMIT": "Memorlimo (MB)"
+          }
+        }
+      }
     },
     {
       "id": "metersphere",
@@ -1677,7 +2954,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/metersphere/data.yml",
+      "translations": {
+        "en": {
+          "description": "A next-generation open-source continuous testing platform covering API, performance, UI and test tracking for one-stop quality assurance. The installation package bundles MySQL, Redis and other dependencies.",
+          "category": "Development/DevOps",
+          "ports": {
+            "8081": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "MeterSphere",
+          "description": "新世代オープンソースの継続的テストプラットフォーム。インターフェース、パフォーマンス、UI、テストトラッキングをカバーするワンストップ品質保証を提供し、インストールパッケージには MySQL、Redis などの依存関係が組み込まれています。",
+          "category": "開発/DevOps",
+          "ports": {
+            "8081": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Nova generacio de malfermita kontinua testado-platformo, kiu kovras interfacojn, rendimenton, UI-on kaj testan spuradon, provizante unu-stacian kvalitgarantion; la instalpaketo enkorpigas dependaĵojn kiel MySQL kaj Redis.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "8081": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "mysql",
@@ -1719,7 +3020,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/mysql/data.yml",
+      "translations": {
+        "en": {
+          "description": "The world's most popular open-source relational database management system, widely used across web applications, enterprise systems and data warehouses. This template uses the official MySQL 8 image and persists data to a local data directory.",
+          "category": "Database/Storage",
+          "ports": {
+            "3306": "MySQL service"
+          },
+          "env": {
+            "MYSQL_ROOT_PASSWORD": "root password"
+          }
+        },
+        "ja": {
+          "name": "MySQL",
+          "description": "世界で最も広く使われているオープンソースのリレーショナルデータベース管理システム。さまざまな Web アプリ、企業システム、データウェアハウスで広く利用されています。本テンプレートは MySQL 8 公式イメージを使用し、データはローカル data ディレクトリに永続化されます。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "3306": "MySQL サービス"
+          },
+          "env": {
+            "MYSQL_ROOT_PASSWORD": "root パスワード"
+          }
+        },
+        "eo": {
+          "description": "La plej populara malfermita rilata datumbaza administra sistemo en la mondo, vaste uzata en diversaj retaj aplikaĵoj, firmaj sistemoj kaj datenmagazenoj. Ĉi tiu ŝablono uzas la oficialan MySQL 8-bildon kaj konservas datumojn en la loka datenujo.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "3306": "MySQL-servo"
+          },
+          "env": {
+            "MYSQL_ROOT_PASSWORD": "Pasvorto de root"
+          }
+        }
+      }
     },
     {
       "id": "n8n",
@@ -1762,7 +3096,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/n8n/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source workflow automation platform that connects apps, data and AI through visual nodes. It supports 400+ integrations and can be self-hosted.",
+          "category": "AI/Development",
+          "ports": {
+            "5678": "Web UI"
+          },
+          "env": {
+            "N8N_SECURE_COOKIE": "Whether to use secure cookies",
+            "GENERIC_TIMEZONE": "Time zone"
+          }
+        },
+        "ja": {
+          "name": "n8n",
+          "description": "オープンソースのワークフロー自動化プラットフォーム。ビジュアルノードでアプリ、データ、AI を接続し、400 以上のインテグレーションに対応。セルフホストでデプロイできます。",
+          "category": "AI/開発",
+          "ports": {
+            "5678": "Web 画面"
+          },
+          "env": {
+            "N8N_SECURE_COOKIE": "セキュア Cookie にするかどうか",
+            "GENERIC_TIMEZONE": "タイムゾーン"
+          }
+        },
+        "eo": {
+          "description": "Malfermita laborfluo-aŭtomatiga platformo, kiu per videblaj nodoj ligas aplikaĵojn, datumojn kaj AI-on; ĝi subtenas pli ol 400 integraĵojn kaj povas esti mem-gastigita.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "5678": "Reteja interfaco"
+          },
+          "env": {
+            "N8N_SECURE_COOKIE": "Ĉu uzi sekurecan kuketon",
+            "GENERIC_TIMEZONE": "Horzono"
+          }
+        }
+      }
     },
     {
       "id": "nanobot",
@@ -1794,7 +3164,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nanobot/data.yml",
+      "translations": {
+        "en": {
+          "description": "An ultra-lightweight, self-hosted personal AI agent framework from HKUDS. It provides a WebUI (8765) and WebSocket, supports tool calling and local deployment with extremely low resource usage.",
+          "category": "AI/Development",
+          "ports": {
+            "8765": "WebUI / WebSocket"
+          }
+        },
+        "ja": {
+          "name": "Nanobot",
+          "description": "HKUDS が公開した超軽量セルフホスト型の個人向け AI エージェントフレームワーク。WebUI（8765）と WebSocket を提供し、ツール呼び出しとローカルデプロイに対応、リソース消費が非常に低いのが特徴です。",
+          "category": "AI/開発",
+          "ports": {
+            "8765": "WebUI / WebSocket"
+          }
+        },
+        "eo": {
+          "description": "Ekstreme malpeza mem-gastigita persona AI-agenta kadro malfermita de HKUDS, kiu provizas WebUI (8765) kaj WebSocket, subtenas ilvokojn kaj lokan deplojon, kaj konsumas tre malmulte da resursoj.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8765": "WebUI / WebSocket"
+          }
+        }
+      }
     },
     {
       "id": "new-api",
@@ -1836,7 +3230,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/new-api/data.yml",
+      "translations": {
+        "en": {
+          "description": "A next-generation LLM API gateway and AI asset management platform supporting unified access to multiple models, token management, channel distribution, usage statistics and billing. It can connect to various models such as OpenAI and DeepSeek.",
+          "category": "Development/DevOps",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "SESSION_SECRET": "Session secret (recommended)"
+          }
+        },
+        "ja": {
+          "name": "New API",
+          "description": "次世代大規模モデル API ゲートウェイ＆AI 資産管理プラットフォーム。複数モデルの統合接続、トークン管理、チャネル配信、利用量統計、課金に対応し、OpenAI / DeepSeek などの各種モデルと連携できます。",
+          "category": "開発/DevOps",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "SESSION_SECRET": "セッションキー（設定を推奨）"
+          }
+        },
+        "eo": {
+          "description": "Nova generacio de API-pordego por grandaj modeloj kaj AI-aktiva administra platformo, kiu subtenas unuigitan aliron al pluraj modeloj, ĵeton-administron, distribuadon de kanaloj, uzokvantan statistikon kaj fakturigon; ĝi povas ligi al diversaj modeloj kiel OpenAI kaj DeepSeek.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "SESSION_SECRET": "Sesio-ŝlosilo (rekomendita)"
+          }
+        }
+      }
     },
     {
       "id": "nextcloud",
@@ -1868,7 +3295,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nextcloud/data.yml",
+      "translations": {
+        "en": {
+          "description": "A self-hosted cloud drive and collaboration platform supporting file synchronization, sharing, online documents, calendar and contacts, letting you stay in full control of your data.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Nextcloud",
+          "description": "セルフホスト型のネットワークストレージ＆コラボレーションプラットフォーム。ファイル同期、共有、オンラインドキュメント、カレンダー、連絡先などに対応し、自分のデータを完全に管理できます。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Mem-gastigita nuba disko kaj kunlabora platformo, kiu subtenas dosiero-sinkronigon, kundividon, interretajn dokumentojn, kalendaron kaj kontaktojn, tiel ke vi povas plene regi viajn proprajn datumojn.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "nezha",
@@ -1905,7 +3356,36 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nezha/data.yml",
+      "translations": {
+        "en": {
+          "name": "Nezha Monitor",
+          "description": "A self-hosted all-in-one server monitoring and operations tool supporting a multi-platform panel, real-time alerts, remote commands and task management. It helps you keep track of the status of multiple servers.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "8008": "Panel interface",
+            "5555": "Agent communication port"
+          }
+        },
+        "ja": {
+          "name": "哪吒モニタ（Nezha Monitor）",
+          "description": "セルフホスト型のオールインワンサーバー監視・運用ツール。複数端末対応の管理パネル、リアルタイムアラート、リモートコマンド実行、タスク管理を備え、複数サーバーの状態を一元管理できます。",
+          "category": "監視/運用",
+          "ports": {
+            "8008": "管理画面",
+            "5555": "Agent通信ポート"
+          }
+        },
+        "eo": {
+          "name": "Nezha-Monitoro",
+          "description": "Mem-gastigita unu-stacia servilmonitorado kaj operacia ilo, kiu subtenas plurflankajn panelojn, realtempan alarmilon, forajn komandojn kaj taskadministradon, helpante regi la statuson de pluraj serviloj.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "8008": "Panela interfaco",
+            "5555": "Komunika haveno de Agent"
+          }
+        }
+      }
     },
     {
       "id": "nginx-proxy-manager",
@@ -1948,7 +3428,37 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nginx-proxy-manager/data.yml",
+      "translations": {
+        "en": {
+          "description": "An easy-to-use Nginx reverse proxy and free SSL certificate management panel with a visual interface for configuring domain forwarding, wildcard resolution and Let's Encrypt certificates.",
+          "category": "Network/Tools",
+          "ports": {
+            "81": "Admin interface",
+            "80": "HTTP proxy",
+            "443": "HTTPS proxy"
+          }
+        },
+        "ja": {
+          "name": "Nginx Proxy Manager",
+          "description": "使いやすい Nginx リバースプロキシ + 無料 SSL 証明書管理パネル。ドメイン転送、ワイルドカード、Let's Encrypt 証明書をビジュアルに設定できます。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "81": "管理画面",
+            "80": "HTTP プロキシ",
+            "443": "HTTPS プロキシ"
+          }
+        },
+        "eo": {
+          "description": "Facile uzebla administra panelo por Nginx-inversprokura servo kaj senpagaj SSL-atestiloj, kiu subtenas videblan agordon de domajna plusendo, arbitran solvon kaj Let's Encrypt-atestilojn.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "81": "Administra interfaco",
+            "80": "HTTP-prokura servo",
+            "443": "HTTPS-prokura servo"
+          }
+        }
+      }
     },
     {
       "id": "nocodb",
@@ -1986,7 +3496,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nocodb/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source Airtable alternative that turns databases into visual spreadsheets. Supporting MySQL / PostgreSQL / SQLite, it lets you build data applications by drag and drop and manage data without coding.",
+          "category": "Database/Storage",
+          "ports": {
+            "8080": "Web UI"
+          },
+          "env": {
+            "NC_DB": "Database connection string (SQLite by default)"
+          }
+        },
+        "ja": {
+          "name": "NocoDB",
+          "description": "オープンソースの Airtable 代替品。データベースをビジュアルなスプレッドシート化します。MySQL / PostgreSQL / SQLite に対応し、ドラッグ＆ドロップでデータアプリを構築。プログラミング不要でデータを管理できます。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "8080": "Web 画面"
+          },
+          "env": {
+            "NC_DB": "データベース接続文字列（デフォルトは SQLite）"
+          }
+        },
+        "eo": {
+          "description": "Malfermita alternativo al Airtable, kiu transformas datumbazojn en videblajn kalkultad-tabelojn; ĝi subtenas MySQL, PostgreSQL kaj SQLite, kaj per trenado-kaj-lasi ebligas konstrui datumaplikojn kaj administri datumojn sen programado.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "8080": "Reteja interfaco"
+          },
+          "env": {
+            "NC_DB": "Datumbaza konekta ĉeno (defaŭlte SQLite)"
+          }
+        }
+      }
     },
     {
       "id": "node-red",
@@ -2019,7 +3562,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/node-red/data.yml",
+      "translations": {
+        "en": {
+          "description": "A Node.js-based flow-based programming tool that connects devices, APIs and services by dragging nodes. It is suitable for IoT, automation and data-flow processing.",
+          "category": "AI/Development",
+          "ports": {
+            "1880": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Node-RED",
+          "description": "Node.js ベースのフローベースプログラミングツール。ノードのドラッグ＆ドロップでデバイス、API、サービスを接続でき、IoT、自動化、データフロー処理に適しています。",
+          "category": "AI/開発",
+          "ports": {
+            "1880": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Flua programado-ilo bazita sur Node.js, kiu per trenado de nodoj ligas aparatojn, API-ojn kaj servojn; konvenas por aĵa interreto (IoT), aŭtomatigo kaj datumfluo-procesado.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "1880": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "nps",
@@ -2056,7 +3623,36 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/nps/data.yml",
+      "translations": {
+        "en": {
+          "name": "nps (intranet penetration)",
+          "description": "A lightweight, high-performance intranet penetration tool server with a built-in web management interface, supporting TCP, UDP, HTTP(S), Socks5 and P2P tunnels as well as traffic statistics.",
+          "category": "Network/Tools",
+          "ports": {
+            "8080": "Web admin interface",
+            "8024": "Client connection port"
+          }
+        },
+        "ja": {
+          "name": "nps（内網トンネル）",
+          "description": "軽量・高性能な内網トンネルツールのサーバー側。Web 管理画面を内蔵し、TCP / UDP / HTTP(S) / Socks5 / P2P トンネルとトラフィック統計に対応します。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "8080": "Web 管理画面",
+            "8024": "クライアント接続ポート"
+          }
+        },
+        "eo": {
+          "name": "nps (Intretunelo)",
+          "description": "Malpeza kaj alt-efikeca servila flanko de intretunela ilo, kiu havas enkonstruitan retan administran interfacon kaj subtenas TCP, UDP, HTTP(S), Socks5 kaj P2P-tunelojn, kun trafikstatistiko.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "8080": "Reteja administra interfaco",
+            "8024": "Klienta konekta haveno"
+          }
+        }
+      }
     },
     {
       "id": "one-api",
@@ -2094,7 +3690,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/one-api/data.yml",
+      "translations": {
+        "en": {
+          "description": "An OpenAI API management and distribution system supporting unified access to multiple models, token management and quota statistics. It can convert various models into the OpenAI format for external invocation.",
+          "category": "AI/Development",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "SESSION_SECRET": "Session secret (recommended)"
+          }
+        },
+        "ja": {
+          "name": "One API",
+          "description": "OpenAI インターフェースの管理・配信システム。複数モデルの統合接続、トークン管理、利用量統計に対応し、各種モデルを OpenAI 形式に変換して外部に提供できます。",
+          "category": "AI/開発",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "SESSION_SECRET": "セッションキー（設定を推奨）"
+          }
+        },
+        "eo": {
+          "description": "OpenAI-interfaca administra kaj distribuada sistemo, kiu subtenas unuigitan aliron al pluraj modeloj, ĵeton-administron kaj kotizstatistikon; ĝi povas konverti diversajn modelojn al OpenAI-formato por ekstera invokado.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "SESSION_SECRET": "Sesio-ŝlosilo (rekomendita)"
+          }
+        }
+      }
     },
     {
       "id": "open-webui",
@@ -2132,7 +3761,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/open-webui/data.yml",
+      "translations": {
+        "en": {
+          "description": "An extensible, feature-rich and user-friendly self-hosted AI web interface supporting Ollama and OpenAI-compatible endpoints, offering multi-user support, RAG, model management and conversation history.",
+          "category": "AI/Development",
+          "ports": {
+            "8080": "Web UI"
+          },
+          "env": {
+            "OLLAMA_BASE_URL": "Ollama address (optional)"
+          }
+        },
+        "ja": {
+          "name": "Open WebUI",
+          "description": "拡張可能で機能豊富、ユーザーフレンドリーなセルフホスト型 AI Web インターフェース。Ollama と OpenAI 互換 API に対応し、マルチユーザー、RAG、モデル管理、会話履歴を提供します。",
+          "category": "AI/開発",
+          "ports": {
+            "8080": "Web 画面"
+          },
+          "env": {
+            "OLLAMA_BASE_URL": "Ollama のアドレス（任意）"
+          }
+        },
+        "eo": {
+          "description": "Etendebla, riĉa kaj uzant-amika mem-gastigita AI-retinterfaco, kiu subtenas kongruajn interfacojn de Ollama kaj OpenAI, kaj ofertas plurajn uzantojn, RAG, modeladministron kaj konversacian historion.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8080": "Reteja interfaco"
+          },
+          "env": {
+            "OLLAMA_BASE_URL": "Adreso de Ollama (laŭvola)"
+          }
+        }
+      }
     },
     {
       "id": "openclaw",
@@ -2164,7 +3826,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openclaw/data.yml",
+      "translations": {
+        "en": {
+          "description": "A personal AI assistant that runs on your own devices, with tool invocation, DM pairing and autonomous execution capabilities. The official project provides prebuilt ghcr images.",
+          "category": "AI/Development",
+          "ports": {
+            "18789": "Gateway port"
+          }
+        },
+        "ja": {
+          "name": "OpenClaw",
+          "description": "自分のデバイスで動作するパーソナル AI アシスタント。ツール呼び出し、DM ペアリング、自律実行機能を備え、公式が事前ビルド済みの ghcr イメージを提供しています。",
+          "category": "AI/開発",
+          "ports": {
+            "18789": "Gateway ポート"
+          }
+        },
+        "eo": {
+          "description": "Persona AI-helpanto funkciebla sur viaj propraj aparatoj, kun il-invoko-, DM-pariĝo- kaj aŭtonoma plenumaj kapabloj; la oficialo provizas antaŭkompilitan ghcr-bildon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "18789": "Haveno de Gateway"
+          }
+        }
+      }
     },
     {
       "id": "opengist",
@@ -2196,7 +3882,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/opengist/data.yml",
+      "translations": {
+        "en": {
+          "description": "A self-hosted code snippet sharing platform similar to GitHub Gist. It supports anonymous / logged-in snippet creation, syntax highlighting and comments, and is backed by Git storage.",
+          "category": "Network/Tools",
+          "ports": {
+            "6157": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Opengist",
+          "description": "セルフホスト型のコードスニペット共有プラットフォーム。GitHub Gist のような機能を提供し、匿名 / ログインでのスニペット作成、シンタックスハイライト、コメントに対応。Git ベースで保存されます。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "6157": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Mem-gastigita platformo por kundividi kodo-fragmentojn, simila al GitHub Gist; ĝi subtenas kreadon de fragmentoj kiel anonimo aŭ per ensaluto, sintakselstarigon kaj komentadon, kaj konservas datumojn per Git.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "6157": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "openlist",
@@ -2239,7 +3949,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/openlist/data.yml",
+      "translations": {
+        "en": {
+          "description": "A community fork of AList, a cloud drive aggregation and file listing program supporting dozens of storage backends including Aliyun Drive, OneDrive, Baidu Drive, Quark, 115 and WebDAV, with online preview and WebDAV capabilities.",
+          "category": "Panel/Website",
+          "ports": {
+            "5244": "Web UI"
+          },
+          "env": {
+            "TZ": "Time zone",
+            "UMASK": "File permission mask"
+          }
+        },
+        "ja": {
+          "name": "OpenList",
+          "description": "AList コミュニティフォークのネットワークストレージ集約＆ファイルリストプログラム。Alibaba Cloud Drive、OneDrive、Baidu 網盤、クォーク、115、WebDAV など数十種類のストレージに対応し、オンラインプレビューと WebDAV 機能を備えています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "5244": "Web 画面"
+          },
+          "env": {
+            "TZ": "タイムゾーン",
+            "UMASK": "ファイル権限マスク"
+          }
+        },
+        "eo": {
+          "description": "Forko de la komunumo AList: nubdisko-agreganta kaj dosierlistiga programo, kiu subtenas dekojn da stokservoj kiel Alibaba Cloud Drive, OneDrive, Baidu Netdisk, Quark, 115 kaj WebDAV, kun kapabloj de interreta antaŭrigardo kaj WebDAV.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "5244": "Reteja interfaco"
+          },
+          "env": {
+            "TZ": "Horzono",
+            "UMASK": "Dosierpermesa masko"
+          }
+        }
+      }
     },
     {
       "id": "outline",
@@ -2297,7 +4043,52 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/outline/data.yml",
+      "translations": {
+        "en": {
+          "description": "A modern team knowledge base and Wiki platform supporting real-time collaborative Markdown editing, full-text search and rich integrations. It requires PostgreSQL and Redis.",
+          "category": "Panel/Website",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "DATABASE_URL": "Database connection",
+            "REDIS_URL": "Redis connection",
+            "SECRET_KEY": "Secret key",
+            "UTILS_SECRET": "Utils secret",
+            "URL": "Access URL"
+          }
+        },
+        "ja": {
+          "name": "Outline",
+          "description": "モダンなチーム向けナレッジベース＆Wiki プラットフォーム。Markdown でのリアルタイム共同編集、全文検索、豊富なインテグレーションに対応。PostgreSQL と Redis との連携が必要です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "DATABASE_URL": "データベース接続",
+            "REDIS_URL": "Redis 接続",
+            "SECRET_KEY": "シークレットキー",
+            "UTILS_SECRET": "ユーティリティキー",
+            "URL": "アクセスアドレス"
+          }
+        },
+        "eo": {
+          "description": "Moderna scibazo kaj Vikio-platformo por teamoj, kiu subtenas realteman kunlaboran redaktadon en Markdown, plentekstan serĉon kaj riĉajn integraĵojn; ĝi bezonas uzi kune kun PostgreSQL kaj Redis.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "DATABASE_URL": "Datumbaza konekto",
+            "REDIS_URL": "Redis-konekto",
+            "SECRET_KEY": "Ŝlosilo",
+            "UTILS_SECRET": "Ila ŝlosilo",
+            "URL": "Alira adreso"
+          }
+        }
+      }
     },
     {
       "id": "palworld-server-docker",
@@ -2355,7 +4146,52 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-docker/data.yml",
+      "translations": {
+        "en": {
+          "description": "The dedicated server Docker image for Palworld, with built-in SteamCMD auto-download and updates of the server. It provides the game (8211/udp), query and RCON ports.",
+          "category": "Development/DevOps",
+          "ports": {
+            "8211": "Game port",
+            "27015": "Query port",
+            "25575": "RCON"
+          },
+          "env": {
+            "ADMIN_PASSWORD": "Admin password (required)",
+            "SERVER_PASSWORD": "Server password (required, otherwise you cannot join)",
+            "COMMUNITY_SERVER": "Whether this is a community server"
+          }
+        },
+        "ja": {
+          "name": "Palworld Server Docker",
+          "description": "幻兽パル（Palworld）専用サーバーの Docker イメージ。SteamCMD によるサーバーソフトの自動ダウンロード/アップデートを内蔵し、ゲーム（8211/udp）、クエリ、RCON ポートを提供します。",
+          "category": "開発/DevOps",
+          "ports": {
+            "8211": "ゲームポート",
+            "27015": "クエリポート",
+            "25575": "RCON"
+          },
+          "env": {
+            "ADMIN_PASSWORD": "管理者パスワード（必須）",
+            "SERVER_PASSWORD": "サーバーパスワード（必須。設定しないと参加できません）",
+            "COMMUNITY_SERVER": "コミュニティサーバーにするかどうか"
+          }
+        },
+        "eo": {
+          "description": "Docker-bildo por dediĉita servilo de la ludo Palworld, kiu mem aŭtomate elŝutas / ĝisdatigas la servan programon per SteamCMD kaj provizas la ludhavenon (8211/udp), la demandan havenon kaj la RCON-havenon.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "8211": "Lud-haveno",
+            "27015": "Demanda haveno",
+            "25575": "RCON"
+          },
+          "env": {
+            "ADMIN_PASSWORD": "Administra pasvorto (deviga)",
+            "SERVER_PASSWORD": "Serva pasvorto (deviga, alie oni ne povas aliĝi)",
+            "COMMUNITY_SERVER": "Ĉu ĝi estas komunuma servilo"
+          }
+        }
+      }
     },
     {
       "id": "palworld-server-tool",
@@ -2387,7 +4223,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/palworld-server-tool/data.yml",
+      "translations": {
+        "en": {
+          "description": "A Palworld server management tool providing a web management interface (8080) and an Agent (8081). You can view players, economy, save backups and game status.",
+          "category": "Development/DevOps",
+          "ports": {
+            "8080": "Web admin interface"
+          }
+        },
+        "ja": {
+          "name": "Palworld Server Tool",
+          "description": "幻兽パル（Palworld）サーバー管理ツール。Web 管理（8080）と Agent（8081）を提供し、プレイヤー、経済状況、セーブバックアップ、ゲーム状態を確認できます。",
+          "category": "開発/DevOps",
+          "ports": {
+            "8080": "Web 管理画面"
+          }
+        },
+        "eo": {
+          "description": "Administra ilo por servilo de Palworld, kiu provizas retan administradon (8080) kaj agenton (8081), ebligante vidi ludantojn, ekonomion, sekurkopiojn de konservoj kaj la statuson de la ludo.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "8080": "Reteja administra interfaco"
+          }
+        }
+      }
     },
     {
       "id": "phpmyadmin",
@@ -2435,7 +4295,46 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/phpmyadmin/data.yml",
+      "translations": {
+        "en": {
+          "description": "A PHP-based visual web management tool for MySQL / MariaDB supporting management of databases, tables, SQL, users and import/export. It requires connecting to an external database.",
+          "category": "Database/Storage",
+          "ports": {
+            "80": "Web UI"
+          },
+          "env": {
+            "PMA_HOST": "Database host (e.g. mysql or a server IP)",
+            "PMA_PORT": "Database port",
+            "PMA_ARBITRARY": "Allow connecting to any server (1 = yes)"
+          }
+        },
+        "ja": {
+          "name": "phpMyAdmin",
+          "description": "PHP ベースの MySQL / MariaDB ビジュアル Web 管理ツール。データベース、テーブル、SQL、ユーザー、インポート/エクスポートの管理に対応し、外部データベースへの接続が必要です。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "80": "Web 画面"
+          },
+          "env": {
+            "PMA_HOST": "データベースホスト（例: mysql やサーバー IP）",
+            "PMA_PORT": "データベースポート",
+            "PMA_ARBITRARY": "任意のサーバーへの接続を許可（1=はい）"
+          }
+        },
+        "eo": {
+          "description": "Videbla administra ilo de MySQL/MariaDB bazita sur PHP, kiu subtenas datumbazojn, tabelojn, SQL, uzantojn kaj importon/eksporton; ĝi bezonas konekti al ekstera datumbazo.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "80": "Reteja interfaco"
+          },
+          "env": {
+            "PMA_HOST": "Datumbaza mastrumilo (ekz. mysql aŭ servila IP)",
+            "PMA_PORT": "Datumbaza haveno",
+            "PMA_ARBITRARY": "Permesi konekton al iu ajn servilo (1=jes)"
+          }
+        }
+      }
     },
     {
       "id": "pixivd",
@@ -2461,7 +4360,21 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivd/data.yml",
+      "translations": {
+        "en": {
+          "description": "A Pixiv command-line batch download tool (official ghcr image) supporting bulk download of illustrations by artist ID and daily / historical rankings. The container runs in keep-alive mode; after installation run the pixivd command in the container terminal (e.g. pixivd <UID> or pixivd -r). Downloads are saved in the illustrations directory.",
+          "category": "Network/Tools"
+        },
+        "ja": {
+          "name": "PixivD",
+          "description": "Pixiv 用コマンドライン一括ダウンロードツール（公式 ghcr イメージ）。絵師 ID、デイリー/ヒストリカルランキングでイラストを一括ダウンロードできます。コンテナは常駐方式で動作し、インストール後にコンテナターミナルで pixivd コマンド（例: pixivd <UID> や pixivd -r）を実行します。ダウンロード結果は illustrations ディレクトリに保存されます。",
+          "category": "ネットワーク/ツール"
+        },
+        "eo": {
+          "description": "Komandlinia ilo por amasa elŝutado de Pixiv-aj bildoj (oficiala ghcr-bildo), kiu subtenas amasan elŝuton de ilustraĵoj laŭ artisma ID kaj laŭ ĉiutaga aŭ historia rangolisto; la ujo funkcias en daŭra reĝimo, do la komando pixivd estas plenumata en la terminalo de la ujo (ekz. pixivd &lt;UID&gt; aŭ pixivd -r), kaj la elŝutitaj rezultoj estas konservataj en la ilustraĵ-dosierujo."
+        }
+      }
     },
     {
       "id": "pixivfe",
@@ -2493,7 +4406,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pixivfe/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source alternative frontend for pixiv that protects privacy and allows anonymous browsing without logging in. All requests are performed server-side; it is lightweight, modern and supports multi-architecture images.",
+          "category": "Network/Tools",
+          "ports": {
+            "8282": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "PixivFE",
+          "description": "オープンソースの pixiv 代替フロントエンド。プライバシーを保護し、ログイン不要で匿名閲覧できます。すべてのリクエストはサーバー側で処理され、軽量・モダンでマルチアーキテクチャのイメージに対応しています。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "8282": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Malfermita anstataŭa antaŭparto por pixiv, kiu protektas privatecon kaj ebligas anoniman foliumadon sen ensaluto; ĉiuj petoj estas plenumataj servilflanke, ĝi estas malpeza, moderna kaj subtenas bildojn por multaj arkitekturoj.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "8282": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "portainer",
@@ -2525,7 +4462,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/portainer/data.yml",
+      "translations": {
+        "en": {
+          "description": "The most popular visual panel for Docker / Kubernetes, providing one-stop management of containers, images, networks, volumes and stacks. Its intuitive interface makes it friendly for beginners.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "9000": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Portainer",
+          "description": "最も人気のある Docker / Kubernetes ビジュアルパネル。コンテナ、イメージ、ネットワーク、ボリューム、スタックのワンストップ管理を提供し、直感的なインターフェースで初心者にも使いやすいのが特徴です。",
+          "category": "監視/運用",
+          "ports": {
+            "9000": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "La plej populara videbla panelo por Docker/Kubernetes, kiu provizas unu-stacian administradon de ujoj, bildoj, retoj, volumoj kaj ŝtupoj; la interfaco estas intuicia kaj taŭga por komencantoj.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "9000": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "postgres",
@@ -2577,7 +4538,46 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/postgres/data.yml",
+      "translations": {
+        "en": {
+          "description": "A powerful open-source relational database renowned for its reliability and rich data types, supporting complex queries, transactions, extensions and full-text search. This template uses the official PostgreSQL 16 image.",
+          "category": "Database/Storage",
+          "ports": {
+            "5432": "PostgreSQL service"
+          },
+          "env": {
+            "POSTGRES_USER": "Superuser",
+            "POSTGRES_PASSWORD": "Superuser password",
+            "POSTGRES_DB": "Default database"
+          }
+        },
+        "ja": {
+          "name": "PostgreSQL",
+          "description": "強力なオープンソースのリレーショナルデータベース。信頼性と豊富なデータ型で知られ、複雑なクエリ、トランザクション、拡張、全文検索に対応します。本テンプレートは公式 PostgreSQL 16 イメージを使用します。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "5432": "PostgreSQL サービス"
+          },
+          "env": {
+            "POSTGRES_USER": "スーパーユーザー",
+            "POSTGRES_PASSWORD": "スーパーユーザーのパスワード",
+            "POSTGRES_DB": "デフォルトデータベース"
+          }
+        },
+        "eo": {
+          "description": "Povuza malfermita rilata datumbazo fama pro sia fidindeco kaj riĉaj datentipoj, subtenante kompleksajn demandojn, transakciojn, etendaĵojn kaj plentekstan trovon. Ĉi tiu ŝablono uzas la oficialan PostgreSQL 16-bildon.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "5432": "PostgreSQL-servo"
+          },
+          "env": {
+            "POSTGRES_USER": "Superuzanto",
+            "POSTGRES_PASSWORD": "Pasvorto de la superuzanto",
+            "POSTGRES_DB": "Defaŭlta datumbazo"
+          }
+        }
+      }
     },
     {
       "id": "pppixiv",
@@ -2625,7 +4625,46 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/pppixiv/data.yml",
+      "translations": {
+        "en": {
+          "description": "A Pixiv illustration batch download tool with a built-in web management interface (/dashboard). Enter an artist UID to batch download all of their illustrations with preview support. It requires configuring your Pixiv account and password, and a proxy is needed to access Pixiv from mainland China.",
+          "category": "Network/Tools",
+          "ports": {
+            "5000": "Web admin interface"
+          },
+          "env": {
+            "username": "Pixiv account (required)",
+            "password": "Pixiv password (required)",
+            "port": "Service port"
+          }
+        },
+        "ja": {
+          "name": "pppixiv",
+          "description": "Pixiv イラスト一括ダウンロードツール。Web 管理画面（/dashboard）を内蔵し、絵師の UID を入力するだけでワンクリックで全イラストを一括ダウンロードでき、プレビューも可能です。Pixiv のアカウントとパスワードの設定が必要で、中国国内からの Pixiv アクセスはプロキシが必要です。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "5000": "Web 管理画面"
+          },
+          "env": {
+            "username": "Pixiv アカウント（必須）",
+            "password": "Pixiv パスワード（必須）",
+            "port": "サービスポート"
+          }
+        },
+        "eo": {
+          "description": "Ilo por amasa elŝutado de Pixiv-aj ilustraĵoj, kun enkonstruita reta administra interfaco (/dashboard); enigante la UID-on de artisto oni povas per unu klako amase elŝuti ĉiujn liajn ilustraĵojn kun antaŭrigardo. Necesas agordi Pixiv-uzantnomon kaj pasvorton; aliro al Pixiv el Ĉinio bezonas prokurilon.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "5000": "Reteja administra interfaco"
+          },
+          "env": {
+            "username": "Pixiv-konto (deviga)",
+            "password": "Pixiv-pasvorto (deviga)",
+            "port": "Serva haveno"
+          }
+        }
+      }
     },
     {
       "id": "qinglong",
@@ -2657,7 +4696,33 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qinglong/data.yml",
+      "translations": {
+        "en": {
+          "name": "Qinglong Panel",
+          "description": "A scheduled task management panel supporting JavaScript / Python / Shell scripts. It can be used to automate tasks such as check-ins and farming, with built-in dependency management and log viewing.",
+          "category": "Panel/Website",
+          "ports": {
+            "5700": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "青竜パネル（QingLong）",
+          "description": "スケジュールタスク管理パネル。JavaScript / Python / Shell スクリプトに対応し、自動チェックインや放置タスクなどの自動化に利用できます。依存関係管理とログ表示を内蔵しています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "5700": "Web 画面"
+          }
+        },
+        "eo": {
+          "name": "Qinglong-Panelo",
+          "description": "Administra panelo por planitaj taskoj, kiu subtenas JavaScript-, Python- kaj Shell-skriptojn; ĝi povas esti uzata por aŭtomataj salutado, restado kaj similaj taskoj, kun enkompleksa dependecadministrado kaj protokolvidado.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "5700": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "qwenpaw",
@@ -2695,7 +4760,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/qwenpaw/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source personal AI assistant from Tongyi (Alibaba) supporting local or cloud deployment, multi-tool invocation and conversation orchestration. The image bundles an OpenAI-compatible interface.",
+          "category": "AI/Development",
+          "ports": {
+            "8088": "Web UI"
+          },
+          "env": {
+            "QWENPAW_TOKEN": "Access token (recommended)"
+          }
+        },
+        "ja": {
+          "name": "QwenPaw",
+          "description": "通義（Qwen）が公開したパーソナル AI アシスタント。ローカル/クラウドデプロイ、マルチツール呼び出し、会話オーケストレーションに対応し、イメージ内に OpenAI 互換 API を内蔵しています。",
+          "category": "AI/開発",
+          "ports": {
+            "8088": "Web 画面"
+          },
+          "env": {
+            "QWENPAW_TOKEN": "アクセストークン（設定を推奨）"
+          }
+        },
+        "eo": {
+          "description": "Persona AI-helpanto malfermita de Tongyi (Qwen), kiu subtenas lokan/nuban deplojon, multajn ilvokojn kaj dialogan aranĝadon; la bildo havas enkonstruitan interfacon kongruan kun OpenAI.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8088": "Reteja interfaco"
+          },
+          "env": {
+            "QWENPAW_TOKEN": "Alirma ĵetono (rekomendita)"
+          }
+        }
+      }
     },
     {
       "id": "reader",
@@ -2733,7 +4831,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/reader/data.yml",
+      "translations": {
+        "en": {
+          "description": "A self-hosted online reading site supporting book source management, serial tracking, reading progress synchronization and web reading. Data is stored in a local directory.",
+          "category": "Panel/Website",
+          "ports": {
+            "8080": "Web UI"
+          },
+          "env": {
+            "READER_APP_SECUREKEY": "Admin password (recommended)"
+          }
+        },
+        "ja": {
+          "name": "Reader",
+          "description": "セルフホスト型のオンライン読書サイト。書源管理、追更、読書進捗の同期、Web での読書に対応し、データはローカルディレクトリに保存されます。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "8080": "Web 画面"
+          },
+          "env": {
+            "READER_APP_SECUREKEY": "管理パスワード（設定を推奨）"
+          }
+        },
+        "eo": {
+          "description": "Mem-gastigita reta legado-retejo, kiu subtenas administradon de librofontejoj, daŭrigadon de legado, sinkronigon de legadprogreso kaj retan legadon; datumoj estas konservataj en loka dosierujo.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "8080": "Reteja interfaco"
+          },
+          "env": {
+            "READER_APP_SECUREKEY": "Administra pasvorto (rekomendita)"
+          }
+        }
+      }
     },
     {
       "id": "redis",
@@ -2775,7 +4906,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/redis/data.yml",
+      "translations": {
+        "en": {
+          "description": "A high-performance open-source in-memory key-value database supporting data structures such as strings, hashes, lists and sets. It is widely used as a cache, message queue and session store. This template uses the official Redis 7 image.",
+          "category": "Database/Storage",
+          "ports": {
+            "6379": "Redis service"
+          },
+          "env": {
+            "REDIS_PASSWORD": "Access password (disabled if left empty)"
+          }
+        },
+        "ja": {
+          "name": "Redis",
+          "description": "高性能なオープンソースのインメモリキー・バリュー型データベース。文字列、ハッシュ、リスト、集合などのデータ構造に対応し、キャッシュ、メッセージキュー、セッションストレージとして広く使われています。本テンプレートは公式 Redis 7 イメージを使用します。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "6379": "Redis サービス"
+          },
+          "env": {
+            "REDIS_PASSWORD": "アクセスパスワード（空欄の場合は無効）"
+          }
+        },
+        "eo": {
+          "description": "Alt-efikeca malfermita memor-bazita ŝlosilo-valora datumbazo, kiu subtenas datenstrukturojn kiel ĉenoj, hash-tabelojn, listojn kaj arojn; vaste uzata kiel kaŝmemoro, mesaĝvico kaj sesio-stokado. Ĉi tiu ŝablono uzas la oficialan Redis 7-bildon.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "6379": "Redis-servo"
+          },
+          "env": {
+            "REDIS_PASSWORD": "Alirmesa pasvorto (se malplena, ĝi ne estas ebligita)"
+          }
+        }
+      }
     },
     {
       "id": "rsshub",
@@ -2808,7 +4972,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/rsshub/data.yml",
+      "translations": {
+        "en": {
+          "description": "Everything into RSS. Generate RSS subscriptions for various content sources (websites, social platforms, blogs, etc.) and aggregate every update you care about.",
+          "category": "Network/Tools",
+          "ports": {
+            "1200": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "RSSHub",
+          "description": "万物は RSS になる。ウェブサイト、SNS、ブログなどさまざまなコンテンツソースから RSS 購読を生成し、気になるすべての更新を集約します。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "1200": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Ĉio povas iĝi RSS. Ĝi generas RSS-abonoj de diversaj enhavfontoj (retejoj, sociaj platformoj, blogoj ktp), agreggante ĉiujn ĝisdatigojn, kiujn vi sekvas.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "1200": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "sbox-community",
@@ -2843,7 +5031,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sbox-community/data.yml",
+      "translations": {
+        "en": {
+          "description": "A Flask-based Scratch creator community supporting work publishing, communication and showcasing. It is the community side of the ZeroCat ecosystem and is currently only available for source-code deployment.",
+          "category": "Panel/Website",
+          "ports": {
+            "5219": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Sbox Community",
+          "description": "Flask ベースの Scratch クリエイター向けコミュニティ。作品の公開、交流、展示に対応し、ZeroCat エコシステムのコミュニティ側です。現在はソースコードでのデプロイのみ提供されています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "5219": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Scratch-kreantkomunumo bazita sur Flask, kiu subtenas publikigon, diskuton kaj prezenton de verkoj; ĝi estas la komunuma flanko de la ZeroCat-ekosistemo. Nuntempe ĝi estas disponebla nur per fonta deplojo.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "5219": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "sftpgo",
@@ -2886,7 +5098,43 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sftpgo/data.yml",
+      "translations": {
+        "en": {
+          "description": "A feature-rich SFTP / HTTP / FTP server supporting local filesystems as well as storage backends such as S3, WebDAV and Google Drive. It has a built-in web management interface and virtual users.",
+          "category": "Database/Storage",
+          "ports": {
+            "8080": "Web admin interface",
+            "2022": "SFTP service"
+          },
+          "env": {
+            "SFTPGO_DEFAULT_ROOT_PATH": "Default root directory"
+          }
+        },
+        "ja": {
+          "name": "SFTPGo",
+          "description": "機能豊富な SFTP / HTTP / FTP サーバー。ローカルファイルシステムのほか、S3、WebDAV、Google Drive などのストレージバックエンドに対応し、Web 管理画面と仮想ユーザーを内蔵しています。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "8080": "Web 管理画面",
+            "2022": "SFTP サービス"
+          },
+          "env": {
+            "SFTPGO_DEFAULT_ROOT_PATH": "デフォルトのルートディレクトリ"
+          }
+        },
+        "eo": {
+          "description": "Rieĉa SFTP/HTTP/FTP-servilo, kiu subtenas lokan dosiersistemon kaj stokadajn fonajn servojn kiel S3, WebDAV kaj Google Drive, kun enkonstruita reta administra interfaco kaj virtualaj uzantoj.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "8080": "Reteja administra interfaco",
+            "2022": "SFTP-servo"
+          },
+          "env": {
+            "SFTPGO_DEFAULT_ROOT_PATH": "Defaŭlta radikodosierujo"
+          }
+        }
+      }
     },
     {
       "id": "sqlbot",
@@ -2918,7 +5166,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sqlbot/data.yml",
+      "translations": {
+        "en": {
+          "description": "An intelligent data query system based on LLM and RAG from the DataEase team. Query databases with natural language and generate charts. The image bundles PostgreSQL.",
+          "category": "AI/Development",
+          "ports": {
+            "8000": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "SQLBot",
+          "description": "DataEase チームが開発した大規模モデル + RAG ベースのインテリジェント問い合わせシステム。自然言語でデータベースを照会しグラフを生成できます。イメージ内に PostgreSQL が組み込まれています。",
+          "category": "AI/開発",
+          "ports": {
+            "8000": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Inteligenta datum-demanda sistemo bazita sur granda modelo + RAG produktita de la teamo de DataEase, kiu ebligas demandi datumbazojn per natura lingvo kaj generi diagramojn; la bildo enkorpigas PostgreSQL.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8000": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "stirling-pdf",
@@ -2950,7 +5222,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/stirling-pdf/data.yml",
+      "translations": {
+        "en": {
+          "description": "A powerful local PDF toolbox supporting 50+ operations such as merge, split, compress, convert, encrypt, watermark and OCR. All processing is done locally to protect privacy.",
+          "category": "Network/Tools",
+          "ports": {
+            "8080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Stirling-PDF",
+          "description": "強力なローカル PDF ツールボックス。結合、分割、圧縮、変換、暗号化、透かし、OCR など 50 以上の操作に対応し、すべての処理がローカルで完結するためプライバシーが保護されます。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "8080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Povuza loka PDF-ilskatolo, kiu subtenas pli ol 50 operaciojn kiel kunigon, disigon, kunpremon, konvertigon, ĉifradon, akvomarkon kaj OCR; ĉiu prilaborado okazas loke, protektante vian privatecon.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "8080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "sub2api",
@@ -2982,7 +5278,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sub2api/data.yml",
+      "translations": {
+        "en": {
+          "description": "An AI API gateway that converts subscription accounts into unified API keys. It supports account grouping, load balancing and quota statistics, and requires PostgreSQL and Redis.",
+          "category": "Network/Tools",
+          "ports": {
+            "8080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Sub2API",
+          "description": "サブスクリプションアカウントを統一 API キーに変換する AI API ゲートウェイ。アカウントグループ、ロードバランシング、利用量統計に対応し、PostgreSQL と Redis の連携が必要です。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "8080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "AI-API-pordego, kiu unuecigas abonkontojn en API-ŝlosilojn; ĝi subtenas kontogrupon, ŝarĝbalancadon kaj kotizstatistikojn, kaj bezonas uzi kune kun PostgreSQL kaj Redis.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "8080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "sun-panel",
@@ -3014,7 +5334,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/sun-panel/data.yml",
+      "translations": {
+        "en": {
+          "description": "A server / NAS navigation panel and browser homepage. It is clean and beautiful, supporting icon management, internal/external network link switching and built-in widgets, with extremely low resource usage.",
+          "category": "Panel/Website",
+          "ports": {
+            "3002": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Sun-Panel",
+          "description": "サーバー / NAS のナビゲーションパネル＆ブラウザホームページ。すっきり美しく、アイコン管理、内外網リンク切り替え、内蔵ミニウィンドウに対応し、リソース消費が非常に低いのが特徴です。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3002": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Navigadpanelo por serviloj/NAS kaj retumila hejmpaĝo, simpla kaj bela; ĝi subtenas ikonadministradon, ŝaltadon inter internaj/eksteraj retaj ligiloj kaj enkonstruitajn malgrandajn fenestrojn, konsumante tre malmultajn resursojn.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3002": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "tailchat",
@@ -3046,7 +5390,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/tailchat/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source next-generation IM and collaboration platform supporting groups, channels, voice, plugins and bots. It can be fully self-hosted to build your own private communication space.",
+          "category": "Panel/Website",
+          "ports": {
+            "11002": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Tailchat",
+          "description": "オープンソースの次世代 IM＆コラボレーションプラットフォーム。グループ、チャンネル、音声、プラグイン、ボットに対応し、完全なセルフホストで自分だけのプライベートな通信空間を構築できます。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "11002": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Malfermita venontgeneracia IM- kaj kunlabora-platformo, kiu subtenas grupojn, kanalojn, voĉon, kromaĵojn kaj robotojn; ĝi povas esti plene mem-gastigita por konstrui vian propran privatan komunikan spacon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "11002": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "twikoo",
@@ -3079,7 +5447,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/twikoo/data.yml",
+      "translations": {
+        "en": {
+          "description": "A simple and secure comment system for static websites. It supports post comments, likes, emojis and email notifications. Data is stored in local JSON files with extremely low resource usage.",
+          "category": "Network/Tools",
+          "ports": {
+            "8080": "Comment service"
+          }
+        },
+        "ja": {
+          "name": "Twikoo",
+          "description": "シンプルで安全な静的サイト向けコメントシステム。記事コメント、いいね、絵文字、メール通知に対応し、データはローカル JSON ファイルに保存されます。リソース消費が非常に低いのが特徴です。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "8080": "コメントサービス"
+          }
+        },
+        "eo": {
+          "description": "Simpla kaj sekura komentad-sistemo por statikaj retejoj, kiu subtenas artikolkomentojn, ŝatojn, emoci-ikonojn kaj retpoŝtajn sciigojn; datumoj estas konservataj en loka JSON-dosiero, kun tre malalta resurso-konsumo.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "8080": "Komenta servo"
+          }
+        }
+      }
     },
     {
       "id": "umami",
@@ -3117,7 +5509,40 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/umami/data.yml",
+      "translations": {
+        "en": {
+          "description": "An open-source, privacy-focused website traffic analytics tool that is lightweight and modern. It supports multiple sites, event tracking and custom charts, with full ownership of your data. This template bundles a PostgreSQL database.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "HASH_SALT": "Data encryption salt (change it on first deployment)"
+          }
+        },
+        "ja": {
+          "name": "Umami",
+          "description": "プライバシー重視のオープンソース Web サイトアクセス解析ツール。軽量かつ現代的で、マルチサイト、イベントトラッキング、カスタムグラフに対応し、データはすべて自己管理できます。本テンプレートには PostgreSQL データベースが内蔵されています。",
+          "category": "監視/運用",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "HASH_SALT": "データ暗号化のソルト（初回デプロイ時に変更してください）"
+          }
+        },
+        "eo": {
+          "description": "Malfermita, privateco-orientita analiza ilo por reteja trafiko, malpeza kaj moderna; ĝi subtenas plurajn retejojn, eventan spurdon kaj laŭmendajn diagramojn, kaj viaj datumoj apartenas tute al vi. Ĉi tiu ŝablono enkorpigas PostgreSQL-datumbazon.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "HASH_SALT": "Datumĉifrada salo (modifu ĉe la unua deplojo)"
+          }
+        }
+      }
     },
     {
       "id": "upage",
@@ -3149,7 +5574,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/upage/data.yml",
+      "translations": {
+        "en": {
+          "description": "A visual website-building platform based on LLMs from the Halo team. Generate web pages through conversational description, with built-in AI website-building capabilities.",
+          "category": "Panel/Website",
+          "ports": {
+            "3000": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "uPage",
+          "description": "Halo チームが開発した大規模モデルベースのビジュアル Web ページ構築プラットフォーム。会話による記述で Web ページを生成でき、AI によるウェブサイト構築機能を内蔵しています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3000": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Videbla retej-konstrua platformo bazita sur grandaj modeloj produktita de la teamo de Halo; ĝi generas retejojn per dialoga priskribo kaj havas enkonstruitan AI-retejkonstruan kapablon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3000": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "uptime-kuma",
@@ -3181,7 +5630,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uptime-kuma/data.yml",
+      "translations": {
+        "en": {
+          "description": "A self-hosted website / service availability monitoring tool supporting protocols such as HTTP, TCP, Ping and DNS, with notifications, alerting and status pages.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "3001": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Uptime Kuma",
+          "description": "セルフホスト型のウェブサイト/サービス可用性監視ツール。HTTP、TCP、Ping、DNS など複数のプロトコルに対応し、通知アラートとステータスページを備えています。",
+          "category": "監視/運用",
+          "ports": {
+            "3001": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Mem-gastigita kontrolebla ilo por la disponebleco de retejoj/servoj, kiu subtenas plurajn protokolojn kiel HTTP, TCP, Ping kaj DNS, kun sciigaj alarmoj kaj statuspaĝo.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "3001": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "uuwaf",
@@ -3222,7 +5695,37 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/uuwaf/data.yml",
+      "translations": {
+        "en": {
+          "description": "A free, open-source industrial-grade web application firewall providing WAF rule protection, CC attack defense and visual security reports. The management interface listens on port 4443.",
+          "category": "Network/Tools",
+          "ports": {
+            "4443": "Admin interface (HTTPS)",
+            "80": "WAF HTTP",
+            "443": "WAF HTTPS"
+          }
+        },
+        "ja": {
+          "name": "uuWAF",
+          "description": "無料・オープンソースの産業向け Web アプリケーションファイアウォール。WAF ルールによる防御、CC 攻撃対策、ビジュアルなセキュリティレポートを提供し、管理画面のポートは 4443 です。",
+          "category": "ネットワーク/ツール",
+          "ports": {
+            "4443": "管理画面（HTTPS）",
+            "80": "WAF HTTP",
+            "443": "WAF HTTPS"
+          }
+        },
+        "eo": {
+          "description": "Senpaga malfermita industri-nivela retaplikaĵa fajroŝirmilo (WAF), kiu provizas WAF-regulprotekton, defendon kontraŭ CC-atakoj kaj videblajn sekurecajn raportojn; la administra interfaco uzas havenon 4443.",
+          "category": "Reto/Iloj",
+          "ports": {
+            "4443": "Administra interfaco (HTTPS)",
+            "80": "WAF HTTP",
+            "443": "WAF HTTPS"
+          }
+        }
+      }
     },
     {
       "id": "verdaccio",
@@ -3254,7 +5757,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/verdaccio/data.yml",
+      "translations": {
+        "en": {
+          "description": "A lightweight, extensible private npm registry proxy that lets you set up your own Node package source locally or on an intranet, supporting proxying and caching of public npm packages.",
+          "category": "Database/Storage",
+          "ports": {
+            "4873": "npm repository"
+          }
+        },
+        "ja": {
+          "name": "Verdaccio",
+          "description": "軽量で拡張可能なプライベート npm レジストリプロキシ。ローカルや内網で自分だけの Node パッケージソースを構築でき、公開 npm パッケージのプロキシとキャッシュに対応します。",
+          "category": "データベース/ストレージ",
+          "ports": {
+            "4873": "npm レジストリ"
+          }
+        },
+        "eo": {
+          "description": "Malpeza kaj etendebla privata npm-deponeja prokurilo, kiu ebligas krei vian propran Node-pakaĵfontejon loke aŭ en intraneto; ĝi subtenas proksimumadon kaj kaŝumadon de publikaj npm-pakaĵoj.",
+          "category": "Datumbazo/Stokado",
+          "ports": {
+            "4873": "npm-deponejo"
+          }
+        }
+      }
     },
     {
       "id": "watchtower",
@@ -3297,7 +5824,37 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/watchtower/data.yml",
+      "translations": {
+        "en": {
+          "description": "Automatically monitors running containers and pulls and rebuilds them when their base image releases a new version. It keeps self-hosted applications up to date and avoids missing security updates.",
+          "category": "Monitoring/Ops",
+          "env": {
+            "TZ": "Time zone",
+            "WATCHTOWER_CLEANUP": "Remove old images after updating",
+            "WATCHTOWER_POLL_INTERVAL": "Check interval (seconds)"
+          }
+        },
+        "ja": {
+          "name": "Watchtower",
+          "description": "実行中のコンテナを自動監視し、ベースイメージに新バージョンがリリースされると自動で取得・再構築します。セルフホストアプリを最新に保ち、セキュリティ更新を取り逃さないようにできます。",
+          "category": "監視/運用",
+          "env": {
+            "TZ": "タイムゾーン",
+            "WATCHTOWER_CLEANUP": "更新後に古いイメージを削除するかどうか",
+            "WATCHTOWER_POLL_INTERVAL": "チェック間隔（秒）"
+          }
+        },
+        "eo": {
+          "description": "Aŭtomate monitoras la funkciantajn ujojn; kiam la baza bildo publikigas novan version, ĝi aŭtomate elŝutas kaj rekonstruas, tenante mem-gastigitajn aplikaĵojn ĝisdataj kaj evitante maltrafi sekurecajn ĝisdatigojn.",
+          "category": "Monitorado/Operaciado",
+          "env": {
+            "TZ": "Horzono",
+            "WATCHTOWER_CLEANUP": "Ĉu forigi la malnovajn bildojn post ĝisdatigo",
+            "WATCHTOWER_POLL_INTERVAL": "Kontrolintervalo (sekundoj)"
+          }
+        }
+      }
     },
     {
       "id": "wordpress",
@@ -3350,7 +5907,49 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/icon.svg",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/wordpress/data.yml",
+      "translations": {
+        "en": {
+          "description": "The most widely used open-source site building and content management system in the world, with an extremely rich ecosystem of plugins and themes. Suitable for blogs, corporate sites, e-commerce and more. This template bundles a MySQL database.",
+          "category": "Panel/Website",
+          "ports": {
+            "80": "Web UI"
+          },
+          "env": {
+            "WORDPRESS_DB_HOST": "Database address",
+            "WORDPRESS_DB_USER": "Database user",
+            "WORDPRESS_DB_PASSWORD": "Database password",
+            "WORDPRESS_DB_NAME": "Database name"
+          }
+        },
+        "ja": {
+          "name": "WordPress",
+          "description": "世界中で最も広く使われているオープンソースのウェブサイト構築・CMS。プラグインとテーマのエコシステムが非常に豊富で、ブログ、企業サイト、EC などあらゆる種類のサイトに適しています。本テンプレートには MySQL データベースが内蔵されています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "80": "Web 画面"
+          },
+          "env": {
+            "WORDPRESS_DB_HOST": "データベースのアドレス",
+            "WORDPRESS_DB_USER": "データベースユーザー",
+            "WORDPRESS_DB_PASSWORD": "データベースパスワード",
+            "WORDPRESS_DB_NAME": "データベース名"
+          }
+        },
+        "eo": {
+          "description": "La plej vaste uzata malfermita retej-konstrua kaj enhavo-administra sistemo en la mondo, kun ege riĉa ekosistemo de kromaĵoj kaj temoj; taŭga por blogoj, entreprenaj retejoj, komercretejoj ktp. Ĉi tiu ŝablono enkorpigas MySQL-datumbazon.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "80": "Reteja interfaco"
+          },
+          "env": {
+            "WORDPRESS_DB_HOST": "Datumbaza adreso",
+            "WORDPRESS_DB_USER": "Datumbaza uzanto",
+            "WORDPRESS_DB_PASSWORD": "Datumbaza pasvorto",
+            "WORDPRESS_DB_NAME": "Nomo de la datumbazo"
+          }
+        }
+      }
     },
     {
       "id": "zabbix",
@@ -3381,7 +5980,31 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zabbix/data.yml",
+      "translations": {
+        "en": {
+          "description": "An enterprise-grade open-source monitoring solution supporting monitoring of hosts, networks, applications and databases with multi-channel alerting and built-in visual dashboards. This template bundles a PostgreSQL database and exposes the web on port 8080.",
+          "category": "Monitoring/Ops",
+          "ports": {
+            "8080": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Zabbix",
+          "description": "エンタープライズ向けオープンソース監視ソリューション。ホスト、ネットワーク、アプリ、データベースなどの監視とマルチチャネルアラートに対応し、ビジュアルダッシュボードを内蔵しています。本テンプレートには PostgreSQL が内蔵され、Web ポートは 8080 です。",
+          "category": "監視/運用",
+          "ports": {
+            "8080": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "Entrepren-nivela malfermita monitorado-solvo, kiu subtenas monitoradon de mastrumiloj, retoj, aplikaĵoj kaj datumbazoj kun multkanalaj alarmoj, kaj havas enkonstruitan videblan panelon; ĉi tiu ŝablono enkorpigas PostgreSQL-datumbazon kaj uzas retan havenon 8080.",
+          "category": "Monitorado/Operaciado",
+          "ports": {
+            "8080": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "zakura",
@@ -3418,7 +6041,34 @@
       "env": [],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zakura/data.yml",
+      "translations": {
+        "en": {
+          "description": "An AI orchestration platform that collaboratively boosts agent intelligence. It provides an API (8787) and Web (3001) interface, supporting multi-agent collaboration and automated orchestration.",
+          "category": "AI/Development",
+          "ports": {
+            "8787": "API service",
+            "3001": "Web UI"
+          }
+        },
+        "ja": {
+          "name": "Zakura",
+          "description": "Agent の知能を協調的に高める AI オーケストレーションプラットフォーム。API（8787）と Web（3001）のインターフェースを提供し、マルチエージェント協調と自動オーケストレーションに対応します。",
+          "category": "AI/開発",
+          "ports": {
+            "8787": "API サービス",
+            "3001": "Web 画面"
+          }
+        },
+        "eo": {
+          "description": "AI-orestra platformo, kiu kunlabore pliigas la inteligentecon de agentoj; ĝi provizas API (8787) kaj Web (3001) interfacojn, kaj subtenas kunlaboradon de pluraj agentoj kaj aŭtomatan orkestradon.",
+          "category": "AI/Disvolvo",
+          "ports": {
+            "8787": "API-servo",
+            "3001": "Reteja interfaco"
+          }
+        }
+      }
     },
     {
       "id": "zentaopms",
@@ -3456,7 +6106,42 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zentaopms/data.yml",
+      "translations": {
+        "en": {
+          "name": "ZenTao",
+          "description": "A domestically produced open-source all-in-one project management software covering the entire workflow of product, project, testing, documentation and DevOps. The image bundles a MariaDB database.",
+          "category": "Development/DevOps",
+          "ports": {
+            "80": "Web UI"
+          },
+          "env": {
+            "MYSQL_INTERNAL": "Whether to use the built-in database (1 = built-in)"
+          }
+        },
+        "ja": {
+          "name": "禅道（ZenTao）",
+          "description": "国内発のオープンソース統合プロジェクト管理ソフトウェア。製品、プロジェクト、テスト、ドキュメント、DevOps の全プロセスをカバーし、イメージ内に MariaDB データベースが組み込まれています。",
+          "category": "開発/DevOps",
+          "ports": {
+            "80": "Web 画面"
+          },
+          "env": {
+            "MYSQL_INTERNAL": "内蔵データベースを使うかどうか（1=内蔵）"
+          }
+        },
+        "eo": {
+          "name": "ZenTao (Ĉandao)",
+          "description": "Ĉina malfermita integrita projekt-administra programaro, kiu kovras la tutan procezon de produkto, projekto, testado, dokumentoj kaj DevOps; la bildo enkorpigas MariaDB-datumbazon.",
+          "category": "Disvolvo/DevOps",
+          "ports": {
+            "80": "Reteja interfaco"
+          },
+          "env": {
+            "MYSQL_INTERNAL": "Ĉu uzi la enkonstruitan datumbazon (1=enkonstruita)"
+          }
+        }
+      }
     },
     {
       "id": "zerocat",
@@ -3496,7 +6181,42 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/zerocat/data.yml",
+      "translations": {
+        "en": {
+          "name": "ZeroCat Programming Community",
+          "description": "A lightweight online programming and sharing platform supporting Scratch, Python and other languages, aimed at programming beginners. It is still in its early stage; the official project only offers source-code Dockerfile builds locally, with no pullable prebuilt image yet.",
+          "category": "Panel/Website",
+          "ports": {
+            "3000": "Web UI"
+          },
+          "env": {
+            "DATABASE_URL": "MySQL connection string (required, e.g. mysql://root:pwd@host:3306/zerocat)"
+          }
+        },
+        "ja": {
+          "name": "ZeroCat プログラミングコミュニティ",
+          "description": "軽量なオンラインプログラミング＆共有プラットフォーム。Scratch、Python などプログラミング初心者向けの機能を備えたコミュニティです。現在は初期段階にあり、公式はソースコードでの Dockerfile ローカルビルドのみ提供していて、プル可能なビルド済みイメージはまだありません。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "3000": "Web 画面"
+          },
+          "env": {
+            "DATABASE_URL": "MySQL 接続文字列（必須、例: mysql://root:pwd@host:3306/zerocat）"
+          }
+        },
+        "eo": {
+          "name": "ZeroCat (Programada Komunumo)",
+          "description": "Malpeza interreta programado- kaj kundivida platformo, kiu subtenas komunumojn konvenajn por programado-komencantoj kiel Scratch kaj Python. Nuntempe ĝi estas en frua stadio: la oficialo provizas nur lokan konstruon per fonta Dockerfile, kaj ankoraŭ ne ekzistas elŝutebla antaŭkompilita bildo.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "3000": "Reteja interfaco"
+          },
+          "env": {
+            "DATABASE_URL": "MySQL-konekta ĉeno (deviga, ekz. mysql://root:pwd@host:3306/zerocat)"
+          }
+        }
+      }
     },
     {
       "id": "alist",
@@ -3548,7 +6268,46 @@
       ],
       "icon": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/icon.png",
       "compose_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/docker-compose.yml",
-      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/data.yml"
+      "data_url": "https://raw.githubusercontent.com/wuhulab/Graw/gh-pages/apps/alist/data.yml",
+      "translations": {
+        "en": {
+          "description": "A file listing and sharing program with multi-storage support, aggregating popular storage services such as Aliyun Drive, Baidu Drive, OneDrive and Quark. It comes with a built-in web interface, WebDAV support and offline downloads.",
+          "category": "Panel/Website",
+          "ports": {
+            "5244": "Web UI"
+          },
+          "env": {
+            "PUID": "Runtime user UID",
+            "PGID": "Runtime user GID",
+            "UMASK": "File permission mask"
+          }
+        },
+        "ja": {
+          "name": "AList",
+          "description": "複数のストレージを統合できるファイルリスト＆共有プログラム。Alibaba Cloud Drive、Baidu 網盤、OneDrive、クォークなど主要ストレージを集約し、Web 画面、WebDAV、オフラインダウンロードを内蔵しています。",
+          "category": "パネル/ウェブサイト",
+          "ports": {
+            "5244": "Web 画面"
+          },
+          "env": {
+            "PUID": "実行ユーザーの UID",
+            "PGID": "実行ユーザーの GID",
+            "UMASK": "ファイル権限マスク"
+          }
+        },
+        "eo": {
+          "description": "Programo de dosierlistigo kaj kundivido, kiu subtenas multajn stokejojn: ĝi kunigas ĉefajn stokservojn kiel Alibaba Cloud Drive, Baidu Netdisk, OneDrive kaj Quark, kaj havas enkonstruitan retan interfacon, WebDAV kaj eksterretan elŝuton.",
+          "category": "Panelo/Retpaĝaro",
+          "ports": {
+            "5244": "Reteja interfaco"
+          },
+          "env": {
+            "PUID": "UID de la funkciiga uzanto",
+            "PGID": "GID de la funkciiga uzanto",
+            "UMASK": "Dosierpermesa masko"
+          }
+        }
+      }
     }
   ]
 }

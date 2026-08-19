@@ -1,0 +1,13 @@
+description: >
+  Malfermita minimalisma retro-servilo de amikcirka/mikroblogo-sistemo, kiu
+  subtenas publikadon de bildoj kaj teksto, abonadon kaj foliumadon en la
+  publika paĝo; ĝi povas esti mem-gastigita kaj bezonas uzi kune kun
+  MySQL-datumbazo.
+category: "AI/Disvolvo"
+ports:
+  8080: "Serva haveno"
+env:
+  MYSQL_PASS: "Datumbaza pasvorto (deviga)"
+  MYSQL_URL: "Datumbaza adreso:haveno"
+  MYSQL_DB: "Nomo de la datumbazo"
+  MBLOG_FRONT_DOMAIN: "Adreso de la fronta parto"

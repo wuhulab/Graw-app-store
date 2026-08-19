@@ -1,0 +1,6 @@
+name: "frp（frps サーバー）"
+description: >
+  高性能内網トンネルツールのサーバー側。リバースプロキシによって内網サービスを安全に公網へ公開し、TCP / UDP / HTTP / HTTPS プロトコルに対応します。
+category: "ネットワーク/ツール"
+ports:
+  7000: "frps 通信ポート"

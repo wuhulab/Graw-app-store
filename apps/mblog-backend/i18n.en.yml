@@ -1,0 +1,12 @@
+description: >
+  An open-source minimalistic Moments/Weibo-style social backend supporting image-text
+  posting, following and a public feed. It can be self-hosted and requires a MySQL
+  database.
+category: "AI/Development"
+ports:
+  8080: "Service port"
+env:
+  MYSQL_PASS: "Database password (required)"
+  MYSQL_URL: "Database address:port"
+  MYSQL_DB: "Database name"
+  MBLOG_FRONT_DOMAIN: "Frontend address"

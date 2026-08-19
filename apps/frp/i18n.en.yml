@@ -1,0 +1,8 @@
+name: "frp (frps server)"
+description: >
+  The server side of a high-performance intranet penetration tool that securely exposes
+  internal services to the public internet via reverse proxying, supporting TCP, UDP,
+  HTTP and HTTPS protocols.
+category: "Network/Tools"
+ports:
+  7000: "frps communication port"

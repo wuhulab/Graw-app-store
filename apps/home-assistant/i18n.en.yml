@@ -1,0 +1,9 @@
+description: >
+  An open-source home automation platform supporting integration with thousands of
+  devices, automation rules, dashboards and voice assistants. It is the core hub of a
+  smart home.
+category: "Monitoring/Ops"
+ports:
+  8123: "Web UI"
+env:
+  TZ: "Time zone"

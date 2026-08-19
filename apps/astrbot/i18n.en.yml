@@ -1,0 +1,8 @@
+description: >
+  A multi-platform AI chatbot framework supporting QQ, WeChat, Feishu, Telegram and more.
+  It connects to mainstream LLMs and ships with a built-in WebUI management panel and a
+  plugin ecosystem.
+category: "AI/Development"
+ports:
+  6185: "Web admin UI"
+  6199: "OneBot / message port"

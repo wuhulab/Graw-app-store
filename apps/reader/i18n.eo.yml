@@ -1,0 +1,9 @@
+description: >
+  Mem-gastigita reta legado-retejo, kiu subtenas administradon de librofontejoj,
+  daŭrigadon de legado, sinkronigon de legadprogreso kaj retan legadon;
+  datumoj estas konservataj en loka dosierujo.
+category: "Panelo/Retpaĝaro"
+ports:
+  8080: "Reteja interfaco"
+env:
+  READER_APP_SECUREKEY: "Administra pasvorto (rekomendita)"

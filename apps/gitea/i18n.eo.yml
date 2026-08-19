@@ -1,0 +1,12 @@
+description: >
+  Malpeza, rapida kaj mem-gastigita git-servo kun malgranda memoruzo kaj simpla
+  instalado; ĝi subtenas deponejojn, issue-ojn, PR-ojn, CI, Vikiojn kaj
+  Actions, kaj estas ideala elekto por krei privatan kodan gastigan
+  platformon.
+category: "Panelo/Retpaĝaro"
+ports:
+  3000: "Reteja interfaco"
+  22: "SSH"
+env:
+  GITEA__server__DOMAIN: "Domajno / IP"
+  GITEA__server__SSH_DOMAIN: "SSH-domajno"

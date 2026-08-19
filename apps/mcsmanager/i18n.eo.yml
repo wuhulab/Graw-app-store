@@ -1,0 +1,7 @@
+description: >
+  Reta administra panelo por ludserviloj, kiu subtenas unu-klakan instaladon,
+  starton/haltigon, sekurkopiojn kaj dosieradministradon de diversaj
+  ludserviloj; la panelo uzas havenon 23333.
+category: "Disvolvo/DevOps"
+ports:
+  23333: "Reteja panelo"

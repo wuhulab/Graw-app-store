@@ -1,0 +1,8 @@
+description: >
+  Navigadpanelo por serviloj/NAS kaj retumila hejmpaĝo, simpla kaj bela; ĝi
+  subtenas ikonadministradon, ŝaltadon inter internaj/eksteraj retaj ligiloj
+  kaj enkonstruitajn malgrandajn fenestrojn, konsumante tre malmultajn
+  resursojn.
+category: "Panelo/Retpaĝaro"
+ports:
+  3002: "Reteja interfaco"

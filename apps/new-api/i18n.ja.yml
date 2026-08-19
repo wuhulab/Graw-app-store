@@ -1,0 +1,8 @@
+name: "New API"
+description: >
+  次世代大規模モデル API ゲートウェイ＆AI 資産管理プラットフォーム。複数モデルの統合接続、トークン管理、チャネル配信、利用量統計、課金に対応し、OpenAI / DeepSeek などの各種モデルと連携できます。
+category: "開発/DevOps"
+ports:
+  3000: "Web 画面"
+env:
+  SESSION_SECRET: "セッションキー（設定を推奨）"

@@ -1,0 +1,7 @@
+description: >
+  A widely popular open-source bastion host (PAM) providing asset management, account
+  hosting, operation audit and ticket approval. It serves as a secure operations entry
+  point.
+category: "Monitoring/Ops"
+ports:
+  80: "Web UI"

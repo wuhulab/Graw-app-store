@@ -1,0 +1,9 @@
+description: >
+  An open-source personal AI assistant from Tongyi (Alibaba) supporting local or cloud
+  deployment, multi-tool invocation and conversation orchestration. The image bundles an
+  OpenAI-compatible interface.
+category: "AI/Development"
+ports:
+  8088: "Web UI"
+env:
+  QWENPAW_TOKEN: "Access token (recommended)"

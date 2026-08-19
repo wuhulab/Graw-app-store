@@ -1,0 +1,8 @@
+description: >
+  LLM-inferenca rimarkokomotoro programita en C/C++, kiu subtenas lokan
+  funkciadon de diversaj malfermitaj grandaj modeloj en GGUF-formato; ĝi havas
+  enkonstruitan HTTP-servilon kongruan kun OpenAI kaj povas esti uzata por
+  aŭtonoma privata AI-deplojo.
+category: "AI/Disvolvo"
+ports:
+  8080: "HTTP-servilo"

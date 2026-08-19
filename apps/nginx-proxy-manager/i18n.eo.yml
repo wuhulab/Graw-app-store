@@ -1,0 +1,9 @@
+description: >
+  Facile uzebla administra panelo por Nginx-inversprokura servo kaj senpagaj
+  SSL-atestiloj, kiu subtenas videblan agordon de domajna plusendo, arbitran
+  solvon kaj Let's Encrypt-atestilojn.
+category: "Reto/Iloj"
+ports:
+  81: "Administra interfaco"
+  80: "HTTP-prokura servo"
+  443: "HTTPS-prokura servo"

@@ -1,0 +1,9 @@
+name: "ChatGPT-Next-Web"
+description: >
+  クロスプラットフォームの ChatGPT / マルチモデルチャット用 Web フロントエンド。複数の大規模言語モデル API、会話管理、Markdown に対応し、そのままデプロイして使える自ホスト型 AI チャット画面です。
+category: "AI/開発"
+ports:
+  3000: "Web 画面"
+env:
+  OPENAI_API_KEY: "モデル API キー"
+  CODE: "アクセスパスワード（設定すると他人による利用を防げます）"

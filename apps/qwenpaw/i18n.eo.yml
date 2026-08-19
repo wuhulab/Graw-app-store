@@ -1,0 +1,9 @@
+description: >
+  Persona AI-helpanto malfermita de Tongyi (Qwen), kiu subtenas lokan/nuban
+  deplojon, multajn ilvokojn kaj dialogan aranĝadon; la bildo havas
+  enkonstruitan interfacon kongruan kun OpenAI.
+category: "AI/Disvolvo"
+ports:
+  8088: "Reteja interfaco"
+env:
+  QWENPAW_TOKEN: "Alirma ĵetono (rekomendita)"

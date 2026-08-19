@@ -1,0 +1,9 @@
+description: >
+  Servodiscovera kaj agorda centro de HashiCorp, kiu provizas servomatricon,
+  KV-stokadon kaj sanec-kontrolojn kaj subtenas plurajn datucentrojn; ĉi tiu
+  ŝablono funkcias en dev-unuomaŝina reĝimo kaj eksponas la retan
+  uzantinterfacon.
+category: "Disvolvo/DevOps"
+ports:
+  8500: "Reteja uzantinterfaco"
+  8600: "DNS-interfaco"

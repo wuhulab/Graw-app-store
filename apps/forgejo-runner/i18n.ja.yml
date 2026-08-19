@@ -1,0 +1,7 @@
+name: "Forgejo Runner"
+description: >
+  Forgejo Actions 用ランナー。専用マシン上で Forgejo リポジトリの CI/CD パイプラインを実行します。事前に Forgejo インスタンスでランナーを登録し、トークンを取得する必要があります。
+category: "開発/DevOps"
+env:
+  FORGEJO_INSTANCE_URL: "Forgejo インスタンスのアドレス（必須）"
+  FORGEJO_RUNNER_REGISTRATION_TOKEN: "Runner 登録トークン（必須）"

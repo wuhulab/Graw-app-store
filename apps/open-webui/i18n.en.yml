@@ -1,0 +1,9 @@
+description: >
+  An extensible, feature-rich and user-friendly self-hosted AI web interface supporting
+  Ollama and OpenAI-compatible endpoints, offering multi-user support, RAG, model
+  management and conversation history.
+category: "AI/Development"
+ports:
+  8080: "Web UI"
+env:
+  OLLAMA_BASE_URL: "Ollama address (optional)"

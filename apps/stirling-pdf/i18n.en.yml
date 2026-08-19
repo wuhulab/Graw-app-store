@@ -1,0 +1,6 @@
+description: >
+  A powerful local PDF toolbox supporting 50+ operations such as merge, split, compress,
+  convert, encrypt, watermark and OCR. All processing is done locally to protect privacy.
+category: "Network/Tools"
+ports:
+  8080: "Web UI"

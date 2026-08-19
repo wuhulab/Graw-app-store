@@ -1,0 +1,7 @@
+description: >
+  A personal AI assistant that runs on your own devices, with tool invocation, DM pairing
+  and autonomous execution capabilities. The official project provides prebuilt ghcr
+  images.
+category: "AI/Development"
+ports:
+  18789: "Gateway port"

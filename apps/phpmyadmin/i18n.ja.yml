@@ -1,0 +1,10 @@
+name: "phpMyAdmin"
+description: >
+  PHP ベースの MySQL / MariaDB ビジュアル Web 管理ツール。データベース、テーブル、SQL、ユーザー、インポート/エクスポートの管理に対応し、外部データベースへの接続が必要です。
+category: "データベース/ストレージ"
+ports:
+  80: "Web 画面"
+env:
+  PMA_HOST: "データベースホスト（例: mysql やサーバー IP）"
+  PMA_PORT: "データベースポート"
+  PMA_ARBITRARY: "任意のサーバーへの接続を許可（1=はい）"

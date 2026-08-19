@@ -1,0 +1,7 @@
+description: >
+  Novgeneracia administra platformo por ludserviloj (GSM3), kiu subtenas
+  unu-klakan deplojon, monitoradon kaj planadon de diversaj ludserviloj; la
+  reta interfaco uzas havenon 3001.
+category: "Disvolvo/DevOps"
+ports:
+  3001: "Reteja interfaco"

@@ -1,0 +1,13 @@
+description: >
+  La plej vaste uzata malfermita retej-konstrua kaj enhavo-administra sistemo
+  en la mondo, kun ege riĉa ekosistemo de kromaĵoj kaj temoj; taŭga por blogoj,
+  entreprenaj retejoj, komercretejoj ktp. Ĉi tiu ŝablono enkorpigas
+  MySQL-datumbazon.
+category: "Panelo/Retpaĝaro"
+ports:
+  80: "Reteja interfaco"
+env:
+  WORDPRESS_DB_HOST: "Datumbaza adreso"
+  WORDPRESS_DB_USER: "Datumbaza uzanto"
+  WORDPRESS_DB_PASSWORD: "Datumbaza pasvorto"
+  WORDPRESS_DB_NAME: "Nomo de la datumbazo"

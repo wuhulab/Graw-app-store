@@ -1,0 +1,7 @@
+description: >
+  DeepSeek's official open-source AI Agent framework where everything is a plugin. It
+  provides agents with capabilities such as file, terminal, search and planning, and ships
+  with a built-in local web interface.
+category: "AI/Development"
+ports:
+  3080: "Web UI"
